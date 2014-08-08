@@ -1,0 +1,58 @@
+\newcommand{\mat}[1]{
+      {\textbf{#1}}
+}
+
+\newcommand{\todo}[1]{
+      {\colorbox{red}{ TODO: #1 }}
+}
+
+\newcommand{\todotext}[1]{
+      {\color{red} TODO: #1} \normalfont
+}
+
+\newcommand{\info}[1]{
+      {\colorbox{blue}{ (INFO: #1)}}
+}
+
+% Hinweis auf Programme in Datei
+\newcommand{\datei}[1]{
+      {\ttfamily{#1}}
+}
+\newcommand{\code}[1]{
+      {\ttfamily{#1}}
+}
+% bild mit defnierter Breite einfügen
+\newcommand{\bild}[4]{
+  \begin{figure}[!hbt]
+    \centering
+      \vspace{1ex}
+      \includegraphics[width=#2]{images/#1}
+      \caption[#4]{\label{img.#1} #3}
+    \vspace{1ex}
+  \end{figure}
+}
+% bild mit eigener Breite
+\newcommand{\bilda}[3]{
+  \begin{figure}[!hbt]
+    \centering
+      \vspace{1ex}
+      \includegraphics{images/#1}
+      \caption[#3]{\label{img.#1} #2}
+      \vspace{1ex}
+  \end{figure}
+}
+
+
+% Bild todo
+\newcommand{\bildt}[2]{
+  \begin{figure}[!hbt]
+    \begin{center}
+      \vspace{2ex}
+	      \includegraphics[width=6cm]{images/todobild}
+      %\caption{\label{#1} \color{red}{ TODO: #2}}
+      \caption{\label{#1} \todotext{#2}}
+      %{\caption{\label{#1} {\todo{#2}}}}
+      \vspace{2ex}
+    \end{center}
+  \end{figure}
+}

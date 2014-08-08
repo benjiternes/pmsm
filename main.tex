@@ -1,0 +1,119 @@
+% ----------------------------------------------------------------------------------------------------------
+% Praeambel
+% ----------------------------------------------------------------------------------------------------------
+\input{class.tex}
+\input{makros.tex} 
+
+\begin{document}
+\pagenumbering{Roman}
+\pagestyle{empty}
+
+% ----------------------------------------------------------------------------------------------------------
+% Titelseite
+% ----------------------------------------------------------------------------------------------------------
+\clearscrheadings\clearscrplain
+
+\begin{center}
+	\begin{minipage}{7cm}
+	\textsc{Fachbereich Elektrotechnik\\
+	und Informatik}\\
+	\\
+	Institut für Systemtechnik
+	\end{minipage}
+	\hfill
+	\begin{minipage}{7cm}
+	\includegraphics[width=\textwidth]{bo}\\
+	\end{minipage}
+	
+	\vspace*{4cm}
+	
+	\Huge
+	\textbf{Projektarbeit}\\
+	\vspace*{0.5cm}
+	\large
+	über das Thema\\
+	\vspace*{1cm}
+	\Huge
+	\textbf{Auslegung eines parametriesierten Modells einer vektorgeregelten anisotropen Synchronmaschine}\\
+	\vspace*{2cm}
+	\vfill
+	\normalsize
+	\newcolumntype{x}[1]{>{\raggedleft\arraybackslash\hspace{0pt}}p{#1}}
+	\begin{tabular}{x{6cm}p{7.5cm}}
+		\rule{0mm}{5ex}\textbf{Autoren:} & Benjamin Ternes\newline benjamin.ternes@fernuni-hagen.de\newline Matrikelnummer: 014102076 \\
+		\rule{0mm}{5ex}                & Jan Feldkamp\newline jan.feldkamp@hs-bochum.de \newline Matrikelnummer: XXXXXXXXXX\\ 
+		\rule{0mm}{5ex}\textbf{Prüfer:} & Prof. Dr.-Ing. A. Bergmann \\ 
+		\rule{0mm}{5ex}\textbf{Abgabedatum:} & \today \\ 
+	\end{tabular} 
+\end{center}
+\clearpage
+
+\ihead{\headmark}
+\chead{}
+\ohead{\pagemark}
+\ifoot{}
+\cfoot{}
+\ofoot{}
+
+\pagestyle{scrheadings} 
+% ----------------------------------------------------------------------------------------------------------
+% Verzeichnisse
+% ----------------------------------------------------------------------------------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Symbolverzeichnis}\label{s.sym}
+\addcontentsline{toc}{chapter}{Symbolverzeichnis}
+\markboth{Symbolverzeichnis}{Symbolverzeichnis}
+% ----------------------------------------------------------------------------------------------------------
+% Symbolliste
+% ----------------------------------------------------------------------------------------------------------
+\section*{Allgemeine Symbole}\label{s.sym.alg}
+\begin{flushleft}\begin{tabularx}{\textwidth}{l l X}
+Symbol & Bedeutung	& Einheit\\ 
+$I$	& elektrische Stromstärke	&	$A$ \\
+$\Theta$	&	elektrische Durchflutung 	&	$A$	\\
+$A$			&	elektrischer Strombelag  	&  	$A/m$\\ 
+$J$			&	elektrische Stromdichte		&	$A/m^2$ \\	
+$H$			&	magnetische Feldstärke		&	$A/m$\\
+$\mu_0$		&	magnetische Feldkonstante	&	$Vs/Am$\\
+$\mu_r$		&	relative Permeabilität		&	\\
+$B$			&	magnetische Flussdichte		&	$T = Vs/m^2$ \\
+$\Phi$		&	magnetischer Fluss			&	$Vs$ \\
+$\Psi$		&	verketteter Fluss			&	$Vs$ \\
+$L, M$		&	Induktivitäten				&	$H = Vs/A$\\
+$U$			&	elektrische Spannung		&	$V$ \\
+$V$			&	magnetisches Vektorpotenzial&	$Vs/m$\\
+$V_m$		&	magnetische Spannung		&	$A$
+\end{tabularx}\end{flushleft}
+% ----------------------------------------------------------------------------------------------------------
+% Einleitung
+% ----------------------------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+%\input{Einleitung}
+% ----------------------------------------------------------------------------------------------------------
+% Kapitel
+% ----------------------------------------------------------------------------------------------------------
+\cleardoublepage
+\input{grundlagen}
+%\input{Kapitel_2}
+%\input{Kapitel_3}
+%\input{Kapitel_4}
+%\input{Kapitel_5}
+%\input{Kapitel_6}
+% ----------------------------------------------------------------------------------------------------------
+% Literatur
+% ----------------------------------------------------------------------------------------------------------
+\cleardoublepage
+\nocite{*}
+\printbibliography
+% ----------------------------------------------------------------------------------------------------------
+% Anhang
+% ----------------------------------------------------------------------------------------------------------
+\appendix
+\chapter{Anhang}
+
+
+
+\end{document}

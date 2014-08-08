@@ -1,0 +1,138 @@
+\documentclass[fontsize=12pt,%
+paper=a4,%
+headinclude,%
+twoside=false,%
+parskip=half+,%
+pagesize=auto,%
+numbers=noenddot,%
+plainheadsepline,%
+open=right,%
+toc=listof,%
+toc=bibliography%
+]{scrreprt}
+
+% PDF-Kompression
+\pdfminorversion=5
+\pdfobjcompresslevel=1
+
+% Schriften
+%\usepackage{mathpazo}
+%\usepackage{mathpazo,tgpagella}
+\usepackage{libertine}
+%\usepackage{fourier}
+\usepackage{lmodern}
+
+% Allgemeines
+\usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
+\automark[chapter]{section}
+\usepackage{amsmath,marvosym} % Mathesachen
+\usepackage[T1]{fontenc} % Ligaturen, richtige Umlaute im PDF
+\usepackage[utf8]{inputenc}% UTF8-Kodierung für Umlaute usw
+
+\usepackage{setspace}
+%\onehalfspacing 
+
+% Schriften-Größen
+\setkomafont{chapter}{\Huge\rmfamily}
+\setkomafont{section}{\Large\rmfamily}
+\setkomafont{subsection}{\large\rmfamily}
+\setkomafont{subsubsection}{\large\rmfamily}
+\setkomafont{chapterentry}{\large\rmfamily} % Überschrift der Ebene in Inhaltsverzeichnis
+\setkomafont{descriptionlabel}{\bfseries\rmfamily} % für description Umgebungen
+\setkomafont{captionlabel}{\small\bfseries}
+\setkomafont{caption}{\small}
+
+% Sprache: Deutsch
+\usepackage[ngerman]{babel}
+
+% PDF
+\usepackage[ngerman,%
+pdfauthor={B. Ternes},%
+pdftitle={Modellierung einer anisotropen Synchronmaschine mit Simulink},%
+colorlinks=true,linkcolor=magenta,citecolor=magenta,filecolor=magenta,urlcolor=magenta%
+]{hyperref}
+
+% BibLaTeX
+\usepackage[backend=biber,%
+ style=authoryear,%
+ autocite=inline,%
+ sorting=anyt,%
+ sortcites=true,%
+ hyperref=auto,%
+ maxnames=3,%
+ minnames=1,%
+ dashed=false%
+]{biblatex}
+
+\bibliography{bibo.bib}
+
+\setlength{\bibitemsep}{1em}
+\DefineBibliographyStrings{ngerman}{andothers = {u.\,a.},}
+
+\usepackage[final]{microtype} % mikrotypographische Optimierungen
+\usepackage{url}
+\usepackage{pdflscape} % einzelne Seiten drehen können
+
+% Tabellen
+\usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
+\usepackage{multicol} % mehre Spalten auf eine Seite
+\usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
+\usepackage{longtable} % Tabellen über mehrere Seiten
+\usepackage{array}
+
+%  Bibliographie
+%\usepackage{bibgerm} % Umlaute in BibTeX
+
+% Tabellen
+\usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
+\usepackage{multicol} % mehre Spalten auf eine Seite
+\usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
+\usepackage{array}
+\usepackage{float}
+
+% Bilder
+\usepackage{graphicx}
+\usepackage{color}
+\graphicspath{{_Bilder/}}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{subfigure}
+\newcommand{\subfigureautorefname}{\figurename}
+\usepackage[all]{hypcap}
+
+% Bildunterschrift
+\setcapindent{0em}
+\setcapwidth[c]{0.9\textwidth}
+\setlength{\abovecaptionskip}{0.2cm}
+
+% Quellcode
+\usepackage{listings}
+\definecolor{grau}{gray}{0.25}
+\lstset{
+	extendedchars=true,
+	basicstyle=\tiny\ttfamily,
+	%basicstyle=\footnotesize\ttfamily,
+	tabsize=2,
+	keywordstyle=\textbf,
+	commentstyle=\color{grau},
+	stringstyle=\textit,
+	numbers=left,
+	numberstyle=\tiny,
+	% für schönen Zeilenumbruch
+	breakautoindent  = true,
+	breakindent      = 2em,
+	breaklines       = true,
+	postbreak        = ,
+	prebreak         = \raisebox{-.8ex}[0ex][0ex]{\Righttorque},
+}
+
+% linksbündige Fußboten
+\deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
+
+\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
+% für autoref von Gleichungen in itemize-Umgebungen
+\makeatletter
+\newcommand{\saved@equation}{}
+\let\saved@equation\equation
+\def\equation{\@hyper@itemfalse\saved@equation}
+\makeatother 
