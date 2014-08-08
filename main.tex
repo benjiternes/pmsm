@@ -48,14 +48,13 @@
 \end{center}
 \clearpage
 
-\ihead{\headmark}
-\chead{}
-\ohead{\pagemark}
-\ifoot{}
-\cfoot{}
-\ofoot{}
-
-\pagestyle{scrheadings} 
+\pagestyle{scrheadings}
+\ohead[]{\pagemark}
+\ihead[]{\headmark}
+\ifoot[]{}
+\automark[chapter]{chapter}
+\automark*[section]{}
+\renewcommand*{\chapterpagestyle}{scrheadings}
 % ----------------------------------------------------------------------------------------------------------
 % Verzeichnisse
 % ----------------------------------------------------------------------------------------------------------
@@ -71,7 +70,10 @@
 % ----------------------------------------------------------------------------------------------------------
 \section*{Allgemeine Symbole}\label{s.sym.alg}
 \begin{flushleft}\begin{tabularx}{\textwidth}{l l X}
-Symbol & Bedeutung	& Einheit\\ 
+Symbol & Bedeutung	& Einheit\\
+\\
+\hline
+\\ 
 $I$	& elektrische Stromstärke	&	$A$ \\
 $\Theta$	&	elektrische Durchflutung 	&	$A$	\\
 $A$			&	elektrischer Strombelag  	&  	$A/m$\\ 
@@ -97,7 +99,7 @@ $V_m$		&	magnetische Spannung		&	$A$
 % ----------------------------------------------------------------------------------------------------------
 \cleardoublepage
 \input{grundlagen}
-%\input{Kapitel_2}
+%\input{_template}
 %\input{Kapitel_3}
 %\input{Kapitel_4}
 %\input{Kapitel_5}

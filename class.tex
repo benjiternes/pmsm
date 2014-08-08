@@ -1,12 +1,13 @@
 \documentclass[fontsize=12pt,%
 paper=a4,%
-headinclude,%
+DIV=classic,%
+BCOR=8mm,%
 twoside=false,%
-parskip=half+,%
+headings=openany,%
+parskip=half,%
 pagesize=auto,%
 numbers=noenddot,%
-plainheadsepline,%
-open=right,%
+headsepline=true,%
 toc=listof,%
 toc=bibliography%
 ]{scrreprt}
@@ -16,18 +17,19 @@ toc=bibliography%
 \pdfobjcompresslevel=1
 
 % Schriften
-%\usepackage{mathpazo}
-%\usepackage{mathpazo,tgpagella}
-\usepackage{libertine}
+\usepackage{mathpazo,tgpagella}
+%\usepackage{libertine}
 %\usepackage{fourier}
 \usepackage{lmodern}
 
 % Allgemeines
-\usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
-\automark[chapter]{section}
 \usepackage{amsmath,marvosym} % Mathesachen
 \usepackage[T1]{fontenc} % Ligaturen, richtige Umlaute im PDF
 \usepackage[utf8]{inputenc}% UTF8-Kodierung für Umlaute usw
+
+\usepackage{scrlayer-scrpage} 
+\pagestyle{scrheadings}
+
 
 \usepackage{setspace}
 %\onehalfspacing 
@@ -43,13 +45,14 @@ toc=bibliography%
 \setkomafont{caption}{\small}
 
 % Sprache: Deutsch
-\usepackage[ngerman]{babel}
-
+\usepackage[autostyle,babel,german=guillemets,style=german]{csquotes}
+\usepackage[USenglish,ngerman]{babel} 
+\selectlanguage{ngerman}
 % PDF
 \usepackage[ngerman,%
 pdfauthor={B. Ternes},%
 pdftitle={Modellierung einer anisotropen Synchronmaschine mit Simulink},%
-colorlinks=true,linkcolor=magenta,citecolor=magenta,filecolor=magenta,urlcolor=magenta%
+colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
 ]{hyperref}
 
 % BibLaTeX
@@ -59,7 +62,7 @@ colorlinks=true,linkcolor=magenta,citecolor=magenta,filecolor=magenta,urlcolor=m
  sorting=anyt,%
  sortcites=true,%
  hyperref=auto,%
- maxnames=3,%
+ maxnames=2,%
  minnames=1,%
  dashed=false%
 ]{biblatex}
@@ -136,3 +139,17 @@ colorlinks=true,linkcolor=magenta,citecolor=magenta,filecolor=magenta,urlcolor=m
 \let\saved@equation\equation
 \def\equation{\@hyper@itemfalse\saved@equation}
 \makeatother 
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+
+\definecolor{light-gray}{gray}{0.85}
+
+\newmdenv[%
+    backgroundcolor=light-gray,
+    linecolor=light-gray,
+    outerlinewidth=2pt,
+    roundcorner=2mm,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip,
+]{shaded}
