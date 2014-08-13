@@ -1,0 +1,15 @@
+[0] Config.pm:320> INFO - This is Biber 1.9
+[0] Config.pm:323> INFO - Logfile is 'main.blg'
+[26] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
+[26] Biber.pm:333> INFO - Reading 'main.bcf'
+[83] Biber.pm:632> INFO - Using all citekeys in bib section 0
+[115] Biber.pm:3051> INFO - Processing section 0
+[137] Biber.pm:3189> INFO - Looking for bibtex format file 'bibo.bib' for section 0
+[140] bibtex.pm:990> INFO - Decoding LaTeX character macros into UTF-8
+[142] bibtex.pm:864> INFO - Found BibTeX data source 'bibo.bib'
+[447] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[447] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[447] Biber.pm:2928> INFO - Sorting list 'anyt' of type 'entry' with scheme 'anyt' and locale 'de-DE'
+[447] Biber.pm:2932> INFO - No sort tailoring available for locale 'de-DE'
+[537] bbl.pm:517> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[541] bbl.pm:606> INFO - Output to main.bbl
