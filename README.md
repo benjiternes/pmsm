@@ -12,3 +12,4 @@ Auslegung eines parametriesierten Modells einer vektorgeregelten anisotropen Syn
 Autoren:
 Benjamin Ternes, B. Eng.	E-Mail: benji.ternes@gmail.com
 Jan Feldkamp, B. Eng.		E-Mail: jan.feldkamp@hs-bochum.de
+TEST
