@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Symbolverzeichnis}{1}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Theoretische Grundlagen und begriffliche Erkl\IeC {\"a}rungen}{2}{chapter.1}
+\contentsline {chapter}{\numberline {1}Theoretische und begriffliche Grundlagen}{2}{chapter.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Dreiphasensystem}{2}{section.1.1}
 \defcounter {refsection}{0}\relax 
@@ -25,40 +25,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Einf\IeC {\"u}hrung Synchronmaschine}{4}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Permanenterregte Synchronmaschine}{4}{section.1.6}
+\contentsline {paragraph}{\nonumberline Historischer Hintergund}{4}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.7}Evalurierung der Ersatzschaltbilder f\IeC {\"u}r die Regelung}{4}{section.1.7}
+\contentsline {subsection}{\numberline {1.5.1}Beschreibung der Synchronmaschine im dq-Koordinatensystem}{6}{subsection.1.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{6}{chapter.2}
+\contentsline {section}{\numberline {1.6}Besonderheiten der Schenkelpolmaschine}{6}{section.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{6}{section.2.1}
+\contentsline {section}{\numberline {1.7}Permanenterregte Synchronmaschine}{6}{section.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{9}{section.2.2}
+\contentsline {section}{\numberline {1.8}Evalurierung der Ersatzschaltbilder f\IeC {\"u}r die Regelung}{6}{section.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{12}{section.2.3}
+\contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{14}{section.2.4}
+\contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{7}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{17}{chapter.3}
+\contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{10}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{17}{section.3.1}
+\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{13}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Darstellung der Simulationsergebnisse}{17}{section.3.2}
+\contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{15}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Regelung der PMSM mit Simulink}{18}{chapter.4}
+\contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{18}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung in Simulink}{18}{section.4.1}
+\contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{18}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung in die TI-Bibliotheken}{18}{section.4.2}
+\contentsline {section}{\numberline {3.2}Darstellung der Simulationsergebnisse}{18}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}\IeC {\"U}bersicht der Regelstruktur}{18}{section.4.3}
+\contentsline {chapter}{\numberline {4}Regelung der PMSM mit Simulink}{19}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Subsysteme}{18}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung in Simulink}{19}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Auswertung der Simulationsergebnisse}{19}{chapter.5}
+\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung in die TI-Bibliotheken}{19}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Vergleich der Ergebnisse der TI-Bibliotheken}{19}{section.5.1}
+\contentsline {section}{\numberline {4.3}\IeC {\"U}bersicht der Regelstruktur}{19}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{20}{chapter.6}
+\contentsline {subsection}{\numberline {4.3.1}Subsysteme}{19}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{21}{chapter*.6}
+\contentsline {chapter}{\numberline {5}Auswertung der Simulationsergebnisse}{20}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Vergleich der Ergebnisse der TI-Bibliotheken}{20}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{21}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{22}{chapter*.7}
