@@ -6,61 +6,18 @@
 
 Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im folgenden einige Grundlagen erörtert.
 
-\section{Dreiphasensystem}\label{sec:dreiphasensystem}
+\section{Theorie der Drehfeldmaschinen}\label{sec:grund-drehfeld}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{dreiphasensystem.pdf}
-\label{fig:dreiphasensystem}
-\caption{Darstellung des Dreiphasensystem mit \textsc{Mathematica}.}
-\end{figure}
+Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen, der Grund hierfür ist die Robustheit der aktiven Bauteile und die gute Energieeffizienz.
+Zudem besitzen Drehfeldmaschinen ein großes Leistungsspektrum und einen großen Drehzahl- und Drehmomentstellbereich.
+Die wesentlichen Vertreter der Maschinenfamilie sind die Synchron- und die Asynchronmaschinen.
+Beide basieren auf der Wirkung eines Drehfeldes, das sich durch den Luftspalt der Maschine bewegt.
 
-\section{Einführung Magnetfelder}\label{sec:magnetfelder}
+\subsection{Magnetfelder}
 
-\subsection{Strombelag}\label{sec:strombelag}
+\subsubsection{•}
 
-Die zeitliche und örtliche Änderung von Magnetfeldern in elektrischen Maschinen wird bestimmt durch die Anordnung stromdurchflossener Leiter und die Art der Speisung \parencite[S.~199]{hofmann2013}.
-Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben.
-Wenn die Oberfläche eines ferromagnetischen Körpers einen Strombelag $A$ führt, d.\ h.\ wenn eine flächenhafte Strömung vorliegt, liefert das Durchflutungsgesetz
 
-\begin{align}
-\oint_{s}{\vec{H}d\vec{s}} = w\cdot I = \Theta \label{durchflutungsgesetz}
-\end{align}
-
-$Hds=Ads$, d.\ h.\ $H = A$ bzw.\ $B = \mu A$.
-Folgernd existieren neben den Normalkomponenten, $B_n$ und $H_n$ die Tangentialkomponenten $H_t$ und $B_t$ der Feldgrößen.
-Die Feldlinien treten nicht mehr senkrecht aus der Randkurve aus, sondern unter einem Winkel $\alpha$.
-
-\begin{align}
-\alpha = \arctan(\frac{B_n}{\mu A}) \label{strombelagwinkel}
-\end{align}
-
-Der Strombelag wird über dem Umlauf einer Spule bzw.\ Spulengruppe angegeben.
-
-\begin{align}
-\Theta(x) = - \int_{x_0}^{x} A(x)dx \label{durchflutung}
-\end{align}
-
-damit erhält man durch Differentation den Strombelag $A$
-
-\begin{align}
-A(x) = -\partial_x \Theta(x) \label{Strombelag}
-\end{align}
-
-mit
-
-\begin{align}
-\Theta(x) = \hat{\Theta}(x)\cdot \cos(\frac{\pi}{\tau_p}(x-x_\mu)) \label{adurchflutung}
-\end{align}
-
-Nach \ref{durchflutung} ist offensichtlich, dass eine sinusförmige Durchflutungsverteilung nur dann entstehen kann, wenn der Ankerstrombelag ebenfalls sinusförmig, aber um eine Polteilung versetzt ist \parencite[S.~247]{mullerI2005}.
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.5\textwidth]{strombelag.pdf}
-%\label{fig:strombelag}
-%\caption{Darstellung des sinusförmigen Verlaufs des Strombelags über dem Umlauf.}
-%\end{figure}
 
 \section{Allgemeine Grundlagen der Drehstrommaschinen}\label{sec:drehstrommaschinen}
 
