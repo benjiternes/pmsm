@@ -12,18 +12,76 @@ Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen, der Gr
 Zudem besitzen Drehfeldmaschinen ein großes Leistungsspektrum und einen großen Drehzahl- und Drehmomentstellbereich.
 Die wesentlichen Vertreter der Maschinenfamilie sind die Synchron- und die Asynchronmaschinen.
 Beide basieren auf der Wirkung eines Drehfeldes, das sich durch den Luftspalt der Maschine bewegt.
-
-\subsection{Magnetfelder}
-
-\subsubsection{•}
-
-
-
-\section{Allgemeine Grundlagen der Drehstrommaschinen}\label{sec:drehstrommaschinen}
-
 Die Synchron- und Asynchronmaschine besitzen im Ständer denselben Aufbau und erfordern zur Darstellung ihres Verhaltens eine Reihe gleicher physikalischer Begriffe.
 Es ist zweckmäßig die Grundlagen der Synchronmaschine in einem eigenen Kapitel zu behandeln.
-Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zu Beschreibung von umlaufenden Durchflutungen und deren Felder.
+Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
+
+\section{Magnetfelder}
+
+
+
+\subsection{Strombelag}
+
+Die örtliche und zeitliche Änderung von Magnetfeldern in elektrischen Maschinen wird durch die Anordnung der Leiter und die Art der Speisung bestimmt \autocite[S~199]{hofmann2013}.
+Die räumliche Verteilung des Stromes wird durch den Strombelag bestimmt, der als $N\cdot I$ pro Länge des bewickelten Umfanges definiert ist.
+
+Das Luftspaltfeld hat die zentrale Bedeutung und muss deshalb auch berechnet werden können.
+Die Ursache für die Entstehung dieses Luftspaltfeldes sind die vom Strom durchflossenen Leiter in den Nuten des Stators.
+Unter der idealisierten Annahme eines homogenen Feldverlaufs im Bereich der Nutöffnung (s.\ h.\ \autoref{fig:nutquerfeld}) das Feld im Luftspalt vom Feld in der Nut getrennt.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{nutquerfeld.pdf}
+\label{fig:nutquerfeld}
+\caption{Abbildung des Nutquerfeldes einer Rechtecknut im Stator.}
+\end{figure}
+
+Hierzu wird die oben abgebildete Nut betrachtet, wobei die Permeabilität des Eisens als sehr groß gegenüber derjenigen von Luft angenommen wird ($\mu_{Fe} \rightarrow \infty$).
+Es bildet sich ein Nutquerfeld aus, das ist leicht aus dem Durchflutungsgesetzt herzuleiten.
+
+\begin{align}
+\oint \vec{H}d\vec{l} = \Theta \label{eqn:durchflutungsgesetzt}
+\end{align}
+
+Dieses Nutquerfeld stößt an der Grenzfläche zwischen Nutöffnung (Nutschlitz bzw.\ Streuschlitz) und Luftspalt an das zu berechnende Luftspaltfeld und stellt somit eine der Randbedingungen zur Berechnung des Luftspaltfeldes dar.
+Das Magnetische Feld in der Nutöffnung $H_{S}$, dass unter idealisierte Annahme tangential gerichtet ist, kann wiederum auch aus dem Durchflutungsgesetz berechnet werden.
+
+\begin{align}
+H_S = \frac{\Theta_{Nut}}{b_S}
+\end{align}
+
+Diese Randbedingung zur Berechnung des Luftspaltfeldes kann auch anders erzeugt werden.
+Unter Annahme, dass die Nutdurchflutung $\Theta$ unendlich dünn auf einer glatten Eisenoberfläche gleichmäßig im Bereich der Nutöffnung $b_S$ verteilt ist.
+Diese Modellvorstellung wird mit Hilfe des Strombelages beschrieben.
+
+\begin{align}
+A = \frac{\Theta_{Nut}}{b_S}
+\end{align}
+
+\autoref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen Beschreibung.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{strombelag_neu.pdf}
+\label{fig:strombelag-neu}
+\caption{Vereinfachte Modellvorstellung zur Berechnung des Luftspaltfeldes mit Hilfe des Strombelags.}
+\end{figure}
+
+Bei Auswertung des Durchflutungsgesetz bei einem Umlauf um diesen Strombelag, ergibt sich für die tangentiale Feldstärke $H_t$ an der Eisenoberfläche im Bereich des Strombelages
+
+\begin{align}
+\oint \vec{H}d\vec{l} = \Theta_Nut \\
+H_t\cdot b_S = A\cdot b_S \\
+H_t = A = \frac{\Theta_{Nut}}{b_S} \label{eqn:feld-ht}
+\end{align}
+
+Mit \autoref{eqn:feld-ht} ist gezeit, dass die Randbedingungen zur Berechnung des Luftspaltfeldes unverändert erhalten bleibt, wenn statt der in Nuten eingebrachten Leiter ein äquivalenter Strombelag auf der glatten Eisenoberfläche berücksichtigt wird (Die Wirkung der Nutdurchflutung wird hinreichend genau durch den über der Nutöffnung verteilten Strombelag beschrieben).
+Zur Berechnung des Luftspaltfeldes muss also nun das Nutenfeld \autocite[S.~14]{ternes2013} nicht berücksichtigt werden.
+Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
+
+\begin{quote}
+Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. TU München)
+\end{quote}
 
 \subsection{Drehstromwicklungen}
 
@@ -53,11 +111,17 @@ Bei einer zweipoligen Maschine mit $p=1$ stimmen somit der räumlich mechanische
 \gamma_{el} = p\cdot \gamma_{mech}
 \end{align}
 
+BBB Noch überarbeiten, Quellen: Fischer, Schröder, DISS von Bruhn BBB
 
+BBB Abbildungen erstellen BBB
+
+BBB Formeln? BBB
+
+BBB Nicht äquivalent??? BBB
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.5\textwidth]{Visio-synchronmaschine-drehstrom.pdf}
+\includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
 \label{fig:drehstromwicklung}
 \caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld in Anlehnung an \autocite[S.~141]{fischer2009}}
 \end{figure}
@@ -83,11 +147,46 @@ Dabei verliert man die Beeinflussung des Erregerzustandes über den Erregerstrom
 
 \subsection{Beschreibung der Synchronmaschine im dq-Koordinatensystem}
 
+Im folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagneten ersetzt wird.
+In diesem Fall verbleiben nur die drei Statorwicklungen als stromdurchflossene Wicklungen.
+Wesentlich bei den nachstehenden Überlegungen ist es, ob die Synchronmaschine als symmetrische Maschine (Vollpolläufer) oder als unsymmetrische Maschine (Schenkelpolläufer) konzipiert ist.
+Die Wahl der Konzipierung hat Auswirkungen auf die Möglichkeit, Feldschwächebetrieb zu erreichen oder nur bedingt und dann mit Einschränkungen \autocite[S.~291]{schroder2000}.
+Wird die Synchronmaschine in der Statorwicklung mit einer sinusförmigen Spannung versorgt, so ist diese als (PMSM) permanentmagneterregte Synchronmaschine definiert.
+Bei einer trapezförmigen Speisung der Statorwicklung wird die Maschine als (BLDC) bürstenlose Gleichstrommaschine bezeichnet.
+Der einfachste Fall für die Ermittlung des Signalflussplanes ist die Annahme, dass die Maschine an der Statorwicklung eine sinusförmige Spannung anliegt und die Maschine symmetrisch konzipiert wurde.
+Bei einer symmetrisch konzipierten Synchronmaschine werden die Reluktanzeinflüsse nicht wirksam.
+Damit ergeben sich nach \autocite[S.~291]{schroder2000} folgende Gleichungen für die Synchron-Vollpolmaschine.
+
+\begin{align}
+\frac{d\psi_d}{dt} &= U_d - R_1\cdot I_d + \Omega_L\cdot\psi_q \\
+\frac{d\psi_q}{dt} &= U_q - R_1\cdot I_q + \Omega_L\cdot\psi_d \\
+\end{align}
+
+mit 
+
+\begin{align}
+\psi_d &= \psi_{PM} + L_d\cdot I_d\\
+\psi_q &= L_q\cdot I_q
+\end{align}
+
+Damit ergibt sich das innere Luftspaltdrehmoment $M_i$ zu:
+
+\begin{align}
+M_i &= \frac{3}{2}\cdot Z_p \cdot (\psi_d\cdot I_q - \psi_q\cdot I_d) \\
+\nonumber &= \frac{3}{2}\cdot Z_p \cdot (\underbrace{\psi_{PM}\cdot I_q}_{\text{~Hauptmoment}} + \underbrace{(L_d-L_q)\cdot I_d\cdot I_q}_{\text{~Reluktanzmoment}})
+\end{align}
+
+und der allgemeinen mech.\ Bewegungsgleichung
+
+\begin{align}
+\Theta\cdot \frac{d\Omega_m}{dt} = M_i - M_L
+\end{align}
+
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{synchron-dq.pdf}
 \label{fig:synchron-dq}
-\caption{Darstellung der Synchronmaschine im dq-Koordinatensystem in Anlehnung an \parencite[S.~257]{schroeder2000}.}
+\caption{Darstellung der Synchronmaschine im dq-Koordinatensystem.}
 \end{figure}
 
 \section{Besonderheiten der Schenkelpolmaschine}\label{sec:schenkelpol}

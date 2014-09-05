@@ -385,6 +385,30 @@
       \field{title}{Mathematica: Einführung, Anwendung, Referenz}
       \field{year}{2002}
     \endentry
+    \entry{kornmeier}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=6b1d267ded98253901436199cf4533e6}{Kornmeier}{K\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6b1d267ded98253901436199cf4533e6}{Kornmeier}{K\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Bern}%
+      }
+      \list{publisher}{1}{%
+        {Haupt UTB}%
+      }
+      \strng{namehash}{6b1d267ded98253901436199cf4533e6}
+      \strng{fullhash}{6b1d267ded98253901436199cf4533e6}
+      \field{sortinit}{K}
+      \field{sortinithash}{33bf4c961fa093ee6a297ccbd88eacc0}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Wissenschaftliches schreiben leicht gemacht}
+      \field{edition}{6}
+      \field{title}{Wissenschaftliches schreiben leicht gemacht}
+      \field{year}{2013}
+    \endentry
     \entry{kovacs1959}{book}{}
       \name{labelname}{2}{}{%
         {{uniquename=0,hash=3ad1694fde29b9e65608d690b1a5a27e}{Kovács}{K\bibinitperiod}{K.}{K\bibinitperiod}{}{}{}{}}%
@@ -788,6 +812,74 @@
       \field{edition}{6}
       \field{title}{Taschenbuch der Physik}
       \field{year}{2010}
+    \endentry
+    \entry{ternes2012}{inproceedings}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=1068f64d0d3ba9fa433c2dd7ba9354d7}{Ternes}{T\bibinitperiod}{Benjamin}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1068f64d0d3ba9fa433c2dd7ba9354d7}{Ternes}{T\bibinitperiod}{Benjamin}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {CADFEM}%
+      }
+      \strng{namehash}{1068f64d0d3ba9fa433c2dd7ba9354d7}
+      \strng{fullhash}{1068f64d0d3ba9fa433c2dd7ba9354d7}
+      \field{sortinit}{T}
+      \field{sortinithash}{9378dd666f3c24d81538df53aa99e23d}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Beitrag zur internationalen ANSYS Konferenz in Kassel -- Simulation des Synchronprozesses}
+      \field{booktitle}{Nutzung des Tools EM-Praktikum und ANSYS in den Lehrveranstaltungen der Elektrischen Maschinen}
+      \field{title}{Beitrag zur internationalen ANSYS Konferenz in Kassel -- Simulation des Synchronprozesses}
+      \field{year}{2012}
+      \field{pages}{108\bibrangedash 112}
+    \endentry
+    \entry{ternes2013}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=1068f64d0d3ba9fa433c2dd7ba9354d7}{Ternes}{T\bibinitperiod}{Benjamin}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1068f64d0d3ba9fa433c2dd7ba9354d7}{Ternes}{T\bibinitperiod}{Benjamin}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{2}{%
+        {FH Dortmund, University of Applied Science}%
+        {Arts}%
+      }
+      \strng{namehash}{1068f64d0d3ba9fa433c2dd7ba9354d7}
+      \strng{fullhash}{1068f64d0d3ba9fa433c2dd7ba9354d7}
+      \field{sortinit}{T}
+      \field{sortinithash}{9378dd666f3c24d81538df53aa99e23d}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Softwaregestützte Berechnung von Stator- und Rotoroberströmen in Abhängigkeit der Drehzahl eines asynchronen Käfigläufermotors auf Basis der Oberfeldtheorie}
+      \field{title}{Softwaregestützte Berechnung von Stator- und Rotoroberströmen in Abhängigkeit der Drehzahl eines asynchronen Käfigläufermotors auf Basis der Oberfeldtheorie}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2013}
+    \endentry
+    \entry{theisen}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=3e5771a181dde6a12d4b54cb9e96aeb7}{Theisen}{T\bibinitperiod}{{M.\bibnamedelimi R.}}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=3e5771a181dde6a12d4b54cb9e96aeb7}{Theisen}{T\bibinitperiod}{{M.\bibnamedelimi R.}}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Vahlen}%
+      }
+      \strng{namehash}{3e5771a181dde6a12d4b54cb9e96aeb7}
+      \strng{fullhash}{3e5771a181dde6a12d4b54cb9e96aeb7}
+      \field{sortinit}{T}
+      \field{sortinithash}{9378dd666f3c24d81538df53aa99e23d}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Wissenschaftliches Arbeiten}
+      \field{edition}{16}
+      \field{title}{Wissenschaftliches Arbeiten}
+      \field{year}{2013}
     \endentry
     \entry{unbehauenI2008}{book}{}
       \name{labelname}{1}{}{%

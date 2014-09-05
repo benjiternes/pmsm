@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.10)  26 AUG 2014 10:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.10)  3 SEP 2014 14:58
 entering extended mode
 **main.tex
 (C:\Users\benji\Desktop\_PMSM\main.tex
@@ -1734,7 +1734,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<_Bilder/bo.pdf, id=135, 470.35765pt x 106.9248pt>
+<_Bilder/bo.pdf, id=127, 470.35765pt x 106.9248pt>
 File: _Bilder/bo.pdf Graphic file (type pdf)
  <use _Bilder/bo.pdf>
 Package pdftex.def Info: _Bilder/bo.pdf used on input line 25.
@@ -1780,14 +1780,6 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 62
  [4
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 63
-.
-
-(C:\Users\benji\Desktop\_PMSM\main.lot)
-\tf@lot=\write8
- [5
-
-]
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <17.28> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 71.
  [1
@@ -1810,106 +1802,107 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-<_Bilder/dreiphasensystem.pdf, id=243, 584.1825pt x 372.39125pt>
-File: _Bilder/dreiphasensystem.pdf Graphic file (type pdf)
-
-<use _Bilder/dreiphasensystem.pdf>
-Package pdftex.def Info: _Bilder/dreiphasensystem.pdf used on input line 13.
-(pdftex.def)             Requested size: 234.73526pt x 149.63573pt.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 20.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 23.
+<_Bilder/nutquerfeld.pdf, id=235, 426.73528pt x 182.20872pt>
+File: _Bilder/nutquerfeld.pdf Graphic file (type pdf)
+
+<use _Bilder/nutquerfeld.pdf>
+Package pdftex.def Info: _Bilder/nutquerfeld.pdf used on input line 34.
+(pdftex.def)             Requested size: 469.47052pt x 200.46078pt.
  [2
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.28 \end{align}
-                 <C:/Users/benji/Desktop/_PMSM/_Bilder/dreiphasensystem.pdf>]
-[3]
-<_Bilder/Visio-synchronmaschine-drehstrom.pdf, id=276, 207.93584pt x 217.10912p
-t>
-File: _Bilder/Visio-synchronmaschine-drehstrom.pdf Graphic file (type pdf)
- <use _Bilder/Visio-synchronmaschine-drehstrom.pdf>
-Package pdftex.def Info: _Bilder/Visio-synchronmaschine-drehstrom.pdf used on i
-nput line 103.
-(pdftex.def)             Requested size: 234.73526pt x 245.10516pt.
-
-
-LaTeX Warning: Citation 'ternes2012' on page 4 undefined on input line 112.
-
-[4]
-
-LaTeX Warning: Citation 'ternes2012' on page 5 undefined on input line 116.
-
-<_Bilder/synchron-dq.pdf, id=297, 597.45204pt x 256.13994pt>
-File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
-
-<use _Bilder/synchron-dq.pdf>
-Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 131.
-(pdftex.def)             Requested size: 469.47052pt x 201.27351pt.
-
-
-LaTeX Warning: Citation 'schroeder2000' on page 5 undefined on input line 133.
-
-
-LaTeX Warning: Citation 'schroeder2000' on page 5 undefined on input line 133.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
-[] []\T1/lmr/m/n/10.95 (+20) Darstellung der Syn-chron-ma-schi-ne im dq-
+]
+Overfull \hbox (0.44557pt too wide) in paragraph at lines 46--48
+[]\T1/lmr/m/n/12 (-20) Dieses Nut-quer-feld stöÿt an der Grenz-flä-che zwi-sche
+n Nut-öff-nung (Nutschlitz bzw. Streuschlitz)
  []
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}
+<_Bilder/strombelag_neu.pdf, id=242, 426.73528pt x 179.3631pt>
+File: _Bilder/strombelag_neu.pdf Graphic file (type pdf)
+
+<use _Bilder/strombelag_neu.pdf>
+Package pdftex.def Info: _Bilder/strombelag_neu.pdf used on input line 65.
+(pdftex.def)             Requested size: 469.47052pt x 197.33011pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.134 \end{figure}
-                   <C:/Users/benji/Desktop/_PMSM/_Bilder/Visio-synchronmaschine
--drehstrom.pdf>]
-<_Bilder/synchron-esb-kremser2004.pdf, id=311, 597.45204pt x 113.92162pt>
+l.71 
+      <C:/Users/benji/Desktop/_PMSM/_Bilder/nutquerfeld.pdf>] [4pdfTeX warning 
+(ext4): destination with the same identifier (name{figure.1.2}) has been alread
+y used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.94 
+      <C:/Users/benji/Desktop/_PMSM/_Bilder/strombelag_neu.pdf>]
+<_Bilder/synchronmaschine-drehstrom.pdf, id=296, 426.73528pt x 222.04758pt>
+File: _Bilder/synchronmaschine-drehstrom.pdf Graphic file (type pdf)
+
+<use _Bilder/synchronmaschine-drehstrom.pdf>
+Package pdftex.def Info: _Bilder/synchronmaschine-drehstrom.pdf used on input l
+ine 124.
+(pdftex.def)             Requested size: 469.47052pt x 244.29034pt.
+ [5] [6pdfTeX warning (ext4): destination with the same identifier (name{figure
+.1.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.141 
+       <C:/Users/benji/Desktop/_PMSM/_Bilder/synchronmaschine-drehstrom.pdf>]
+[7] <_Bilder/synchron-dq.pdf, id=347, 426.73528pt x 239.11333pt>
+File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
+
+<use _Bilder/synchron-dq.pdf>
+Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 187.
+(pdftex.def)             Requested size: 469.47052pt x 263.0656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+[] []\T1/lmr/m/n/10.95 (+20) Darstellung der Syn-chron-ma-schi-ne im dq-
+ []
+
+<_Bilder/synchron-esb-kremser2004.pdf, id=348, 597.45204pt x 113.92162pt>
 File: _Bilder/synchron-esb-kremser2004.pdf Graphic file (type pdf)
 
 <use _Bilder/synchron-esb-kremser2004.pdf>
 Package pdftex.def Info: _Bilder/synchron-esb-kremser2004.pdf used on input lin
-e 144.
+e 200.
 (pdftex.def)             Requested size: 469.47052pt x 89.51904pt.
-)
-(C:\Users\benji\Desktop\_PMSM\vektor.tex [6pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.1.3}) has been already used, duplicate ign
-ored
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5 \chapter
-            {Grundlagen der Vektorregelung}pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.1.4}) has been already used, duplicate ign
+l.203 \end{figure}
+                   <C:/Users/benji/Desktop/_PMSM/_Bilder/synchron-dq.pdf>])
+(C:\Users\benji\Desktop\_PMSM\vektor.tex [9pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.1.5}) has been already used, duplicate ign
 ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.5 \chapter
             {Grundlagen der Vektorregelung} <C:/Users/benji/Desktop/_PMSM/_Bild
-er/synchron-dq.pdf> <C:/Users/benji/Desktop/_PMSM/_Bilder/synchron-esb-kremser2
-004.pdf>]
+er/synchron-esb-kremser2004.pdf>]
 Kapitel 2.
-[7
+[10
 
-] <_Bilder/zeitzeiger.pdf, id=351, 284.26201pt x 284.26201pt>
+] <_Bilder/zeitzeiger.pdf, id=397, 284.26201pt x 284.26201pt>
 File: _Bilder/zeitzeiger.pdf Graphic file (type pdf)
 
 <use _Bilder/zeitzeiger.pdf>
 Package pdftex.def Info: _Bilder/zeitzeiger.pdf used on input line 49.
 (pdftex.def)             Requested size: 234.73526pt x 234.74458pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-}) has been already used, duplicate ignored
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1919,7 +1912,7 @@ Overfull \hbox (37.6089pt too wide) in paragraph at lines 81--81
 [] 
  []
 
-<_Bilder/raumzeigermaschine.pdf, id=384, 739.56299pt x 369.7815pt>
+<_Bilder/raumzeigermaschine.pdf, id=429, 739.56299pt x 369.7815pt>
 File: _Bilder/raumzeigermaschine.pdf Graphic file (type pdf)
 
 <use _Bilder/raumzeigermaschine.pdf>
@@ -1935,7 +1928,7 @@ er
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9]
+[12]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 119.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1965,7 +1958,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 119.
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1974,10 +1967,10 @@ l.141 \end{align}
                   <C:/Users/benji/Desktop/_PMSM/_Bilder/raumzeigermaschine.pdf>
 ]
 
-LaTeX Warning: Reference `alphabetakoordinaten' on page 11 undefined on input l
+LaTeX Warning: Reference `alphabetakoordinaten' on page 14 undefined on input l
 ine 155.
 
-<_Bilder/alphabetakoordinaten.pdf, id=423, 284.26201pt x 284.26201pt>
+<_Bilder/alphabetakoordinaten.pdf, id=469, 284.26201pt x 284.26201pt>
 File: _Bilder/alphabetakoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/alphabetakoordinaten.pdf>
@@ -1997,14 +1990,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--161
  (+20) -
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.179 \end{align}
                   <C:/Users/benji/Desktop/_PMSM/_Bilder/alphabetakoordinaten.pd
-f>] [12] <_Bilder/dqkoordinaten.pdf, id=465, 340.8735pt x 284.26201pt>
+f>] [15] <_Bilder/dqkoordinaten.pdf, id=512, 340.8735pt x 284.26201pt>
 File: _Bilder/dqkoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/dqkoordinaten.pdf>
@@ -2020,21 +2013,21 @@ der d-q-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14pdfTeX warning (ext4): destination with the same identifier (name{figur
+[16] [17pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.372 
        <C:/Users/benji/Desktop/_PMSM/_Bilder/dqkoordinaten.pdf>]
-<_Bilder/blockbildclarke.pdf, id=501, 170.43675pt x 113.223pt>
+<_Bilder/blockbildclarke.pdf, id=547, 170.43675pt x 113.223pt>
 File: _Bilder/blockbildclarke.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildclarke.pdf>
 Package pdftex.def Info: _Bilder/blockbildclarke.pdf used on input line 375.
 (pdftex.def)             Requested size: 234.73526pt x 155.94902pt.
 
-<_Bilder/blockbildpark.pdf, id=502, 170.43675pt x 142.13101pt>
+<_Bilder/blockbildpark.pdf, id=548, 170.43675pt x 142.13101pt>
 File: _Bilder/blockbildpark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildpark.pdf>
@@ -2056,14 +2049,14 @@ Package pdftex.def Info: _Bilder/blockbildpark.pdf used on input line 400.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<_Bilder/blockbildclarkepark.pdf, id=503, 284.26201pt x 142.13101pt>
+<_Bilder/blockbildclarkepark.pdf, id=549, 284.26201pt x 142.13101pt>
 File: _Bilder/blockbildclarkepark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildclarkepark.pdf>
 Package pdftex.def Info: _Bilder/blockbildclarkepark.pdf used on input line 409
 .
 (pdftex.def)             Requested size: 234.73526pt x 117.37228pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2085,7 +2078,7 @@ rk.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<_Bilder/blockbildinverseclarkepark.pdf, id=539, 284.26201pt x 142.13101pt>
+<_Bilder/blockbildinverseclarkepark.pdf, id=585, 284.26201pt x 142.13101pt>
 File: _Bilder/blockbildinverseclarkepark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildinverseclarkepark.pdf>
@@ -2096,7 +2089,7 @@ ine 418.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (C:\Users\benji\Desktop\_PMSM\anforderung.tex [16pdfTeX warning (ext4): desti
+) (C:\Users\benji\Desktop\_PMSM\anforderung.tex [19pdfTeX warning (ext4): desti
 nation with the same identifier (name{figure.2.7}) has been already used, dupli
 cate ignored
 
@@ -2111,7 +2104,7 @@ n already used, duplicate ignored
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil fÃ¼r die Regelung der PMSM mit Simulink}]
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2133,55 +2126,50 @@ verseclarkepark.pdf): PDF inclusion: multiple pdfs with page group included in
 a single page
 >]
 Kapitel 3.
-) (C:\Users\benji\Desktop\_PMSM\regelung.tex [18
+) (C:\Users\benji\Desktop\_PMSM\regelung.tex [21
 
 ]
 Kapitel 4.
-) (C:\Users\benji\Desktop\_PMSM\auswertung.tex [19
+) (C:\Users\benji\Desktop\_PMSM\auswertung.tex [22
 
 ]
 Kapitel 5.
-) (C:\Users\benji\Desktop\_PMSM\zusammenfassung.tex [20
+) (C:\Users\benji\Desktop\_PMSM\zusammenfassung.tex [23
 
 ]
 Kapitel 6.
-) [21
+) [24
 
-] [22
+] [25
 
 
 
-] [23] [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
+] [26] [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (C:\Users\benji\Desktop\_PMSM\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5D097521404369DBB2EA3D3F0A136E73;2417.
+(rerunfilecheck)             Checksum: BCD295E2FA4F55EEBEADC87B8C13DB08;2267.
 
 
 LaTeX Warning: There were undefined references.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35947 strings out of 493921
- 685091 string characters out of 3147282
- 1164653 words of memory out of 3000000
- 38347 multiletter control sequences out of 15000+200000
- 109143 words of font info for 151 fonts, out of 3000000 for 9000
+ 35966 strings out of 493921
+ 685224 string characters out of 3147282
+ 1164464 words of memory out of 3000000
+ 38350 multiletter control sequences out of 15000+200000
+ 109532 words of font info for 153 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  80i,20n,85p,10430b,3305s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
-.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Program 
+{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{D:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-ec.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex
+.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Program 
 Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<D:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
 1/public/mathpazo/fplmr.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
@@ -2198,10 +2186,10 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D:/Program Files/MiKTeX 2
 blic/lm/lmssbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.
 pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><D:/Program Fi
 les/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (29 pages, 1801740 bytes).
+Output written on main.pdf (31 pages, 1071853 bytes).
 PDF statistics:
- 743 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 151 named destinations out of 1000 (max. 500000)
- 37198 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 792 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 35651 words of extra memory for PDF output out of 35830 (max. 10000000)
 
