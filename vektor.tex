@@ -8,11 +8,11 @@
 %% -- Einführung in die Vektorregelung
 In modernen Antriebssystemen ist es häufig unerlässlich, entscheidende Maschinengrößen wie Drehzahl oder Drehmoment auf einen gewünschten Wert einzustellen.
 Dabei kamen der Vergangenheit häufig Gleichstrommaschinen zum Einsatz, welche sich durch gute Regel- und Einstelleigenschaften bei den geforderten Parametern auszeichnen.
-Große Fortschritte in den Bereichen der Leistungselektronik und Reglerkomponenten führen dazu, dass heute Antriebe wesentlich einfacher mit Synchronmaschinen realisiert werden können.
-Dabei haben Drehfeldmaschinen, aufgrund fehlender mechanischer Kommutation den, den Vorteil,dass kein nennenswerter Verschleiß Auftritt.
+Große Fortschritte in den Bereichen der Leistungselektronik und Reglerkomponenten führen dazu, dass Antriebe wesentlich einfacher mit Synchronmaschinen realisiert werden können.
+Dabei haben Drehfeldmaschinen, aufgrund fehlender mechanischer Kommutation den Vorteil, dass kein nennenswerter Verschleiß Auftritt.
 
-Entscheidend für den Aufbau einer geregelten PMSM ist die Vektor- bzw.\ feldorientierte Regelung. 
-Die Maschine wird mit näherungsweise sinusförmig veränderlichen Strömen gespeist. 
+Entscheidend für den Aufbau einer geregelten PMSM ist die Vektor- bzw. feldorientierte Regelung. 
+Die Maschine wird näherungsweise mit sinusförmigen Strömen gespeist. 
 Ebenso besitzen alle weiteren auftretenden elektrischen Größen wie Spannungen, Flüsse oder Felder aufgrund ihres Zeitverhaltens annähernd Sinusform \parencite[S.~1]{nuss2010}.	
 Die Idee der Vektorregelung ist es nun, nicht die zeitlichen Momentanwerte der Ströme zu verändern, sondern die erfassten Wechselgrößen in ein Zwei-komponentiges rotierendes Koordinatensystem zu übertragen.
 Diese Komponenten werden regelungstechnisch verwertet und zurück transformiert.
@@ -57,7 +57,7 @@ Bei der Entwicklung bieten sich die Statorphasenströme $i_{s,1}$, $i_{s,2}$, un
 Diese stehen zu jedem Zeitpunkt zur Verfügung. 
 Es sei angemerkt, dass dabei die Nullbedingung erfüllt ist. 
 Die Summe der Statorphasenströme muss immer null sein, was beim Einsatz von Drehfeldmaschinen idr. gegeben ist.
-Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die dritte zu schließen, da gilt:
+Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die Dritte zu schließen, da gilt:
 
 \begin{align}
 	i_{s,1} + i_{s,2} + i_{s,3} = 0 
@@ -65,7 +65,7 @@ Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die dritte 
 \end{align}
 
 
-Nun ist zweikomponentige Zeitzeiger immer um mindestens zwei Momentanwerte erweiterbar. 
+Nun ist der zweikomponentige Zeitzeiger immer um mindestens zwei Momentanwerte erweiterbar. 
 Ein hierfür geeigneter Ansatz zur Erzeugung eines Raumzeigers wurde erstmals in kovacs1959 veröffentlicht:
 
 \begin{align}
@@ -89,14 +89,15 @@ Wird nun die trigonometrische Cosinus-Funktion durch die entsprechende exponenti
 	\end{split}
 \end{align}
 
-Nach ausmultiplizieren der Therme folgt mit $1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}}=0$ das Ergebnis und somit der Raumzeiger
+Nach ausmultiplizieren der Terme folgt mit $1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}}=0$ das Ergebnis und somit der Raumzeiger
 
 \begin{align}
 	\underline{i}_{s} = \frac{2}{3} \cdot \hat{i}_{s}\cdot\biggl\{ \frac{3}{2} \cdot  e^{j(\omega_{s}t+\varphi_{0})} + \frac{1}{2} \cdot e^{-j(\omega_{s}t+\varphi_{0})} \cdot \bigg( 1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}} \bigg)  \biggr\} = \hat{i}_{s} \cdot e^{j(\omega_{s}t+\varphi_{0})}
 	\label{zeigerende}
 \end{align}
 
-Das Ergebnis von \ref{zeigerende} entspricht strukturell dem in \ref{statorströme} angegebenen Statorstromzeitzeiger. Dadurch ist sichergestellt, dass der Ansatz aus \ref{statorstromzeiger} in der Lage ist als Gesamtzeiger, bestehend aus den Momentanwerten der Statorströme, zu fungieren. 
+Das Ergebnis von \ref{zeigerende} entspricht strukturell dem in \ref{statorströme} angegebenen Statorstromzeitzeiger. 
+Dadurch ist sichergestellt, dass der Ansatz aus \ref{statorstromzeiger} in der Lage ist als Gesamtzeiger, bestehend aus den Momentanwerten der Statorströme, zu fungieren. 
 Die folgende Abbildung \ref{fig:raumzeigermaschine} zeigt zur Veranschaulichung eine zweipolige Drehfeldmaschine mit zugehörigem Zeigerdiagramm, welches den Statorstromraumzeiger beinhaltet. 
 
 \begin{figure}[h]
@@ -194,7 +195,7 @@ Der Faktor $\frac{2}{3}$ normiert dabei $a_{\alpha}$ und $a_{\alpha}$ auf den Be
 Die Transvormation mit diesem Vorfaktor ist daher längeninvariant.
 
 Für eine Regelung fehlt eine Rücktransvormationsvorschrift, mit deren Hilfe die $\alpha$- und $\beta$-Komponente wieder in ein Dreiphasensystem gebracht werden kann.
-Die Inverse Matrix bildet sich aus der Transformationsmatrix \ref{clarkematrix}. 
+Die inverse Matrix bildet sich aus der Transformationsmatrix \ref{clarkematrix}. 
 Da es sich hier aber um eine nichtquadratische Matrix handelt, ist diese zunächst nicht invertierbar.
 Folglich muss die Matrix um eine Eingangsgröße erweitert werden.
 Dabei bietet sich die Nullbedingung des Systems an.
@@ -285,11 +286,12 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
  	\label{inverseclarkematrixnulleinfach}
  \end{align}
  
- aus. Da die Nullkomponente der Phasengröße null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${T^\prime}$ entspricht.
+ aus. 
+ Da die Nullkomponente der Phasengröße null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${T^\prime}$ entspricht.
 
 \section{Beschreibung in rotorfesten d-q-Koordinatensystem}\label{sec:park}
 
-Für die Regelung von Drehfeldmaschinen hat es sich als praktikabel herausgestellt, die Systembeschreibung von der im Verfeld beschriebenen ortsfesten Koordinatensystem in ein, mit der Winkelgeschwindigkeit des Rotors, rotierendes Koordinatensystem zu überführen. 
+Für die Regelung von Drehfeldmaschinen hat es sich als praktikabel herausgestellt, die Systembeschreibung von der im Vorfeld beschriebenen ortsfesten Koordinatensystem in ein, mit der Winkelgeschwindigkeit des Rotors, rotierendes Koordinatensystem zu überführen. 
 Daher wird die Darstellung auch rotorfest genannt. 
 Die Vorteile dieser Koordinatenbeschreibung liegen zum einen in einer einfacheren Darstellbarkeit elektrophysikalischer Zusammenhänge und zum anderen dass die Raumzeigergrößen näherungsweise Gleichgrößen sind.
 Dadurch lassen sich klassische Regelvefahren auf die Maschine anwenden.
