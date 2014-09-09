@@ -80,10 +80,91 @@ Zur Berechnung des Luftspaltfeldes muss also nun das Nutenfeld \autocite[S.~14]{
 Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
 
 \begin{quote}
-Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. TU München)
+Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. Bundeswehr Universität in München.)
 \end{quote}
 
-\subsection{Drehstromwicklungen}
+\subsection{Mehrphasensysteme}
+
+Bei einpoliger Verbindung von $m$ Wechselspannungsquellen entsteht eine Schaltung, die $(m+1)$ Klemmen aufweist (s.~h.~\autoref{fig:mehrphasen}).
+Haben diese $m$ Wechselspannungsquellen dieselbe Kreisfrequenz $\omega$, so stellt die Schaltung die Spannungsquelle eines allgemeinen Mehrphasensystems dar.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{mehrphasen.pdf}
+\label{fig:mehrphasen}
+\caption{Spannungsquelle eines Mehrphasensystems.}
+\end{figure}
+
+Da keine Vorgaben bezüglich der Amplituden $\hat{u}$ und der Phasenlage $\varphi$ in der Definition der allgemeinen Mehrphasen-Spannungsquelle enthalten sind, kann sie \zB durch das folgende Gleichungssystemen beschrieben werden
+
+\begin{align}
+u_1(t) &= \hat{u}_1 \cdot \cos(\omega t - \varphi_1) \\
+u_2(t) &= \hat{u}_2 \cdot \cos(\omega t - \varphi_2) \nonumber  \\
+\vdots \nonumber \\
+u_m(t) &= \hat{u}_m \cdot \cos(\omega t - \varphi_m) \nonumber
+\end{align}
+
+Aus der allgemeinen Mehrphasen-Spannungsquelle entsteht eine symmetrische Mehrphasen-Spannungsquelle, wenn zusätzlich gleiche Amplituden
+
+\begin{align*}
+\hat{u}_1 = \hat{u}_2 = \ldots \hat{u}_m
+\end{align*}
+
+und gleiche Phasenwinkeldifferenz zwischen aufeinanderfolgenden Teilspannungen gefordert werden
+
+\begin{align*}
+\varphi_1 - \varphi_2 = \varphi_2 - \varphi_3 = \ldots = \varphi_{m-1} - \varphi_m = \Delta \varphi
+\end{align*}
+
+Aus Symmetrieüberlegungen ergibt sich, dass die einheitliche Phasenwinkeldifferenz eine Funktion der Phasenzahl $m$ sein muss.
+
+\begin{align}
+\Delta \varphi = \frac{\omega T}{m} = \frac{2\pi}{m}
+\end{align}
+
+Darin tritt die Periodendauert $T$ der Teilspannungen auf.
+Setzt man der Einfachheit
+
+\begin{align*}
+\varphi_1 = 0
+\end{align*}
+
+so wird die symmetrische Mehrphasen-Spannungsquelle durch das folgende Gleichungssystem beschrieben.
+
+\begin{align}
+u_1(t) &= \hat{u} \cdot \cos(\omega t) \\ \label{eqn:drehstrom}
+u_2(t) &= \hat{u} \cdot \cos(\omega t - \frac{\omega T}{m})\nonumber \\
+\vdots \nonumber \\
+u_m(t) &= \hat{u} \cdot \cos(\omega t - (m-1)\frac{\omega T}{m})\nonumber
+\end{align}
+
+In der Elektrotechnik treten Systeme mit verschiedenen Phasenzahlen auf.
+Das Wechselstromsystem kann als Sonderfall des Mehrphasensystems mit $m=1$ aufgefasst werden.
+Es kommt nur bei kleinen Leistungen zum Einsatz.
+Eine Ausnahme stellt die Bahnversorgung dar, die bis zu großen Leistungen generell einphasig betrieben wird.
+Gekennzeichnet ist diese durch die eingeprägte Frequenz von $f = 16\frac{2}{3}\mbox{Hz}$.
+
+Die Phasenzahl $m=2$ tritt bei elektrischen Kleinmaschinen auf, allerdings nur in Form eines unsymmetrischen Systems mit einer Phasenwinkeldifferenz
+
+\begin{align*}
+\Delta \varphi = 90^{\circ} \,\mbox{bzw.\ }\, 270^{\circ}
+\end{align*}
+
+Die Phasenzahl $m=3$ kennzeichnet das Drehstromsystem, dass die Basis der elektrischen Energietechnik bildet.
+Höhere Phasenzahlen treten \zB in der Stromrichtertechnik auf mit $m=6, 12, 24$.
+Drehstromerzeuger mit Phasenzahl $m=3$ werden generell als symmetrisches System ausgelegt.
+Als Klemmenbezeichnung ist die Buchstabengruppe $R, S, T$ bzw.\ $U, V, W$ üblich, wobei die gemeinsame Leitung der drei Teilspannungen mit $O, N$ oder $Mp$ für Mittelpunkt bezeichnet wird.
+
+Durch die DIN-Normung wurde festgelegt, dass die Klemmenbezeichnung beim Drehstromsystem mit $L1, L2$ und $L3$ zu erfolgen hat.
+Die Phasenwinkeldifferenz ist $\Delta \varphi = 120^{\circ}$.
+Stellt man die Phasenspannungen $u_1(t), u_2(t), u_3(t)$ nach \autoref{eqn:drehstrom} dar, so ergibt sich 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{dreiphasensystem.pdf}
+\label{fig:dreiphasen}
+\caption{Phasenspannung eines symmetrischen Drehstromerzeugers.}
+\end{figure}
 
 Der prinzipielle Aufbau einer Drehstromwicklung lässt sich anhand aus den Anforderungen zur Erzeugung einer dreiphasigen Wechselspannung erläutern.
 Eine solche Drehspannung erhält man mit einer Anordnung nach \autoref{fig:drehstromwicklung}.
@@ -123,14 +204,14 @@ BBB Nicht äquivalent??? BBB
 \centering
 \includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
 \label{fig:drehstromwicklung}
-\caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld in Anlehnung an \autocite[S.~141]{fischer2009}}
+\caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld.}
 \end{figure}
 
 \section{Induktivitäten}\label{sec:induktiv}
 
 \section{Einführung Synchronmaschine}\label{sec:synchron}
 
-\paragraph{Historischer Hintergund} Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~108f.]{ternes2012}[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
+\paragraph{Historischer Hintergund} Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
 
 Die gleichstromgespeiste Erregerwicklung ermöglicht es, das Magnetfeld unabhängig vom Netz zu beeinflussen.
 Als Spannungsquelle für die Speisung der Erregerwicklung wurden sog.\ Gleichstromerregermaschinen eingesetzt, in der heutigen Zeit werden Wechselspannung mit Hilfe von Leistungselektronischen Schaltungen gespeist.
@@ -144,6 +225,24 @@ Aus diesem Grund werden größere Gleichstrommaschinen durch drehzahlvariable Sy
 Im Bereich kleinerer Leistungen wird anstelle der Gleichstromerregung eine Erregung durch Permanentmagnete eingesetzt.
 Dabei verliert man die Beeinflussung des Erregerzustandes über den Erregerstrom, dafür erhält man eine elektrische Maschine die keine elektrische Verbindung zum Läufer erfordert.
 
+\subsection{Spannungsgleichungen und Ersatzschaltbild}
+
+Die Synchronmaschine mit Vollpolläufer ist wegen ihres konstanten Luftspaltes mathematisch leichter erfassbar, als die Synchronmaschine mit Schenkelpolläufer.
+Als Grundlage für weitere Betrachtungen dient dieses mathematische Modell als Grundlage.
+Weiterhin wird vereinbart, dass
+\begin{itemize}
+	\item quasistationärer Betrieb
+	\item Verbraucherzählpfeilsystem
+	\item rechtsgängige Spulen
+	\item läuferfeste, komplexe Ebene
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{synchron-dq-1.pdf}
+\label{fig:dq-synchron-1}
+\caption{d,q-System der Synchronmaschine als Skizze.}
+\end{figure}
 
 \subsection{Beschreibung der Synchronmaschine im dq-Koordinatensystem}
 
