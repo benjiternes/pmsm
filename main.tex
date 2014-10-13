@@ -4,6 +4,8 @@
 \input{class.tex}
 \input{makros.tex} 
 
+\renewcommand{\i}[1]{\mathrm{#1}}
+
 \begin{document}
 \pagenumbering{Roman}
 \pagestyle{empty}
@@ -74,28 +76,28 @@ Symbol & Bedeutung	& Einheit\\
 \\
 \hline
 \\ 
-$I$	& elektrische Stromstärke	&	$A$ \\
-$\Theta$	&	elektrische Durchflutung 	&	$A$	\\
-$A$			&	elektrischer Strombelag  	&  	$A/m$\\ 
-$J$			&	elektrische Stromdichte		&	$A/m^2$ \\	
-$H$			&	magnetische Feldstärke		&	$A/m$\\
-$\mu_0$		&	magnetische Feldkonstante	&	$Vs/Am$\\
-$\mu_r$		&	relative Permeabilität		&	\\
-$B$			&	magnetische Flussdichte		&	$T = Vs/m^2$ \\
-$\Phi$		&	magnetischer Fluss			&	$Vs$ \\
-$\Psi$		&	verketteter Fluss			&	$Vs$ \\
-$L, M$		&	Induktivitäten				&	$H = Vs/A$\\
-$U$			&	elektrische Spannung		&	$V$ \\
-$V$			&	magnetisches Vektorpotenzial&	$Vs/m$\\
-$V_m$		&	magnetische Spannung		&	$A$ \\
-$\Omega_L$	&	elektr.\ Winkelgeschwindigkeit des Rotors($\Omega_L = Z_p\cdot \Omega_m$) & $s^{-1}$ \\
-$\Omega_m$	&	mech.\ Winkelgeschwindigkeit des Rotors & $s^{-1}$ \\
-$Z_p$		&	Polpaarzahl					&	\\
-$\psi_d, \psi_q$	&	Statorfluss-Komponenten im d,q-System &	$Vs$ \\
-$U_d, U_q$	&	Statorspannungs-Komponenten im d,q-System &	$V$ \\
-$I_d, I_q$	&	Statorstrom-Kompenenten im d,q-System	&	$A$ \\
-$R_1$		&	Statorwiderstand			&	$\Omega$ \\
-$L_d, L_q$	& 	Statorinduktivität im d,q-System & $Vs/A$
+$I$	& elektrische Stromstärke	&	\si{A} \\
+$\Theta$	&	elektrische Durchflutung 	&	\si{A}	\\
+$A$			&	elektrischer Strombelag  	&  	\si{A/m}\\ 
+$J$			&	elektrische Stromdichte		&	\si{A/m^2} \\	
+$H$			&	magnetische Feldstärke		&	\si{A/m}\\
+$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	$Vs/Am$\\
+$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
+$B$			&	magnetische Flussdichte		&	\si{Vs/m^2}\\
+$\Phi$		&	magnetischer Fluss			&	\si{Vs} \\
+$\Psi$		&	verketteter Fluss			&	\si{Vs} \\
+$L, M$		&	Induktivitäten				&	\si{Vs/A}\\
+$U$			&	elektrische Spannung		&	\si{V} \\
+$V$			&	magnetisches Vektorpotenzial&	\si{Vs/m}\\
+$V_\mathrm{m}$		&	magnetische Spannung		&	\si{A} \\
+$\Omega_\mathrm{L}$	&	elektr.\ Winkelgeschwindigkeit des Rotors($\Omega_L = Z_p\cdot \Omega_m$) & \si{1/s} \\
+$\Omega_\mathrm{m}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
+$Z_\mathrm{p}$		&	Polpaarzahl					&	\\
+$\psi_\mathrm{d}, \psi_\mathrm{q}$	&	Statorfluss-Komponenten im d,q-System &	\si{Vs} \\
+$U_\mathrm{d}, U_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{V} \\
+$I_\mathrm{d}, I_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{A} \\
+$R_\mathrm{1}$		&	Statorwiderstand			&	\si{V/A} \\
+$L_\mathrm{d}, L_\mathrm{q}$	& 	Statorinduktivität im d,q-System & \si{Vs/A}
 \end{tabularx}\end{flushleft}
 % ----------------------------------------------------------------------------------------------------------
 % Einleitung
