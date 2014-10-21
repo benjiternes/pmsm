@@ -1,4 +1,4 @@
-% -*- coding: utf-8 -*-
+4% -*- coding: utf-8 -*-
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
@@ -229,12 +229,100 @@ Weiterhin wird vereinbart, dass
 	\item läuferfeste, komplexe Ebene
 \end{itemize}
 
+vorliegt s.~h.~Abbildung~\ref{fig:dq-synchron-1}.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{synchron-dq-1.pdf}
 \label{fig:dq-synchron-1}
-\caption{d,q-System der Synchronmaschine als Skizze.}
+\caption{Veranschaulicht das mit $n$ rotierende $d, q-$System, in dem der Maschinenzustand durch ruhende Zeiger ausgedrückt wird.}
 \end{figure}
+
+Der Ständerkreis kann in den Läuferkreis keine Spannung induzieren, weil Ständerfeld und Läuferfeld gleiche Drehzahl haben und somit im Läufer keine ständerbedingten Flussänderungen entstehen.
+Mit dieser Erkenntnis und den oben genannten Voraussetzungen wird der Läuferkreis durch die Gleichung
+
+\begin{align}
+U_\i{e} = I_\i{e} \cdot R_\i{e}
+\end{align}
+
+beschrieben.
+
+Die Induktivität $L_\i{e}$ bringt wegen
+
+\begin{align*}
+\frac{\i{d}i_\i{e}}{dt} = 0
+\end{align*}
+
+keinen Beitrag.
+Die Spannungsgleichung für den Ständerkreis ergibt sich zu
+
+\begin{align}
+U_\i{1} = R_\i{1}\underline{I}_\i{1}+\i{j}X_\i{1}\underline{I}_\i{1}+\i{j}X_\i{h}\underline{I}_\mu
+\end{align}
+
+Bei der Synchronmaschine entsteht die Magnetisierungsstrombelagswelle aus der Ständer- und der Läuferstrombelagswelle.
+Der Magnetisierungsstrom setzt sich entsprechend zusammen
+
+\begin{align}
+\underline{I}_\mu = \underline{I}_\i{1} + I'_\i{e}
+\end{align}
+
+Damit ergibt sich für die Ständerspannung $U_\i{1}$
+
+\begin{align}
+U_\i{1} = R_\i{1}\underline{I}_\i{1} + \i{j}X_\i{1}\underline{I}_\i{1} + \i{j}X_\i{h}\underline{I}_\i{1} + \i{j}X_{h}\underline{I}'_\i{e}
+\end{align}
+
+Der vom Ständerstrom unabhängige Term wird als eingeprägte Spannung aufgefasst.
+Die Polradspannung
+
+\begin{align}
+\underline{U}_\i{p} = \i{j}X_\i{h}\underline{I}'_\i{e}
+\end{align}
+
+ist über den Erregerstrom einstellbar.
+Die Ständerhauptreaktanz $X_\i{h}$ korrespondiert mit dem Drehfeld.
+Die Hauptfeldspannung
+
+\begin{align}
+\underline{U}_\i{h} = \i{j} X_\i{h} \underline{I}_\i{1} + \underline{U}_\i{p}
+\end{align}
+
+hat wie das Drehfeld zwei Komponenten, eine ständerbedingte und eine polradbedingte.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{synchron-esb-kremser2004.pdf}
+\label{fig:esb-kremser}
+\caption{Ersatzschaltbild der Synchronmaschine.}
+\end{figure}
+
+Haupt- und Streureaktanz des Ständerkreises werden häufig zur synchronen Reaktanz zusammengezogen
+
+\begin{align}
+X_\i{d} = X_\i{1} + X_\i{h}
+\end{align}
+
+Die daraus folgende relative synchron Reaktanz ist eine wichtige Kenngröße der Synchronmaschine.
+
+\begin{align}
+x_\i{d} = \frac{I_\i{1}}{U_\i{1}}\cdot X_\i{d}
+\end{align}
+
+Als Richtwert gilt
+
+\begin{align*}
+x_\i{d} &= 1.2 \ldots 1.5\,\text{Vollpolläufer}
+x_\i{d} &= 0.6 \ldots 1.6\,\text{Schenkelpolläufer}
+\end{align*}
+
+Der Ständerkreisverlustwiderstand ist etwa mit 
+
+\begin{align}
+R_\i{1} \approx 0.07 X_\i{d}
+\end{align}
+
+anzusetzen.
 
 \subsection{Beschreibung der Synchronmaschine im dq-Koordinatensystem}
 
@@ -249,8 +337,8 @@ Bei einer symmetrisch konzipierten Synchronmaschine werden die Reluktanzeinflüs
 Damit ergeben sich nach \autocite[S.~291]{schroder2000} folgende Gleichungen für die Synchron-Vollpolmaschine.
 
 \begin{align}
-\frac{d\psi_\i{d}}{dt} &= U_\i{d} - R_\i{1}\cdot I_\i{d} + \Omega_\i{L}\cdot\psi_\i{q} \\
-\frac{d\psi_\i{q}}{dt} &= U_\i{q} - R_\i{1}\cdot I_\i{q} + \Omega_\i{L}\cdot\psi_\i{d} \\
+\frac{\i{d}\psi_\i{d}}{dt} &= U_\i{d} - R_\i{1}\cdot I_\i{d} + \Omega_\i{L}\cdot\psi_\i{q} \\
+\frac{\i{d}\psi_\i{q}}{dt} &= U_\i{q} - R_\i{1}\cdot I_\i{q} + \Omega_\i{L}\cdot\psi_\i{d} \\
 \end{align}
 
 mit 
@@ -270,7 +358,7 @@ M_\i{i} &= \frac{3}{2}\cdot Z_\i{p} \cdot (\psi_\i{d}\cdot I_\i{q} - \psi_\i{q}\
 und der allgemeinen mech.\ Bewegungsgleichung
 
 \begin{align}
-\Theta\cdot \frac{d\Omega_m}{dt} = M_\i{i} - M_\i{L}
+\Theta\cdot \frac{\i{d}\Omega_m}{\i{d}t} = M_\i{i} - M_\i{L}
 \end{align}
 
 \begin{figure}[!htb]
@@ -286,12 +374,7 @@ und der allgemeinen mech.\ Bewegungsgleichung
 
 \section{Evalurierung der Ersatzschaltbilder für die Regelung}\label{sec:esb}
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{synchron-esb-kremser2004.pdf}
-\label{fig:esb-kremser}
-\caption{Ersatzschaltbild der Synchronmaschine nach \parencite[S.~145]{kremser2004}.}
-\end{figure}
+
 
 %%% Local Variables: 
 %%% mode: latex

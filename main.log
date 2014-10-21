@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.19)  20 OCT 2014 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.19)  21 OCT 2014 14:44
 entering extended mode
 **main.tex
 (D:\pmsm\main.tex
@@ -237,9 +237,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\marvosym\marvosym.sty
-Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
-)
+("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -2026,6 +2033,26 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 9.
+
+(C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 9.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 9.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 9.
+
+(C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 9.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 9.
 LaTeX Font Info:    Try loading font information for OT1+lmss on input line 9.
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
@@ -2102,7 +2129,10 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <17.28> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 73.
  [1
 
-] (D:\pmsm\grundlagen.tex
+] (D:\pmsm\grundlagen.tex [2
+
+
+]
 Kapitel 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -2121,15 +2151,13 @@ Class scrreprt Warning: \float@addtolists detected!
 
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 23.
-<_Bilder/nutquerfeld.pdf, id=243, 455.18858pt x 190.74362pt>
+<_Bilder/nutquerfeld.pdf, id=246, 455.18858pt x 190.74362pt>
 File: _Bilder/nutquerfeld.pdf Graphic file (type pdf)
 
 <use _Bilder/nutquerfeld.pdf>
 Package pdftex.def Info: _Bilder/nutquerfeld.pdf used on input line 34.
 (pdftex.def)             Requested size: 469.47052pt x 196.74168pt.
- [2
-
-
+ [3
 
 ]
 Overfull \hbox (0.44557pt too wide) in paragraph at lines 46--48
@@ -2137,7 +2165,7 @@ Overfull \hbox (0.44557pt too wide) in paragraph at lines 46--48
 n Nut-öff-nung (Nutschlitz bzw. Streuschlitz)
  []
 
-<_Bilder/strombelag_neu.pdf, id=250, 455.18858pt x 167.98158pt>
+<_Bilder/strombelag_neu.pdf, id=254, 455.18858pt x 167.98158pt>
 File: _Bilder/strombelag_neu.pdf Graphic file (type pdf)
 
 <use _Bilder/strombelag_neu.pdf>
@@ -2147,13 +2175,13 @@ Package pdftex.def Info: _Bilder/strombelag_neu.pdf used on input line 65.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.71 
-      <D:/pmsm/_Bilder/nutquerfeld.pdf>] [4pdfTeX warning (ext4): destination w
+      <D:/pmsm/_Bilder/nutquerfeld.pdf>] [5pdfTeX warning (ext4): destination w
 ith the same identifier (name{figure.1.2}) has been already used, duplicate ign
 ored
 
@@ -2161,20 +2189,20 @@ ored
                                                   \fi \fi 
 l.90 
       <D:/pmsm/_Bilder/strombelag_neu.pdf>]
-<_Bilder/mehrphasen.pdf, id=291, 426.73528pt x 167.98158pt>
+<_Bilder/mehrphasen.pdf, id=294, 426.73528pt x 167.98158pt>
 File: _Bilder/mehrphasen.pdf Graphic file (type pdf)
 
 <use _Bilder/mehrphasen.pdf>
 Package pdftex.def Info: _Bilder/mehrphasen.pdf used on input line 93.
 (pdftex.def)             Requested size: 469.47052pt x 184.80849pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.117 \end{align*}
-                   <D:/pmsm/_Bilder/mehrphasen.pdf>] [6]
-<_Bilder/dreiphasensystem.pdf, id=311, 584.1825pt x 372.39125pt>
+                   <D:/pmsm/_Bilder/mehrphasen.pdf>] [7]
+<_Bilder/dreiphasensystem.pdf, id=314, 584.1825pt x 372.39125pt>
 File: _Bilder/dreiphasensystem.pdf Graphic file (type pdf)
 
 <use _Bilder/dreiphasensystem.pdf>
@@ -2185,21 +2213,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--166
 [] []\T1/lmr/m/n/10.95 (+20) Phasenspannung ei-nes sym-me-tri-schen
  []
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.178 \end{align}
                   <D:/pmsm/_Bilder/dreiphasensystem.pdf>]
-<_Bilder/synchronmaschine-drehstrom.pdf, id=327, 426.73528pt x 222.04758pt>
+<_Bilder/synchronmaschine-drehstrom.pdf, id=330, 426.73528pt x 222.04758pt>
 File: _Bilder/synchronmaschine-drehstrom.pdf Graphic file (type pdf)
 
 <use _Bilder/synchronmaschine-drehstrom.pdf>
 Package pdftex.def Info: _Bilder/synchronmaschine-drehstrom.pdf used on input l
 ine 197.
 (pdftex.def)             Requested size: 469.47052pt x 244.29034pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2214,63 +2242,80 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 226.
- [9]
-<_Bilder/synchron-dq-1.pdf, id=366, 426.73528pt x 224.88718pt>
+ [10]
+<_Bilder/synchron-dq-1.pdf, id=370, 426.73528pt x 224.88718pt>
 File: _Bilder/synchron-dq-1.pdf Graphic file (type pdf)
 
 <use _Bilder/synchron-dq-1.pdf>
-Package pdftex.def Info: _Bilder/synchron-dq-1.pdf used on input line 234.
+Package pdftex.def Info: _Bilder/synchron-dq-1.pdf used on input line 236.
 (pdftex.def)             Requested size: 469.47052pt x 247.41438pt.
- [10pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 238.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 238.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 238.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 238.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 238.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 238.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 238.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 238.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 238.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.254 \end{align}
-                  <D:/pmsm/_Bilder/synchron-dq-1.pdf>]
-<_Bilder/synchron-dq.pdf, id=380, 426.73528pt x 239.11333pt>
-File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
-
-<use _Bilder/synchron-dq.pdf>
-Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 278.
-(pdftex.def)             Requested size: 469.47052pt x 263.0656pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--280
-[] []\T1/lmr/m/n/10.95 (+20) Darstellung der Syn-chron-ma-schi-ne im dq-
- []
-
-<_Bilder/synchron-esb-kremser2004.pdf, id=381, 426.73528pt x 102.54008pt>
+l.259 \begin{align}
+                    <D:/pmsm/_Bilder/synchron-dq-1.pdf>]
+<_Bilder/synchron-esb-kremser2004.pdf, id=384, 426.73528pt x 102.54008pt>
 File: _Bilder/synchron-esb-kremser2004.pdf Graphic file (type pdf)
 
 <use _Bilder/synchron-esb-kremser2004.pdf>
 Package pdftex.def Info: _Bilder/synchron-esb-kremser2004.pdf used on input lin
-e 291.
+e 295.
 (pdftex.def)             Requested size: 469.47052pt x 112.81163pt.
-) (D:\pmsm\vektor.tex [11] [12pdfTeX warning (ext4): destination with the same 
-identifier (name{figure.1.7}) has been already used, duplicate ignored
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.304 \end{align}
+                  <D:/pmsm/_Bilder/synchron-esb-kremser2004.pdf>] [13]
+<_Bilder/synchron-dq.pdf, id=417, 426.73528pt x 239.11333pt>
+File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
+
+<use _Bilder/synchron-dq.pdf>
+Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 366.
+(pdftex.def)             Requested size: 469.47052pt x 263.0656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+[] []\T1/lmr/m/n/10.95 (+20) Darstellung der Syn-chron-ma-schi-ne im dq-
+ []
+
+) (D:\pmsm\vektor.tex [14] [15pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.1.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.5 \chapter
-            {Grundlagen der Vektorregelung}pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.1.8}) has been already used, duplicate ign
-ored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.5 \chapter
-            {Grundlagen der Vektorregelung} <D:/pmsm/_Bilder/synchron-dq.pdf> <
-D:/pmsm/_Bilder/synchron-esb-kremser2004.pdf>]
+            {Grundlagen der Vektorregelung} <D:/pmsm/_Bilder/synchron-dq.pdf>]
 Kapitel 2.
-[13
+[16
 
-] <_Bilder/zeitzeiger.pdf, id=434, 284.26201pt x 284.26201pt>
+] <_Bilder/zeitzeiger.pdf, id=456, 284.26201pt x 284.26201pt>
 File: _Bilder/zeitzeiger.pdf Graphic file (type pdf)
 
 <use _Bilder/zeitzeiger.pdf>
 Package pdftex.def Info: _Bilder/zeitzeiger.pdf used on input line 49.
 (pdftex.def)             Requested size: 234.73526pt x 234.74458pt.
- [14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2281,7 +2326,7 @@ Overfull \hbox (37.6089pt too wide) in paragraph at lines 81--81
 [] 
  []
 
-<_Bilder/raumzeigermaschine.pdf, id=466, 739.56299pt x 369.7815pt>
+<_Bilder/raumzeigermaschine.pdf, id=488, 739.56299pt x 369.7815pt>
 File: _Bilder/raumzeigermaschine.pdf Graphic file (type pdf)
 
 <use _Bilder/raumzeigermaschine.pdf>
@@ -2297,11 +2342,19 @@ er
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15]
+[18]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 120.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 18.00587pt on input line 120.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 120.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 18.00587pt on input line 120.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 120.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2327,7 +2380,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 120.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2335,22 +2388,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 l.142 \end{align}
                   <D:/pmsm/_Bilder/raumzeigermaschine.pdf>]
 
-LaTeX Warning: Reference `alphabetakoordinaten' on page 17 undefined on input l
+LaTeX Warning: Reference `alphabetakoordinaten' on page 20 undefined on input l
 ine 156.
 
-<_Bilder/alphabetakoordinaten.pdf, id=507, 284.26201pt x 284.26201pt>
+<_Bilder/alphabetakoordinaten.pdf, id=528, 284.26201pt x 284.26201pt>
 File: _Bilder/alphabetakoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/alphabetakoordinaten.pdf>
 Package pdftex.def Info: _Bilder/alphabetakoordinaten.pdf used on input line 16
 0.
 (pdftex.def)             Requested size: 234.73526pt x 234.74458pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 162.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 162.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 162.
 
 Underfull \hbox (badness 10000) in paragraph at lines 162--162
 [] []\T1/lmr/m/n/10.95 (+20) Beispielhafte La-ge des Raum-zei-gers im $\OML/lmm
@@ -2358,14 +2405,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--162
  (+20) -
  []
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.180 \end{align}
-                  <D:/pmsm/_Bilder/alphabetakoordinaten.pdf>] [18]
-<_Bilder/dqkoordinaten.pdf, id=549, 340.8735pt x 284.26201pt>
+                  <D:/pmsm/_Bilder/alphabetakoordinaten.pdf>] [21]
+<_Bilder/dqkoordinaten.pdf, id=571, 340.8735pt x 284.26201pt>
 File: _Bilder/dqkoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/dqkoordinaten.pdf>
@@ -2381,21 +2428,21 @@ der d-q-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19] [20pdfTeX warning (ext4): destination with the same identifier (name{figur
+[22] [23pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.374 
        <D:/pmsm/_Bilder/dqkoordinaten.pdf>]
-<_Bilder/blockbildclarke.pdf, id=585, 170.43675pt x 113.223pt>
+<_Bilder/blockbildclarke.pdf, id=606, 170.43675pt x 113.223pt>
 File: _Bilder/blockbildclarke.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildclarke.pdf>
 Package pdftex.def Info: _Bilder/blockbildclarke.pdf used on input line 377.
 (pdftex.def)             Requested size: 234.73526pt x 155.94902pt.
 
-<_Bilder/blockbildpark.pdf, id=586, 170.43675pt x 142.13101pt>
+<_Bilder/blockbildpark.pdf, id=607, 170.43675pt x 142.13101pt>
 File: _Bilder/blockbildpark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildpark.pdf>
@@ -2417,14 +2464,14 @@ Package pdftex.def Info: _Bilder/blockbildpark.pdf used on input line 402.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<_Bilder/blockbildclarkepark.pdf, id=587, 284.26201pt x 142.13101pt>
+<_Bilder/blockbildclarkepark.pdf, id=608, 284.26201pt x 142.13101pt>
 File: _Bilder/blockbildclarkepark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildclarkepark.pdf>
 Package pdftex.def Info: _Bilder/blockbildclarkepark.pdf used on input line 411
 .
 (pdftex.def)             Requested size: 234.73526pt x 117.37228pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2445,7 +2492,7 @@ n: multiple pdfs with page group included in a single page
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<_Bilder/blockbildinverseclarkepark.pdf, id=624, 284.26201pt x 142.13101pt>
+<_Bilder/blockbildinverseclarkepark.pdf, id=644, 284.26201pt x 142.13101pt>
 File: _Bilder/blockbildinverseclarkepark.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildinverseclarkepark.pdf>
@@ -2456,7 +2503,7 @@ ine 420.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (D:\pmsm\anforderung.tex [22pdfTeX warning (ext4): destination with the same 
+) (D:\pmsm\anforderung.tex [25pdfTeX warning (ext4): destination with the same 
 identifier (name{figure.2.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2470,7 +2517,7 @@ n already used, duplicate ignored
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil fÃ¼r die Regelung der PMSM mit Simulink}]
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2491,30 +2538,30 @@ pdfTeX warning: pdflatex (file D:/pmsm/_Bilder/blockbildinverseclarkepark.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Kapitel 3.
-) (D:\pmsm\regelung.tex [24
+) (D:\pmsm\regelung.tex [27
 
 ]
 Kapitel 4.
-) (D:\pmsm\auswertung.tex [25
+) (D:\pmsm\auswertung.tex [28
 
 ]
 Kapitel 5.
-) (D:\pmsm\zusammenfassung.tex [26
+) (D:\pmsm\zusammenfassung.tex [29
 
 ]
 Kapitel 6.
-) [27
+) [30
 
-] [28
+] [31
 
 
 
-] [29] [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+] [32] [33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (D:\pmsm\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D1F5FBBEEBED45A767C867803DAF2651;2361.
 
@@ -2524,15 +2571,15 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 38712 strings out of 493921
- 770573 string characters out of 3144866
- 1218222 words of memory out of 3000000
- 41023 multiletter control sequences out of 15000+200000
- 141312 words of font info for 181 fonts, out of 3000000 for 9000
+ 38767 strings out of 493921
+ 772113 string characters out of 3144866
+ 1216971 words of memory out of 3000000
+ 41053 multiletter control sequences out of 15000+200000
+ 145071 words of font info for 200 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  80i,20n,85p,10418b,3303s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{D:/Program Files (x86)/
+{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{D:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/Program Files (x86)/MiKTeX 2.9/font
 s/enc/dvips/lm/lm-mathsy.enc}{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
 /lm/lm-mathex.enc}{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
@@ -2553,10 +2600,10 @@ ype1/public/lm/lmri12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 0.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><D:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (34 pages, 1902434 bytes).
+Output written on main.pdf (37 pages, 1909244 bytes).
 PDF statistics:
- 831 PDF objects out of 1000 (max. 8388607)
- 546 compressed objects within 6 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 859 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
+ 186 named destinations out of 1000 (max. 500000)
  50522 words of extra memory for PDF output out of 51595 (max. 10000000)
 
