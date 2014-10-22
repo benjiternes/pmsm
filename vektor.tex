@@ -2,6 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
+
 \chapter{Grundlagen der Vektorregelung}
 \label{cha:Grundlagen der Vektorregelung}
 
@@ -15,30 +16,32 @@ Entscheidend für den Aufbau einer geregelten PMSM ist die Vektor- bzw. feldorie
 Die Maschine wird näherungsweise mit sinusförmigen Strömen gespeist. 
 Ebenso besitzen alle weiteren auftretenden elektrischen Größen wie Spannungen, Flüsse oder Felder aufgrund ihres Zeitverhaltens annähernd Sinusform \parencite[S.~1]{nuss2010}.	
 Die Idee der Vektorregelung ist es nun, nicht die zeitlichen Momentanwerte der Ströme zu verändern, sondern die erfassten Wechselgrößen in ein Zwei-komponentiges rotierendes Koordinatensystem zu übertragen.
-Diese Komponenten werden regelungstechnisch verwertet und zurück transformiert.
+Dabei beschreibt eine Komponente das Drehmoment, während die andere Komponente die magnetische Flussdichte darstellt.
+Diese Größen werden regelungstechnisch verwertet und zurück transformiert.
 
 \section{Raumzeigerdarstellung}
 \label{sec:raumzeiger}
 
-Die stationären Zusammenhänge der elektrischen Größen in der Maschine, welche ursächlich aus dem Zusammenhang von $\Psi$ und B herrühren, können zunächst mithilfe komplexer Zeitzeiger beschrieben werden. Dabei lassen sich die Statorströme, $i_{s,1}$, $i_{s,2}$, und $i_{s,3}$ einer Drehfeldmaschine mit idendischer Amplitunde $\hat i_{s}$ und Statorkreisfrequenz $\omega_{s}$  und einer jeweiligen $120^\circ$ Phasenverschiebung als
+Die stationären Zusammenhänge der elektrischen Größen in der Maschine, welche ursächlich aus dem Zusammenhang von $\Psi$ und B herrühren, können zunächst mithilfe komplexer Zeitzeiger beschrieben werden. Dabei lassen sich die Statorströme, $i_\i{s,1}$, $i_\i{s,2}$, und $i_\i{s,3}$ einer Drehfeldmaschine mit idendischer Amplitunde $\hat i_\i{s}$ und Statorkreisfrequenz $\omega_\i{s}$  und einer jeweiligen $120^\circ$ Phasenverschiebung als
+
 
 \begin{align}
 	\begin{split}
-	i_{s,i} = Re\{\underline{i}_{s,i}\} = Re\{\underline{\hat i}_{s,i}\cdot e^{j\omega_{s}t}\} = Re\Bigl\{\hat{i_{s}}\cdot e^{j(\omega_{s}t+0-(i-1)\cdot\tfrac{2\pi}{3})}\Bigr\}
-	\\= \hat{i}_{s}\cdot cos\bigg(\omega_{s}t+\varphi_{0}-(i-1)\cdot\frac{2\pi}{3}\bigg)~;~mit~i=1,2,3 \label{statorströme} 
+    i_\i{s,i} = Re\{\underline{i}_\i{s,i}\} = Re\{\underline{\hat i}_\i{s,i}\cdot e^{j\omega_\i{s}t}\} = Re\Bigl\{\hat{i_\i{s}}\cdot e^{j(\omega_\i{s}t+0-(i-1)\cdot\tfrac{2\pi}{3})}\Bigr\}
+	\\=\hat{i}_\i{s}\cdot\si{cos}\bigg(\omega_\i{s}t+\varphi_\i{0}-(i-1)\cdot\frac{2\pi}{3}\bigg)~;~mit~i=1,2,3 \label{statorströme} 
 \end{split}
 \end{align}
 
 mit den komplexen Zeitzeigern
 
 \begin{align}
-	\underline{i}_{s,i} = \underline{\hat i}_{s,i}\cdot e^{j\omega_{s}t}~;~mit~i=1,2,3 \label{zeitzeiger}
+	\underline{i}_\i{s,i} = \underline{\hat i}_\i{s,i}\cdot e^{j\omega_\i{s}t}~;~mit~i=1,2,3 \label{zeitzeiger}
 \end{align}
 
 und den komplexen Amplituden
 
 \begin{align}
-	\underline{\hat i}_{s,i} = \hat{i_{s}}\cdot e^{j(\omega_{s}t+0-(i-1)\cdot\tfrac{2\pi}{3})}~;~mit~i=1,2,3 \label{amplituden}
+	\underline{\hat i}_\i{s,i} = \hat{i_\i{s}}\cdot e^{j(\omega_\i{s}t+0-(i-1)\cdot\tfrac{2\pi}{3})}~;~mit~i=1,2,3 \label{amplituden}
 \end{align}
 
 darstellen. 
@@ -46,21 +49,21 @@ Die folgende Abbildung \ref{fig:zeitzeiger} veranschaulicht die vorangegangenen 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{zeitzeiger.pdf}
+	\includegraphics[width=0.6\textwidth]{zeitzeiger.pdf}
 	\label{fig:zeitzeiger}
 	\caption{Beispielhafte Lage eines Zeitzeigers.}
 \end{figure}
 
 Da das Ziel darin besteht, den dynamischen Rotationsvorgang einer PMSM zu modellieren, ist die Verwendung eines Zeitzeigers, mit dem nur stationöre Vorgänge beschrieben werden können, nicht angebracht. 
-Hier ist es Zweckmäßig, einen Operator so zu entwickeln, dass dieser in der Lage ist, dynamische Vorgänge zu beschrieben, ohne dazu Nebenbedingungen wie beispielsweise die Periodizität heranzuziehen. 
-Bei der Entwicklung bieten sich die Statorphasenströme $i_{s,1}$, $i_{s,2}$, und $i_{s,3}$ des Dreiphasensystems an.
+Hier ist es zweckmäßig, einen Operator so zu entwickeln, dass dieser in der Lage ist, dynamische Vorgänge zu beschrieben, ohne dazu Nebenbedingungen wie beispielsweise die Periodizität heranzuziehen. 
+Bei der Entwicklung bieten sich die Statorphasenströme $i_\i{s,1}$, $i_\i{s,2}$, und $i_\i{s,3}$ des Dreiphasensystems an.
 Diese stehen zu jedem Zeitpunkt zur Verfügung. 
 Es sei angemerkt, dass dabei die Nullbedingung erfüllt ist. 
-Die Summe der Statorphasenströme muss immer null sein, was beim Einsatz von Drehfeldmaschinen idr. gegeben ist.
+Die Summe der Statorphasenströme muss immer Null sein, was beim Einsatz von Drehfeldmaschinen idr. gegeben ist.
 Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die Dritte zu schließen, da gilt:
 
 \begin{align}
-	i_{s,1} + i_{s,2} + i_{s,3} = 0 
+	i_\i{s,1} + i_\i{s,2} + i_\i{s,3} = 0 
 	\label{knotengleichung}
 \end{align}
 
@@ -69,22 +72,24 @@ Nun ist der zweikomponentige Zeitzeiger immer um mindestens zwei Momentanwerte e
 Ein hierfür geeigneter Ansatz zur Erzeugung eines Raumzeigers wurde erstmals in kovacs1959 veröffentlicht:
 
 \begin{align}
-	\underline{i}_{s}(t) = \frac{2}{3} \cdot \Bigl\{\underline{i}_{s,1}(t) + \underline{i}_{s,2}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{i}_{s,3}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{statorstromzeiger}
+	\underline{i}_\i{s}(t) = \frac{2}{3} \cdot \Bigl\{\underline{i}_\i{s,1}(t) + \underline{i}_\i{s,2}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{i}_\i{s,3}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{statorstromzeiger}
 \end{align}
 
-Um jetz aufzeigen zu können, dass der Ansatz aus \ref{statorstromzeiger} im stationären Zustand mit dem entsprechenden Statorstromzeitzeiger übereinstimmt und schlussendlich den Raumzeiger zu erzeugen, werden zunächst in \ref{statorstromzeiger} die Statortrommomentanwerte aus \ref{statorströme} eingesetzt.
+Um jetzt aufzeigen zu können, dass der Ansatz aus \ref{statorstromzeiger} im stationären Zustand mit dem entsprechenden Statorstromzeitzeiger übereinstimmt und schlussendlich den Raumzeiger zu erzeugen, werden zunächst in \ref{statorstromzeiger} die Statorstrommomentanwerte aus \ref{statorströme} eingesetzt.
 Dadurch erhält man
 
 \begin{align}
-\underline{i}_{s}(t) = \frac{2}{3} \cdot \biggl\{\hat{i}_{s}\cdot cos(\omega_{s}t+\varphi_{0}) + \hat{i}_{s}\cdot cos\bigg(\omega_{s}t+\varphi_{0}-\frac{2\pi}{3}\bigg)\cdot e^{j\tfrac{2\pi}{3}} + \hat{i}_{s}\cdot cos\bigg(\omega_{s}t+\varphi_{0}-\frac{4\pi}{3}\bigg)\cdot e^{j\tfrac{4\pi}{3}} \biggr\}
+	\begin{split}
+\underline{i}_\i{s}(t) = \frac{2}{3} \cdot \biggl\{\hat{i}_\i{s}\cdot\si{cos}(\omega_\i{s}t+\varphi_{0}) + \hat{i}_\i{s}\cdot\si{cos}\bigg(\omega_\i{s}t+\varphi_{0}-\frac{2\pi}{3}\bigg)\cdot e^{j\tfrac{2\pi}{3}} + \\ \hat{i}_\i{s}\cdot\si{cos}\bigg(\omega_\i{s}t+\varphi_\i{0}-\frac{4\pi}{3}\bigg)\cdot e^{j\tfrac{4\pi}{3}} \biggr\}
 \label{zwischen1}
+\end{split}
 \end{align}
 
-Wird nun die trigonometrische Cosinus-Funktion durch die entsprechende exponentielle Darstellung ersetzt, folgt hieraus
+Wird nun die Cosinus-Funktion durch die entsprechende exponentielle Darstellung ersetzt, folgt hieraus
 
 \begin{align}
 	\begin{split}
-	\underline{i}_{s}(t) = \frac{2}{3} \cdot \hat{i}_{s} \cdot \biggl\{ \frac{1}{2} \cdot ( e^{j(\omega_{s}t+\varphi_{0})} + e^{-j(\omega_{s}t+\varphi_{0})} ) + \frac{1}{2} \cdot ( e^{j(\omega_{s}t+\varphi_{0}-\frac{2\pi}{3})} + e^{-j(\omega_{s}t+\varphi_{0}-\frac{2\pi}{3})})\cdot e^{j\tfrac{2\pi}{3}} + \\ \frac{1}{2} \cdot ( e^{j(\omega_{s}t+\varphi_{0}-\frac{4\pi}{3})} + e^{-j(\omega_{s}t+\varphi_{0}-\frac{4\pi}{3})})\cdot e^{j\tfrac{4\pi}{3}}  \biggr\}
+	\underline{i}_\i{s}(t) = \frac{2}{3} \cdot \hat{i}_\i{s} \cdot \biggl\{ \frac{1}{2} \cdot ( e^{j(\omega_\i{s}t+\varphi_\i{0})} + e^{-j(\omega_\i{s}t+\varphi_\i{0})} ) + \\ \frac{1}{2} \cdot ( e^{j(\omega_\i{s}t+\varphi_\i{0}-\frac{2\pi}{3})} + e^{-j(\omega_\i{s}t+\varphi_\i{0}-\frac{2\pi}{3})})\cdot e^{j\tfrac{2\pi}{3}} + \\ \frac{1}{2} \cdot ( e^{j(\omega_\i{s}t+\varphi_\i{0}-\frac{4\pi}{3})} + e^{-j(\omega_\i{s}t+\varphi_\i{0}-\frac{4\pi}{3})})\cdot e^{j\tfrac{4\pi}{3}}  \biggr\}
 	\label{zwischen2}
 	\end{split}
 \end{align}
@@ -92,8 +97,10 @@ Wird nun die trigonometrische Cosinus-Funktion durch die entsprechende exponenti
 Nach ausmultiplizieren der Terme folgt mit $1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}}=0$ das Ergebnis und somit der Raumzeiger
 
 \begin{align}
-	\underline{i}_{s} = \frac{2}{3} \cdot \hat{i}_{s}\cdot\biggl\{ \frac{3}{2} \cdot  e^{j(\omega_{s}t+\varphi_{0})} + \frac{1}{2} \cdot e^{-j(\omega_{s}t+\varphi_{0})} \cdot \bigg( 1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}} \bigg)  \biggr\} = \hat{i}_{s} \cdot e^{j(\omega_{s}t+\varphi_{0})}
+\begin{split}
+	\underline{i}_\i{s} = \frac{2}{3} \cdot \hat{i}_\i{s}\cdot\biggl\{ \frac{3}{2} \cdot  e^{j(\omega_\i{s}t+\varphi_\i{0})} + \frac{1}{2} \cdot e^{-j(\omega_\i{s}t+\varphi_\i{0})} \cdot \bigg( 1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}} \bigg)  \biggr\} = \hat{i}_\i{s} \cdot e^{j(\omega_\i{s}t+\varphi_\i{0})}
 	\label{zeigerende}
+\end{split}
 \end{align}
 
 Das Ergebnis von \ref{zeigerende} entspricht strukturell dem in \ref{statorströme} angegebenen Statorstromzeitzeiger. 
@@ -102,7 +109,7 @@ Die folgende Abbildung \ref{fig:raumzeigermaschine} zeigt zur Veranschaulichung 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{raumzeigermaschine.pdf}
+	\includegraphics[width=0.8\textwidth]{raumzeigermaschine.pdf}
 	\label{fig:raumzeigermaschine}
 	\caption{zweipolige Drehfeldmachine mit beispielhafter Statorstromraumzeigerlage}
 \end{figure}
@@ -111,7 +118,7 @@ Mit der Einführung des Raumzeigers ist die theoretische Grundlage dafür gescha
 Da sich, wie Eingangs beschrieben, alle Größen in der Drehfeldmaschine näherungsweise sinusförmig verhalten, ist die Stromraumzeigerdarstellung aus \ref{statorstromzeiger} für alle andren dreiphasigen Größen als allgemeine Raumzeigerdarstellung definierbar.
 
 \begin{align}
-	\underline{a}(t) = \frac{2}{3} \cdot \Bigl\{\underline{a}_{1}(t) + \underline{a}_{2}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{a}_{3}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{raumzeigerdefinition}
+	\underline{a}(t) = \frac{2}{3} \cdot \Bigl\{\underline{a}_\i{1}(t) + \underline{a}_\i{2}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{a}_\i{3}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{raumzeigerdefinition}
 \end{align}
 
 Im Folgenden werden die in der Praxis benötigten Transformationsvorschriften erläutert, welche das Wechseln zwischen Phasen- und Raumzeigergrößen erlauben.
@@ -122,12 +129,12 @@ Im Folgenden werden die in der Praxis benötigten Transformationsvorschriften er
 Als Grundlage für das Wechseln zwischen Phasen- und Raumzeigergrößen dient zunächst die Definition aus \ref{raumzeigerdefinition}. Die Definitionsgleichung lässt sich in Real- und Imaginärteil aufspalten. Es kommt so zu folgender Aufteilung
 
 \begin{align}
-	Re{\underline{a}(t)} = \frac{2}{3} \cdot \Bigl\{ a_{1}(t) + a_{2}(t) \cdot\cos{\frac{2 \pi}{3}} + a_{3}(t) \cdot\cos{\frac{4 \pi}{3}} \Bigr\}
+	Re~{\underline{a}(t)} = \frac{2}{3} \cdot \Bigl\{ a_{1}(t) + a_{2}(t) \cdot\cos{\frac{2 \pi}{3}} + a_{3}(t) \cdot\cos{\frac{4 \pi}{3}} \Bigr\}
 	\label{realteil}
 \end{align}
 
 \begin{align}
-	Im{\underline{a}(t)} = \frac{2}{3} \cdot \Bigl\{ ~~~~~~~~a_{2}(t)\cdot\sin{\frac{2 \pi}{3}} + a_{3}(t) \cdot\sin{\frac{4 \pi}{3}} \Bigr\}
+	Im~{\underline{a}(t)} = \frac{2}{3} \cdot \Bigl\{ ~~~~~~~~a_{2}(t)\cdot\sin{\frac{2 \pi}{3}} + a_{3}(t) \cdot\sin{\frac{4 \pi}{3}} \Bigr\}
 	\label{imaginärteil}
 \end{align}
 
@@ -153,24 +160,24 @@ Der entstandene Raumzeiger in  $\alpha$-$\beta$-Koordinaten ist in allgemeiner F
 	\label{raumzeigeralphabeta}
 \end{align}
 
-darstellbar. Um die $\alpha$- und $\beta$-Komponente des entstandenen Raumzeigers besser nachvollziehen zu können, zeigt die Abbildung \ref{alphabetakoordinaten} eine beispielhafte Lage des Zeigers in $\alpha$-$\beta$-Koordinaten.
+darstellbar. Um die $\alpha$- und $\beta$-Komponente des entstandenen Raumzeigers besser nachvollziehen zu können, zeigt die Abbildung \ref{fig:alphabetakoordinaten} eine beispielhafte Lage des Zeigers in $\alpha$-$\beta$-Koordinaten.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{alphabetakoordinaten.pdf}
+	\includegraphics[width=0.6\textwidth]{alphabetakoordinaten.pdf}
 	\label{fig:alphabetakoordinaten}
 	\caption{Beispielhafte Lage des Raumzeigers im $\alpha$-$\beta$-Koordinatensystem.}
 \end{figure}
 
 Nachdem sich der Raumzeiger im neuern Koordinatensystem darstellen lässt, ist es nun entscheidend, eine mathematische Transformationsvorschrift aufzustellen, die sich an \ref{alpha} und \ref{beta} orientiert. 
-Übertragen auf eine Vektorschreibweise lautet die Transformation
+Übertragen auf eine Vektorschreibweise lautet die Transformation:
 
 \begin{align}
 	\begin{bmatrix}
 	a_{\alpha} \\
 	a_{\beta} 
 	\end{bmatrix}
-	=\underline{T^\prime}\cdot 
+	=\underline{T}^{\prime}
 	\begin{bmatrix}
 	a_{1} \\
 	a_{2} \\
@@ -182,7 +189,7 @@ Nachdem sich der Raumzeiger im neuern Koordinatensystem darstellen lässt, ist e
 mit der Transformationsmatrix
 
 \begin{align}
-	\underline{T^\prime} = 
+	\underline{T}^{\prime} = 
 	\begin{bmatrix}
 		1 & -\frac{1}{2} & -\frac{1}{2}  \\
 		0 & ~~\frac{\sqrt{3}}{2} & ~~\frac{\sqrt{3}}{2}
@@ -192,7 +199,6 @@ mit der Transformationsmatrix
 
 Mit dieser Matrix ist es möglich, die dynamische Drehfeldgößen eines dreiphasigen Systems auf zwei Größen zu reduzieren sowie Momentanwerte und Amplitude in einem Raumzeiger darzustellen.
 Der Faktor $\frac{2}{3}$ normiert dabei $a_{\alpha}$ und $a_{\alpha}$ auf den Betrag der entsprechenden Eingangsgrößen.
-Die Transvormation mit diesem Vorfaktor ist daher längeninvariant.
 
 Für eine Regelung fehlt eine Rücktransvormationsvorschrift, mit deren Hilfe die $\alpha$- und $\beta$-Komponente wieder in ein Dreiphasensystem gebracht werden kann.
 Die inverse Matrix bildet sich aus der Transformationsmatrix \ref{clarkematrix}. 
@@ -287,11 +293,11 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
  \end{align}
  
  aus. 
- Da die Nullkomponente der Phasengröße null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${T^\prime}$ entspricht.
+ Da die Nullkomponente der Phasengröße aufgrund der symmetrischen Belastung null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${\underline{T}^{-1}}$ entspricht.
 
 \section{Beschreibung in rotorfesten d-q-Koordinatensystem}\label{sec:park}
 
-Für die Regelung von Drehfeldmaschinen hat es sich als praktikabel herausgestellt, die Systembeschreibung von der im Vorfeld beschriebenen ortsfesten Koordinatensystem in ein, mit der Winkelgeschwindigkeit des Rotors, rotierendes Koordinatensystem zu überführen. 
+Für die Regelung von Drehfeldmaschinen hat es sich als praktikabel herausgestellt, die Beschreibung des im Vorfeld beschriebenen ortsfesten Koordinatensystems in ein, mit der Winkelgeschwindigkeit des Rotors, rotierendes Koordinatensystem zu überführen. 
 Daher wird die Darstellung auch rotorfest genannt. 
 Die Vorteile dieser Koordinatenbeschreibung liegen zum einen in einer einfacheren Darstellbarkeit elektrophysikalischer Zusammenhänge und zum anderen dass die Raumzeigergrößen näherungsweise Gleichgrößen sind.
 Dadurch lassen sich klassische Regelvefahren auf die Maschine anwenden.
@@ -301,7 +307,7 @@ Zur Verdeutlichung der Transvormationsvorschriften dient die nachfolgende Abbild
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{dqkoordinaten.pdf}
+	\includegraphics[width=0.8\textwidth]{dqkoordinaten.pdf}
 	\label{fig:dqkoordinaten}
 	\caption{Zusammenhang der $\alpha$-$\beta$-Koordinaten und der d-q- Raumzeigerkomponenten}
 \end{figure}
@@ -314,10 +320,10 @@ Mit Hilfe der Abbildung lässt sich nun die Transformationsbeziehung zwischen $\
 
 \begin{align}
 	\begin{bmatrix}
-		a_{d} \\
-		a_{q} 
+		a_\i{d} \\
+		a_\i{q} 
 	\end{bmatrix}
-	=\underline{T^\prime}\cdot 
+	=\underline{T}{^\prime}\cdot 
 	\begin{bmatrix}
 		a_{\alpha} \\
 		a_{\beta}
@@ -328,10 +334,10 @@ Mit Hilfe der Abbildung lässt sich nun die Transformationsbeziehung zwischen $\
 Die Transformationsmatrix lautet dann
 
 \begin{align}
-	\underline{T^\prime} =
+	\underline{T}{^\prime} =
 	\begin{bmatrix}
-		~~~\cos{\varphi_{L}} & \sin{\varphi_{L}} \\
-		-\sin{\varphi_{L}} & \cos{\varphi_{L}}
+		~~~\cos{\varphi_\i{L}} & \sin{\varphi_\i{L}} \\
+		-\sin{\varphi_\i{L}} & \cos{\varphi_\i{L}}
 	\end{bmatrix}
 	\label{parkmatrix}
 \end{align}
@@ -347,8 +353,8 @@ Es gilt für die Rücktransformation also die Beziehung
 	\end{bmatrix}
 	=\underline{T}^{-1}\cdot 
 	\begin{bmatrix}
-		a_{d} \\
-		a_{q} 
+		a_\i{d} \\
+		a_\i{q} 
 	\end{bmatrix}
 	\label{parkvektorinvers}
 \end{align}
@@ -358,8 +364,8 @@ mit der Transformationsmatrix
 \begin{align}
 	\underline{T}^{-1} =
 	\begin{bmatrix}
-		\cos{\varphi_{L}} & -\sin{\varphi_{L}} \\
-		\sin{\varphi_{L}} & ~~~\cos{\varphi_{L}}
+		\cos{\varphi_\i{L}} & -\sin{\varphi_\i{L}} \\
+		\sin{\varphi_\i{L}} & ~~~\cos{\varphi_\i{L}}
 	\end{bmatrix}
 	\label{parkmatrixinvers}
 \end{align}
@@ -374,16 +380,16 @@ Zur einfacheren Darstellung der Clarke- und Parktransformation werden zunächst 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildclarke.pdf}
+	\includegraphics[width=0.35\textwidth]{blockbildclarke.pdf}
 	\label{fig:blockbildclarke}
 	\caption{Clarke Blockbild}
 \end{figure}
 
-Bei der Parktransformation muss der Winkel $\varphi_{L}$, um den das $\alpha$-$\beta$-Koordinatensystem zum d-q-System verschoben ist, zugeführt werden.
+Bei der Parktransformation muss der Winkel $\varphi_\i{L}$, um den das $\alpha$-$\beta$-Koordinatensystem zum d-q-System verschoben ist, zugeführt werden.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildpark.pdf}
+	\includegraphics[width=0.35\textwidth]{blockbildpark.pdf}
 	\label{fig:blockbildpark}
 	\caption{Park Blockbild}
 \end{figure}
@@ -392,14 +398,14 @@ Die entsprechenden Rücktransformationen werden in den folgenden zwei Abbildunge
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildclarke.pdf}
+	\includegraphics[width=0.35\textwidth]{blockbildclarke.pdf}
 	\label{fig:blockbildinverseclarke}
 	\caption{Inverse Clarketransformation Blockbild}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildpark.pdf}
+	\includegraphics[width=0.35\textwidth]{blockbildpark.pdf}
 	\label{fig:blockbildinversepark}
 	\caption{Inverse Park-Transformation Blockbild}
 \end{figure}
@@ -408,16 +414,16 @@ Mit Hilfe der Blockbilder kann jetzt die sowohl die vollständige Hintransformat
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildclarkepark.pdf}
+	\includegraphics[width=0.6\textwidth]{blockbildclarkepark.pdf}
 	\label{fig:blockbildclarkepark}
 	\caption{Flussbild Clarke-Park-Transformation}
 \end{figure}
 
-Abbildung \ref{fig:blockbildclarkepark} zeigt die Transformation der Statorphasenströme $i_{s,1}$, $i_{s,2}$ und $i_{s,3}$ in d-q-Komponenten, während die nachfolgende Grafik \ref{fig:blockbildinverseclarkepark} die zusammenhängende Rücktransformation verbildlicht.
+Abbildung \ref{fig:blockbildclarkepark} zeigt die Transformation der Statorphasenströme $i_\i{s,1}$, $i_\i{s,2}$ und $i_\i{s,3}$ in d-q-Komponenten, während die nachfolgende Grafik \ref{fig:blockbildinverseclarkepark} die zusammenhängende Rücktransformation verbildlicht.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{blockbildinverseclarkepark.pdf}
+	\includegraphics[width=0.6\textwidth]{blockbildinverseclarkepark.pdf}
 	\label{fig:blockbildinverseclarkepark}
 	\caption{Flussbild der inversen Clarke-Park-Transformation}
 \end{figure}
