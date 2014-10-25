@@ -201,6 +201,12 @@ Bei einer zweipoligen Maschine mit $p=1$ stimmen somit der räumlich mechanische
 
 \section{Induktivitäten}\label{sec:induktiv}
 
+Innerhalb der Vektorregelung (s.~h.~Abschnitt~\ref{cha:Grundlagen der Vektorregelung}) werden die absoluten Induktivitäten zum Beispiel für die Berechnung des Spannungssollwertmodells, also der Vorsteuerung, benötigt.
+Im Rahmen von geberlosen Regelalgorithmen sind die absoluten und differentiellen Induktivitäten erforderlich~--~wie \autocite{kellner2012}[S.~35ff.] gut darstellt.
+Auch bei aktuellen Forschungsthemen »Parameteridentifikation von Synchronmaschinen« zeigt \autocite{kellner2012} auf S.~148ff., dass die Induktivitäten für Ständerwiderstandsidentifikation benötigt werden.
+Da für die Anwendung nur die Parameter in rotorfesten Koordinaten von Belang sind, wird sich die Sichtweise in der vorliegenden Arbeit darauf beschränken.
+ 
+
 \section{Einführung Synchronmaschine}\label{sec:synchron}
 
 \paragraph{Historischer Hintergund} Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
@@ -324,7 +330,7 @@ R_\i{1} \approx 0.07 X_\i{d}
 
 anzusetzen.
 
-\subsection{Beschreibung der Synchronmaschine im dq-Koordinatensystem}
+\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}
 
 Im folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagneten ersetzt wird.
 In diesem Fall verbleiben nur die drei Statorwicklungen als stromdurchflossene Wicklungen.
@@ -343,6 +349,15 @@ Bei einer trapezförmigen Speisung der Statorwicklung wird die Maschine als (BLD
 Der einfachste Fall für die Ermittlung des Signalflussplanes ist die Annahme, dass die Maschine an der Statorwicklung eine sinusförmige Spannung anliegt und die Maschine symmetrisch konzipiert wurde.
 Bei einer symmetrisch konzipierten Synchronmaschine werden die Reluktanzeinflüsse nicht wirksam.
 Damit ergeben sich nach \autocite[S.~291]{schroder2000} folgende Gleichungen für die Synchron-Vollpolmaschine.
+Aufgrund der besonderen konstruktiven Situation wird für den Rotor das mit dem Rotor umlaufende Koordinatensystem $L$ jetzt mit den allgemein verwendeten Achsenbezeichnungen $d$ und $q$ gewählt (s.~h.~Abb.~\ref{fig:synchron-dq}).
+Damit wird die Kreisfrequenz $\Omega_\i{L}$ des umlaufenden Koordinatensystems $L (d, q)$ auf die mit der Polpaarzahl $Z_\i{p}$ umgerechnete mechanische Winkelgeschwindigkeit $\Omega_\i{m}$ des Rotors festgelegt ist.
+Aus den obigen Kenntnissen ergibt sich dann \autocite{schroder2001}[S.~682][vgl.~]
+
+\begin{align}
+\Omega_\i{L} = Z_\i{p}\cdot\Omega_\i{m}
+\end{align}
+
+Die Spannungsgleichungen der Synchronmaschine ergeben sich entsprechend zu
 
 \begin{align}
 \frac{\i{d}\psi_\i{d}}{dt} &= U_\i{d} - R_\i{1}\cdot I_\i{d} + \Omega_\i{L}\cdot\psi_\i{q} \\
@@ -360,7 +375,7 @@ Damit ergibt sich das innere Luftspaltdrehmoment $M_i$ zu:
 
 \begin{align}
 M_\i{i} &= \frac{3}{2}\cdot Z_\i{p} \cdot (\psi_\i{d}\cdot I_\i{q} - \psi_\i{q}\cdot I_\i{d}) \\ 
-\nonumber &= \frac{3}{2}\cdot Z_\i{p} \cdot (\underbrace{\psi_\i{PM}\cdot I_\i{q}}_\i{\text{~Hauptmoment}} + \underbrace{(L_\i{d}-L_\i{q})\cdot I_\i{d}\cdot I_\i{q}}_\i{\text{~Reluktanzmoment}}
+\nonumber &= \frac{3}{2}\cdot Z_\i{p} \cdot (\underbrace{\psi_\i{PM}\cdot I_\i{q}}_\i{\text{~Hauptmoment}} + \underbrace{(L_\i{d}-L_\i{q})\cdot I_\i{d}\cdot I_\i{q}}_\i{\text{~Reluktanzmoment}})
 \end{align}
 
 und der allgemeinen mech.\ Bewegungsgleichung
@@ -371,11 +386,11 @@ und der allgemeinen mech.\ Bewegungsgleichung
 
 
 
-\section{Besonderheiten der Schenkelpolmaschine}\label{sec:schenkelpol}
+%\section{Besonderheiten der Schenkelpolmaschine}\label{sec:schenkelpol}
 
-\section{Permanenterregte Synchronmaschine}\label{sec:pmsm}
+%\section{Permanenterregte Synchronmaschine}\label{sec:pmsm}
 
-\section{Evalurierung der Ersatzschaltbilder für die Regelung}\label{sec:esb}
+%\section{Evalurierung der Ersatzschaltbilder für die Regelung}\label{sec:esb}
 
 
 

@@ -40,7 +40,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -65,7 +65,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldate</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -125,11 +125,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useauthor</bcf:key>
@@ -1974,13 +1974,16 @@
     <bcf:citekey order="1">hofmann2013</bcf:citekey>
     <bcf:citekey order="2">fischer2009</bcf:citekey>
     <bcf:citekey order="3">fischer2009</bcf:citekey>
-    <bcf:citekey order="4">fischer2009</bcf:citekey>
-    <bcf:citekey order="5">mullerI2005</bcf:citekey>
-    <bcf:citekey order="6">ternes2012</bcf:citekey>
+    <bcf:citekey order="4">kellner2012</bcf:citekey>
+    <bcf:citekey order="5">kellner2012</bcf:citekey>
+    <bcf:citekey order="6">fischer2009</bcf:citekey>
     <bcf:citekey order="7">mullerI2005</bcf:citekey>
-    <bcf:citekey order="8">schroder2000</bcf:citekey>
-    <bcf:citekey order="9">schroder2000</bcf:citekey>
-    <bcf:citekey order="10">nuss2010</bcf:citekey>
+    <bcf:citekey order="8">ternes2012</bcf:citekey>
+    <bcf:citekey order="9">mullerI2005</bcf:citekey>
+    <bcf:citekey order="10">schroder2000</bcf:citekey>
+    <bcf:citekey order="11">schroder2000</bcf:citekey>
+    <bcf:citekey order="12">schroder2001</bcf:citekey>
+    <bcf:citekey order="13">nuss2010</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt" type="entry" sortscheme="anyt">
