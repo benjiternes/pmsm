@@ -13,13 +13,13 @@
 \contentsline {paragraph}{\nonumberline Historischer Hintergund}{10}{section*.5}
 \contentsline {subsection}{\numberline {1.4.1}Spannungsgleichungen und Ersatzschaltbild}{10}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Beschreibung der Synchronmaschine im dq-Koordinatensystem}{13}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Besonderheiten der Schenkelpolmaschine}{14}{section.1.5}
-\contentsline {section}{\numberline {1.6}Permanenterregte Synchronmaschine}{14}{section.1.6}
-\contentsline {section}{\numberline {1.7}Evalurierung der Ersatzschaltbilder f\IeC {\"u}r die Regelung}{14}{section.1.7}
+\contentsline {section}{\numberline {1.5}Besonderheiten der Schenkelpolmaschine}{15}{section.1.5}
+\contentsline {section}{\numberline {1.6}Permanenterregte Synchronmaschine}{15}{section.1.6}
+\contentsline {section}{\numberline {1.7}Evalurierung der Ersatzschaltbilder f\IeC {\"u}r die Regelung}{15}{section.1.7}
 \contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{16}{chapter.2}
 \contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{16}{section.2.1}
 \contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{19}{section.2.2}
-\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{22}{section.2.3}
+\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{23}{section.2.3}
 \contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{24}{section.2.4}
 \contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{27}{section.3.1}
