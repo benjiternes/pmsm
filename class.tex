@@ -1,8 +1,8 @@
 \documentclass[fontsize=12pt,%
 paper=a4,%
 DIV=classic,%
-BCOR=8mm,%
-twoside=false,%
+%BCOR=10mm,%
+twoside=true,%
 headings=openany,%
 parskip=half,%
 pagesize=auto,%
@@ -30,7 +30,6 @@ toc=bibliography%
 \usepackage{siunitx}
 \usepackage{scrlayer-scrpage} 
 \pagestyle{scrheadings}
-
 
 %\usepackage{setspace}
 %\onehalfspacing 
@@ -132,7 +131,9 @@ colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
 % linksbündige Fußboten
 \deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
 
-\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
+\usepackage[right=3cm,left=2cm]{geometry}
+
+%\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
 % für autoref von Gleichungen in itemize-Umgebungen
 \makeatletter
 \newcommand{\saved@equation}{}

@@ -18,8 +18,6 @@ Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur
 
 \section{Magnetfelder}
 
-
-
 \subsection{Strombelag}
 
 Die örtliche und zeitliche Änderung von Magnetfeldern in elektrischen Maschinen wird durch die Anordnung der Leiter und die Art der Speisung bestimmt \autocite[S~199]{hofmann2013}.
@@ -82,6 +80,36 @@ Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
 \begin{quote}
 Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. Bundeswehr Universität in München.)
 \end{quote}
+
+Weitere spezifische Darstellungen zum Strombelag.
+Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
+
+\begin{align}
+A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot Z\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
+\end{align}
+
+betrachtet man jetzt die Polteilung $\tau_\i{p}$
+
+\begin{align}
+\tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:strombelag3}
+\end{align}
+
+so wird aus Gl.~\ref{eqn:strombelag2} und Gl.~\ref{eqn:strombelag3} bei voller Bewicklung über eine Polteilung
+
+\begin{align}
+A = \frac{m w I}{p \tau_\i{p}}
+\end{align}
+
+\begin{quote}
+\enquote{Aus dem Strombelag $A$ wir bei rotatorischen Maschinen abhängig von der Umfangskoordinate mit $A(x)$, wenn:
+\begin{itemize}
+\item sich durch Wechsel von Hin- und Rückleiter einer Wicklung die Stromrichtung ändert,
+\item durch Konzentration der Wicklung der Strom in den Lücken zu Null wird.
+\end{itemize}
+\autocite[S.~199]{hofmann2013}}
+\end{quote}
+
+
 
 \subsection{Mehrphasensysteme}
 \label{subsec:mehrphasensysteme}
