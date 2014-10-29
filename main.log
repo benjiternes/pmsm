@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.19)  28 OCT 2014 23:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.19)  29 OCT 2014 17:23
 entering extended mode
 **main.tex
 (D:\pmsm\main.tex
@@ -1285,29 +1285,49 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count369
 \TX@ftn=\toks25
 )
+(C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen177
+\lightrulewidth=\dimen178
+\cmidrulewidth=\dimen179
+\belowrulesep=\dimen180
+\belowbottomsep=\dimen181
+\aboverulesep=\dimen182
+\abovetopsep=\dimen183
+\cmidrulesep=\dimen184
+\cmidrulekern=\dimen185
+\defaultaddspace=\dimen186
+\@cmidla=\count370
+\@cmidlb=\count371
+\@aboverulesep=\dimen187
+\@belowrulesep=\dimen188
+\@thisruleclass=\count372
+\@lastruleclass=\count373
+\@thisrulewidth=\dimen189
+)
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip81
 \LTright=\skip82
 \LTpre=\skip83
 \LTpost=\skip84
-\LTchunksize=\count370
-\LTcapwidth=\dimen177
+\LTchunksize=\count374
+\LTcapwidth=\dimen190
 \LT@head=\box77
 \LT@firsthead=\box78
 \LT@foot=\box79
 \LT@lastfoot=\box80
-\LT@cols=\count371
-\LT@rows=\count372
-\c@LT@tables=\count373
-\c@LT@chunks=\count374
+\LT@cols=\count375
+\LT@rows=\count376
+\c@LT@tables=\count377
+\c@LT@chunks=\count378
 \LT@p@ftn=\toks26
 )
-Class scrreprt Info: longtable captions redefined on input line 83.
+Class scrreprt Info: longtable captions redefined on input line 86.
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count375
+\c@float@type=\count379
 \float@exts=\toks27
 \float@box=\box81
 \@float@everytoks=\toks28
@@ -1315,8 +1335,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen178
-\Gin@req@width=\dimen179
+\Gin@req@height=\dimen191
+\Gin@req@width=\dimen192
 )
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -1330,14 +1350,14 @@ Package color Info: Driver file: pdftex.def on input line 130.
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip85
 \subfigcapskip=\skip86
-\subfigcaptopadj=\dimen180
+\subfigcaptopadj=\dimen193
 \subfigbottomskip=\skip87
-\subfigcapmargin=\dimen181
+\subfigcapmargin=\dimen194
 \subfiglabelskip=\skip88
-\c@subfigure=\count376
-\c@lofdepth=\count377
-\c@subtable=\count378
-\c@lotdepth=\count379
+\c@subfigure=\count380
+\c@lofdepth=\count381
+\c@subtable=\count382
+\c@lotdepth=\count383
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
@@ -1350,23 +1370,23 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
-\lst@mode=\count380
+\lst@mode=\count384
 \lst@gtempboxa=\box83
 \lst@token=\toks29
-\lst@length=\count381
-\lst@currlwidth=\dimen182
-\lst@column=\count382
-\lst@pos=\count383
-\lst@lostspace=\dimen183
-\lst@width=\dimen184
-\lst@newlines=\count384
-\lst@lineno=\count385
-\lst@maxwidth=\dimen185
+\lst@length=\count385
+\lst@currlwidth=\dimen195
+\lst@column=\count386
+\lst@pos=\count387
+\lst@lostspace=\dimen196
+\lst@width=\dimen197
+\lst@newlines=\count388
+\lst@lineno=\count389
+\lst@maxwidth=\dimen198
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count386
-\lst@skipnumbers=\count387
+\c@lstnumber=\count390
+\lst@skipnumbers=\count391
 \lst@framebox=\box84
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
@@ -1375,17 +1395,18 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count388
-\Gm@cntv=\count389
-\c@Gm@tempcnt=\count390
-\Gm@bindingoffset=\dimen186
-\Gm@wd@mp=\dimen187
-\Gm@odd@mp=\dimen188
-\Gm@even@mp=\dimen189
-\Gm@layoutwidth=\dimen190
-\Gm@layoutheight=\dimen191
-\Gm@layouthoffset=\dimen192
-\Gm@layoutvoffset=\dimen193
+\Gm@cnth=\count392
+\Gm@cntv=\count393
+\c@Gm@tempcnt=\count394
+\Gm@bindingoffset=\dimen199
+\Gm@wd@mp=\dimen200
+\Gm@odd@mp=\dimen201
+Normal \dimen register pool exhausted, switching to extended pool.
+\Gm@even@mp=\dimen256
+\Gm@layoutwidth=\dimen257
+\Gm@layoutheight=\dimen258
+\Gm@layouthoffset=\dimen259
+\Gm@layoutvoffset=\dimen260
 \Gm@dimlist=\toks30
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
@@ -1401,14 +1422,14 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count391
+\c@abspage=\count395
 Package zref Info: New property: abspage on input line 62.
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip91
-\c@mdf@globalstyle@cnt=\count392
+\c@mdf@globalstyle@cnt=\count396
 \mdf@skipabove@length=\skip92
 \mdf@skipbelow@length=\skip93
 \mdf@leftmargin@length=\skip94
@@ -1457,8 +1478,8 @@ y
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
 -common.tex
 \pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen194
-\pgfutil@tempdimb=\dimen195
+\pgfutil@tempdima=\dimen261
+\pgfutil@tempdimb=\dimen262
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
 -common-lists.tex))
@@ -1492,21 +1513,20 @@ Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 filtered.code.tex
 \pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen196
-\pgf@y=\dimen197
-\pgf@xa=\dimen198
-\pgf@ya=\dimen199
-\pgf@xb=\dimen200
-\pgf@yb=\dimen201
-Normal \dimen register pool exhausted, switching to extended pool.
-\pgf@xc=\dimen256
-\pgf@yc=\dimen257
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count393
-\c@pgf@countb=\count394
-\c@pgf@countc=\count395
-\c@pgf@countd=\count396
+\c@pgf@counta=\count397
+\c@pgf@countb=\count398
+\c@pgf@countc=\count399
+\c@pgf@countd=\count400
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
@@ -1528,8 +1548,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count397
-\pgfsyssoftpath@bigbuffer@items=\count398
+\pgfsyssoftpath@smallbuffer@items=\count401
+\pgfsyssoftpath@bigbuffer@items=\count402
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
 sprotocol.code.tex
@@ -1565,8 +1585,8 @@ code.tex
 code.tex)
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen258
-\pgfmath@count=\count399
+\pgfmath@dimen=\dimen271
+\pgfmath@count=\count403
 \pgfmath@box=\box86
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -1592,37 +1612,37 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count400
+\c@pgfmathroundto@lastzeros=\count404
 ))
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen259
-\pgf@picmaxx=\dimen260
-\pgf@picminy=\dimen261
-\pgf@picmaxy=\dimen262
-\pgf@pathminx=\dimen263
-\pgf@pathmaxx=\dimen264
-\pgf@pathminy=\dimen265
-\pgf@pathmaxy=\dimen266
-\pgf@xx=\dimen267
-\pgf@xy=\dimen268
-\pgf@yx=\dimen269
-\pgf@yy=\dimen270
-\pgf@zx=\dimen271
-\pgf@zy=\dimen272
+\pgf@picminx=\dimen272
+\pgf@picmaxx=\dimen273
+\pgf@picminy=\dimen274
+\pgf@picmaxy=\dimen275
+\pgf@pathminx=\dimen276
+\pgf@pathmaxx=\dimen277
+\pgf@pathminy=\dimen278
+\pgf@pathmaxy=\dimen279
+\pgf@xx=\dimen280
+\pgf@xy=\dimen281
+\pgf@yx=\dimen282
+\pgf@yy=\dimen283
+\pgf@zx=\dimen284
+\pgf@zy=\dimen285
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen273
-\pgf@path@lasty=\dimen274
+\pgf@path@lastx=\dimen286
+\pgf@path@lasty=\dimen287
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen275
-\pgf@shorten@start@additional=\dimen276
+\pgf@shorten@end@additional=\dimen288
+\pgf@shorten@start@additional=\dimen289
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 escopes.code.tex
@@ -1630,19 +1650,19 @@ File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box87
 \pgf@hbox=\box88
 \pgf@layerbox@main=\box89
-\pgf@picture@serial@count=\count401
+\pgf@picture@serial@count=\count405
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen277
+\pgflinewidth=\dimen290
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen278
-\pgf@pt@y=\dimen279
-\pgf@pt@temp=\dimen280
+\pgf@pt@x=\dimen291
+\pgf@pt@y=\dimen292
+\pgf@pt@temp=\dimen293
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 equick.code.tex
@@ -1659,13 +1679,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen281
+\pgfarrowsep=\dimen294
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen282
-\pgf@sys@shading@range@num=\count402
+\pgf@max=\dimen295
+\pgf@sys@shading@range@num=\count406
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
 eimage.code.tex
@@ -1700,8 +1720,8 @@ File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen283
-\pgf@nodesepend=\dimen284
+\pgf@nodesepstart=\dimen296
+\pgf@nodesepend=\dimen297
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
 mp-version-1-18.sty
@@ -1722,8 +1742,8 @@ Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen285
-\pgffor@skip=\dimen286
+\pgffor@iter=\dimen298
+\pgffor@skip=\dimen299
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
 ))
@@ -1734,32 +1754,32 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count403
-\pgfplotmarksize=\dimen287
+\pgf@plot@mark@count=\count407
+\pgfplotmarksize=\dimen300
 )
-\tikz@lastx=\dimen288
-\tikz@lasty=\dimen289
-\tikz@lastxsaved=\dimen290
-\tikz@lastysaved=\dimen291
-\tikzleveldistance=\dimen292
-\tikzsiblingdistance=\dimen293
+\tikz@lastx=\dimen301
+\tikz@lasty=\dimen302
+\tikz@lastxsaved=\dimen303
+\tikz@lastysaved=\dimen304
+\tikzleveldistance=\dimen305
+\tikzsiblingdistance=\dimen306
 \tikz@figbox=\box92
 \tikz@figbox@bg=\box93
 \tikz@tempbox=\box94
 \tikz@tempbox@bg=\box95
-\tikztreelevel=\count404
-\tikznumberofchildren=\count405
-\tikznumberofcurrentchild=\count406
-\tikz@fig@count=\count407
+\tikztreelevel=\count408
+\tikznumberofchildren=\count409
+\tikznumberofcurrentchild=\count410
+\tikz@fig@count=\count411
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count408
-\pgfmatrixcurrentcolumn=\count409
-\pgf@matrix@numberofcolumns=\count410
+\pgfmatrixcurrentrow=\count412
+\pgfmatrixcurrentcolumn=\count413
+\pgf@matrix@numberofcolumns=\count414
 )
-\tikz@expandcount=\count411
+\tikz@expandcount=\count415
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tik
 z\libraries\tikzlibrarytopaths.code.tex
@@ -1800,7 +1820,7 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@horizontalspaceofbox=\skip155
 \mdfsubtitleheight=\skip156
 \mdfsubsubtitleheight=\skip157
-\c@mdfcountframes=\count412
+\c@mdfcountframes=\count416
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1816,10 +1836,10 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count413
-\c@mdf@env@i=\count414
-\c@mdf@env@ii=\count415
-\c@mdf@zref@counter=\count416
+\mdf@envdepth=\count417
+\c@mdf@env@i=\count418
+\c@mdf@env@ii=\count419
+\c@mdf@zref@counter=\count420
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )) (D:\pmsm\makros.tex
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
@@ -1836,7 +1856,11 @@ Package biblatex Info: ... file 'german.lbx' found.
 
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\german.lbx
 File: german.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
-)) (D:\pmsm\main.aux)
+)) (D:\pmsm\main.aux
+
+LaTeX Warning: Label `fig:synchron-dq' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -1857,7 +1881,8 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+
+("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
 File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1944,7 +1969,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count417
+\c@section@level=\count421
 )
 LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
@@ -1977,19 +2002,19 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 (C:\Users\benjamin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count418
-\scratchdimen=\dimen294
+\scratchcounter=\count422
+\scratchdimen=\dimen307
 \scratchbox=\box102
-\nofMPsegments=\count419
-\nofMParguments=\count420
+\nofMPsegments=\count423
+\nofMParguments=\count424
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count421
-\MPscratchDim=\dimen295
-\MPnumerator=\count422
-\makeMPintoPDFobject=\count423
+\MPscratchCnt=\count425
+\MPscratchDim=\dimen308
+\MPnumerator=\count426
+\makeMPintoPDFobject=\count427
 \everyMPtoPDFconversion=\toks44
 )
-\c@lstlisting=\count424
+\c@lstlisting=\count428
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2026,7 +2051,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\c__siunitx_mathsf_int=\count425
+\c__siunitx_mathsf_int=\count429
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 9.
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -2091,7 +2116,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count426
+\c__siunitx_mathtt_int=\count430
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 9.
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
@@ -2109,7 +2134,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-<_Bilder/bo.pdf, id=135, 470.35765pt x 106.9248pt>
+<_Bilder/bo.pdf, id=143, 470.35765pt x 106.9248pt>
 File: _Bilder/bo.pdf Graphic file (type pdf)
  <use _Bilder/bo.pdf>
 Package pdftex.def Info: _Bilder/bo.pdf used on input line 27.
@@ -2161,7 +2186,7 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <17.28> not available
 ] [2
 
 
-] (D:\pmsm\grundlagen.tex [3]
+] (D:\pmsm\grundlagen.tex
 Kapitel 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -2180,25 +2205,25 @@ Class scrreprt Warning: \float@addtolists detected!
 
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 19.
-[4
+[3
 
-] [5] <_Bilder/mehrphasen.pdf, id=269, 426.73528pt x 167.98158pt>
+] [4] <_Bilder/mehrphasen.pdf, id=286, 426.73528pt x 167.98158pt>
 File: _Bilder/mehrphasen.pdf Graphic file (type pdf)
 
 <use _Bilder/mehrphasen.pdf>
 Package pdftex.def Info: _Bilder/mehrphasen.pdf used on input line 85.
 (pdftex.def)             Requested size: 455.24417pt x 179.20792pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.97 \end{align}
-                 <D:/pmsm/_Bilder/mehrphasen.pdf>] [7]
+                 <D:/pmsm/_Bilder/mehrphasen.pdf>] [6]
 
-LaTeX Warning: Reference `eqn' on page 8 undefined on input line 152.
+LaTeX Warning: Reference `eqn' on page 7 undefined on input line 152.
 
-<_Bilder/dreiphasensystem.pdf, id=292, 584.1825pt x 372.39125pt>
+<_Bilder/dreiphasensystem.pdf, id=309, 584.1825pt x 372.39125pt>
 File: _Bilder/dreiphasensystem.pdf Graphic file (type pdf)
 
 <use _Bilder/dreiphasensystem.pdf>
@@ -2208,14 +2233,14 @@ Package pdftex.def Info: _Bilder/dreiphasensystem.pdf used on input line 156.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9pdfTeX warning (ext4): destination with the same identifier (name{figure.
+[7] [8pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.185 \end{align}
                   <D:/pmsm/_Bilder/dreiphasensystem.pdf>]
-<_Bilder/nutquerfeld.pdf, id=316, 455.18858pt x 190.74362pt>
+<_Bilder/nutquerfeld.pdf, id=332, 455.18858pt x 190.74362pt>
 File: _Bilder/nutquerfeld.pdf Graphic file (type pdf)
 
 <use _Bilder/nutquerfeld.pdf>
@@ -2227,20 +2252,20 @@ Overfull \hbox (14.67192pt too wide) in paragraph at lines 209--211
 n Nut-�ff-nung (Nutschlitz bzw. Streuschlitz)
  []
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
-}) has been already used, duplicate ignored
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.211 
        <D:/pmsm/_Bilder/nutquerfeld.pdf>]
-<_Bilder/strombelag_neu.pdf, id=334, 455.18858pt x 167.98158pt>
+<_Bilder/strombelag_neu.pdf, id=352, 455.18858pt x 167.98158pt>
 File: _Bilder/strombelag_neu.pdf Graphic file (type pdf)
 
 <use _Bilder/strombelag_neu.pdf>
 Package pdftex.def Info: _Bilder/strombelag_neu.pdf used on input line 228.
 (pdftex.def)             Requested size: 455.24417pt x 168.0119pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2255,160 +2280,181 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 274.
- [12]
-<_Bilder/synchronmaschine-drehstrom.pdf, id=371, 426.73528pt x 222.04758pt>
+ [11]
+<_Bilder/synchronmaschine-drehstrom.pdf, id=388, 426.73528pt x 222.04758pt>
 File: _Bilder/synchronmaschine-drehstrom.pdf Graphic file (type pdf)
 
 <use _Bilder/synchronmaschine-drehstrom.pdf>
 Package pdftex.def Info: _Bilder/synchronmaschine-drehstrom.pdf used on input l
 ine 295.
 (pdftex.def)             Requested size: 455.24417pt x 236.88719pt.
- [13]
-<_Bilder/Visio-strombelag-hofmann.pdf, id=384, 398.28268pt x 256.18611pt>
+ [12]
+<_Bilder/Visio-strombelag-hofmann.pdf, id=401, 398.28268pt x 256.18611pt>
 File: _Bilder/Visio-strombelag-hofmann.pdf Graphic file (type pdf)
 
 <use _Bilder/Visio-strombelag-hofmann.pdf>
 Package pdftex.def Info: _Bilder/Visio-strombelag-hofmann.pdf used on input lin
 e 327.
 (pdftex.def)             Requested size: 455.24417pt x 292.82527pt.
- [14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.344 
        <D:/pmsm/_Bilder/synchronmaschine-drehstrom.pdf>]
-
-LaTeX Warning: Citation 'kellner2012' on page 15 undefined on input line 354.
-
-
-LaTeX Warning: Citation 'kellner2012' on page 15 undefined on input line 355.
-
-
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.357 
-       <D:/pmsm/_Bilder/Visio-strombelag-hofmann.pdf>]
-Underfull \hbox (badness 2744) in paragraph at lines 361--361
+       <D:/pmsm/_Bilder/Visio-strombelag-hofmann.pdf>] [15]
+Underfull \hbox (badness 2744) in paragraph at lines 421--421
 [][][]\T1/lmr/m/n/10 (+20) Friedrich Au-gust Ha-sel-wan-der war ein deut-scher 
 In-ge-nieur, ein Er-fin-der der Drehstrom-
  []
 
-<_Bilder/synchron.jpg, id=435, 336.25626pt x 291.0875pt>
+[16pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.422 
+      ] <_Bilder/synchron.jpg, id=481, 336.25626pt x 291.0875pt>
 File: _Bilder/synchron.jpg Graphic file (type jpg)
 
 <use _Bilder/synchron.jpg>
-Package pdftex.def Info: _Bilder/synchron.jpg used on input line 366.
+Package pdftex.def Info: _Bilder/synchron.jpg used on input line 426.
 (pdftex.def)             Requested size: 170.71652pt x 147.7864pt.
 
-<_Bilder/synchron2.jpg, id=436, 770.88pt x 1027.84pt>
+<_Bilder/synchron2.jpg, id=482, 770.88pt x 1027.84pt>
 File: _Bilder/synchron2.jpg Graphic file (type jpg)
 
 <use _Bilder/synchron2.jpg>
-Package pdftex.def Info: _Bilder/synchron2.jpg used on input line 370.
+Package pdftex.def Info: _Bilder/synchron2.jpg used on input line 430.
 (pdftex.def)             Requested size: 170.71652pt x 227.61543pt.
 
-Underfull \hbox (badness 3701) in paragraph at lines 372--372
+Underfull \hbox (badness 3701) in paragraph at lines 432--432
 [] []\T1/lmr/m/n/10.95 (+20) Abbildungen zwei-er Syn-chron Ge-ne-ra-to-ren ver-
 schie-de-ner
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16] <_Bilder/synchron-dq-1.pdf, id=451, 426.73528pt x 224.88718pt>
-File: _Bilder/synchron-dq-1.pdf Graphic file (type pdf)
-
-<use _Bilder/synchron-dq-1.pdf>
-Package pdftex.def Info: _Bilder/synchron-dq-1.pdf used on input line 405.
-(pdftex.def)             Requested size: 455.24417pt x 239.91656pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 407.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 407.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 407.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 407.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 407.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 407.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 407.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 407.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 407.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.412 
-       <D:/pmsm/_Bilder/synchron.jpg> <D:/pmsm/_Bilder/synchron2.jpg>] [18pdfTe
-X warning (ext4): destination with the same identifier (name{figure.1.8}) has b
-een already used, duplicate ignored
+l.442 
+       <D:/pmsm/_Bilder/synchron.jpg> <D:/pmsm/_Bilder/synchron2.jpg>]
+<_Bilder/synchron-dq-1.pdf, id=496, 426.73528pt x 224.88718pt>
+File: _Bilder/synchron-dq-1.pdf Graphic file (type pdf)
+
+<use _Bilder/synchron-dq-1.pdf>
+Package pdftex.def Info: _Bilder/synchron-dq-1.pdf used on input line 465.
+(pdftex.def)             Requested size: 455.24417pt x 239.91656pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 467.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 467.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 467.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 467.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 467.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 467.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 467.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 467.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 467.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18] [19pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.430 \end{align}
-                  <D:/pmsm/_Bilder/synchron-dq-1.pdf>]
-<_Bilder/synchron-esb-kremser2004.pdf, id=469, 426.73528pt x 102.54008pt>
+l.508 \begin{align}
+                    <D:/pmsm/_Bilder/synchron-dq-1.pdf>]
+<_Bilder/synchron-esb-kremser2004.pdf, id=518, 426.73528pt x 102.54008pt>
 File: _Bilder/synchron-esb-kremser2004.pdf Graphic file (type pdf)
 
 <use _Bilder/synchron-esb-kremser2004.pdf>
 Package pdftex.def Info: _Bilder/synchron-esb-kremser2004.pdf used on input lin
-e 464.
+e 524.
 (pdftex.def)             Requested size: 455.24417pt x 109.39291pt.
- [19]
-File: _Bilder/synchronmaschine-drehstrom.pdf Graphic file (type pdf)
-
-<use _Bilder/synchronmaschine-drehstrom.pdf>
-Package pdftex.def Info: _Bilder/synchronmaschine-drehstrom.pdf used on input l
-ine 498.
-(pdftex.def)             Requested size: 455.24417pt x 236.88719pt.
-
-<_Bilder/synchron-dq.pdf, id=481, 426.73528pt x 239.11333pt>
-File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
-
-<use _Bilder/synchron-dq.pdf>
-Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 512.
-(pdftex.def)             Requested size: 455.24417pt x 255.09346pt.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.525 
-       <D:/pmsm/_Bilder/synchron-esb-kremser2004.pdf>] [21pdfTeX warning (ext4)
-: destination with the same identifier (name{figure.1.10}) has been already use
-d, duplicate ignored
+l.546 \end{align*}
+                   <D:/pmsm/_Bilder/synchron-esb-kremser2004.pdf>]
+File: _Bilder/synchronmaschine-drehstrom.pdf Graphic file (type pdf)
+
+<use _Bilder/synchronmaschine-drehstrom.pdf>
+Package pdftex.def Info: _Bilder/synchronmaschine-drehstrom.pdf used on input l
+ine 558.
+(pdftex.def)             Requested size: 455.24417pt x 236.88719pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\textcite' on input line 563.
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.535 \end{align}
-                 ] [22pdfTeX warning (ext4): destination with the same identifi
-er (name{figure.1.11}) has been already used, duplicate ignored
+l.569 
+      ] <_Bilder/synchron-dq.pdf, id=549, 426.73528pt x 239.11333pt>
+File: _Bilder/synchron-dq.pdf Graphic file (type pdf)
+
+<use _Bilder/synchron-dq.pdf>
+Package pdftex.def Info: _Bilder/synchron-dq.pdf used on input line 572.
+(pdftex.def)             Requested size: 455.24417pt x 255.09346pt.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 \end{align}
-                  <D:/pmsm/_Bilder/synchron-dq.pdf>]) (D:\pmsm\vektor.tex
-[23]
+l.586 
+       <D:/pmsm/_Bilder/synchron-dq.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 594.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\textcite' on input line 621.
+
+
+LaTeX Warning: Reference `fig:dq-synchron-rotorfest' on page 23 undefined on in
+put line 623.
+
+[23] [24pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.669 \end{quote}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.1.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.669 \end{quote}
+                 ]) (D:\pmsm\vektor.tex [25]
 Kapitel 2.
-[24
+[26
 
-] <_Bilder/zeitzeiger.pdf, id=550, 284.26201pt x 284.26201pt>
+] <_Bilder/zeitzeiger.pdf, id=619, 284.26201pt x 284.26201pt>
 File: _Bilder/zeitzeiger.pdf Graphic file (type pdf)
 
 <use _Bilder/zeitzeiger.pdf>
@@ -2418,7 +2464,7 @@ Package pdftex.def Info: _Bilder/zeitzeiger.pdf used on input line 52.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25] <_Bilder/raumzeigermaschine1.pdf, id=567, 398.08725pt x 284.26201pt>
+[27] <_Bilder/raumzeigermaschine1.pdf, id=637, 398.08725pt x 284.26201pt>
 File: _Bilder/raumzeigermaschine1.pdf Graphic file (type pdf)
 
 <use _Bilder/raumzeigermaschine1.pdf>
@@ -2429,7 +2475,7 @@ Package pdftex.def Info: _Bilder/raumzeigermaschine1.pdf used on input line 112
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<_Bilder/raumzeigermaschine2.pdf, id=568, 398.08725pt x 398.08725pt>
+<_Bilder/raumzeigermaschine2.pdf, id=638, 398.08725pt x 398.08725pt>
 File: _Bilder/raumzeigermaschine2.pdf Graphic file (type pdf)
 
 <use _Bilder/raumzeigermaschine2.pdf>
@@ -2476,7 +2522,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 134.
 
-[26] <_Bilder/alphabetakoordinaten.pdf, id=583, 284.26201pt x 284.26201pt>
+[28] <_Bilder/alphabetakoordinaten.pdf, id=654, 284.26201pt x 284.26201pt>
 File: _Bilder/alphabetakoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/alphabetakoordinaten.pdf>
@@ -2487,7 +2533,7 @@ Package pdftex.def Info: _Bilder/alphabetakoordinaten.pdf used on input line 17
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27] [28] [29] <_Bilder/dqkoordinaten.pdf, id=615, 340.8735pt x 284.26201pt>
+[29] [30] [31] <_Bilder/dqkoordinaten.pdf, id=685, 340.8735pt x 284.26201pt>
 File: _Bilder/dqkoordinaten.pdf Graphic file (type pdf)
 
 <use _Bilder/dqkoordinaten.pdf>
@@ -2503,8 +2549,8 @@ der d-q-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30]
-<_Bilder/blockbildclarkeparkkomplett.pdf, id=626, 398.08725pt x 398.08725pt>
+[32]
+<_Bilder/blockbildclarkeparkkomplett.pdf, id=696, 398.08725pt x 398.08725pt>
 File: _Bilder/blockbildclarkeparkkomplett.pdf Graphic file (type pdf)
 
 <use _Bilder/blockbildclarkeparkkomplett.pdf>
@@ -2516,7 +2562,7 @@ line 390.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<_Bilder/blockbildinverseclarkeparkkomplett.pdf, id=627, 398.08725pt x 398.0872
+<_Bilder/blockbildinverseclarkeparkkomplett.pdf, id=697, 398.08725pt x 398.0872
 5pt>
 File: _Bilder/blockbildinverseclarkeparkkomplett.pdf Graphic file (type pdf)
  <use _Bilder/blockbildinverseclarkeparkkomplett.pdf>
@@ -2528,28 +2574,28 @@ Package pdftex.def Info: _Bilder/blockbildinverseclarkeparkkomplett.pdf used on
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:blockbildclarkepark' on page 31 undefined on inpu
+LaTeX Warning: Reference `fig:blockbildclarkepark' on page 33 undefined on inpu
 t line 413.
 
 
-LaTeX Warning: Reference `fig:blockbildinverseclarkepark' on page 31 undefined 
+LaTeX Warning: Reference `fig:blockbildinverseclarkepark' on page 33 undefined 
 on input line 413.
 
-) (D:\pmsm\anforderung.tex [31] [32pdfTeX warning (ext4): destination with the 
+) (D:\pmsm\anforderung.tex [33] [34pdfTeX warning (ext4): destination with the 
 same identifier (name{figure.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/zeitzeiger.pdf>] [33pdfTeX warning (ext4): destination with the same
+sm/_Bilder/zeitzeiger.pdf>] [35pdfTeX warning (ext4): destination with the same
  identifier (name{figure.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/raumzeigermaschine1.pdf>] [34pdfTeX warning (ext4): destination with
+sm/_Bilder/raumzeigermaschine1.pdf>] [36pdfTeX warning (ext4): destination with
  the same identifier (name{figure.2.3}) has been already used, duplicate ignore
 d
 
@@ -2557,7 +2603,7 @@ d
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/raumzeigermaschine2.pdf>] [35pdfTeX warning (ext4): destination with
+sm/_Bilder/raumzeigermaschine2.pdf>] [37pdfTeX warning (ext4): destination with
  the same identifier (name{figure.2.4}) has been already used, duplicate ignore
 d
 
@@ -2565,7 +2611,7 @@ d
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/alphabetakoordinaten.pdf>] [36pdfTeX warning (ext4): destination wit
+sm/_Bilder/alphabetakoordinaten.pdf>] [38pdfTeX warning (ext4): destination wit
 h the same identifier (name{figure.2.5}) has been already used, duplicate ignor
 ed
 
@@ -2573,14 +2619,14 @@ ed
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/dqkoordinaten.pdf>] [37pdfTeX warning (ext4): destination with the s
+sm/_Bilder/dqkoordinaten.pdf>] [39pdfTeX warning (ext4): destination with the s
 ame identifier (name{figure.2.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
-sm/_Bilder/blockbildclarkeparkkomplett.pdf>] [38pdfTeX warning (ext4): destinat
+sm/_Bilder/blockbildclarkeparkkomplett.pdf>] [40pdfTeX warning (ext4): destinat
 ion with the same identifier (name{figure.2.7}) has been already used, duplicat
 e ignored
 
@@ -2590,51 +2636,49 @@ l.5 \chapter
             {Anforderungsprofil für die Regelung der PMSM mit Simulink} <D:/pm
 sm/_Bilder/blockbildinverseclarkeparkkomplett.pdf>]
 Kapitel 3.
-) (D:\pmsm\regelung.tex [39
+) (D:\pmsm\regelung.tex [41
 
 ]
 Kapitel 4.
-) (D:\pmsm\auswertung.tex [40
+) (D:\pmsm\auswertung.tex [42
 
 ]
 Kapitel 5.
-) (D:\pmsm\zusammenfassung.tex [41
+) (D:\pmsm\zusammenfassung.tex [43
 
 ]
 Kapitel 6.
-) [42
+) [44
 
-] [43
+] [45
 
 
 
-] [44] [45]
+] [46] [47]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (D:\pmsm\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 29E5D476A87D3F0D11ECF6504BEF7628;2370.
+(rerunfilecheck)             Checksum: 65BB7D5CEB29B2D88554FD4B567E1713;2615.
 
 
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 39339 strings out of 493921
- 780711 string characters out of 3144866
- 1231642 words of memory out of 3000000
- 41575 multiletter control sequences out of 15000+200000
- 145491 words of font info for 204 fonts, out of 3000000 for 9000
+ 39568 strings out of 493921
+ 785667 string characters out of 3144866
+ 1233447 words of memory out of 3000000
+ 41777 multiletter control sequences out of 15000+200000
+ 146915 words of font info for 209 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 80i,21n,85p,10418b,3313s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,21n,88p,10418b,3313s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{D:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/Program Files (x86)/MiKTeX 2.9/font
@@ -2657,10 +2701,10 @@ ype1/public/lm/lmri12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 0.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><D:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (49 pages, 2490241 bytes).
+Output written on main.pdf (51 pages, 2507404 bytes).
 PDF statistics:
- 945 PDF objects out of 1000 (max. 8388607)
- 656 compressed objects within 7 object streams
- 218 named destinations out of 1000 (max. 500000)
- 50540 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1014 PDF objects out of 1200 (max. 8388607)
+ 721 compressed objects within 8 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 50556 words of extra memory for PDF output out of 51595 (max. 10000000)
 

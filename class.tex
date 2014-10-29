@@ -58,11 +58,13 @@ colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
 % BibLaTeX
 \usepackage[backend=biber,%
  style=authoryear,%
- autocite=inline,%
+ bibstyle=authoryear,%
+ citestyle=authoryear,%
+ % autocite=inline,%
  sorting=anyt,%
  sortcites=true,%
  hyperref=auto,%
- maxnames=2,%
+ maxnames=3,%
  minnames=1,%
 ]{biblatex}
 
@@ -79,6 +81,7 @@ colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
 \usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
 \usepackage{multicol} % mehre Spalten auf eine Seite
 \usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
+\usepackage{booktabs}
 \usepackage{longtable} % Tabellen über mehrere Seiten
 \usepackage{array}
 

@@ -315,7 +315,7 @@
       \field{title}{Elektrische Maschinen: [Lehr- und Übungsbuch]}
       \field{year}{2013}
     \endentry
-    \entry{Kellner2012}{thesis}{}
+    \entry{kellner2012}{thesis}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=cbed34a957f19567e372df2240f45ef2}{Kellner}{K\bibinitperiod}{Sven}{S\bibinitperiod}{}{}{}{}}%
       }
@@ -455,7 +455,7 @@
       \field{datelabelsource}{}
       \field{labeltitle}{Elektrische Maschinen und Antriebe}
       \field{shorttitle}{Elektrische Maschinen und Antriebe}
-      \field{title}{Elektrische Maschinen und Antriebe: Grundlagen, Motoren und Anwendungen ; mit 10 Tabellen}
+      \field{title}{Elektrische Maschinen und Antriebe: Grundlagen, Motoren und Anwendungen}
       \field{year}{2004}
     \endentry
     \entry{lingnau}{book}{}
@@ -508,11 +508,13 @@
       \field{year}{2012}
     \endentry
     \entry{mullerI2005}{book}{}
-      \name{labelname}{1}{}{%
+      \name{labelname}{2}{}{%
         {{uniquename=0,hash=2b763d54e5d9ff720e0b4db6c6486eb6}{Müller}{M\bibinitperiod}{Germar}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c9a80dca8773edd478c1d4fbc2812832}{Ponick}{P\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{1}{}{%
+      \name{author}{2}{}{%
         {{uniquename=0,hash=2b763d54e5d9ff720e0b4db6c6486eb6}{Müller}{M\bibinitperiod}{Germar}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c9a80dca8773edd478c1d4fbc2812832}{Ponick}{P\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
       }
       \list{location}{1}{%
         {Weinheim}%
@@ -520,23 +522,23 @@
       \list{publisher}{1}{%
         {Wiley-{VCH}}%
       }
-      \strng{namehash}{2b763d54e5d9ff720e0b4db6c6486eb6}
-      \strng{fullhash}{2b763d54e5d9ff720e0b4db6c6486eb6}
+      \strng{namehash}{4c1dc4631668e2e78acf1787fd927d80}
+      \strng{fullhash}{4c1dc4631668e2e78acf1787fd927d80}
       \field{sortinit}{M}
       \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
-      \field{labelyear}{2005}
+      \field{labelyear}{2006}
       \field{datelabelsource}{}
       \field{labeltitle}{Elektrische Maschinen}
       \field{title}{Elektrische Maschinen}
-      \field{year}{2005}
+      \field{year}{2006}
     \endentry
     \entry{mullerII2008}{book}{}
-      \name{labelname}{3}{uniquelist=1}{%
+      \name{labelname}{3}{}{%
         {{uniquename=0,hash=2b763d54e5d9ff720e0b4db6c6486eb6}{Müller}{M\bibinitperiod}{Germar}{G\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=da870f17b08800783378082cbe33433d}{Vogt}{V\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=c9a80dca8773edd478c1d4fbc2812832}{Ponick}{P\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{3}{uniquelist=1}{%
+      \name{author}{3}{}{%
         {{uniquename=0,hash=2b763d54e5d9ff720e0b4db6c6486eb6}{Müller}{M\bibinitperiod}{Germar}{G\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=da870f17b08800783378082cbe33433d}{Vogt}{V\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=c9a80dca8773edd478c1d4fbc2812832}{Ponick}{P\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
@@ -547,7 +549,7 @@
       \list{publisher}{1}{%
         {Wiley-{VCH-Verl.}}%
       }
-      \strng{namehash}{c73a00b58ba2d4f04b35f8db6218db5c}
+      \strng{namehash}{30819af1a9aacce748299a650b1b7dcd}
       \strng{fullhash}{30819af1a9aacce748299a650b1b7dcd}
       \field{sortinit}{M}
       \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
