@@ -1971,21 +1971,23 @@
     <bcf:datasource type="file" datatype="bibtex">bibo.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">hofmann2013</bcf:citekey>
-    <bcf:citekey order="2">hofmann2013</bcf:citekey>
+    <bcf:citekey order="1">fischer2009</bcf:citekey>
+    <bcf:citekey order="2">fischer2009</bcf:citekey>
     <bcf:citekey order="3">hofmann2013</bcf:citekey>
-    <bcf:citekey order="4">fischer2009</bcf:citekey>
-    <bcf:citekey order="5">fischer2009</bcf:citekey>
-    <bcf:citekey order="6">kellner2012</bcf:citekey>
-    <bcf:citekey order="7">kellner2012</bcf:citekey>
-    <bcf:citekey order="8">fischer2009</bcf:citekey>
-    <bcf:citekey order="9">mullerI2005</bcf:citekey>
-    <bcf:citekey order="10">ternes2012</bcf:citekey>
+    <bcf:citekey order="4">hofmann2013</bcf:citekey>
+    <bcf:citekey order="5">hofmann2013</bcf:citekey>
+    <bcf:citekey order="6">hofmann2013</bcf:citekey>
+    <bcf:citekey order="7">hofmann2013</bcf:citekey>
+    <bcf:citekey order="8">kellner2012</bcf:citekey>
+    <bcf:citekey order="9">kellner2012</bcf:citekey>
+    <bcf:citekey order="10">fischer2009</bcf:citekey>
     <bcf:citekey order="11">mullerI2005</bcf:citekey>
-    <bcf:citekey order="12">schroder2000</bcf:citekey>
-    <bcf:citekey order="13">schroder2000</bcf:citekey>
-    <bcf:citekey order="14">schroder2001</bcf:citekey>
-    <bcf:citekey order="15">nuss2010</bcf:citekey>
+    <bcf:citekey order="12">ternes2012</bcf:citekey>
+    <bcf:citekey order="13">mullerI2005</bcf:citekey>
+    <bcf:citekey order="14">schroder2000</bcf:citekey>
+    <bcf:citekey order="15">schroder2000</bcf:citekey>
+    <bcf:citekey order="16">schroder2001</bcf:citekey>
+    <bcf:citekey order="17">nuss2010</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt" type="entry" sortscheme="anyt">

@@ -16,100 +16,63 @@ Die Synchron- und Asynchronmaschine besitzen im Ständer denselben Aufbau und er
 Es ist zweckmäßig die Grundlagen der Synchronmaschine in einem eigenen Kapitel zu behandeln.
 Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
 
-\section{Magnetfelder}
+\subsection{Maxwellsche Gleichungen}\label{sec:maxwell}
 
-\subsection{Strombelag}
+Die Grundlage für alle Betrachtungen sind die Maxwellschen Gleichungen.
+In Differentialform lauten diese (unter Vernachlässigung des Verschiebungsstromes $\vec{D}$
 
-Die örtliche und zeitliche Änderung von Magnetfeldern in elektrischen Maschinen wird durch die Anordnung der Leiter und die Art der Speisung bestimmt \autocite[S~199]{hofmann2013}.
-Die räumliche Verteilung des Stromes wird durch den Strombelag bestimmt, der als $N\cdot I$ pro Länge des bewickelten Umfanges definiert ist.
+\begin{tabular}{ll}
+1. Maxwellsche Gleichung	&	$\nabla \times \vec{H} = \vec{J}+\frac{\i{d}\vec{D}}{\i{d}t} \approx \vec{J}$ \\
+2. Maxwellsche Gleichung	&	$\nabla \times \vec{E} = -\frac{\i{d}\vec{B}}{\i{d}t}$ \\
+3. Maxwellsche Gleichung	&	$\nabla \cdot \vec{B} = 0$ \\
+4. Maxwellsche Gleichung	&	$\nabla \cdot \vec{D} = \rho$
+\end{tabular}
 
-Das Luftspaltfeld hat die zentrale Bedeutung und muss deshalb auch berechnet werden können.
-Die Ursache für die Entstehung dieses Luftspaltfeldes sind die vom Strom durchflossenen Leiter in den Nuten des Stators.
-Unter der idealisierten Annahme eines homogenen Feldverlaufs im Bereich der Nutöffnung (s.~h.~Abbildung~\ref{fig:nutquerfeld}) das Feld im Luftspalt vom Feld in der Nut getrennt.
+und die dazu gehörigen Materialgesetze lauten
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{nutquerfeld.pdf}
-\label{fig:nutquerfeld}
-\caption{Abbildung des Nutquerfeldes einer Rechtecknut im Stator.}
-\end{figure}
+\begin{align*}
+\vec{B} &= \mu\vec{H}\\
+\vec{D}	&= \epsilon\vec{E}\\
+\vec{J} &= \gamma\vec{E}
+\end{align*}
 
-Hierzu wird die oben abgebildete Nut betrachtet, wobei die Permeabilität des Eisens als sehr groß gegenüber derjenigen von Luft angenommen wird ($\mu_\i{Fe} \rightarrow \infty$).
-Es bildet sich ein Nutquerfeld aus, das ist leicht aus dem Durchflutungsgesetzt herzuleiten.
+Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \epsilon$ und $\gamma$ zu ortsunabhängigen Materialkonstanten.
 
-\begin{align}
-\oint \vec{H}d\vec{l} = \Theta \label{eqn:durchflutungsgesetzt}
-\end{align}
-
-Dieses Nutquerfeld stößt an der Grenzfläche zwischen Nutöffnung (Nutschlitz bzw.\ Streuschlitz) und Luftspalt an das zu berechnende Luftspaltfeld und stellt somit eine der Randbedingungen zur Berechnung des Luftspaltfeldes dar.
-Das Magnetische Feld in der Nutöffnung $H_\i{S}$, dass unter idealisierte Annahme tangential gerichtet ist, kann wiederum auch aus dem Durchflutungsgesetz berechnet werden.
+\subsubsection{Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralfrom)}
 
 \begin{align}
-H_\i{S} = \frac{\Theta_\i{Nut}}{b_\i{S}}
+\oint \vec{H}\i{d}\vec{l} = \int_A \vec{J}\i{d}\vec{A}
 \end{align}
 
-Diese Randbedingung zur Berechnung des Luftspaltfeldes kann auch anders erzeugt werden.
-Unter Annahme, dass die Nutdurchflutung $\Theta$ unendlich dünn auf einer glatten Eisenoberfläche gleichmäßig im Bereich der Nutöffnung $b_\i{S}$ verteilt ist.
-Diese Modellvorstellung wird mit Hilfe des Strombelages beschrieben.
+Das Linienintegral der magnetischen Feldstärke $\vec{H}$ längs eines in sich geschlossenen räumlichen Integrationsweges $\vec{l}$ ist gleich dem gesamten elektrischen Strom, der durch die so begrenzte Fläche $A$ hindurchtritt.
+
+\subsubsection{Das Induktionsgesetz (2. Maxwellsche Gleichung in Integralfrom)}
 
 \begin{align}
-A = \frac{\Theta_\i{Nut}}{b_\i{S}}
+\oint \vec{E}\i{d}\vec{l} = -\frac{\i{d}}{\i{d}t}\int_A \vec{B}\i{d}\vec{A}
 \end{align}
 
-s.~h.~Abbildung~\ref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen Beschreibung.
+Das Linienintegral der elektrischen Feldstärke $\vec{E}$ längs eines in sich geschlossenen Integrationsweges $\vec{l}$ ist gleich der negativen totalen zeitlichen Änderung des gesamten magnetischen Flusses, der durch die so begrenzte Fläche A hindurchtritt.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=\textwidth]{strombelag_neu.pdf}
-\label{fig:strombelag-neu}
-\caption{Vereinfachte Modellvorstellung zur Berechnung des Luftspaltfeldes mit Hilfe des Strombelags.}
-\end{figure}
-
-Bei Auswertung des Durchflutungsgesetz bei einem Umlauf um diesen Strombelag, ergibt sich für die tangentiale Feldstärke $H_\i{t}$ an der Eisenoberfläche im Bereich des Strombelages
+Hierbei ist
 
 \begin{align}
-\oint \vec{H}d\vec{l} = \Theta_\i{Nut} \\
-H_\i{t}\cdot b_\i{S} = A\cdot b_\i{S} \\
-H_\i{t} = A = \frac{\Theta_\i{Nut}}{b_\i{S}} \label{eqn:feld-ht}
+\int_A \vec{B}\i{d}\vec{A} = \Phi
 \end{align}
 
-Mit Abbildung~\ref{eqn:feld-ht} ist gezeigt, dass die Randbedingungen zur Berechnung des Luftspaltfeldes unverändert erhalten bleibt, wenn statt der in Nuten eingebrachten Leiter ein äquivalenter Strombelag auf der glatten Eisenoberfläche berücksichtigt wird (Die Wirkung der Nutdurchflutung wird hinreichend genau durch den über der Nutöffnung verteilten Strombelag beschrieben).
-Zur Berechnung des Luftspaltfeldes muss also nun das Nutenfeld nicht berücksichtigt werden.
-Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
+der magnetische Fluss.
 
-\begin{quote}
-Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. Bundeswehr Universität in München.)
-\end{quote}
-
-Weitere spezifische Darstellungen zum Strombelag.
-Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
+\subsubsection{(3. Maxwellsche Gleichung in Integralfrom)}
 
 \begin{align}
-A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot Z\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
+\int_A \vec{B}\i{d}\vec{A} = 0
 \end{align}
 
-betrachtet man jetzt die Polteilung $\tau_\i{p}$
+\subsubsection{(4. Maxwellsche Gleichung in Integralfrom)}
 
 \begin{align}
-\tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:strombelag3}
+\int_A \vec{D}\i{d}\vec{A} = \int_V\rho\i{d}V
 \end{align}
-
-so wird aus Gl.~\ref{eqn:strombelag2} und Gl.~\ref{eqn:strombelag3} bei voller Bewicklung über eine Polteilung
-
-\begin{align}
-A = \frac{m w I}{p \tau_\i{p}}
-\end{align}
-
-\begin{quote}
-\enquote{Aus dem Strombelag $A$ wir bei rotatorischen Maschinen abhängig von der Umfangskoordinate mit $A(x)$, wenn:
-\begin{itemize}
-\item sich durch Wechsel von Hin- und Rückleiter einer Wicklung die Stromrichtung ändert,
-\item durch Konzentration der Wicklung der Strom in den Lücken zu Null wird.
-\end{itemize}
-\autocite[S.~199]{hofmann2013}}
-\end{quote}
-
-
 
 \subsection{Mehrphasensysteme}
 \label{subsec:mehrphasensysteme}
@@ -221,24 +184,194 @@ Bei einer zweipoligen Maschine mit $p=1$ stimmen somit der räumlich mechanische
 \gamma_\i{el} = p\cdot \gamma_\i{mech}
 \end{align}
 
+\section{Magnetfelder}
+
+\subsection{Strombelag}
+
+Das Luftspaltfeld hat die zentrale Bedeutung und muss deshalb auch berechnet werden können.
+Die Ursache für die Entstehung dieses Luftspaltfeldes sind die vom Strom durchflossenen Leiter in den Nuten des Stators.
+Unter der idealisierten Annahme eines homogenen Feldverlaufs im Bereich der Nutöffnung (s.~h.~Abbildung~\ref{fig:nutquerfeld}) das Feld im Luftspalt vom Feld in der Nut getrennt.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{nutquerfeld.pdf}
+\label{fig:nutquerfeld}
+\caption{Abbildung des Nutquerfeldes einer Rechtecknut im Stator.}
+\end{figure}
+
+Hierzu wird die oben abgebildete Nut betrachtet, wobei die Permeabilität des Eisens als sehr groß gegenüber derjenigen von Luft angenommen wird ($\mu_\i{Fe} \rightarrow \infty$).
+Es bildet sich ein Nutquerfeld aus, das ist leicht aus dem Durchflutungsgesetzt herzuleiten.
+
+\begin{align}
+\oint \vec{H}d\vec{l} = \Theta \label{eqn:durchflutungsgesetzt}
+\end{align}
+
+Dieses Nutquerfeld stößt an der Grenzfläche zwischen Nutöffnung (Nutschlitz bzw.\ Streuschlitz) und Luftspalt an das zu berechnende Luftspaltfeld und stellt somit eine der Randbedingungen zur Berechnung des Luftspaltfeldes dar.
+Das Magnetische Feld in der Nutöffnung $H_\i{S}$, dass unter idealisierte Annahme tangential gerichtet ist, kann wiederum auch aus dem Durchflutungsgesetz berechnet werden.
+
+\begin{align}
+H_\i{S} = \frac{\Theta_\i{Nut}}{b_\i{S}}
+\end{align}
+
+Diese Randbedingung zur Berechnung des Luftspaltfeldes kann auch anders erzeugt werden.
+Unter Annahme, dass die Nutdurchflutung $\Theta$ unendlich dünn auf einer glatten Eisenoberfläche gleichmäßig im Bereich der Nutöffnung $b_\i{S}$ verteilt ist.
+Diese Modellvorstellung wird mit Hilfe des Strombelages beschrieben.
+
+\begin{align}
+A = \frac{\Theta_\i{Nut}}{b_\i{S}}
+\end{align}
+
+s.~h.~Abbildung~\ref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen Beschreibung.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{strombelag_neu.pdf}
+\label{fig:strombelag-neu}
+\caption{Vereinfachte Modellvorstellung zur Berechnung des Luftspaltfeldes mit Hilfe des Strombelags.}
+\end{figure}
+
+Bei Auswertung des Durchflutungsgesetz bei einem Umlauf um diesen Strombelag, ergibt sich für die tangentiale Feldstärke $H_\i{t}$ an der Eisenoberfläche im Bereich des Strombelages
+
+\begin{align}
+\oint \vec{H}d\vec{l} = \Theta_\i{Nut} \\
+H_\i{t}\cdot b_\i{S} = A\cdot b_\i{S} \\
+H_\i{t} = A = \frac{\Theta_\i{Nut}}{b_\i{S}} \label{eqn:feld-ht}
+\end{align}
+
+Mit Abbildung~\ref{eqn:feld-ht} ist gezeigt, dass die Randbedingungen zur Berechnung des Luftspaltfeldes unverändert erhalten bleibt, wenn statt der in Nuten eingebrachten Leiter ein äquivalenter Strombelag auf der glatten Eisenoberfläche berücksichtigt wird (Die Wirkung der Nutdurchflutung wird hinreichend genau durch den über der Nutöffnung verteilten Strombelag beschrieben).
+Zur Berechnung des Luftspaltfeldes muss also nun das Nutenfeld nicht berücksichtigt werden.
+Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
+
+\begin{quote}
+Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. Bundeswehr Universität in München.)
+\end{quote}
+
+Weitere spezifische Darstellungen zum Strombelag.
+Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
+
+\begin{align}
+A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot Z\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
+\end{align}
+
+betrachtet man jetzt die Polteilung $\tau_\i{p}$
+
+\begin{align}
+\tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:polteilung}
+\end{align}
+
+so wird aus Gl.~\ref{eqn:strombelag2} und Gl.~\ref{eqn:polteilung} bei voller Bewicklung über eine Polteilung
+
+\begin{align}
+A = \frac{m w I}{p \tau_\i{p}}
+\end{align}
+
+\begin{quote}
+\enquote{Aus dem Strombelag $A$ wir bei rotatorischen Maschinen abhängig von der Umfangskoordinate mit $A(x)$, wenn:
+\begin{itemize}
+\item sich durch Wechsel von Hin- und Rückleiter einer Wicklung die Stromrichtung ändert,
+\item durch Konzentration der Wicklung der Strom in den Lücken zu Null wird.
+\end{itemize}
+\autocite[S.~199]{hofmann2013}}
+\end{quote}
+
+Der dann alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung durch seine Grundwelle beschrieben werden
+
+\begin{align}
+A_\i{1}(x) = \hat{A}_\i{1} \cdot \cos(\frac{x}{\tau_\i{p}}\cdot \pi)
+\end{align}
+
+Die wichtigste Kenngröße zur Erzeugung der Kräfte in Maschinen sind die Feldgrößen, \dh bei Vernachlässigung des magnetischen Spannungsabfalls im Eisen kann laut dem Durchflutungsgesetz mit $\mu_\i{Fe} >> 1$ die magnetische Spannung über den Luftspalt an jeder Stelle der Umfangskoordinate $x$ über das Integral des Strombelages ermitteln (s.~h.~Abbildung~\ref{fig:Visio-strombelag-umlauf}).
+
+\begin{align}
+V_\delta (x) = - \int_0^x A(x)\i{d}x
+\end{align}
+
+Das Integral erhält die Bezeichnung \enquote{Felderregerkurve} (vgl.~\textcite[S.~199]{hofmann2013}).
+Die Felderregerkurve gibt an, welche magnetische Spannung zur Magnetfelderzeugung an der Stelle $x$ zur Verfügung steht.
+Diese ist wichtige für die Berechnung von Streuung und Verlusten in der Maschine.
+
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
-\label{fig:drehstromwicklung}
-\caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld.}
+\label{fig:Visio-strombelag-umlauf}
+\caption{Integral entlang des Umfanges; magnetische Umlaufspannung.}
 \end{figure}
+
+\subsection{Durchflutung}\label{sec:durchflutung}
+
+Die Durchflutung lässt sich als Integral des Strombelages entlang der Polteilung darstellen
+
+\begin{align}
+\Theta = -\int_0^{\tau_\i{p}} A(x)\i{d}x
+\end{align}
+
+mit Gl.~\ref{eqn:polteilung} ergibt sicht dann \autocite[S.~200]{hofmann2013}
+
+\begin{align}
+\Theta = - \int_0^{2(\pi /p)} A(\gamma)\i{d}\gamma \quad \text{mit}\,\, \frac{x}{\tau_\i{p}}=\frac{\gamma}{\pi}
+\end{align}
+
+\subsection{Gleichfelder}\label{sec:gleichfelder}
+
+Wird der Strombelag einer Wicklung durch einen Gleichstrom gebildet, so entsteht ein örtlich, aber nicht zeitlich abhängiges Luftspaltfeld.
+Die örtliche Abhängigkeit hängt von den Wicklungsparametern ab, Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt Strombelag $A$ und Felderregerkurve $B$ einer Vollpol-Ankerspule.
+Der Strombelag ist konzentriert, die Felderregerkurve wird trapezförmig an den Sinus angenähert.
+Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch die Grundwelle beschreiben
+
+\begin{align}
+B_\i{1}(x) = \hat{B}_\i{1}\cdot\cos(\frac{x}{\tau_\i{p}}\cdot \pi)
+\end{align}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{Visio-strombelag-hofmann.pdf}
+\label{fig:Visio-strombelag-hofmann}
+\caption{Strombelag, Felderreger- und Feldkurve der Vollpolmaschine.}
+\end{figure}
+
+\subsection{Drehfelder}\label{sec:drehfelder}
+
+Nach \textcite{hofmann2013} sind
+
+\begin{quote}
+\enquote{Drehfelder sind Magnetfelder, deren Welle durch den Luftspalt läuft.}
+\end{quote}
+
+Die Erzeugung von Drehfeldern kann auf zwei Arten geschehen.
+Zum einen aus der Drehung eines Gleichfeldes (s.~h.~Abschnitt~\ref{sec:gleichfelder}) oder durch die Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern.
+Bei der Synchronmaschine wird mittels Gleichstrom der Anker erregt, so entsteht zunächst ein Gleichfeld mit örtlicher Induktionsverteilung.
+Wird nun die das Gleichfeld erzeugende Wicklung gedreht, bekommt das Feld eine Drehgeschwindigkeit, \dh die Felddichte verhält sich orts- und zeitabhängig.
+
+\begin{align}
+B(x,t) = \hat{B}\cdot\cos(\frac{x}{\tau_\i{p}}\pi\pm\omega t)
+\end{align}
+
+Der Fall, dass sich aus der Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern ein Drehfeld bildet soll hier nicht weiter erläutert werden.
 
 \section{Induktivitäten}\label{sec:induktiv}
 
 Innerhalb der Vektorregelung (s.~h.~Abschnitt~\ref{cha:Grundlagen der Vektorregelung}) werden die absoluten Induktivitäten zum Beispiel für die Berechnung des Spannungssollwertmodells, also der Vorsteuerung, benötigt.
-Im Rahmen von geberlosen Regelalgorithmen sind die absoluten und differentiellen Induktivitäten erforderlich~--~wie \autocite{kellner2012}[S.~35ff.] gut darstellt.
-Auch bei aktuellen Forschungsthemen »Parameteridentifikation von Synchronmaschinen« zeigt \autocite{kellner2012} auf S.~148ff., dass die Induktivitäten für Ständerwiderstandsidentifikation benötigt werden.
+Im Rahmen von geberlosen Regelalgorithmen sind die absoluten und differentiellen Induktivitäten erforderlich~--~wie \textcite{kellner2012}[S.~35ff.] gut darstellt.
+Auch bei aktuellen Forschungsthemen »Parameteridentifikation von Synchronmaschinen« zeigt \textcite{kellner2012} auf S.~148ff., dass die Induktivitäten für Ständerwiderstandsidentifikation benötigt werden.
 Da für die Anwendung nur die Parameter in rotorfesten Koordinaten von Belang sind, wird sich die Sichtweise in der vorliegenden Arbeit darauf beschränken.
  
 
 \section{Einführung Synchronmaschine}\label{sec:synchron}
 
 \paragraph{Historischer Hintergund} Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{6cm}
+\includegraphics[width=\textwidth]{synchron}
+\end{minipage}
+\hfill
+\begin{minipage}{6cm}
+\includegraphics[width=\textwidth]{synchron2}
+\end{minipage}
+\caption{Abbildungen zweier Synchron Generatoren verschiedener Leistungsklassen.}
+\label{fig:synchron-generatoren}
+\end{figure}
 
 Die gleichstromgespeiste Erregerwicklung ermöglicht es, das Magnetfeld unabhängig vom Netz zu beeinflussen.
 Als Spannungsquelle für die Speisung der Erregerwicklung wurden sog.\ Gleichstromerregermaschinen eingesetzt, in der heutigen Zeit werden Wechselspannung mit Hilfe von Leistungselektronischen Schaltungen gespeist.
@@ -359,6 +492,13 @@ R_\i{1} \approx 0.07 X_\i{d}
 \end{align}
 
 anzusetzen.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
+\label{fig:drehstromwicklung}
+\caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld.}
+\end{figure}
 
 \subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}
 
