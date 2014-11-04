@@ -296,7 +296,15 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
  \end{align}
  
  aus. 
- Da die Nullkomponente der Phasengröße aufgrund der symmetrischen Belastung null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${\underline{T}^{-1}}$ entspricht.
+ Da die Nullkomponente der Phasengröße aufgrund der symmetrischen Belastung null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${\underline{T}^{-1}}$ entspricht. Zusammgefassend ist die Transformation in der fogenden Grafik \ref{fig:clarktransformationdiagramm} erkennbar.
+ 
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width=\textwidth]{/vektor/clarktransformationdiagramm.pdf}
+ 	\label{fig:clarktransformationdiagramm}
+ 	\caption{Clarke Transformation}
+ \end{figure}
+ 
 
 \section{Beschreibung in rotorfesten d-q-Koordinatensystem}\label{sec:park}
 
@@ -306,13 +314,13 @@ Die Vorteile dieser Koordinatenbeschreibung liegen zum einen in einer einfachere
 Dadurch lassen sich klassische Regelvefahren auf die Maschine anwenden.
 Das Regelverhalten ähnelt dem der Gleichstrommaschine, welche sich durch eine gute Regelbarkeit auszeichnet. 
 Für die folgende Park Transformation dient die zuvor durchgeführte Clarke Transformation als Grundlage. 
-Zur Verdeutlichung der Transvormationsvorschriften dient die nachfolgende Abbildung am Beispiel eines Statorstromraumzeigers
+Zur Verdeutlichung der Transvormationsvorschriften dient die nachfolgende Abbildung \ref{fig:dqkoordinaten} am Beispiel eines Statorstromraumzeigers
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/dqkoordinaten.pdf}
 	\label{fig:dqkoordinaten}
-	\caption{Zusammenhang der $\alpha$-$\beta$-Koordinaten und der d-q- Raumzeigerkomponenten}
+	\caption{Zusammenhang zwischen $\alpha$-$\beta$-Koordinaten und d-q-Koordinaten}
 \end{figure}
 
 
@@ -373,40 +381,44 @@ mit der Transformationsmatrix
 	\label{parkmatrixinvers}
 \end{align}
 
+Dieser Transformationsschritt ist der Abbildung \ref{fig:parktransformationdiagramm} zu entnehmen.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/vektor/parktransformationdiagramm.pdf}
+	\label{fig:parktransformationdiagramm}
+	\caption{Park Transformation}
+\end{figure}
 
 
 \section{Signalflussplan der Vektorregelung}\label{sec:signalflussplan}
 
 In diesem Abschnitt mit Hilfe der Transformationsvorschriften aus den vorherigen Abschnitten \ref{sec:clark} und \ref{sec:park} vorbereitend ein Signalflussplan entwickelt werden.
-Dieser Plan soll im praktischen Teil ins Gesamtsystem integriert werden können.
-Zur einfacheren Darstellung der Clarke- und Parktransformation werden zunächst entsprechende Signalflussbilder eingeführt.
+Dieser Plan soll im praktischen Teil in das Simulationsmodell integriert werden können.
+Zur einfacheren Darstellung der Clarke- und Parktransformation werden zunächst die benötigten Signalflussbilder eingeführt.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/blockbildclarkeparkkomplett.pdf}
-	\label{fig:clarkeparkkomplett}
-	\caption{Clarke Blockbild}
+	\label{fig:blockbildclarkeparkkomplett}
+	\caption{Blockschaltbilder der Transformationen}
 \end{figure}
 
-Bei der Parktransformation muss der Winkel $\varepsilon_\i{RS}$, um den das $\alpha$-$\beta$-Koordinatensystem zum d-q-System verschoben ist, zugeführt werden.
+In Teil a) der Abbildung \ref{fig:blockbildclarkeparkkomplett} ist das Blockbild der Clarke-Transformation und in Teil b) die Park-Transformation dargestellt. 
+Bei der Parktransformation wird der Winkel $\varepsilon_\i{RS}$, um den das $\alpha$-$\beta$-Koordinatensystem zum d-q-System verschoben ist, zugeführt.
+Die entsprechenden Rücktransformationen sind in Teil c) und d) der Grafik veranschaulicht.
+
+Innerhalb des Reglermodells werden die Hin- und Rücktransformationen direkt aufeinander folgen. Daher sind in der nachstehenden Abbildung \ref{fig:blockbildinverseclarkeparkkomplett} die Clarke-Park-Transformation, sowie die Park-Clarke-Transformation als zusammenhängendes Blockbild mit den Stromkomponenten aufgezeigt.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/blockbildinverseclarkeparkkomplett.pdf}
-	\label{fig:blockbildpark}
-	\caption{Park Blockbild}
+	\label{fig:blockbildinverseclarkeparkkomplett}
+	\caption{Blockschaltbilder der Transformationen}
 \end{figure}
-
-Die entsprechenden Rücktransformationen werden in den folgenden zwei Abbildungen dargestellt.
-
-
-
 
 Mit Hilfe der Blockbilder kann jetzt die sowohl die vollständige Hintransformation eines Dreiphasensystems in ein rototorisches, zweikomponentiges Bezugsystem, als auch die entsprechende Rücktransformation, als Signalflussbild skizziert werden.
 
-
-
-Abbildung \ref{fig:blockbildclarkepark} zeigt die Transformation der Statorphasenströme $i_\i{u}$, $i_\i{v}$ und $i_\i{w}$ in d-q-Komponenten, während die nachfolgende Grafik \ref{fig:blockbildinverseclarkepark} die zusammenhängende Rücktransformation verbildlicht.
 
 
 

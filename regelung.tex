@@ -5,7 +5,104 @@
 \chapter{Regelung der PMSM mit Simulink}
 \label{cha:regelungpmsm}
 
+Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Modellierungssoftware  Simulink$^\text{\textregistered}$ geben, welches als Toolbox in der Software MATLAB$^\text{\textregistered}$ implementiert ist.
+Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiteren Verständnis der Arbeit benötigten Grundkenntnisse.
+Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist, und zum andern auf der Anwenderfreundlichkeit bei der Durchführung von Simulationsprojekten. \autocite[Vorwort]{scherf2010}
+Dem versierten Anwender der Software sei geraten, diesen Abschnitt zu überspringen.
+
+
 \section{Einführung in Simulink}\label{sec:simulink}
+
+MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq ~entwickelt worden. Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
+MATLAB ist dabei die Kernsoftware, welche sich mit vielen Toolboxen ergänzen lässt. 
+Der Name MATLAB wurde dabei von "MATrix LABoratory" abgeleitet.
+Vor der Simulation eines technischen Prozesses steht die Modellbildung, welche in den vorangegangenen Kapiteln durchgeführt wurde.
+Dazu sind die nötigen physikalischen Gesetzmäßigkeiten zur Beschreibung der Maschine und Regelung genutzt worden.
+Als Ergebnis der Modellbildung werden nun die Differentialgleichungen, Verknüpfungen und Zusammenhänge innerhalb von Simulink zu einem geschlossen Simulationsmodell verbunden. 
+Der Aufbau von den Systemen findet in Simulink mit Hilfe von Blockbildern statt, welche mit Signalflusspfeilen zu einem Signalflussplan kombiniert werden. 
+Entscheident für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
+Zur Einführung in die Software dient daher ein einfaches physikalisches Simulationsbeispiel: das Pendel.
+
+\subsection{Simulationsbeispiel: Pendel}
+
+Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/regelung/pendel.pdf}
+	\label{fig:pendel}
+	\caption{Fadenpendel}
+\end{figure}
+
+Er gelten folgende Momente:
+
+Rückstellmoment
+\begin{align}
+		M_\i{R} = m \cdot g \cdot \si{sin}(\varphi)
+		\label{rueckstellmoment} 
+\end{align}
+Beschleunigungsmoment
+\begin{align}
+	M_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi
+	\label{beschleunigungsmoment} 
+\end{align}
+Reibungsmoment
+\begin{align}
+	M_\i{Reib} = d \cdot l^{2} \cdot \dot\varphi
+	\label{reibungsmoment} 
+\end{align}
+Außerdem gilt:
+\begin{align}
+	\sum M = 0
+	\label{momentengleichgewicht} 
+\end{align}
+
+Die Bewegung des Pendels wird mit folgenden Werten simuliert:\\
+\\
+$ m = 2,3 ~\i{kg}\\ d = 0,2 ~\i{Nms}\\ l = 1,1 ~\i{m}\\ g = 9,81\tfrac{\i{m}}{\i{s^{2}}} \\ \varphi_\i{0} = 40^{\circ}$
+
+Als nächster Schritt werden die physikalischen Systembeschreibungen in einer Gesamtformel zusammengefasst. 
+
+\begin{align}
+	\sum M = M_\i{R} + M_\i{B} + M_\i{Reib} = 0
+	\label{momentengleichgewichtgesamt} 
+\end{align}
+
+\begin{align}
+	\sum M = m \cdot g \cdot \si{sin}(\varphi) + J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi + d \cdot l^{2} \cdot \dot\varphi = 0
+	\label{momentengleichgewichtgesamt2} 
+\end{align}
+
+Wird nun die Differentialgleichung \ref{momentengleichgewichtgesamt2} nach der höchsten Ableitung $\ddot\varphi$ umgestellt, ergibt sich:
+
+\begin{align}
+	\ddot\varphi = -\dot\varphi \cdot \tfrac{\i{d}}{\i{m}} - \tfrac{\i{g}}{\i{l}} \cdot \si{sin}(\varphi)
+	\label{diffgleichung} 
+\end{align}
+
+An dieser Stelle ist die Modellbildung abgeschlossen. Jetzt können die Werte in MATLAB/Simulink  verarbeitet werden.
+Hier werden zuerst in der MATLAB-Umgebung Variablen mit den vorgegebenen Werten parametrisiert.
+
+%GRAFIK MATLAB
+
+Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momentengleichgewichtgesamt2} aufgebaut werden.
+
+%GRAFIK Simulink
+
+Herzstück des Simulationsmodells bilden zwei Integratoren.
+Mit Hilfe dieser Blöcke lassen sich  $\dot\varphi$ und $\varphi$ erzeugen.
+Die Simulink Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
+Mit Hilfe dieser Blöcke und der Signalflusspfeile lässt sich die Gleichung in das Simulationsmodell übertragen.
+Ist das Modell aufgebaut, werden die Simulationsparameter ausgewählt. 
+Simulink arbeitet numerisch, daher muss ein Integrationsverfahren zur Lösung der DGLs ausgewählt werden. Voreingestellt ist das Dormand-Prince-Verfahren mit variabler Schrittweite.
+Diese Methode liefert in den meisten Anwendungen gute Ergebnisse. \autocite[S.~6]{scherf2010}
+Zur Verifizierung der Simulationsergebnisse ist es für den Anwender unumgänglich, sich im Vorfeld Gedanken zum erwartenden Ergebnis zu machen.
+Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung in Abhängigkeit von der Zeit erzeugen.
+Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes \glqq{Scope}\grqq.
+Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
+
+%Grafik Scope
+
 
 \section{Einführung in die TI-Bibliotheken}\label{sec:TI}
 

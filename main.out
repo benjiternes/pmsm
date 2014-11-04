@@ -25,10 +25,11 @@
 \BOOKMARK [1][-]{section.3.2}{Darstellung der Simulationsergebnisse}{chapter.3}% 25
 \BOOKMARK [0][-]{chapter.4}{Regelung der PMSM mit Simulink}{}% 26
 \BOOKMARK [1][-]{section.4.1}{Einf\374hrung in Simulink}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.2}{Einf\374hrung in die TI-Bibliotheken}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.3}{\334bersicht der Regelstruktur}{chapter.4}% 29
-\BOOKMARK [2][-]{subsection.4.3.1}{Subsysteme}{section.4.3}% 30
-\BOOKMARK [0][-]{chapter.5}{Auswertung der Simulationsergebnisse}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Vergleich der Ergebnisse der TI-Bibliotheken}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 33
-\BOOKMARK [0][-]{chapter*.11}{Literatur}{}% 34
+\BOOKMARK [2][-]{subsection.4.1.1}{Simulationsbeispiel: Pendel}{section.4.1}% 28
+\BOOKMARK [1][-]{section.4.2}{Einf\374hrung in die TI-Bibliotheken}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{\334bersicht der Regelstruktur}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.1}{Subsysteme}{section.4.3}% 31
+\BOOKMARK [0][-]{chapter.5}{Auswertung der Simulationsergebnisse}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Vergleich der Ergebnisse der TI-Bibliotheken}{chapter.5}% 33
+\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 34
+\BOOKMARK [0][-]{chapter*.11}{Literatur}{}% 35
