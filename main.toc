@@ -1,0 +1,44 @@
+\select@language {ngerman}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\select@language {ngerman}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{IV}{chapter*.2}
+\contentsline {chapter}{Symbolverzeichnis}{1}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Theoretische und begriffliche Grundlagen}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Theorie der Drehfeldmaschinen}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Maxwellsche Gleichungen}{3}{subsection.1.1.1}
+\contentsline {subsubsection}{\nonumberline Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralfrom)}{4}{section*.5}
+\contentsline {subsubsection}{\nonumberline Das Induktionsgesetz (2. Maxwellsche Gleichung in Integralfrom)}{4}{section*.6}
+\contentsline {subsubsection}{\nonumberline (3. Maxwellsche Gleichung in Integralfrom)}{5}{section*.7}
+\contentsline {subsubsection}{\nonumberline (4. Maxwellsche Gleichung in Integralfrom)}{5}{section*.8}
+\contentsline {subsection}{\numberline {1.1.2}Mehrphasensysteme}{5}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Magnetfelder}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Strombelag}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Durchflutung}{12}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Gleichfelder}{13}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Drehfelder}{13}{subsection.1.2.4}
+\contentsline {section}{\numberline {1.3}Induktivit\IeC {\"a}ten}{15}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Streuinduktivit\IeC {\"a}ten und Streureaktanzen}{16}{subsection.1.3.1}
+\contentsline {subsubsection}{\nonumberline Nut- und Zahnkopfstreuung}{16}{section*.9}
+\contentsline {section}{\numberline {1.4}Einf\IeC {\"u}hrung Synchronmaschine}{17}{section.1.4}
+\contentsline {paragraph}{\nonumberline Historischer Hintergund}{17}{section*.10}
+\contentsline {subsection}{\numberline {1.4.1}Spannungsgleichungen und Ersatzschaltbild}{18}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach \textcite {schroder2000}}{22}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach \textcite {kellner2012}}{24}{subsection.1.4.3}
+\contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{26}{chapter.2}
+\contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{26}{section.2.1}
+\contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{29}{section.2.2}
+\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{33}{section.2.3}
+\contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{36}{section.2.4}
+\contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{38}{chapter.3}
+\contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{38}{section.3.1}
+\contentsline {section}{\numberline {3.2}Darstellung der Simulationsergebnisse}{38}{section.3.2}
+\contentsline {chapter}{\numberline {4}Regelung der PMSM mit Simulink}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung in Simulink}{39}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Simulationsbeispiel: Pendel}{40}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung in die TI-Bibliotheken}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}\IeC {\"U}bersicht der Regelstruktur}{42}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Subsysteme}{42}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Auswertung der Simulationsergebnisse}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Vergleich der Ergebnisse der TI-Bibliotheken}{43}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{44}{chapter.6}
+\contentsline {chapter}{\nonumberline Literatur}{45}{chapter*.11}
