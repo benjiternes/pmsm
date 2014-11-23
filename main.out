@@ -1,35 +1,33 @@
 \BOOKMARK [0][-]{chapter*.2}{Abbildungsverzeichnis}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Symbolverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Theoretische und begriffliche Grundlagen}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Theorie der Drehfeldmaschinen}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.1}{Maxwellsche Gleichungen}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.2}{Mehrphasensysteme}{section.1.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Magnetfelder}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.2.1}{Strombelag}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.2}{Durchflutung}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.3}{Gleichfelder}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.4}{Drehfelder}{section.1.2}% 11
-\BOOKMARK [1][-]{section.1.3}{Induktivit\344ten}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.3.1}{Streuinduktivit\344ten und Streureaktanzen}{section.1.3}% 13
-\BOOKMARK [1][-]{section.1.4}{Einf\374hrung Synchronmaschine}{chapter.1}% 14
-\BOOKMARK [2][-]{subsection.1.4.1}{Spannungsgleichungen und Ersatzschaltbild}{section.1.4}% 15
-\BOOKMARK [2][-]{subsection.1.4.2}{Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach schroder2000}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.3}{Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach kellner2012}{section.1.4}% 17
-\BOOKMARK [0][-]{chapter.2}{Grundlagen der Vektorregelung}{}% 18
-\BOOKMARK [1][-]{section.2.1}{Raumzeigerdarstellung}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.2}{Beschreibung in \205Koordinatensystem}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.3}{Beschreibung in rotorfesten d-q-Koordinatensystem}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.4}{Signalflussplan der Vektorregelung}{chapter.2}% 22
-\BOOKMARK [0][-]{chapter.3}{Anforderungsprofil f\374r die Regelung der PMSM mit Simulink}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Eingabe und Ausgabedaten}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.2}{Darstellung der Simulationsergebnisse}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Regelung der PMSM mit Simulink}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Einf\374hrung in Simulink}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.1.1}{Simulationsbeispiel: Pendel}{section.4.1}% 28
-\BOOKMARK [1][-]{section.4.2}{Einf\374hrung in die TI-Bibliotheken}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.3}{\334bersicht der Regelstruktur}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.3.1}{Subsysteme}{section.4.3}% 31
-\BOOKMARK [0][-]{chapter.5}{Auswertung der Simulationsergebnisse}{}% 32
-\BOOKMARK [1][-]{section.5.1}{Vergleich der Ergebnisse der TI-Bibliotheken}{chapter.5}% 33
-\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 34
-\BOOKMARK [0][-]{chapter*.11}{Literatur}{}% 35
+\BOOKMARK [1][-]{subsection.1.0.1}{Maxwellsche Gleichungen}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.1}{Mehrphasensysteme}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Theorie der Drehfeldmaschinen}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Magnetfelder}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.3.1}{Strombelag}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.2}{Durchflutung}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.3}{Gleichfelder}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.4}{Drehfelder}{section.1.3}% 11
+\BOOKMARK [1][-]{section.1.4}{Einf\374hrung Synchronmaschine}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.4.1}{Spannungsgleichungen und Ersatzschaltbild}{section.1.4}% 13
+\BOOKMARK [2][-]{subsection.1.4.2}{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}{section.1.4}% 14
+\BOOKMARK [2][-]{subsection.1.4.3}{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}{section.1.4}% 15
+\BOOKMARK [0][-]{chapter.2}{Grundlagen der Vektorregelung}{}% 16
+\BOOKMARK [1][-]{section.2.1}{Raumzeigerdarstellung}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.2}{Beschreibung in \205Koordinatensystem}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Beschreibung in rotorfesten d-q-Koordinatensystem}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.4}{Signalflussplan der Vektorregelung}{chapter.2}% 20
+\BOOKMARK [0][-]{chapter.3}{Anforderungsprofil f\374r die Regelung der PMSM mit Simulink}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Eingabe und Ausgabedaten}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Darstellung der Simulationsergebnisse}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Regelung der PMSM mit Simulink}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Einf\374hrung in Simulink}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.1.1}{Simulationsbeispiel: Pendel}{section.4.1}% 26
+\BOOKMARK [1][-]{section.4.2}{Einf\374hrung in die TI-Bibliotheken}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{\334bersicht der Regelstruktur}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.3.1}{Subsysteme}{section.4.3}% 29
+\BOOKMARK [0][-]{chapter.5}{Auswertung der Simulationsergebnisse}{}% 30
+\BOOKMARK [1][-]{section.5.1}{Vergleich der Ergebnisse der TI-Bibliotheken}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 32
+\BOOKMARK [0][-]{chapter*.9}{Literatur}{}% 33
