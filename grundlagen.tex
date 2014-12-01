@@ -1,4 +1,4 @@
-% -*- coding: utf-8 -*-
+ % -*- coding: utf-8 -*-
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
@@ -270,13 +270,6 @@ Das Integral erhält die Bezeichnung \enquote{Felderregerkurve} (vgl.~\textcite[
 Die Felderregerkurve gibt an, welche magnetische Spannung zur Magnetfelderzeugung an der Stelle $x$ zur Verfügung steht.
 Diese ist wichtige für die Berechnung von Streuung und Verlusten in der Maschine.
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
-\label{fig:Visio-strombelag-umlauf}
-\caption{Integral entlang des Umfanges; magnetische Umlaufspannung.}
-\end{figure}
-
 \subsection{Durchflutung}\label{sec:durchflutung}
 
 Die Durchflutung lässt sich als Integral des Strombelages entlang der Polteilung darstellen
@@ -540,7 +533,7 @@ anzusetzen.
 \caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld.}
 \end{figure}
 
-\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}
+\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}\label{sec:synchron-dq}
 
 Im folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagneten ersetzt wird.
 In diesem Fall verbleiben nur die drei Statorwicklungen als stromdurchflossene Wicklungen.
@@ -592,8 +585,8 @@ u_\i{q} = - \frac{\i{d}}{\i{d}t}\Psi
 Entsprechend Abbildung~\ref{fig:netzwerk-stander-drehstrom} ergeben die die Grundgleichungen einer PMSM ganz allgemein zu
 
 \begin{align}
-u_\i{u} = R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u} \\ \label{eqn:10}
-u_\i{v} = R_\i{1}i_\i{v} + \frac{\i{d}}{\i{d}t}\Psi_\i{v} \\ \nonumber
+u_\i{u} = R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u} \nonumber \\ 
+u_\i{v} = R_\i{1}i_\i{v} + \frac{\i{d}}{\i{d}t}\Psi_\i{v} \label{eqn:10} \\ 
 u_\i{w} = R_\i{1}i_\i{w} + \frac{\i{d}}{\i{d}t}\Psi_\i{w} \nonumber
 \end{align}
 
@@ -691,15 +684,15 @@ Eine Trennung von Real- und Imaginärteil ergibt die bekannten, üblicherweise v
 \begin{shaded}
 	Spannungsgleichungen im rotorfesten System
 	\begin{align}
-		u_\x{d} &= R_\x{1}i_\x{d} + \frac{\x{d}}{\x{d}t}\Psi_\x{d}-\omega_\x{el}\Psi_\x{q} \\
-		u_\x{q} &= R_\x{1}i_\x{q} + \frac{\x{d}}{\x{d}t}\Psi_\x{q}-\omega_\x{el}\Psi_\x{d}
+		u_\x{d} &= R_\x{1}i_\x{d} + \frac{\x{d}}{\x{d}t}\Psi_\x{d}-\omega_\x{el}\Psi_\x{q} \label{eqn:ud-gleichung}\\
+		u_\x{q} &= R_\x{1}i_\x{q} + \frac{\x{d}}{\x{d}t}\Psi_\x{q}-\omega_\x{el}\Psi_\x{d} \label{eqn:uq-gleichung}
 	\end{align}
 \end{shaded}
 
 Allgemein kann das innere Drehmoment einer einpolpaarigen elektrischen Maschine und damit auch im Speziellen einer PMSM nach \textcite{kellner2012} aus dem in Richtung der Motorwelle zeigenden Vektorprodukt aus Ständerfluss und Ständerstrom berechnet werden:
 
 \begin{align}
-	M_\x{i} = \frac{3}{2}(\underline{\Psi}^{\x{d,q}} \times \underline{i}^{\x{d,q}})
+	M_\x{i} = \frac{3}{2}(\underline{\Psi}^{\x{d,q}} \times \underline{i}^{\x{d,q}}) 
 \end{align}
 
 Das innere Drehmoment $M_\x{i}$ für eine elektrische Maschine mit $Z_\x{p}$ Polpaaren kann schließlich nach Auswertung des Vektorproduktes ermittelt werden:
@@ -707,14 +700,14 @@ Das innere Drehmoment $M_\x{i}$ für eine elektrische Maschine mit $Z_\x{p}$ Pol
 \begin{shaded}
 	inneres Drehmoment
 	\begin{align}
-M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} )
+M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} ) \label{eqn:mi-gleichung}
 	\end{align}
 \end{shaded}
 
 Um das System vollständig zu beschreiben, fehlt noch die mechanische Bestimmungsgleichung
 
 \begin{align}
-	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{Z_\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el}
+	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{Z_\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
 \end{align}
 
 Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $Z_\x{p}$ für die Polpaarzahl der elektrischen Maschine.
@@ -722,19 +715,50 @@ Alle hergeleiteten Gleichungen beziehen sich auf die Annahme des Grundwellenmode
 Im nächsten Schritt ist es wichtig die Flüsse durch Induktivitäten zu ersetzen.
 Dafür werden oft linearisierte Gleichungen verwendet \autocite{schroder2001}, bei dem Modell sind alle Parameter konstant.
 Dementsprechend einfach ist es, die Ableitungen der Flussverkettungen zu bestimmen.
+Beim linearen Maschinenmodell gibt es definitionsgemäß keine Sättigungserscheinungen \autocites{mullerII2008}{schroder2001}.
+Alle elektrischen Parameter und damit auch die Induktivitäten der elektrischen Maschine sind damit konstant.
+Aus dieser Annahme folgt nach \autocite{schroder2001}:
 
+\begin{align}
+	\Psi_\x{d} &= \Psi_{pm} + L_\x{d}i_\x{d} \\
+	\Psi_\x{q} &= L_\x{q}i_\x{q}
+\end{align}
 
-%\section{Besonderheiten der Schenkelpolmaschine}\label{sec:schenkelpol}
+Die in Richtung der $d$-Achse ausgerichteten Permanentmagnete rufen eine als konstant angenommene Flussverkettung $\Psi_\x{pm}$ hervor \autocite{kellner2012}.
+Daraus ergeben sich in Gleichung (\ref{eqn:ud-gleichung}), (\ref{eqn:uq-gleichung}) und (\ref{eqn:mi-gleichung}) eingesetzt die Grundgleichungen des linearisierten Maschinenmodells zu:
 
-%\section{Permanenterregte Synchronmaschine}\label{sec:pmsm}
+\begin{shaded}
+linearisierte Gleichungen
+\begin{align}
+		u_\x{d} &= R_\x{1}i_\x{d} + L_\x{d}\frac{\x{d}i_\x{d}}{\x{d}t}-\omega_\x{el}L_\x{q}i_\x{q} \label{eqn:ud-lin-gleichung} \\
+		u_\x{q} &= R_\x{1}i_\x{q} + L_\x{q}\frac{\x{d}i_\x{q}}{\x{d}t}+\omega_\x{el}L_\x{d}i_\x{d} + \omega_\x{el}\Psi_\x{pm}  \label{eqn:uq-lin-gleichung} \\
+		M_\x{i} &= \frac{3p}{2} ( \Psi_\x{pm}i_\x{q} + (L_\x{d}-L_\x{q})i_\x{d}i_\x{q}) \label{eqn:mi-lin-gleichung}
+\end{align}
+\end{shaded}
 
-%\section{Evalurierung der Ersatzschaltbilder für die Regelung}\label{sec:esb}
+\begin{figure}[h!]
+	\centering
+	\includegraphics{_Bilder/ESB-synchron-dq.pdf}
+	\label{fig:ESB-synchron-dq}
+	\caption{Graphische Darstellung der Gleichungen (\ref{eqn:ud-lin-gleichung}) und (\ref{eqn:uq-lin-gleichung}).}
+\end{figure}
 
+Die beiden Spannungsgleichungen können gemäß Abbildung \ref{fig:ESB-synchron-dq} graphisch dargestellt werden.
+Erkennbar ist, dass in der Abbildung \ref{fig:ESB-synchron-dq} die beiden Gleichungen nur über die Spannungsquellen miteinander verkoppelt sind.
+Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechanische-gleichung}) nach den Ableitungen von $i_\x{d}, i_\x{q}$ und $\omega_\x{el}$ auf, so ergeben sich die linearen Gleichungen der PMSM in Zustandsform zu:
 
+\begin{shaded}
+	linearisierten Gleichung in Zustandsform
+\begin{align}
+\frac{\x{d}i_\x{d}}{\x{d}t} &= -\frac{R_\x{1}}{L_\x{d}}i_\x{d}+\omega_\x{el}\frac{L_\x{q}}{L_\x{d}}i_\x{q}+\frac{1}{L_\x{d}}u_\x{d} \\
+\frac{\x{d}i_\x{q}}{\x{d}t} &= -\omega_\x{el}\frac{L_\x{d}}{L_\x{q}}i_\x{d} - \frac{R_\x{1}}{L_\x{q}}i_\x{q} + \frac{1}{L_\x{q}}u_\x{q} - \frac{\omega_\x{el}}{L_\x{q}}\Psi_\x{pm} \\
+\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J} \Psi_\x{pm} i_\x{q} - \frac{p}{J} M_\x{Last}
+\end{align}
+\end{shaded}
 
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "main"
+%%% TeX-master: "main.tex"
 %%% TeX-open-quote: "\\enquote{"
 %%% TeX-close-quote: "}"
 %%% LaTeX-csquotes-open-quote: "\\enquote{"
