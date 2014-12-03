@@ -23,13 +23,13 @@ Der Aufbau von den Systemen findet in Simulink mit Hilfe von Blockbildern statt,
 Entscheident für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
 Zur Einführung in die Software dient daher ein einfaches physikalisches Simulationsbeispiel: das Pendel.
 
-\subsection{Simulationsbeispiel: Pendel}
+\subsection{Simulationsbeispiel -- Das mathematische Pendel}
 
 Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{/regelung/pendel.pdf}
+	\includegraphics{/regelung/pendel.pdf}
 	\label{fig:pendel}
 	\caption{Fadenpendel}
 \end{figure}
@@ -38,23 +38,19 @@ Er gelten folgende Momente:
 
 Rückstellmoment
 \begin{align}
-		M_\i{R} = m \cdot g \cdot \si{sin}(\varphi)
-		\label{rueckstellmoment} 
+		M_\i{R} = m \cdot g \cdot \si{sin}(\varphi) \label{rueckstellmoment} 
 \end{align}
 Beschleunigungsmoment
 \begin{align}
-	M_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi
-	\label{beschleunigungsmoment} 
+	M_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi\label{beschleunigungsmoment} 
 \end{align}
 Reibungsmoment
 \begin{align}
-	M_\i{Reib} = d \cdot l^{2} \cdot \dot\varphi
-	\label{reibungsmoment} 
+	M_\i{Reib} = d \cdot l^{2} \cdot \dot\varphi\label{reibungsmoment} 
 \end{align}
 Außerdem gilt:
 \begin{align}
-	\sum M = 0
-	\label{momentengleichgewicht} 
+	\sum M = 0 \label{momentengleichgewicht} 
 \end{align}
 
 Die Bewegung des Pendels wird mit folgenden Werten simuliert:\\
@@ -100,7 +96,7 @@ Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momente
 \end{figure}
 
 Herzstück des Simulationsmodells bilden zwei Integratoren.
-Mit Hilfe dieser Blöcke lassen sich  $\dot\varphi$ und $\varphi$ erzeugen.
+Mit Hilfe dieser Blöcke lassen sich  $\dot{\varphi}$ und $\varphi$ erzeugen.
 Die Simulink Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
 Mit Hilfe dieser Blöcke und der Signalflusspfeile lässt sich die Gleichung in das Simulationsmodell übertragen.
 Ist das Modell aufgebaut, werden die Simulationsparameter ausgewählt. 
@@ -118,7 +114,26 @@ Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
 	\caption{ Winkel $\varphi$ des Pendels über die Simulationszeit t=15s}
 \end{figure}
 
+<<<<<<< HEAD
 Wie erwartet, wird eine deutlich gedämpfte Schwingung des simulierten Pendels erkennbar.
+=======
+\section{Simulink Modell der PMSM}\label{sec:math-model-pmsm}
+
+Als Grundlage für die Betrachtung der PMSM gilt der Abschnitt \ref{sec:synchron-dq}.
+Die grundlegenden Gleichung dazu sind (\ref{eqn:ud-lin-gleichung}), (\ref{eqn:uq-lin-gleichung}) und (\ref{eqn:mi-lin-gleichung}).
+Aus den Gleichungen ergibt sich dann im Simulink das Modell.
+Das Modell wurde ich zwei Systeme unterteilt:
+
+\begin{itemize}
+	\item mechanical system
+	\item electrical system
+\end{itemize}
+
+Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s. h. Gl. (\ref{eqn:mi-lin-gleichung}).
+Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter der PMSM.
+
+
+>>>>>>> e887cb4ce56df14768cb9de1f365592c81d6a329
 
 \section{Einführung in die TI-Bibliotheken}\label{sec:TI}
 

@@ -5,6 +5,7 @@
 \input{makros.tex} 
 
 \renewcommand{\i}[1]{\mathrm{#1}}
+\newcommand{\x}[1]{\mathrm{#1}}
 
 \begin{document}
 \pagenumbering{Roman}
@@ -70,38 +71,41 @@
 % ----------------------------------------------------------------------------------------------------------
 % Symbolliste
 % ----------------------------------------------------------------------------------------------------------
-\section*{Allgemeine Symbole}\label{s.sym.alg}
-\begin{flushleft}\begin{tabularx}{\textwidth}{l l X}
-Symbol & Bedeutung	& Einheit\\
-\\
-\hline
-\\ 
-$I$	& elektrische Stromstärke	&	\si{A} \\
-$\Theta$	&	elektrische Durchflutung 	&	\si{A}	\\
-$A$			&	elektrischer Strombelag  	&  	\si{A/m}\\ 
-$J$			&	elektrische Stromdichte		&	\si{A/m^2} \\	
-$H$			&	magnetische Feldstärke		&	\si{A/m}\\
-$I_\i{e}$	&	Erregerstrom	&	\si{A} \\
-$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	$Vs/Am$\\
-$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
-$B$			&	magnetische Flussdichte		&	\si{Vs/m^2}\\
-$\Phi$		&	magnetischer Fluss			&	\si{Vs} \\
-$\Psi$		&	verketteter Fluss			&	\si{Vs} \\
-$L, M$		&	Induktivitäten				&	\si{Vs/A}\\
-$U$			&	elektrische Spannung		&	\si{V} \\
-$U_\i{e}$ & Erregerspannung & \si{V}\\
-$R_\i{e}$	&	Erregerkreisverlustwiderstand &	\si{\Omega}\\
-$V$			&	magnetisches Vektorpotenzial&	\si{Vs/m}\\
-$V_\mathrm{m}$		&	magnetische Spannung		&	\si{A} \\
-$\Omega_\mathrm{L}$	&	elektr.\ Winkelgeschwindigkeit des Rotors($\Omega_L = Z_p\cdot \Omega_m$) & \si{1/s} \\
-$\Omega_\mathrm{m}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
-$Z_\mathrm{p}$		&	Polpaarzahl					&	\\
-$\psi_\mathrm{d}, \psi_\mathrm{q}$	&	Statorfluss-Komponenten im d,q-System &	\si{Vs} \\
-$U_\mathrm{d}, U_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{V} \\
-$I_\mathrm{d}, I_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{A} \\
-$R_\mathrm{1}$		&	Statorwiderstand			&	\si{V/A} \\
-$L_\mathrm{d}, L_\mathrm{q}$	& 	Statorinduktivität im d,q-System & \si{Vs/A}
-\end{tabularx}\end{flushleft}
+%\section*{Allgemeine Symbole}\label{s.sym.alg}
+%\begin{flushleft}
+%\begin{tabularx}{\textwidth}{lll}
+%Symbol & Bedeutung	& Einheit\\
+%\\
+%\hline
+%\\ 
+%$I$	& elektrische Stromstärke	&	\si{A} \\
+%$\Theta$	&	elektr.Durchflutung 	&	\si{A}	\\
+%$A$			&	elektr. Strombelag  	&  	\si{A/m}\\ 
+%$J$			&	elektr. Stromdichte		&	\si{A/m^2} \\	
+%$H$			&	magnetische Feldstärke		&	\si{A/m}\\
+%$I_\i{e}$	&	Erregerstrom	&	\si{A} \\
+%$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	\si{Vs/Am}\\
+%$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
+%$B$			&	magnetische Flussdichte		&	\si{Vs/m^2}\\
+%$\Phi$		&	magnetischer Fluss			&	\si{Vs} \\
+%$\Psi$		&	verketteter Fluss			&	\si{Vs} \\
+%$L, M$		&	Induktivitäten				&	\si{Vs/A}\\
+%$U$			&	elektrische Spannung		&	\si{V} \\
+%$U_\i{e}$ & Erregerspannung & \si{V}\\
+%$R_\i{e}$	&	Erregerkreisverlustwiderstand &	\si{\Omega}\\
+%$V$			&	magnetisches Vektorpotenzial&	\si{Vs/m}\\
+%$V_\mathrm{m}$		&	magnetische Spannung		&	\si{A} \\
+%$\omega_\mathrm{el}$	&	elektr.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
+%$\omega_\mathrm{mech}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
+%$Z_\mathrm{p}$		&	Polpaarzahl					&	\\
+%$\psi_\mathrm{d}, \psi_\mathrm{q}$	&	Statorfluss-Komponenten im d,q-System &	\si{Vs} \\
+%$u_\mathrm{d}, U_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{V} \\
+%$i_\mathrm{d}, I_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{A} \\
+%$\Psi_\mathrm{d}, \Psi_\mathrm{q}$	&	Flussverkettung im d,q-System	&	\si{A} \\
+%$R_\mathrm{1}$		&	Statorwiderstand			&	\si{V/A} \\
+%$L_\mathrm{d}, L_\mathrm{q}$	& 	Statorinduktivität im d,q-System & \si{Vs/A}
+%\end{tabularx}
+%\end{flushleft}
 % ----------------------------------------------------------------------------------------------------------
 % Einleitung
 % ----------------------------------------------------------------------------------------------------------

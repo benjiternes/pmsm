@@ -1,20 +1,10 @@
-% -*- coding: utf-8 -*-
+ % -*- coding: utf-8 -*-
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
 \chapter{Theoretische und begriffliche Grundlagen}\label{cha:grundlagen}
 
 Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im folgenden einige Grundlagen erörtert.
-
-\section{Theorie der Drehfeldmaschinen}\label{sec:grund-drehfeld}
-
-Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen, der Grund hierfür ist die Robustheit der aktiven Bauteile und die gute Energieeffizienz.
-Zudem besitzen Drehfeldmaschinen ein großes Leistungsspektrum und einen großen Drehzahl- und Drehmomentstellbereich.
-Die wesentlichen Vertreter der Maschinenfamilie sind die Synchron- und die Asynchronmaschinen.
-Beide basieren auf der Wirkung eines Drehfeldes, das sich durch den Luftspalt der Maschine bewegt.
-Die Synchron- und Asynchronmaschine besitzen im Ständer denselben Aufbau und erfordern zur Darstellung ihres Verhaltens eine Reihe gleicher physikalischer Begriffe.
-Es ist zweckmäßig die Grundlagen der Synchronmaschine in einem eigenen Kapitel zu behandeln.
-Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
 
 \subsection{Maxwellsche Gleichungen}\label{sec:maxwell}
 
@@ -74,7 +64,7 @@ der magnetische Fluss.
 \int_A \vec{D}\i{d}\vec{A} = \int_V\rho\i{d}V
 \end{align}
 
-\subsection{Mehrphasensysteme}
+\section{Mehrphasensysteme}
 \label{subsec:mehrphasensysteme}
 
 Bei einpoliger Verbindung von $m$ Wechselspannungsquellen entsteht eine Schaltung, die $(m+1)$ Klemmen aufweist (s.~h.~Abbildung~\ref{fig:mehrphasen}).
@@ -124,10 +114,10 @@ Setzt man der Einfachheit
 so wird die symmetrische Mehrphasen-Spannungsquelle durch das folgende Gleichungssystem beschrieben.
 
 \begin{align}
-u_\i{1(t)} &= \hat{u} \cdot \cos(\omega t) \\ \label{eqn:drehstrom}
-u_\i{2(t)} &= \hat{u} \cdot \cos(\omega t - \frac{\omega T}{m})\nonumber \\
+u_\i{1}(t) &= \hat{u} \cdot \cos(\omega t) \label{eqn:drehstrom} \\ 
+u_\i{2}(t) &= \hat{u} \cdot \cos(\omega t - \frac{\omega T}{m})\nonumber \\
 \vdots \nonumber \\
-u_\i{m(t)} &= \hat{u} \cdot \cos(\omega t - (m-1)\frac{\omega T}{m})\nonumber
+u_\i{m}(t) &= \hat{u} \cdot \cos(\omega t - (m-1)\frac{\omega T}{m})\nonumber
 \end{align}
 
 In der Elektrotechnik treten Systeme mit verschiedenen Phasenzahlen auf.
@@ -149,7 +139,7 @@ Als Klemmenbezeichnung ist die Buchstabengruppe $R, S, T$ bzw.\ $U, V, W$ üblic
 
 Durch die DIN-Normung wurde festgelegt, dass die Klemmenbezeichnung beim Drehstromsystem mit $L1, L2$ und $L3$ zu erfolgen hat.
 Die Phasenwinkeldifferenz ist $\Delta \varphi = 120^{\circ}$.
-Stellt man die Phasenspannungen $u_\i{1(t)}, u_\i{2(t)}, u_i{3(t)}$ nach Abbildung~\ref{eqn} dar, so ergibt sich 
+Stellt man die Phasenspannungen $u_\i{1}(t), u_\i{2}(t), u_\i{3}(t)$ nach Abbildung~\ref{eqn:drehstrom} dar, so ergibt sich 
 
 \begin{figure}[!h]
 \centering
@@ -158,31 +148,21 @@ Stellt man die Phasenspannungen $u_\i{1(t)}, u_\i{2(t)}, u_i{3(t)}$ nach Abbildu
 \caption{Phasenspannung eines symmetrischen Drehstromerzeugers.}
 \end{figure}
 
+\section{Theorie der Drehfeldmaschinen}\label{sec:grund-drehfeld}
+
+Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen, der Grund hierfür ist die Robustheit der aktiven Bauteile und die gute Energieeffizienz.
+Zudem besitzen Drehfeldmaschinen ein großes Leistungsspektrum und einen großen Drehzahl- und Drehmomentstellbereich.
+Die wesentlichen Vertreter der Maschinenfamilie sind die Synchron- und die Asynchronmaschinen.
+Beide basieren auf der Wirkung eines Drehfeldes, das sich durch den Luftspalt der Maschine bewegt.
+Die Synchron- und Asynchronmaschine besitzen im Ständer denselben Aufbau und erfordern zur Darstellung ihres Verhaltens eine Reihe gleicher physikalischer Begriffe.
+Es ist zweckmäßig die Grundlagen der Synchronmaschine in einem eigenen Kapitel zu behandeln.
+Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
+
 Der prinzipielle Aufbau einer Drehstromwicklung lässt sich anhand aus den Anforderungen zur Erzeugung einer dreiphasigen Wechselspannung erläutern.
 Eine solche Drehspannung erhält man mit einer Anordnung nach Abbildung~\ref{fig:drehstromwicklung}.
 Ein aus Dynamoblechen geschichtetes Ständerblechpacket enthält in Nuten am Bohrungsumfang gleichmäßig verteilte Leiter, die zu drei räumlich verteilten Wicklungssträngen zusammengeschaltet werden \autocite[S.~141]{fischer2009}.
 Der Läufer erzeugt ein Gleichfeld, das eine sinusförmige Feldverteilung längst des Luftspaltes aufbaut.
 Hat der Läufer eine konstante Drehzahl, so induziert das Feld in den einzelnen Spulen zeitlich sinusförmige Spannungen, die sich innerhalb eines Wicklungsstranges zu einem Wert addieren.
-Die Berechnung der Induktion kann über die Allgemeine Beziehung
-
-\begin{align}
-u_\i{q} = B\cdot l \cdot v
-\end{align}
-
-erfolgen.
-Sei $d_1$ der Bohrungdurchmesser des Ständerblechpaketes einer $2p$-poligen Maschine, so bezeichnet man den Umfangsanteil
-
-\begin{align}
-\tau_\i{p} = \frac{d_\i{1} \cdot \pi}{2p}
-\end{align}
-
-wieder als Polteilung.
-Die Polteilung entspricht der Länder einer Halbwelle der sinusförmigen Flussdichteverteilung im Luftspalt (enspricht einem elektrischen Winkel von $\omega t = 180^{\circ}$.
-Bei einer zweipoligen Maschine mit $p=1$ stimmen somit der räumlich mechanische und der elektrische Winkel überein, allgemein gilt die Beziehung \autocite[S.141f.]{fischer2009}
-
-\begin{align}
-\gamma_\i{el} = p\cdot \gamma_\i{mech}
-\end{align}
 
 \section{Magnetfelder}
 
@@ -194,7 +174,7 @@ Unter der idealisierten Annahme eines homogenen Feldverlaufs im Bereich der Nut�
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{nutquerfeld.pdf}
+\includegraphics{_Bilder/nutquerfeld.pdf}
 \label{fig:nutquerfeld}
 \caption{Abbildung des Nutquerfeldes einer Rechtecknut im Stator.}
 \end{figure}
@@ -274,7 +254,7 @@ A = \frac{m w I}{p \tau_\i{p}}
 \autocite[S.~199]{hofmann2013}}
 \end{quote}
 
-Der dann alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung durch seine Grundwelle beschrieben werden
+Der alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung durch seine Grundwelle beschrieben werden
 
 \begin{align}
 A_\i{1}(x) = \hat{A}_\i{1} \cdot \cos(\frac{x}{\tau_\i{p}}\cdot \pi)
@@ -289,13 +269,6 @@ V_\delta (x) = - \int_0^x A(x)\i{d}x
 Das Integral erhält die Bezeichnung \enquote{Felderregerkurve} (vgl.~\textcite[S.~199]{hofmann2013}).
 Die Felderregerkurve gibt an, welche magnetische Spannung zur Magnetfelderzeugung an der Stelle $x$ zur Verfügung steht.
 Diese ist wichtige für die Berechnung von Streuung und Verlusten in der Maschine.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
-\label{fig:Visio-strombelag-umlauf}
-\caption{Integral entlang des Umfanges; magnetische Umlaufspannung.}
-\end{figure}
 
 \subsection{Durchflutung}\label{sec:durchflutung}
 
@@ -348,77 +321,77 @@ B(x,t) = \hat{B}\cdot\cos(\frac{x}{\tau_\i{p}}\pi\pm\omega t)
 
 Der Fall, dass sich aus der Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern ein Drehfeld bildet soll hier nicht weiter erläutert werden.
 
-\section{Induktivitäten}\label{sec:induktiv}
+%\section{Induktivitäten}\label{sec:induktiv}
 
-Innerhalb der Vektorregelung (s.~h.~Abschnitt~\ref{cha:Grundlagen der Vektorregelung}) werden die absoluten Induktivitäten zum Beispiel für die Berechnung des Spannungssollwertmodells, also der Vorsteuerung, benötigt.
-Im Rahmen von geberlosen Regelalgorithmen sind die absoluten und differentiellen Induktivitäten erforderlich~--~wie \textcite{kellner2012}[S.~35ff.] gut darstellt.
-Auch bei aktuellen Forschungsthemen »Parameteridentifikation von Synchronmaschinen« zeigt \textcite{kellner2012} auf S.~148ff., dass die Induktivitäten für Ständerwiderstandsidentifikation benötigt werden.
-Da für die Anwendung nur die Parameter in rotorfesten Koordinaten von Belang sind, wird sich die Sichtweise in der vorliegenden Arbeit darauf beschränken.
+%Innerhalb der Vektorregelung (s.~h.~Abschnitt~\ref{cha:Grundlagen der Vektorregelung}) werden die absoluten Induktivitäten zum Beispiel für die Berechnung des Spannungssollwertmodells, also der Vorsteuerung, benötigt.
+%Im Rahmen von geberlosen Regelalgorithmen sind die absoluten und differentiellen Induktivitäten erforderlich~--~wie \textcite{kellner2012}[S.~35ff.] gut darstellt.
+%Auch bei aktuellen Forschungsthemen »Parameteridentifikation von Synchronmaschinen« zeigt \textcite{kellner2012} auf S.~148ff., dass die Induktivitäten für Ständerwiderstandsidentifikation benötigt werden.
+%Da für die Anwendung nur die Parameter in rotorfesten Koordinaten von Belang sind, wird sich die Sichtweise in der vorliegenden Arbeit darauf beschränken.
 
-In den Spannungsgleichungen (s.~h.~Abschnitt~\ref{sec:spannungsgleichung-esb}) der Wicklungen einer elektrischen Maschine sind neben den ohmschen Spannungsabfällen $u$ die zeitlichen Änderungen ihrer Flussverkettungen $\Psi$ \autocite[S.~511]{mullerII2008}.
-Sowohl die Flussverkettung als auch die ohmschen Spannungsabfälle sind Funktionen der Ströme $i$.
-Bei ohmschen Spannungsabfällen tritt als Proportionalitätsfaktor der Wicklungswiderstand $R$ auf.
-Bei magnetischer Linearität zwischen den Strömen und der Flussverkettung ist $L$ der Proportionalitätsfaktor.
+%In den Spannungsgleichungen (s.~h.~Abschnitt~\ref{sec:spannungsgleichung-esb}) der Wicklungen einer elektrischen Maschine sind neben den ohmschen Spannungsabfällen $u$ die zeitlichen Änderungen ihrer Flussverkettungen $\Psi$ \autocite[S.~511]{mullerII2008}.
+%Sowohl die Flussverkettung als auch die ohmschen Spannungsabfälle sind Funktionen der Ströme $i$.
+%Bei ohmschen Spannungsabfällen tritt als Proportionalitätsfaktor der Wicklungswiderstand $R$ auf.
+%Bei magnetischer Linearität zwischen den Strömen und der Flussverkettung ist $L$ der Proportionalitätsfaktor.
 
-\begin{quote}
-\enquote{Wenn magnetische Linearität vorausgesetzt wird, kann die Flussverkettung einer Wicklung ganz allgemein als Linearkombination ihrer von den einzelnen für das Feld verantwortlichen Strömen herrührenden Anteile dargestellt werden \autocite[S.~511]{mullerII2008}.} 
-\end{quote}
+%\begin{quote}
+%\enquote{Wenn magnetische Linearität vorausgesetzt wird, kann die Flussverkettung einer Wicklung ganz allgemein als Linearkombination ihrer von den %einzelnen für das Feld verantwortlichen Strömen herrührenden Anteile dargestellt werden \autocite[S.~511]{mullerII2008}.} 
+%\end{quote}
 
-Die dort auftretenden Proportionalitätsfaktoren sind Induktivitäten $L$.
-Für die Flussverkettung $\Psi_\i{n}$ einer Wicklung $n$ mit dem gesamten Feld des Stromes $i_\i{k}$ der Wicklung $k$ gilt
+%Die dort auftretenden Proportionalitätsfaktoren sind Induktivitäten $L$.
+%Für die Flussverkettung $\Psi_\i{n}$ einer Wicklung $n$ mit dem gesamten Feld des Stromes $i_\i{k}$ der Wicklung $k$ gilt
 
-\begin{align}
-\Psi_\i{n} = L_\i{n,k}\cdot i_\i{k} = \int_\i{Wicklung n}B_\i{k}\i{d}A \label{eqn:induktivität}
-\end{align}
+%\begin{align}
+%\Psi_\i{n} = L_\i{n,k}\cdot i_\i{k} = \int_\i{Wicklung n}B_\i{k}\i{d}A \label{eqn:induktivität}
+%\end{align}
 
-Dabei stellt der Proportionalitätsfaktor $L$ zwischen der Flussverkettung einer Wicklung und ihrem eigenen Strom die Selbstinduktivität dar \autocite[S.~24]{ternes2013}.
-Ströme die in anderen Wicklungen fließen, nennt man Gegeninduktivitäten.
-Ausgehend von Gl.~\ref{eqn:induktivität} ergibt sich die allgemeine Berechnungsvorschrift für eine Induktivität $L_\i{n,k}$ die Beziehung
+%Dabei stellt der Proportionalitätsfaktor $L$ zwischen der Flussverkettung einer Wicklung und ihrem eigenen Strom die Selbstinduktivität dar \autocite[S.~24]{ternes2013}.
+%Ströme die in anderen Wicklungen fließen, nennt man Gegeninduktivitäten.
+%Ausgehend von Gl.~\ref{eqn:induktivität} ergibt sich die allgemeine Berechnungsvorschrift für eine Induktivität $L_\i{n,k}$ die Beziehung
 
-\begin{align}
-L_\i{n,k} = \frac{\Psi_\i{n}}{i_\i{k}} \label{eqn:allg-induktivität}
-\end{align}
+%\begin{align}
+%L_\i{n,k} = \frac{\Psi_\i{n}}{i_\i{k}} \label{eqn:allg-induktivität}
+%\end{align}
 
-Die Induktivitäten lassen sich im stationären Betrieb der Maschine lasssen sich entsprechend Reaktanzen zuordnen.
+%Die Induktivitäten lassen sich im stationären Betrieb der Maschine lasssen sich entsprechend Reaktanzen zuordnen.
 
-\begin{align}
-X = \omega L
-\end{align}
+%\begin{align}
+%X = \omega L
+%\end{align}
 
-\subsection{Streuinduktivitäten und Streureaktanzen}\label{sec:induktiv-streu}
+%\subsection{Streuinduktivitäten und Streureaktanzen}\label{sec:induktiv-streu}
 
-Man erhält die Streuinduktivität gemäß der allgemeinen Beziehung in Gl.~\ref{eqn:allg-induktivität}.
-Das prinzipielle Vorgehen zur Berechnung von Streuflussverkettungen kann aus \textcite[S.~311]{mullerII2008} entnommen werden.
-Entsprechend ergeben sich verschiedene Arten von Streuung.
+%Man erhält die Streuinduktivität gemäß der allgemeinen Beziehung in Gl.~\ref{eqn:allg-induktivität}.
+%Das prinzipielle Vorgehen zur Berechnung von Streuflussverkettungen kann aus \textcite[S.~311]{mullerII2008} entnommen werden.
+%Entsprechend ergeben sich verschiedene Arten von Streuung.
 
-\subsubsection{Nut- und Zahnkopfstreuung}\label{sec:nut-zahn-streuung}
+%\subsubsection{Nut- und Zahnkopfstreuung}\label{sec:nut-zahn-streuung}
 
-Nach \textcite[S.~323]{mullerII2008} erhält man für die Teilstreufelder im Nut- und Zahnkopfraum entsprechend umgerechnet in die Streureaktanz
+%Nach \textcite[S.~323]{mullerII2008} erhält man für die Teilstreufelder im Nut- und Zahnkopfraum entsprechend umgerechnet in die Streureaktanz
 
-\begin{align}
-X_{\sigma} = \omega L_{\sigma}
-\end{align}
+%\begin{align}
+%X_{\sigma} = \omega L_{\sigma}
+%\end{align}
 
-Nach \textcite[S.~533--536]{mullerII2008} ergibt sich für den allgemeinen relativen Streuleitwert
+%Nach \textcite[S.~533--536]{mullerII2008} ergibt sich für den allgemeinen relativen Streuleitwert
 
-\begin{table}[htb]
-\centering
-\caption{Abhängigkeiten für den allgemeinen relativen Streuleitwert nach \textcite{mullerII2008}.}
-\begin{tabular}{ll}
-\toprule
-Streuungskomponente	&	$\lambda_{\sigma} =$ \\
-\midrule
-Nut- und Zahnkopfstreuung	&	$\frac{\lambda_\i{nz}}{q}$ \\
-Wicklungskopfstreuung		&	$\lambda_\i{w}$ \\
-Oberwellenstreuung			&	$\sigma_\i{o}\lambda_\i{h}\xi^{2}_{\i{p}}$	\\
-Schrägungsstreuung			&	$\sigma_\i{schr}\lambda_\i{h}\xi^{2}_{\i{p}}$ \\
-\bottomrule
-\end{tabular}
-\end{table} 
+%\begin{table}[htb]
+%\centering
+%\caption{Abhängigkeiten für den allgemeinen relativen Streuleitwert nach \textcite{mullerII2008}.}
+%\begin{tabular}{ll}
+%\toprule
+%Streuungskomponente	&	$\lambda_{\sigma} =$ \\
+%\midrule
+%Nut- und Zahnkopfstreuung	&	$\frac{\lambda_\i{nz}}{q}$ \\
+%Wicklungskopfstreuung		&	$\lambda_\i{w}$ \\
+%Oberwellenstreuung			&	$\sigma_\i{o}\lambda_\i{h}\xi^{2}_{\i{p}}$	\\
+%Schrägungsstreuung			&	$\sigma_\i{schr}\lambda_\i{h}\xi^{2}_{\i{p}}$ \\
+%\bottomrule
+%\end{tabular}
+%\end{table} 
 
 \section{Einführung Synchronmaschine}\label{sec:synchron}
 
-\paragraph{Historischer Hintergund} Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
+Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
 
 \begin{figure}[h!]
 \centering
@@ -435,7 +408,7 @@ Schrägungsstreuung			&	$\sigma_\i{schr}\lambda_\i{h}\xi^{2}_{\i{p}}$ \\
 
 Die gleichstromgespeiste Erregerwicklung ermöglicht es, das Magnetfeld unabhängig vom Netz zu beeinflussen.
 Als Spannungsquelle für die Speisung der Erregerwicklung wurden sog.\ Gleichstromerregermaschinen eingesetzt, in der heutigen Zeit werden Wechselspannung mit Hilfe von Leistungselektronischen Schaltungen gespeist.
-Um die Schleifringübertragung der Erregerleistung zu umgehen, werden schleifring- bzw.\ bürstenlose Erregersysteme realisiert \autocite[S.~108]{ternes2012}.
+Um die Schleifringübertragung der Erregerleistung zu umgehen, werden schleifring- bzw.\ bürstenlose Erregersysteme realisiert \autocite{fischer2009}.
 Als Motor wurden Drephasen-Synchronmaschinen schon bald für große Leistungen eingesetzt, \zB zum Antrieb von Pumpen und Verdichten \autocite[S.~486]{mullerI2005}.
 Der Nachteil ist, dass die Drehzahl durch die Netzfrequenz festgelegt ist.
 Die Synchronmaschine arbeitet unabhängig von der Belastung stets mit der durch die Netzfrequenz und die ausgeführte Polpaarzahl festgelegten synchronen Drehzahl.
@@ -479,7 +452,7 @@ beschrieben.
 Die Induktivität $L_\i{e}$ bringt wegen
 
 \begin{align*}
-\frac{\i{d}i_\i{e}}{dt} = 0
+\frac{\i{d}i_\i{e}}{\i{d}t} = 0
 \end{align*}
 
 keinen Beitrag.
@@ -555,12 +528,12 @@ anzusetzen.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{synchronmaschine-drehstrom.pdf}
+\includegraphics{synchronmaschine-drehstrom.pdf}
 \label{fig:drehstromwicklung}
 \caption{Erzeugung einer mehrphasigen Spannung durch ein räumlich sinusförmiges Läuferdrehfeld.}
 \end{figure}
 
-\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach \textcite{schroder2000}}
+\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}\label{sec:synchron-dq}
 
 Im folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagneten ersetzt wird.
 In diesem Fall verbleiben nur die drei Statorwicklungen als stromdurchflossene Wicklungen.
@@ -569,7 +542,7 @@ Die Wahl der Konzipierung hat Auswirkungen auf die Möglichkeit, Feldschwächebe
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{synchron-dq.pdf}
+\includegraphics{synchron-dq.pdf}
 \label{fig:synchron-dq}
 \caption{Darstellung der Synchronmaschine im dq-Koordinatensystem.}
 \end{figure}
@@ -578,57 +551,22 @@ Wird die Synchronmaschine in der Statorwicklung mit einer sinusförmigen Spannun
 Bei einer trapezförmigen Speisung der Statorwicklung wird die Maschine als (BLDC) bürstenlose Gleichstrommaschine bezeichnet.
 Der einfachste Fall für die Ermittlung des Signalflussplanes ist die Annahme, dass die Maschine an der Statorwicklung eine sinusförmige Spannung anliegt und die Maschine symmetrisch konzipiert wurde.
 Bei einer symmetrisch konzipierten Synchronmaschine werden die Reluktanzeinflüsse nicht wirksam.
-Damit ergeben sich nach \textcite[S.~291]{schroder2000} folgende Gleichungen für die Synchron-Vollpolmaschine.
-
-Aufgrund der besonderen konstruktiven Situation wird für den Rotor das mit dem Rotor umlaufende Koordinatensystem $L$ jetzt mit den allgemein verwendeten Achsenbezeichnungen $d$ und $q$ gewählt (s.~h.~Abbildung~\ref{fig:synchron-dq}).
-Damit wird die Kreisfrequenz $\Omega_\i{L}$ des umlaufenden Koordinatensystems $L (d, q)$ auf die mit der Polpaarzahl $Z_\i{p}$ umgerechnete mechanische Winkelgeschwindigkeit $\Omega_\i{m}$ des Rotors festgelegt ist.
-Aus den obigen Kenntnissen ergibt sich dann \textcite[S.~682]{schroder2001}
+Aufgrund der besonderen konstruktiven Situation wird für den Rotor das mit dem Rotor umlaufende Koordinatensystem $el$ jetzt mit den allgemein verwendeten Achsenbezeichnungen $d$ und $q$ gewählt (s.~h.~Abbildung~\ref{fig:synchron-dq}).
+Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems $el(d, q)$ auf die mit der Polpaarzahl $Z_\i{p}$ umgerechnete mechanische Winkelgeschwindigkeit $\omega_\i{m}$ des Rotors festgelegt ist.
 
 \begin{align}
-\Omega_\i{L} = Z_\i{p}\cdot\Omega_\i{m}
+\omega_\i{el} = Z_\i{p}\cdot\omega_\i{m}
 \end{align}
-
-Die Spannungsgleichungen der Synchronmaschine ergeben sich entsprechend zu
-
-\begin{shaded}
-Spannungsgleichungen (Vollpolmaschine) nach \textcite{schroder2000}
-\begin{align}
-\frac{\i{d}\Psi_\i{d}}{\i{d}t} &= U_\i{d} - R_\i{1}\cdot I_\i{d} + \Omega_\i{L}\cdot\Psi_\i{q} \\
-\frac{\i{d}\Psi_\i{q}}{\i{d}t} &= U_\i{q} - R_\i{1}\cdot I_\i{q} + \Omega_\i{L}\cdot\Psi_\i{d}
-\end{align}
-\end{shaded}
-
-mit 
-
-\begin{align}
-\Psi_\i{d} &= \Psi_\i{PM} + L_\i{d}\cdot I_\i{d}\\
-\Psi_\i{q} &= L_\i{q}\cdot I_\i{q}
-\end{align}
-
-Damit ergibt sich das innere Luftspaltdrehmoment $M_i$ zu:
-
-\begin{align}
-M_\i{i} &= \frac{3}{2}\cdot Z_\i{p} \cdot (\Psi_\i{d}\cdot I_\i{q} - \Psi_\i{q}\cdot I_\i{d}) \\ 
-\nonumber &= \frac{3}{2}\cdot Z_\i{p} \cdot (\underbrace{\Psi_\i{PM}\cdot I_\i{q}}_\i{\text{~Hauptmoment}} + \underbrace{(L_\i{d}-L_\i{q})\cdot I_\i{d}\cdot I_\i{q}}_\i{\text{~Reluktanzmoment}} )
-\end{align}
-
-und der allgemeinen mech.\ Bewegungsgleichung
-
-\begin{align}
-\Theta\cdot \frac{\i{d}\Omega_m}{\i{d}t} = M_\i{i} - M_\i{L}
-\end{align}
-
-\subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem nach \textcite{kellner2012}}
 
 Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:dq-synchron-rotorfest} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
-Für die Herleitung der Zusammenhänge wird an dieser Stelle nicht weiter eingegangen, hierfür wird auf einschlägige Literatur verwiesen \autocites{mullerI2005}{fischer2009}{schroder2000}{kremser2004}
+Für die Herleitung der Zusammenhänge wird an dieser Stelle nicht weiter eingegangen, hierfür wird auf einschlägige Literatur verwiesen \autocites{mullerI2005}{fischer2009}{schroder2000}{kremser2004}.
 
-\begin{figure}[!htb]
+\begin{figure}[h!]
 \centering
-%\includegraphics[width=\textwidth]{Visio-dq-synchron-rotorfest.pdf}
-\label{fig:synchron-dq}
-\caption{Graphische Veranschaulichung der verschiedenen Koordinatensysteme: dreiphasig $(a,
-b, c)$, ständerfest $(\alpha, \beta)$ und rotorfest $(d, q)$.}
+\includegraphics{_Bilder/synchron-grundlage.pdf}
+\label{fig:synchron-grundlage}
+\caption{Graphische Veranschaulichung der verschiedenen Koordinatensysteme: dreiphasig $(u,
+v, w)$, ständerfest $(\alpha, \beta)$ und rotorfest $(d, q)$.}
 \end{figure}
 
 Das Induktionsgesetz besagt, dass die in einer Spule induzierte Spannung gleich der entgegengesetzten Änderung der durch die Wicklung der Spule fließenden Flussverkettung ist \autocite{kellner2012}.
@@ -637,9 +575,9 @@ Das Induktionsgesetz besagt, dass die in einer Spule induzierte Spannung gleich 
 u_\i{q} = - \frac{\i{d}}{\i{d}t}\Psi
 \end{align}
 
-\begin{figure}[!htb]
+\begin{figure}[h!]
 \centering
-%\includegraphics[width=\textwidth]{Visio-dq-synchron-rotorfest.pdf}
+\includegraphics{_Bilder/dq-synchron-rotorfest.pdf}
 \label{fig:netzwerk-stander-drehstrom}
 \caption{Allgemeines Netzwerk des Ständers einer Drehstrommaschine.}
 \end{figure}
@@ -647,8 +585,8 @@ u_\i{q} = - \frac{\i{d}}{\i{d}t}\Psi
 Entsprechend Abbildung~\ref{fig:netzwerk-stander-drehstrom} ergeben die die Grundgleichungen einer PMSM ganz allgemein zu
 
 \begin{align}
-u_\i{u} = R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u} \\ \label{eqn:10}
-u_\i{v} = R_\i{1}i_\i{v} + \frac{\i{d}}{\i{d}t}\Psi_\i{v} \\ \nonumber
+u_\i{u} = R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u} \nonumber \\ 
+u_\i{v} = R_\i{1}i_\i{v} + \frac{\i{d}}{\i{d}t}\Psi_\i{v} \label{eqn:10} \\ 
 u_\i{w} = R_\i{1}i_\i{w} + \frac{\i{d}}{\i{d}t}\Psi_\i{w} \nonumber
 \end{align}
 
@@ -674,25 +612,153 @@ Es gilt:
 u_\i{u} + u_\i{v} + u_\i{w} = 0 \label{eqn:3}
 \end{align}
 
-Aus den Gleichungen~\ref{eqn:10}, \ref{eqn:2} und \ref{eqn:3} ergibt sich dann in ständerfesten Koordinaten abhängig von Phasenströmen und -flussverkettungen
+Aus den Gleichungen~(\ref{eqn:10}), (\ref{eqn:2}) und (\ref{eqn:3}) ergibt sich dann in ständerfesten Koordinaten abhängig von Phasenströmen und -flussverkettungen
 
 \begin{align}
 \underline{u}^{\alpha, \beta} = \frac{2}{3} \left[ (R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u})\cdot (1-\underline{a}^2) + (R_\i{1}i_\i{v} + \frac{\i{d}}{\i{d}t}\Psi_\i{v})\cdot (\underline{a}-\underline{a}^2) \right]
 \end{align}
 
+So ergibt sich die Darstellung von Real- und Imaginärteil des Spannungszeigers in ständerfesten Koordinaten nach \textcite{kellner2012} zu:
 
+\begin{align}
+	\text{Re}\{ \underline{u}^{\alpha,\beta} \} &= (R_\i{1}i_\i{u}+\frac{\i{d}}{\i{d}t}\Psi_\i{u}) = u_\i{u} \\
+	\text{Im}\{ \underline{u}^{\alpha,\beta} \} &= (R_\i{1}i_\i{u}+\frac{\i{d}}{\i{d}t}\Psi_\i{u})\cdot \frac{1}{\sqrt{3}} + (R_\i{1}i_\i{v}+\frac{\i{d}}{\i{d}t}\Psi_\i{v})\cdot \frac{2}{\sqrt{3}} = \frac{u_\i{u}+2u_\i{v}}{\sqrt{3}}
+\end{align}
 
-%\section{Besonderheiten der Schenkelpolmaschine}\label{sec:schenkelpol}
+Damit kann die komplexe Spannungsgleichung in $\alpha,\beta$-Koordinaten geschrieben werden:
 
-%\section{Permanenterregte Synchronmaschine}\label{sec:pmsm}
+\begin{align}
+	\underline{u}^{\alpha,\beta} = R_\i{1}\cdot\underline{i}^{\alpha,\beta}+\frac{\i{d}}{\i{d}t}\underline{\Psi}^{\alpha,\beta}
+\end{align}
 
-%\section{Evalurierung der Ersatzschaltbilder für die Regelung}\label{sec:esb}
+mit
 
+\begin{align}
+	\underline{i}^{\alpha,\beta} &= i_\i{u} + \underline{a}\cdot i_\i{v} + \underline{a}^{2}\cdot (-i_\i{u}-i_\i{v}) \\
+	\underline{\Psi}^{\alpha,\beta} &= \Psi_\i{u} + \underline{a}\cdot \Psi_\i{v} + \underline{a}^{2}\cdot (-\Psi_\i{u}-\Psi_\i{v})
+\end{align}
 
+Zusätzlich zum ständerfesten Koordinatensystem kann ein läuferfestes Koordinatensystem eingeführt werden.
+Der Vorteil ist, dass die läuferfesten Koordinaten Gleichgrößen sind, während die ständerfesten Koordinaten Wechselgrößen sind.
+Die Eigenschaft der läuferfesten Koordinaten wird für die feldorientierte Regelung verwendet \autocites{schroder2001}{nuss2010}{fuest2004}.
+Es ist mit den läuferfesten Koordinaten möglich, dass Motormodell entsprechend Gleichung~(\ref{eqn:10}) darzustellen.
+Die läuferfesten Koordinaten werden durch Drehung des $\alpha,\beta$-Koordinatensystems um den elektrischen Läuferwinkel $\epsilon_\i{RS}$ gewonnen.
+Für einen beispielhaften Zeiger $\underline{\xi}$ gilt nach \textcite{kellner2012}
+
+\begin{align}
+	\underline{\xi}^{\alpha,\beta} &= \xi \cdot e^{\x{j}\epsilon_\xi} = \underline{\xi}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} \label{eqn:raumzeiger-a-b}\\
+	\underline{\xi}^{\x{d,q}} &= \xi \cdot e^{\x{j}(\epsilon_\xi - \epsilon_\x{el})} = \underline{\xi}^{\alpha,\beta} \cdot e^{-\x{j}\epsilon_\x{el}}
+\end{align}
+
+Mit Hilfe der Gleichung~(\ref{eqn:raumzeiger-a-b}), lässt sich allgemein der Spannungszeiger umschreiben zu:
+
+\begin{align}
+	\underline{u}^{\alpha,\beta} = \underline{u}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} = R_\x{1}\underline{i}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} + \frac{\x{d}}{\x{d}t}(\underline{\Psi}^{\x{d,q}}e^{\x{j}\epsilon_\x{el}})
+\end{align}
+
+Durch Anwendung der Produktregel kann der Fluss umgeschrieben werden.
+
+\begin{align}
+	\frac{\x{d}}{\x{d}t}\underline{\Psi}^{\alpha,\beta} &= \frac{\x{d}}{\x{d}t}(\underline{\Psi}^{\x{d,q}}e^{\x{j}\epsilon_\x{el}}) \nonumber \\
+														&= e^{\x{j}\epsilon_\x{el}} \cdot \frac{\x{d}}{\x{d}t}\underline{\Psi}^{\x{d,q}} + \underline{\Psi}^{\x{d,q}} \frac{\x{d}}{\x{d}t}e^{\x{j}\epsilon_\x{el}} \\
+														&= (\frac{\x{d}}{\x{d}t}\underline{\Psi}^{\x{d,q}}+\x{j}\cdot \omega_\x{el}\underline{\Psi}^{\x{d,q}})e^{\x{j}\epsilon_\x{el}}
+\end{align}
+
+Damit ergibt sich der komplexe Zeiger als und vereinfacht Gleichung~(\ref{eqn:udq-zeiger-vereinfacht}):
+
+\begin{align}
+	\underline{u}^{\x{d,q}}e^{\x{j}\epsilon_\x{el}} &= R_\x{1}\underline{i}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} + (\frac{\x{d}}{\x{d}t}\underline{\Psi}^{\x{d,q}}+\x{j}\cdot \omega_\x{el}\underline{\Psi}^{\x{d,q}})e^{\x{j}\epsilon_\x{el}}\\
+	\underline{u}^{\x{d,q}} &= R_\x{1}\underline{i}^{\x{d,q}} + \frac{\x{d}}{\x{d}t}\underline{\Psi}^{\x{d,q}}+\x{j}\cdot \omega_\x{el}\underline{\Psi}^{\x{d,q}}	  \label{eqn:udq-zeiger-vereinfacht}
+\end{align}
+
+Die Beziehung (\ref{eqn:udq-zeiger-vereinfacht}) beschreibt den Spannungsraumzeiger in den rotorfesten $d,q$-Koordinaten.
+Bei Synchronmaschinen entsprechen die rotorfesten Koordinaten gleichzeitig den flussorientierten Koordinaten, da der Permanentmagnetfluss mit dem Läufer rotiert.
+Gleichung~(\ref{eqn:udq-zeiger-vereinfacht}) kann gemäß
+
+\begin{align}
+	u_\x{d} + \x{j}u_\x{q} = R_\x{1}(i_\x{d}+\x{j}i_\x{q}) + \frac{\x{d}}{\x{d}t}(\Psi_\x{d}+\x{j}\Psi_\x{q}) + \x{j}\omega_\x{el}(\Psi_\x{d}+\x{j}\Psi_\x{q})
+\end{align}
+
+Eine Trennung von Real- und Imaginärteil ergibt die bekannten, üblicherweise verwendeten Gleichungen \autocite{schroder2001}
+
+\begin{shaded}
+	Spannungsgleichungen im rotorfesten System
+	\begin{align}
+		u_\x{d} &= R_\x{1}i_\x{d} + \frac{\x{d}}{\x{d}t}\Psi_\x{d}-\omega_\x{el}\Psi_\x{q} \label{eqn:ud-gleichung}\\
+		u_\x{q} &= R_\x{1}i_\x{q} + \frac{\x{d}}{\x{d}t}\Psi_\x{q}-\omega_\x{el}\Psi_\x{d} \label{eqn:uq-gleichung}
+	\end{align}
+\end{shaded}
+
+Allgemein kann das innere Drehmoment einer einpolpaarigen elektrischen Maschine und damit auch im Speziellen einer PMSM nach \textcite{kellner2012} aus dem in Richtung der Motorwelle zeigenden Vektorprodukt aus Ständerfluss und Ständerstrom berechnet werden:
+
+\begin{align}
+	M_\x{i} = \frac{3}{2}(\underline{\Psi}^{\x{d,q}} \times \underline{i}^{\x{d,q}}) 
+\end{align}
+
+Das innere Drehmoment $M_\x{i}$ für eine elektrische Maschine mit $Z_\x{p}$ Polpaaren kann schließlich nach Auswertung des Vektorproduktes ermittelt werden:
+
+\begin{shaded}
+	inneres Drehmoment
+	\begin{align}
+M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} ) \label{eqn:mi-gleichung}
+	\end{align}
+\end{shaded}
+
+Um das System vollständig zu beschreiben, fehlt noch die mechanische Bestimmungsgleichung
+
+\begin{align}
+	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{Z_\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
+\end{align}
+
+Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $Z_\x{p}$ für die Polpaarzahl der elektrischen Maschine.
+Alle hergeleiteten Gleichungen beziehen sich auf die Annahme des Grundwellenmodells.
+Im nächsten Schritt ist es wichtig die Flüsse durch Induktivitäten zu ersetzen.
+Dafür werden oft linearisierte Gleichungen verwendet \autocite{schroder2001}, bei dem Modell sind alle Parameter konstant.
+Dementsprechend einfach ist es, die Ableitungen der Flussverkettungen zu bestimmen.
+Beim linearen Maschinenmodell gibt es definitionsgemäß keine Sättigungserscheinungen \autocites{mullerII2008}{schroder2001}.
+Alle elektrischen Parameter und damit auch die Induktivitäten der elektrischen Maschine sind damit konstant.
+Aus dieser Annahme folgt nach \autocite{schroder2001}:
+
+\begin{align}
+	\Psi_\x{d} &= \Psi_{pm} + L_\x{d}i_\x{d} \\
+	\Psi_\x{q} &= L_\x{q}i_\x{q}
+\end{align}
+
+Die in Richtung der $d$-Achse ausgerichteten Permanentmagnete rufen eine als konstant angenommene Flussverkettung $\Psi_\x{pm}$ hervor \autocite{kellner2012}.
+Daraus ergeben sich in Gleichung (\ref{eqn:ud-gleichung}), (\ref{eqn:uq-gleichung}) und (\ref{eqn:mi-gleichung}) eingesetzt die Grundgleichungen des linearisierten Maschinenmodells zu:
+
+\begin{shaded}
+linearisierte Gleichungen
+\begin{align}
+		u_\x{d} &= R_\x{1}i_\x{d} + L_\x{d}\frac{\x{d}i_\x{d}}{\x{d}t}-\omega_\x{el}L_\x{q}i_\x{q} \label{eqn:ud-lin-gleichung} \\
+		u_\x{q} &= R_\x{1}i_\x{q} + L_\x{q}\frac{\x{d}i_\x{q}}{\x{d}t}+\omega_\x{el}L_\x{d}i_\x{d} + \omega_\x{el}\Psi_\x{pm}  \label{eqn:uq-lin-gleichung} \\
+		M_\x{i} &= \frac{3p}{2} ( \Psi_\x{pm}i_\x{q} + (L_\x{d}-L_\x{q})i_\x{d}i_\x{q}) \label{eqn:mi-lin-gleichung}
+\end{align}
+\end{shaded}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{_Bilder/ESB-synchron-dq.pdf}
+	\label{fig:ESB-synchron-dq}
+	\caption{Graphische Darstellung der Gleichungen (\ref{eqn:ud-lin-gleichung}) und (\ref{eqn:uq-lin-gleichung}).}
+\end{figure}
+
+Die beiden Spannungsgleichungen können gemäß Abbildung \ref{fig:ESB-synchron-dq} graphisch dargestellt werden.
+Erkennbar ist, dass in der Abbildung \ref{fig:ESB-synchron-dq} die beiden Gleichungen nur über die Spannungsquellen miteinander verkoppelt sind.
+Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechanische-gleichung}) nach den Ableitungen von $i_\x{d}, i_\x{q}$ und $\omega_\x{el}$ auf, so ergeben sich die linearen Gleichungen der PMSM in Zustandsform zu:
+
+\begin{shaded}
+	linearisierten Gleichung in Zustandsform
+\begin{align}
+\frac{\x{d}i_\x{d}}{\x{d}t} &= -\frac{R_\x{1}}{L_\x{d}}i_\x{d}+\omega_\x{el}\frac{L_\x{q}}{L_\x{d}}i_\x{q}+\frac{1}{L_\x{d}}u_\x{d} \\
+\frac{\x{d}i_\x{q}}{\x{d}t} &= -\omega_\x{el}\frac{L_\x{d}}{L_\x{q}}i_\x{d} - \frac{R_\x{1}}{L_\x{q}}i_\x{q} + \frac{1}{L_\x{q}}u_\x{q} - \frac{\omega_\x{el}}{L_\x{q}}\Psi_\x{pm} \\
+\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J} \Psi_\x{pm} i_\x{q} - \frac{p}{J} M_\x{Last}
+\end{align}
+\end{shaded}
 
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "main"
+%%% TeX-master: "main.tex"
 %%% TeX-open-quote: "\\enquote{"
 %%% TeX-close-quote: "}"
 %%% LaTeX-csquotes-open-quote: "\\enquote{"
