@@ -83,11 +83,21 @@ Wird nun die Differentialgleichung \ref{momentengleichgewichtgesamt2} nach der h
 An dieser Stelle ist die Modellbildung abgeschlossen. Jetzt können die Werte in MATLAB/Simulink  verarbeitet werden.
 Hier werden zuerst in der MATLAB-Umgebung Variablen mit den vorgegebenen Werten parametrisiert.
 
-%GRAFIK MATLAB
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/regelung/matlab1.jpg}
+	\label{fig:matlab1}
+	\caption{Variablen in Matlab-Umgebung}
+\end{figure}
 
 Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momentengleichgewichtgesamt2} aufgebaut werden.
 
-%GRAFIK Simulink
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/regelung/matlab2.jpg}
+	\label{fig:matlab2}
+	\caption{fertiges Modell in Matlab}
+\end{figure}
 
 Herzstück des Simulationsmodells bilden zwei Integratoren.
 Mit Hilfe dieser Blöcke lassen sich  $\dot\varphi$ und $\varphi$ erzeugen.
@@ -101,8 +111,14 @@ Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung 
 Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes \glqq{Scope}\grqq.
 Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
 
-%Grafik Scope
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/regelung/matlab3.jpg}
+	\label{fig:matlab3}
+	\caption{ Winkel $\varphi$ des Pendels über die Simulationszeit t=15s}
+\end{figure}
 
+Wie erwartet, wird eine deutlich gedämpfte Schwingung des simulierten Pendels erkennbar.
 
 \section{Einführung in die TI-Bibliotheken}\label{sec:TI}
 

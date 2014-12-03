@@ -173,14 +173,14 @@ darstellbar. Um die $\alpha$- und $\beta$-Komponente des entstandenen Raumzeiger
 \end{figure}
 
 Nachdem sich der Raumzeiger im neuern Koordinatensystem darstellen lässt, ist es nun entscheidend, eine mathematische Transformationsvorschrift aufzustellen, die sich an \ref{alpha} und \ref{beta} orientiert. 
-Übertragen auf eine Vektorschreibweise lautet die Transformation:
+Übertragen in eine Matrix lautet die Transformation:
 
 \begin{align}
 	\begin{bmatrix}
 	a_{\alpha} \\
 	a_{\beta} 
 	\end{bmatrix}
-	=\underline{T}^{\prime}
+	=\frac{2}{3}\cdot\underline{T}^{\prime}
 	\begin{bmatrix}
 	a_{u} \\
 	a_{v} \\
@@ -231,7 +231,7 @@ mit der Transformationsmatrix
 	\underline{T} =
 	\begin{bmatrix}
 		1 & -\frac{1}{2} & -\frac{1}{2}  \\
-		0 & ~~\frac{\sqrt{3}}{2} & ~~\frac{\sqrt{3}}{2} \\
+		0 & ~~\frac{\sqrt{3}}{2} & ~-\frac{\sqrt{3}}{2} \\
 		\frac{1}{2} & ~~\frac{1}{2} & ~~\frac{1}{2}
 	\end{bmatrix}
 	\label{clarkematrixnull}
@@ -261,8 +261,8 @@ die inverse Transformationsmatrix
 	\underline{T}^{-1} =
 	\begin{bmatrix}
 		~~1 & 0 & 1  \\
-		-\frac{1}{2} & \frac{\sqrt{3}}{2} & 1 \\
-		~~\frac{1}{2} & \frac{\sqrt{3}}{2} & 1
+		-\frac{1}{2} & -\frac{\sqrt{3}}{2} & 1 \\
+		~-\frac{1}{2} & -\frac{\sqrt{3}}{2} & 1
 	\end{bmatrix}
 	\label{inverseclarkematrixnull}
 \end{align}
@@ -289,8 +289,8 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
  	\underline{T}^{-1} =
  	\begin{bmatrix}
  		~~1 & 0   \\
- 		-\frac{1}{2} & \frac{\sqrt{3}}{2}  \\
- 		~~\frac{1}{2} & \frac{\sqrt{3}}{2} 
+ 		-\frac{1}{2} & -\frac{\sqrt{3}}{2}  \\
+ 		~-\frac{1}{2} & -\frac{\sqrt{3}}{2} 
  	\end{bmatrix}
  	\label{inverseclarkematrixnulleinfach}
  \end{align}
