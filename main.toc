@@ -10,31 +10,31 @@
 \contentsline {subsubsection}{\nonumberline (3. Maxwellsche Gleichung in Integralfrom)}{4}{section*.6}
 \contentsline {subsubsection}{\nonumberline (4. Maxwellsche Gleichung in Integralfrom)}{4}{section*.7}
 \contentsline {section}{\numberline {1.1}Mehrphasensysteme}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Theorie der Drehfeldmaschinen}{8}{section.1.2}
+\contentsline {section}{\numberline {1.2}Theorie der Drehfeldmaschinen}{7}{section.1.2}
 \contentsline {section}{\numberline {1.3}Magnetfelder}{8}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Strombelag}{8}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Durchflutung}{12}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}Gleichfelder}{12}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Drehfelder}{13}{subsection.1.3.4}
-\contentsline {section}{\numberline {1.4}Einf\IeC {\"u}hrung Synchronmaschine}{14}{section.1.4}
+\contentsline {subsection}{\numberline {1.3.4}Drehfelder}{12}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Einf\IeC {\"u}hrung Synchronmaschine}{13}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Spannungsgleichungen und Ersatzschaltbild}{15}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Beschreibung der Synchronmaschine im d,q-Koordinatensystem}{19}{subsection.1.4.2}
-\contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{27}{chapter.2}
-\contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{27}{section.2.1}
-\contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{30}{section.2.2}
-\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{34}{section.2.3}
-\contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{37}{section.2.4}
-\contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{39}{chapter.3}
-\contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{39}{section.3.1}
-\contentsline {section}{\numberline {3.2}Darstellung der Simulationsergebnisse}{39}{section.3.2}
-\contentsline {chapter}{\numberline {4}Regelung der PMSM mit Simulink}{40}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung in Simulink}{40}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Simulationsbeispiel -- Das mathematische Pendel}{41}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Simulink Modell der PMSM}{43}{section.4.2}
+\contentsline {subsection}{\numberline {1.4.2}Beschreibung der Synchronmaschine im d,q-Koordinatensystem}{18}{subsection.1.4.2}
+\contentsline {chapter}{\numberline {2}Grundlagen der Vektorregelung}{26}{chapter.2}
+\contentsline {section}{\numberline {2.1}Raumzeigerdarstellung}{26}{section.2.1}
+\contentsline {section}{\numberline {2.2}Beschreibung in $\alpha $-$\beta $-Koordinatensystem}{29}{section.2.2}
+\contentsline {section}{\numberline {2.3}Beschreibung in rotorfesten d-q-Koordinatensystem}{33}{section.2.3}
+\contentsline {section}{\numberline {2.4}Signalflussplan der Vektorregelung}{36}{section.2.4}
+\contentsline {chapter}{\numberline {3}Anforderungsprofil f\IeC {\"u}r die Regelung der PMSM mit Simulink}{38}{chapter.3}
+\contentsline {section}{\numberline {3.1}Eingabe und Ausgabedaten}{38}{section.3.1}
+\contentsline {section}{\numberline {3.2}Darstellung der Simulationsergebnisse}{38}{section.3.2}
+\contentsline {chapter}{\numberline {4}Regelung der PMSM mit Simulink}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung in Simulink}{39}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Simulationsbeispiel -- Das mathematische Pendel}{40}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Simulink Modell der PMSM}{42}{section.4.2}
 \contentsline {section}{\numberline {4.3}Einf\IeC {\"u}hrung in die TI-Bibliotheken}{43}{section.4.3}
 \contentsline {section}{\numberline {4.4}\IeC {\"U}bersicht der Regelstruktur}{43}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Subsysteme}{43}{subsection.4.4.1}
-\contentsline {chapter}{\numberline {5}Auswertung der Simulationsergebnisse}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Vergleich der Ergebnisse der TI-Bibliotheken}{44}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{45}{chapter.6}
+\contentsline {chapter}{\numberline {5}Auswertung der Simulationsergebnisse}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Vergleich der Ergebnisse der TI-Bibliotheken}{45}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{46}{chapter.6}
 \contentsline {chapter}{\nonumberline Literatur}{47}{chapter*.8}

@@ -13,20 +13,23 @@
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Erzeugung einer mehrphasigen Spannung durch ein r\IeC {\"a}umlich sinusf\IeC {\"o}rmiges L\IeC {\"a}uferdrehfeld.}}{18}{figure.1.9}
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Darstellung der Synchronmaschine im dq-Koordinatensystem.}}{19}{figure.1.10}
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Graphische Veranschaulichung der verschiedenen Koordinatensysteme: dreiphasig $(u, v, w)$, st\IeC {\"a}nderfest $(\alpha , \beta )$ und rotorfest $(d, q)$.}}{20}{figure.1.11}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Allgemeines Netzwerk des St\IeC {\"a}nders einer Drehstrommaschine.}}{21}{figure.1.12}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Allgemeines Netzwerk des St\IeC {\"a}nders einer Drehstrommaschine.}}{20}{figure.1.12}
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Graphische Darstellung der Gleichungen (\ref {eqn:ud-lin-gleichung}) und (\ref {eqn:uq-lin-gleichung}).}}{25}{figure.1.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Beispielhafte Lage eines Zeitzeigers.}}{28}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces zweipolige Drehfeldmaschine}}{30}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Beispielhafte Lage des Raumzeigers im $\alpha $-$\beta $-Koordinatensystem.}}{32}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Clarke Transformation}}{34}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Zusammenhang zwischen $\alpha $-$\beta $-Koordinaten und d-q-Koordinaten}}{35}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Park Transformation}}{36}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Blockschaltbilder der Transformationen}}{37}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Blockschaltbilder der Transformationen}}{38}{figure.2.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Beispielhafte Lage eines Zeitzeigers.}}{27}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces zweipolige Drehfeldmaschine}}{29}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Beispielhafte Lage des Raumzeigers im $\alpha $-$\beta $-Koordinatensystem.}}{31}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Clarke Transformation}}{33}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Zusammenhang zwischen $\alpha $-$\beta $-Koordinaten und d-q-Koordinaten}}{34}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Park Transformation}}{35}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Blockschaltbilder der Transformationen}}{36}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Blockschaltbilder der Transformationen}}{37}{figure.2.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Fadenpendel}}{41}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Fadenpendel}}{40}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Variablen in Matlab-Umgebung}}{42}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces fertiges Modell in Matlab}}{43}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Winkel $\varphi $ des Pendels \IeC {\"u}ber die Simulationszeit t=15s}}{44}{figure.4.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
