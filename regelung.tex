@@ -2,7 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
-\chapter{Regelung der PMSM mit Simulink}
+\chapter{Aufbau der PMSM und Regelungskomponenten mit Simulink}
 \label{cha:regelungpmsm}
 
 Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Modellierungssoftware  Simulink$^\text{\textregistered}$ geben, welches als Toolbox in der Software MATLAB$^\text{\textregistered}$ implementiert ist.
@@ -92,7 +92,7 @@ Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momente
 	\centering
 	\includegraphics[width=\textwidth]{/regelung/matlab2.jpg}
 	\label{fig:matlab2}
-	\caption{fertiges Modell in Matlab}
+	\caption{fertiges Modell in Simulink}
 \end{figure}
 
 Herzstück des Simulationsmodells bilden zwei Integratoren.
@@ -114,15 +114,82 @@ Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
 	\caption{ Winkel $\varphi$ des Pendels über die Simulationszeit t=15s}
 \end{figure}
 
-<<<<<<< HEAD
+
 Wie erwartet, wird eine deutlich gedämpfte Schwingung des simulierten Pendels erkennbar.
-=======
-\section{Simulink Modell der PMSM}\label{sec:math-model-pmsm}
+
+\section{Simulationsblöcke}\label{sec:math-model-pmsm}
+
+Dieses Kapitel dient zur Beschreibung der Bauteile und Komponenten, die für einen späteren Aufbau eines gesamten Regelungssystems der PMSM nötig sind.
+Zunächst wird das erstellte Gesamtsystem in Abb. dargestellt:
+
+Hier sind die Simulinkblöcke der Transformationen, das Modell der PMSM sowie Regelungskomponenten erkennbar.
+Im Folgenden werden diese erläutern und deren Funktionen dargestellt.
+
+\subsection{Transformationsblöcke}
+
+Der Aufbau der Koordinatentransformationen leitet sich im Westentlichen aus Kapitel \ref{sec:clark} ab. 
+Hierbei basiert der Block der $\alpha$-$\beta$-Transformation aus den Zusammenhängen von \ref{clarkevektor} und \ref{clarkematrix}, währen die Rücktransformation, also die inverse $\alpha$-$\beta$-Transformation mit Hilfe von \ref{inverseclarkevektornulleinfach} und \ref{inverseclarkematrixnulleinfach} erstellt ist.
+Weiterhin orientieren sich die Umsetzungen in Simulink an den Blockschaltbildern aus \ref{fig:blockbildclarkeparkkomplett} und \ref{fig:blockbildinverseclarkeparkkomplett}.
+
+Die folgende Abbildung \ref{fig:uvw_to_ab} zeigt den Blockaufbau der Clarke Transformation in Simulink:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/uvw_to_ab.pdf}
+	\label{fig:uvw_to_ab}
+	\caption{Aufbau Clarke Transformation}
+\end{figure}
+
+In Abbildung ABB wird der Aufbau der inversen Clarke Transformation gezeigt:
+
+%ABB INVERSECLARKE
+
+Um die Koordinatentransformation zu vervollständigen ist die d-q-, oder Park Transformation, von entscheidender Bedeutung.
+Der Block für die d-q-Transformation setzt wird mit dem Zusammenhang \ref{parkvektor} und der Matrix \ref{parkmatrix} erstellt. 
+Die inverse d-q-Transformation ist mit Hilfe der Matritzen \ref{parkvektorinvers} sowie \ref{parkmatrixinvers} aufgebaut.
+
+Die nachstehende Grafik \ref{fig:uvw_to_ab} stellt die Park Transformation in Simulink dar:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/ab_to_dq.pdf}
+	\label{fig:uvw_to_ab}
+	\caption{Aufbau Park Transformation}
+\end{figure}
+
+In Abbildung ABB ist der Aufbau der inversen Park Transformation dargestellt:
+
+%ABB INVERSEPARK
+
+An dieser Stelle ist es aus übersichtlichkeitsgründen sinnvoll, die Transformationsblöcke als Subsystem zusammenzufassen.
+Es ergibt sich für die Clarke-Park Transformation somit ein Block mit drei Eingängen für die drei Wechselgrößen und einem Eingange für $\varepsilon_\i{RS}$, sowie zwei Ausgängen für d- und q-Komponente.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/uvw_to_dq.pdf}
+	\label{fig:uvw_to_dq}
+	\caption{Aufbau Clarke-Park Transformation}
+\end{figure}
+
+Ebendieses wird auch für die Rücktransformation gemacht. 
+Hier ergibt sich ein Subsystem mit drei Eingängen. 
+Zwei für d- und q-Größe sowie ebenfalls ein Eingang für $\varepsilon_\i{RS}$.
+Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/dq_to_uvw.pdf}
+	\label{fig:dq_to_uvw}
+	\caption{Aufbau inverse Clarke-Park Transformation}
+\end{figure}
+
+
+\subsection{Modell der PMSM}
 
 Als Grundlage für die Betrachtung der PMSM gilt der Abschnitt \ref{sec:synchron-dq}.
 Die grundlegenden Gleichung dazu sind (\ref{eqn:ud-lin-gleichung}), (\ref{eqn:uq-lin-gleichung}) und (\ref{eqn:mi-lin-gleichung}).
 Aus den Gleichungen ergibt sich dann im Simulink das Modell.
-Das Modell wurde ich zwei Systeme unterteilt:
+Das Modell wird in zwei Systeme unterteilt:
 
 \begin{itemize}
 	\item mechanical system
@@ -131,11 +198,20 @@ Das Modell wurde ich zwei Systeme unterteilt:
 
 Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s. h. Gl. (\ref{eqn:mi-lin-gleichung}).
 Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter der PMSM.
+Die Überführung der Maschinengleichungen erfolgt dabei dem gleichen Prinzip wie in Abschnitt \ref{cha:regelungpmsm}.
+Zunächst wird auf das \enquote{electrical system} eingegangen, welches in Abbildung \ref{fig:electrical-system} dargestellt ist.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/electrical-system.pdf}
+	\label{fig:electrical-system}
+	\caption{Aufbau Subsystem \enquote{electrical system}}
+\end{figure}
 
 
->>>>>>> e887cb4ce56df14768cb9de1f365592c81d6a329
 
-\section{Einführung in die TI-Bibliotheken}\label{sec:TI}
+
+
 
 \section{Übersicht der Regelstruktur}\label{sec:ueberregelung}
 
