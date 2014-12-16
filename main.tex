@@ -117,9 +117,7 @@
 \cleardoublepage
 \input{grundlagen}
 \input{vektor}
-\input{anforderung}
 \input{regelung}
-\input{auswertung}
 \input{zusammenfassung}
 % ----------------------------------------------------------------------------------------------------------
 % Literatur
@@ -130,8 +128,40 @@
 % ----------------------------------------------------------------------------------------------------------
 % Anhang
 % ----------------------------------------------------------------------------------------------------------
-%\begin{appendix}
-%TEST
-%\end{appendix}
+\begin{appendix}
+\chapter{Simulationsblöcke}
+\section{Elektrische Komponenten}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/electrical-system.pdf}
+	\label{fig:electrical-system}
+	\caption{Aufbau des elektrischen Subsystemsystems.}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\textwidth]{/simulink/mechanical-system.pdf}
+\label{fig:mechanical-system}
+\caption{Aufbau des mechanischen Subsystems.}
+\end{figure}
+\newpage
+\section{Reglungstechnische Komponenten}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/uvw_to_ab.pdf}
+	\label{fig:uvw_to_ab}
+	\caption{Aufbau der Clarke-Transformation.}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{/simulink/ab_to_dq.pdf}
+	\label{fig:uvw_to_ab}
+	\caption{Aufbau der Park-Transformation.}
+\end{figure}
+
+	
+	
+\end{appendix}
 
 \end{document}

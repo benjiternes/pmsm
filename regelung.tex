@@ -2,7 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
-\chapter{Aufbau der PMSM und Regelungskomponenten mit Simulink}
+\chapter{Modellierung einer PMSM mit einer feldorientierten Regelung}
 \label{cha:regelungpmsm}
 
 Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Modellierungssoftware  Simulink$^\text{\textregistered}$ geben, welches als Toolbox in der Software MATLAB$^\text{\textregistered}$ implementiert ist.
@@ -10,20 +10,55 @@ Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiter
 Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist, und zum andern auf der Anwenderfreundlichkeit bei der Durchführung von Simulationsprojekten. \autocite[Vorwort]{scherf2010}
 Dem versierten Anwender der Software sei geraten, diesen Abschnitt zu überspringen.
 
+\section{Simulation von Systemen}\label{sec:simulation}
+
+Simulationen sind heute unverzichtbar bei der Entwicklung und Optimierung von Systemen und der Erforschung von Zusammenhängen komplexer Systeme und Prozesse \autocite{brychta}.
+Die meist umfangreichen Prozesse und Systeme werden dazu in Modellen nachgebildet.
+Dieses Verfahren eignet sich gut zur Analyse der Systemeigenschaften.
+Dabei können die eingesetzten Simulationsmittel unterschiedlich ausfallen.
+
+\begin{enumerate}
+	\item Das System wird maßstäblich oder stark vereinfacht mit den wesentlichen Komponenten aufgebaut.
+	\item Das System wird durch ein anderes physikalisches Modell nachgebildet.
+	\item Das System wird durch ein mathematisches Modell beschrieben.
+\end{enumerate}
+
+Bei umfangreichen Simulationen bietet es sich an, das System in \enquote{Subsysteme} zu unterteilen (s.~h.~Abbildung~\ref{fig:subsysteme}), so dass die Modellierung mit Simulink übersichtlicher wird.
+Der Vorteil gegenüber der konventionellen Modellierung von umfangreichen System, ist es, dass Fehler früher erkannt und einzelne Systeme auf physikalische Richtigkeit geprüft werden können.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{/simulink/subsysteme.pdf}
+	\label{fig:subsysteme}
+	\caption{Semantische Abbildung zur Unterteilung eines Systemes in Subsysteme.}
+\end{figure}
+
+Das eingekreiste System kann so isoliert und gekapselt beschrieben werden.
+Dazu sind die Abhängigkeiten zwischen benachbarten Subsytemen zu erfassen und bei der Kapselung geeignet zu verwerten.
+Auch Subsysteme lassen sich in weitere Subsysteme zerlegen (s.~h.~Abbildung~\ref{fig:subsubsysteme}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{/simulink/subsubsystem.pdf}
+	\label{fig:subsubsysteme}
+	\caption{Semantische Abbildung zur Unterteilung eines Subsystems in weitere Subsysteme.}
+\end{figure}
+
+Bei der Modellierung sollte auf die Übersichtlichkeit der Systeme geachtet werden.
 
 \section{Einführung in Simulink}\label{sec:simulink}
 
-MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq ~entwickelt worden. Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
+MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq~entwickelt worden.
+Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
 MATLAB ist dabei die Kernsoftware, welche sich mit vielen Toolboxen ergänzen lässt. 
 Der Name MATLAB wurde dabei von "MATrix LABoratory" abgeleitet.
 Vor der Simulation eines technischen Prozesses steht die Modellbildung, welche in den vorangegangenen Kapiteln durchgeführt wurde.
 Dazu sind die nötigen physikalischen Gesetzmäßigkeiten zur Beschreibung der Maschine und Regelung genutzt worden.
 Als Ergebnis der Modellbildung werden nun die Differentialgleichungen, Verknüpfungen und Zusammenhänge innerhalb von Simulink zu einem geschlossen Simulationsmodell verbunden. 
 Der Aufbau von den Systemen findet in Simulink mit Hilfe von Blockbildern statt, welche mit Signalflusspfeilen zu einem Signalflussplan kombiniert werden. 
-Entscheident für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
-Zur Einführung in die Software dient daher ein einfaches physikalisches Simulationsbeispiel: das Pendel.
+Entscheidend für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
 
-\subsection{Simulationsbeispiel -- Das mathematische Pendel}
+\subsection{Simulationsbeispiel: Das mathematische Pendel}
 
 Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
 
@@ -36,26 +71,34 @@ Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst di
 
 Er gelten folgende Momente:
 
-Rückstellmoment
-\begin{align}
-		M_\i{R} = m \cdot g \cdot \si{sin}(\varphi) \label{rueckstellmoment} 
-\end{align}
-Beschleunigungsmoment
-\begin{align}
-	M_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi\label{beschleunigungsmoment} 
-\end{align}
-Reibungsmoment
-\begin{align}
-	M_\i{Reib} = d \cdot l^{2} \cdot \dot\varphi\label{reibungsmoment} 
-\end{align}
-Außerdem gilt:
-\begin{align}
-	\sum M = 0 \label{momentengleichgewicht} 
-\end{align}
+\begin{center}
+	\begin{tabular}{ll}
+		\toprule
+		Bezeichnung:				&	Mathematisches Modell: \\
+		\midrule
+		Rückstellmoment				&	$F_\i{Z} = m \cdot g \cdot \si{sin}(\varphi) \label{rueckstellmoment}$ \\
+		Beschleunigungsmoment		&	$F_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi\label{beschleunigungsmoment} $ \\
+		Reibungsmoment				&	$F_\i{R} = d \cdot l^{2} \cdot \dot\varphi\label{reibungsmoment} $ \\
+		Summe aller Kräfte			&	$\sum F = 0 \label{momentengleichgewicht} $ \\
+		\bottomrule 
+	\end{tabular}
+\end{center}
 
-Die Bewegung des Pendels wird mit folgenden Werten simuliert:\\
-\\
-$ m = 2,3 ~\i{kg}\\ d = 0,2 ~\i{Nms}\\ l = 1,1 ~\i{m}\\ g = 9,81\tfrac{\i{m}}{\i{s^{2}}} \\ \varphi_\i{0} = 40^{\circ}$
+Die Bewegung des Pendels wird mit folgenden Werten simuliert:
+
+\begin{center}
+\begin{tabular}{ll}
+	\toprule
+	Physikalische Bezeichnung:	& Wert: \\
+	\midrule
+	m		& \SI{2,3}{kg} \\
+	d		& \SI{0,2}{Nms} \\
+	l		& \SI{1,1}{m} \\
+	g		& \SI{9,81}{m/s^2}\\
+	$\varphi$ & \SI{40}{^\circ}\\
+	\bottomrule
+\end{tabular}
+\end{center}
 
 Als nächster Schritt werden die physikalischen Systembeschreibungen in einer Gesamtformel zusammengefasst. 
 
@@ -107,76 +150,58 @@ Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung 
 Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes \glqq{Scope}\grqq.
 Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{/regelung/matlab3.jpg}
 	\label{fig:matlab3}
-	\caption{ Winkel $\varphi$ des Pendels über die Simulationszeit t=15s}
+	\caption{Winkel $\varphi$ des Pendels über die Simulationszeit.}
 \end{figure}
-
 
 Wie erwartet, wird eine deutlich gedämpfte Schwingung des simulierten Pendels erkennbar.
 
 \section{Simulationsblöcke}\label{sec:math-model-pmsm}
 
-Dieses Kapitel dient zur Beschreibung der Bauteile und Komponenten, die für einen späteren Aufbau eines gesamten Regelungssystems der PMSM nötig sind.
-Zunächst wird das erstellte Gesamtsystem in Abb. dargestellt:
+Im folgenden sollen alle modellierten Simulationsblöcke dargestellt werden.
 
-Hier sind die Simulinkblöcke der Transformationen, das Modell der PMSM sowie Regelungskomponenten erkennbar.
-Im Folgenden werden diese erläutern und deren Funktionen dargestellt.
+
+%Dieses Kapitel dient zur Beschreibung der Bauteile und Komponenten, die für einen späteren Aufbau eines gesamten Regelungssystems der PMSM nötig sind.
+%Zunächst wird das erstellte Gesamtsystem in Abb. dargestellt:
+
+%Hier sind die Simulinkblöcke der Transformationen, das Modell der PMSM sowie Regelungskomponenten erkennbar.
+%Im Folgenden werden diese erläutern und deren Funktionen dargestellt.
 
 \subsection{Transformationsblöcke}
 
-Der Aufbau der Koordinatentransformationen leitet sich im Westentlichen aus Kapitel \ref{sec:clark} ab. 
+Der Aufbau der Koordinatentransformationen leitet sich im wesentlichen aus Abschnitt \ref{sec:clark} ab. 
 Hierbei basiert der Block der $\alpha$-$\beta$-Transformation aus den Zusammenhängen von \ref{clarkevektor} und \ref{clarkematrix}, währen die Rücktransformation, also die inverse $\alpha$-$\beta$-Transformation mit Hilfe von \ref{inverseclarkevektornulleinfach} und \ref{inverseclarkematrixnulleinfach} erstellt ist.
 Weiterhin orientieren sich die Umsetzungen in Simulink an den Blockschaltbildern aus \ref{fig:blockbildclarkeparkkomplett} und \ref{fig:blockbildinverseclarkeparkkomplett}.
 
-Die folgende Abbildung \ref{fig:uvw_to_ab} zeigt den Blockaufbau der Clarke Transformation in Simulink:
-
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/uvw_to_ab.pdf}
-	\label{fig:uvw_to_ab}
-	\caption{Aufbau Clarke Transformation}
+	\includegraphics[width=\textwidth]{/simulink/uvw_to_dq.pdf}
+	\label{fig:uvw_to_dq}
+	\caption{Aufbau Clarke-Park Transformation}
 \end{figure}
+%Die folgende Abbildung \ref{fig:uvw_to_ab} zeigt den Blockaufbau der Clarke Transformation in Simulink:
 
-In Abbildung ABB wird der Aufbau der inversen Clarke Transformation gezeigt:
+%In Abbildung ABB wird der Aufbau der inversen Clarke Transformation gezeigt:
 
 %ABB INVERSECLARKE
 
 Um die Koordinatentransformation zu vervollständigen ist die d-q-, oder Park Transformation, von entscheidender Bedeutung.
 Der Block für die d-q-Transformation setzt wird mit dem Zusammenhang \ref{parkvektor} und der Matrix \ref{parkmatrix} erstellt. 
 Die inverse d-q-Transformation ist mit Hilfe der Matritzen \ref{parkvektorinvers} sowie \ref{parkmatrixinvers} aufgebaut.
-
-Die nachstehende Grafik \ref{fig:uvw_to_ab} stellt die Park Transformation in Simulink dar:
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/simulink/ab_to_dq.pdf}
-	\label{fig:uvw_to_ab}
-	\caption{Aufbau Park Transformation}
-\end{figure}
-
-In Abbildung ABB ist der Aufbau der inversen Park Transformation dargestellt:
-
+%Die nachstehende Grafik \ref{fig:uvw_to_ab} stellt die Park Transformation in Simulink dar:
+%In Abbildung ABB ist der Aufbau der inversen Park Transformation dargestellt:
 %ABB INVERSEPARK
-
 An dieser Stelle ist es aus übersichtlichkeitsgründen sinnvoll, die Transformationsblöcke als Subsystem zusammenzufassen.
 Es ergibt sich für die Clarke-Park Transformation somit ein Block mit drei Eingängen für die drei Wechselgrößen und einem Eingange für $\varepsilon_\i{RS}$, sowie zwei Ausgängen für d- und q-Komponente.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/simulink/uvw_to_dq.pdf}
-	\label{fig:uvw_to_dq}
-	\caption{Aufbau Clarke-Park Transformation}
-\end{figure}
-
 Ebendieses wird auch für die Rücktransformation gemacht. 
 Hier ergibt sich ein Subsystem mit drei Eingängen. 
 Zwei für d- und q-Größe sowie ebenfalls ein Eingang für $\varepsilon_\i{RS}$.
 Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{/simulink/dq_to_uvw.pdf}
 	\label{fig:dq_to_uvw}
@@ -184,11 +209,11 @@ Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 \end{figure}
 
 
-\subsection{Modell der PMSM}
+\subsection{Modellierung einer PMSM}
 
 Als Grundlage für die Betrachtung der PMSM gilt der Abschnitt \ref{sec:synchron-dq}.
 Die grundlegenden Gleichung dazu sind (\ref{eqn:ud-lin-gleichung}), (\ref{eqn:uq-lin-gleichung}) und (\ref{eqn:mi-lin-gleichung}).
-Aus den Gleichungen ergibt sich dann im Simulink das Modell.
+Aus den Gleichungen ergibt sich im Simulink das Modell.
 Das Modell wird in zwei Systeme unterteilt:
 
 \begin{itemize}
@@ -196,26 +221,26 @@ Das Modell wird in zwei Systeme unterteilt:
 	\item electrical system
 \end{itemize}
 
-Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s. h. Gl. (\ref{eqn:mi-lin-gleichung}).
-Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter der PMSM.
+Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s.~h.~Gl.~(\ref{eqn:mi-lin-gleichung}).
+Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter einer PMSM.
 Die Überführung der Maschinengleichungen erfolgt dabei dem gleichen Prinzip wie in Abschnitt \ref{cha:regelungpmsm}.
 Zunächst wird auf das \enquote{electrical system} eingegangen, welches in Abbildung \ref{fig:electrical-system} dargestellt ist.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/electrical-system.pdf}
-	\label{fig:electrical-system}
-	\caption{Aufbau Subsystem \enquote{electrical system}}
+	\includegraphics[width=\textwidth]{/simulink/pmsm.pdf}
+	\label{fig:pmsm}
+	\caption{Aufbau des Subsystems: PMSM, mit der Unterteilung in: Electrical system und mechanical system.}
 \end{figure}
 
+Die dabei modellierten Differentialgleichungen~(\ref{eqn:id_dt}) und (\ref{eqn:iq_dt}) werden entsprechend umgesetzt, dabei entsteht das Modell auf Basis eines vereinfachten Modells (s.~h.~Abschnitt~\ref{sec:synchron-dq}~--~Linearisierte Gleichungen (Spannungsgleichungen im rotorfesten System)).
+Aus der Bestimmungsgleichung~(\ref{eqn:mi-lin-gleichung}) folgt die elektrische Winkelgeschwindigkeit $\omega_\x{el}$ (s.~h.~Gl.~(\ref{eqn:dw_dt})).
 
 
 
+%\section{Übersicht der Regelstruktur}\label{sec:ueberregelung}
 
 
-\section{Übersicht der Regelstruktur}\label{sec:ueberregelung}
-
-\subsection{Subsysteme}
 
 
 
@@ -223,7 +248,7 @@ Zunächst wird auf das \enquote{electrical system} eingegangen, welches in Abbil
 
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "main"
+%%% TeX-master: "main.tex"
 %%% TeX-open-quote: "\\enquote{"
 %%% TeX-close-quote: "}"
 %%% LaTeX-csquotes-open-quote: "\\enquote{"
