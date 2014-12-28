@@ -25,19 +25,26 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Blockschaltbilder der Transformationen}}{36}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Blockschaltbilder der Transformationen}}{37}{figure.2.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Semantische Abbildung zur Unterteilung eines Systemes in Subsysteme.}}{39}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Semantische Abbildung zur Unterteilung eines Subsystems in weitere Subsysteme.}}{39}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Fadenpendel}}{40}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Variablen in Matlab-Umgebung}}{42}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces fertiges Modell in Simulink}}{43}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Winkel $\varphi $ des Pendels \IeC {\"u}ber die Simulationszeit.}}{43}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Aufbau Clarke-Park Transformation}}{44}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Aufbau inverse Clarke-Park Transformation}}{45}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Aufbau des Subsystems: PMSM, mit der Unterteilung in: Electrical system und mechanical system.}}{46}{figure.3.9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Fadenpendel}}{39}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Variablen in Matlab-Umgebung}}{41}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces fertiges Modell in Simulink}}{42}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Winkel $\varphi $ des Pendels \IeC {\"u}ber die Simulationszeit t=15s}}{43}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Signalflussplan}}{44}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Aufbau Clarke Transformation}}{46}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Aufbau Inverse Clarke Transformation}}{47}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Aufbau Park Transformation}}{48}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Aufbau Inverse Park Transformation}}{49}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Aufbau Clarke-Park Transformation}}{50}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Aufbau inverse Clarke-Park Transformation}}{50}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Aufbau Subsystem \enquote {electrical system}}}{51}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Aufbau Subsystem \enquote {mechanical-system}}}{51}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Aufbau Subsystem der PMSM}}{52}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Aufbau der Drehzahlregelung}}{52}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Aufbau der Stromregelung}}{53}{figure.3.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Aufbau des elektrischen Subsystemsystems.}}{53}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Aufbau des mechanischen Subsystems.}}{54}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Aufbau der Clarke-Transformation.}}{55}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Aufbau der Park-Transformation.}}{56}{figure.A.4}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Aufbau des elektrischen Subsystemsystems.}}{59}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Aufbau des mechanischen Subsystems.}}{60}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Aufbau der Clarke-Transformation.}}{61}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Aufbau der Park-Transformation.}}{62}{figure.A.4}

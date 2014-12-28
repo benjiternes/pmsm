@@ -2002,8 +2002,7 @@
     <bcf:citekey order="29">kellner2012</bcf:citekey>
     <bcf:citekey order="30">nuss2010</bcf:citekey>
     <bcf:citekey order="31">scherf2010</bcf:citekey>
-    <bcf:citekey order="32">brychta</bcf:citekey>
-    <bcf:citekey order="33">scherf2010</bcf:citekey>
+    <bcf:citekey order="32">scherf2010</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt" type="entry" sortscheme="anyt">
