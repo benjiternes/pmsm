@@ -6,7 +6,7 @@
 
 Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im folgenden einige Grundlagen erörtert.
 
-\subsection{Maxwellsche Gleichungen}\label{sec:maxwell}
+\section{Maxwellsche Gleichungen}\label{sec:maxwell}
 
 Die Grundlage für alle Betrachtungen sind die Maxwellschen Gleichungen.
 In Differentialform lauten diese (unter Vernachlässigung des Verschiebungsstromes $\vec{D}$
@@ -30,17 +30,28 @@ Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \eps
 
 \subsubsection{Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralfrom)}
 
-\begin{align}
-\oint \vec{H}\i{d}\vec{l} = \int_A \vec{J}\i{d}\vec{A}
-\end{align}
+\begin{minipage}{0.5\textwidth}
+	\begin{align}
+		\oint \vec{H}\i{d}\vec{l} = \int_A \vec{J}\i{d}\vec{A}
+	\end{align}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\includegraphics{Gerling1}
+\end{minipage}
 
 Das Linienintegral der magnetischen Feldstärke $\vec{H}$ längs eines in sich geschlossenen räumlichen Integrationsweges $\vec{l}$ ist gleich dem gesamten elektrischen Strom, der durch die so begrenzte Fläche $A$ hindurchtritt.
 
 \subsubsection{Das Induktionsgesetz (2. Maxwellsche Gleichung in Integralfrom)}
 
+\begin{minipage}{0.5\textwidth}
 \begin{align}
-\oint \vec{E}\i{d}\vec{l} = -\frac{\i{d}}{\i{d}t}\int_A \vec{B}\i{d}\vec{A}
+	\oint \vec{E}\i{d}\vec{l} = -\frac{\i{d}}{\i{d}t}\int_A \vec{B}\i{d}\vec{A}
 \end{align}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\includegraphics{Gerling2}
+\end{minipage}
+
 
 Das Linienintegral der elektrischen Feldstärke $\vec{E}$ längs eines in sich geschlossenen Integrationsweges $\vec{l}$ ist gleich der negativen totalen zeitlichen Änderung des gesamten magnetischen Flusses, der durch die so begrenzte Fläche A hindurchtritt.
 
@@ -278,7 +289,7 @@ Die Durchflutung lässt sich als Integral des Strombelages entlang der Polteilun
 \Theta = -\int_0^{\tau_\i{p}} A(x)\i{d}x
 \end{align}
 
-mit Gl.~\ref{eqn:polteilung} ergibt sicht dann \autocite[S.~200]{hofmann2013}
+mit Gl.~\ref{eqn:polteilung} ergibt sich nach \textcite[S.~200]{hofmann2013}
 
 \begin{align}
 \Theta = - \int_0^{2(\pi /p)} A(\gamma)\i{d}\gamma \quad \text{mit}\,\, \frac{x}{\tau_\i{p}}=\frac{\gamma}{\pi}
@@ -286,7 +297,7 @@ mit Gl.~\ref{eqn:polteilung} ergibt sicht dann \autocite[S.~200]{hofmann2013}
 
 \subsection{Gleichfelder}\label{sec:gleichfelder}
 
-Wird der Strombelag einer Wicklung durch einen Gleichstrom gebildet, so entsteht ein örtlich, aber nicht zeitlich abhängiges Luftspaltfeld.
+Wird der Strombelag einer Wicklung durch einen Gleichstrom gebildet, so entsteht ein örtlich, nicht zeitlich abhängiges Luftspaltfeld.
 Die örtliche Abhängigkeit hängt von den Wicklungsparametern ab, Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt Strombelag $A$ und Felderregerkurve $B$ einer Vollpol-Ankerspule.
 Der Strombelag ist konzentriert, die Felderregerkurve wird trapezförmig an den Sinus angenähert.
 Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch die Grundwelle beschreiben
@@ -295,7 +306,7 @@ Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch
 B_\i{1}(x) = \hat{B}_\i{1}\cdot\cos(\frac{x}{\tau_\i{p}}\cdot \pi)
 \end{align}
 
-\begin{figure}[!htb]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{Visio-strombelag-hofmann.pdf}
 \label{fig:Visio-strombelag-hofmann}
@@ -304,10 +315,10 @@ B_\i{1}(x) = \hat{B}_\i{1}\cdot\cos(\frac{x}{\tau_\i{p}}\cdot \pi)
 
 \subsection{Drehfelder}\label{sec:drehfelder}
 
-Nach \textcite{hofmann2013} sind
+Nach \textcite{hofmann2013} sind Drehfelder
 
 \begin{quote}
-\enquote{Drehfelder sind Magnetfelder, deren Welle durch den Luftspalt läuft.}
+\enquote{[\ldots] sind Magnetfelder, deren Welle durch den Luftspalt läuft.}
 \end{quote}
 
 Die Erzeugung von Drehfeldern kann auf zwei Arten geschehen.
