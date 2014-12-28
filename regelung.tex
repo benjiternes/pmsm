@@ -2,7 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
-\chapter{Aufbau der PMSM und Regelungskomponenten mit Simulink}
+\chapter{Modellierung einer PMSM mit einer feldorientierten Regelung}
 \label{cha:regelungpmsm}
 
 Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Modellierungssoftware  Simulink$^\text{\textregistered}$ geben, welches als Toolbox in der Software MATLAB$^\text{\textregistered}$ implementiert ist.
@@ -10,20 +10,55 @@ Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiter
 Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist, und zum andern auf der Anwenderfreundlichkeit bei der Durchführung von Simulationsprojekten. \autocite[Vorwort]{scherf2010}
 Dem versierten Anwender der Software sei geraten, diesen Abschnitt zu überspringen.
 
+\section{Simulation von Systemen}\label{sec:simulation}
+
+Simulationen sind heute unverzichtbar bei der Entwicklung und Optimierung von Systemen und der Erforschung von Zusammenhängen komplexer Systeme und Prozesse \autocite{brychta}.
+Die meist umfangreichen Prozesse und Systeme werden dazu in Modellen nachgebildet.
+Dieses Verfahren eignet sich gut zur Analyse der Systemeigenschaften.
+Dabei können die eingesetzten Simulationsmittel unterschiedlich ausfallen.
+
+\begin{enumerate}
+	\item Das System wird maßstäblich oder stark vereinfacht mit den wesentlichen Komponenten aufgebaut.
+	\item Das System wird durch ein anderes physikalisches Modell nachgebildet.
+	\item Das System wird durch ein mathematisches Modell beschrieben.
+\end{enumerate}
+
+Bei umfangreichen Simulationen bietet es sich an, das System in \enquote{Subsysteme} zu unterteilen (s.~h.~Abbildung~\ref{fig:subsysteme}), so dass die Modellierung mit Simulink übersichtlicher wird.
+Der Vorteil gegenüber der konventionellen Modellierung von umfangreichen System, ist es, dass Fehler früher erkannt und einzelne Systeme auf physikalische Richtigkeit geprüft werden können.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{/simulink/subsysteme.pdf}
+	\label{fig:subsysteme}
+	\caption{Semantische Abbildung zur Unterteilung eines Systemes in Subsysteme.}
+\end{figure}
+
+Das eingekreiste System kann so isoliert und gekapselt beschrieben werden.
+Dazu sind die Abhängigkeiten zwischen benachbarten Subsytemen zu erfassen und bei der Kapselung geeignet zu verwerten.
+Auch Subsysteme lassen sich in weitere Subsysteme zerlegen (s.~h.~Abbildung~\ref{fig:subsubsysteme}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{/simulink/subsubsystem.pdf}
+	\label{fig:subsubsysteme}
+	\caption{Semantische Abbildung zur Unterteilung eines Subsystems in weitere Subsysteme.}
+\end{figure}
+
+Bei der Modellierung sollte auf die Übersichtlichkeit der Systeme geachtet werden.
 
 \section{Einführung in Simulink}\label{sec:simulink}
 
-MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq ~entwickelt worden. Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
+MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq~entwickelt worden.
+Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
 MATLAB ist dabei die Kernsoftware, welche sich mit vielen Toolboxen ergänzen lässt. 
 Der Name MATLAB wurde dabei von "MATrix LABoratory" abgeleitet.
 Vor der Simulation eines technischen Prozesses steht die Modellbildung, welche in den vorangegangenen Kapiteln durchgeführt wurde.
 Dazu sind die nötigen physikalischen Gesetzmäßigkeiten zur Beschreibung der Maschine und Regelung genutzt worden.
 Als Ergebnis der Modellbildung werden nun die Differentialgleichungen, Verknüpfungen und Zusammenhänge innerhalb von Simulink zu einem geschlossen Simulationsmodell verbunden. 
 Der Aufbau von den Systemen findet in Simulink mit Hilfe von Blockbildern statt, welche mit Signalflusspfeilen zu einem Signalflussplan kombiniert werden. 
-Entscheident für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
-Zur Einführung in die Software dient daher ein einfaches physikalisches Simulationsbeispiel: das Pendel.
+Entscheidend für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
 
-\subsection{Simulationsbeispiel -- Das mathematische Pendel}
+\subsection{Simulationsbeispiel: Das mathematische Pendel}
 
 Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
 
@@ -36,26 +71,34 @@ Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst di
 
 Er gelten folgende Momente:
 
-Rückstellmoment
-\begin{align}
-		M_\i{R} = m \cdot g \cdot \si{sin}(\varphi) \label{rueckstellmoment} 
-\end{align}
-Beschleunigungsmoment
-\begin{align}
-	M_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi\label{beschleunigungsmoment} 
-\end{align}
-Reibungsmoment
-\begin{align}
-	M_\i{Reib} = d \cdot l^{2} \cdot \dot\varphi\label{reibungsmoment} 
-\end{align}
-Außerdem gilt:
-\begin{align}
-	\sum M = 0 \label{momentengleichgewicht} 
-\end{align}
+\begin{center}
+	\begin{tabular}{ll}
+		\toprule
+		Bezeichnung:				&	Mathematisches Modell: \\
+		\midrule
+		Rückstellmoment				&	$F_\i{Z} = m \cdot g \cdot \si{sin}(\varphi) \label{rueckstellmoment}$ \\
+		Beschleunigungsmoment		&	$F_\i{B} = J \cdot \varphi = m \cdot l^{2} \cdot \ddot\varphi\label{beschleunigungsmoment} $ \\
+		Reibungsmoment				&	$F_\i{R} = d \cdot l^{2} \cdot \dot\varphi\label{reibungsmoment} $ \\
+		Summe aller Kräfte			&	$\sum F = 0 \label{momentengleichgewicht} $ \\
+		\bottomrule 
+	\end{tabular}
+\end{center}
 
-Die Bewegung des Pendels wird mit folgenden Werten simuliert:\\
-\\
-$ m = 2,3 ~\i{kg}\\ d = 0,2 ~\i{Nms}\\ l = 1,1 ~\i{m}\\ g = 9,81\tfrac{\i{m}}{\i{s^{2}}} \\ \varphi_\i{0} = 40^{\circ}$
+Die Bewegung des Pendels wird mit folgenden Werten simuliert:
+
+\begin{center}
+	\begin{tabular}{ll}
+		\toprule
+		Physikalische Bezeichnung:	& Wert: \\
+		\midrule
+		m		& \SI{2,3}{kg} \\
+		d		& \SI{0,2}{Nms} \\
+		l		& \SI{1,1}{m} \\
+		g		& \SI{9,81}{m/s^2}\\
+		$\varphi$ & \SI{40}{^\circ}\\
+		\bottomrule
+	\end{tabular}
+\end{center}
 
 Als nächster Schritt werden die physikalischen Systembeschreibungen in einer Gesamtformel zusammengefasst. 
 
@@ -107,13 +150,12 @@ Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung 
 Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes \glqq{Scope}\grqq.
 Hier zeigt sich nach durchgeführter Simulation folgendes Ergebnis:
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{/regelung/matlab3.jpg}
 	\label{fig:matlab3}
-	\caption{ Winkel $\varphi$ des Pendels über die Simulationszeit t=15s}
+	\caption{Winkel $\varphi$ des Pendels über die Simulationszeit.}
 \end{figure}
-
 
 Wie erwartet, wird eine deutlich gedämpfte Schwingung des simulierten Pendels erkennbar.
 
@@ -201,11 +243,11 @@ Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 \end{figure}
 
 
-\subsection{Modell der PMSM}
+\subsection{Modellierung einer PMSM}
 
 Als Grundlage für die Betrachtung der PMSM gilt der Abschnitt \ref{sec:synchron-dq}.
 Die grundlegenden Gleichung dazu sind (\ref{eqn:ud-lin-gleichung}), (\ref{eqn:uq-lin-gleichung}) und (\ref{eqn:mi-lin-gleichung}).
-Aus den Gleichungen ergibt sich dann im Simulink das Modell.
+Aus den Gleichungen ergibt sich im Simulink das Modell.
 Das Modell wird in zwei Systeme unterteilt:
 
 \begin{itemize}
@@ -213,40 +255,22 @@ Das Modell wird in zwei Systeme unterteilt:
 	\item electrical system
 \end{itemize}
 
-Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben.
-Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter der PMSM.
-Die Überführung der Maschinengleichungen erfolgt dabei dem gleichen Prinzip wie in Abschnitt \ref{sec:simulink}.
+Bei dem \enquote{mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s.~h.~Gl.~(\ref{eqn:mi-lin-gleichung}).
+Das \enquote{electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter einer PMSM.
+Die Überführung der Maschinengleichungen erfolgt dabei dem gleichen Prinzip wie in Abschnitt \ref{cha:regelungpmsm}.
 Zunächst wird auf das \enquote{electrical system} eingegangen, welches in Abbildung \ref{fig:electrical-system} dargestellt ist.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/simulink/electrical-system.pdf}
-	\label{fig:electrical-system}
-	\caption{Aufbau Subsystem \enquote{electrical system}}
-\end{figure}
-
-Das Subsystem ist mit den linearisierten Maschinengleichungen (\ref{eqn:ud-lin-gleichung}) und (\ref{eqn:uq-lin-gleichung}) aufgebaut. 
-Aus den zugeführten Spannungen $u_\x{d}$ und $u_\x{d}$, sowie $\omega_\x{el}$ werden die Ströme $i_\x{d}$ und $i_\x{q}$ generiert.
-
-Das \enquote{mechanical system} resultiert aus der Differentialgleichung des inneren Drehmomentes (\ref{eqn:mi-lin-gleichung}).
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/simulink/mechanical-system.pdf}
-	\label{fig:mechanical-system}
-	\caption{Aufbau Subsystem \enquote{mechanical-system}}
-\end{figure}
-
-Im Subsystem, welches in Abbildung \ref{fig:mechanical-system} erkennbar ist, werden mit der d- und q-Komponente des Stromes aus dem \enquote{electrical system} das innere Drehmoment $M_\x{i}$, die Drehzahl, der elektrische Winkel $\omega_\x{el}$ sowie der Drehwinkel $\varepsilon_\i{RS}$.
-Jetzt müssen die Subsysteme miteinander verknüpft werden.
-So entsteht das Simulationsmodell der PMSM, welches im Gesamten in Abbildung \ref{fig:pmsm} dargestellt ist.
-
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{/simulink/pmsm.pdf}
 	\label{fig:pmsm}
-	\caption{Aufbau Subsystem der PMSM}
+	\caption{Aufbau des Subsystems: PMSM, mit der Unterteilung in: Electrical system und mechanical system.}
 \end{figure}
+
+Die dabei modellierten Differentialgleichungen~(\ref{eqn:id_dt}) und (\ref{eqn:iq_dt}) werden entsprechend umgesetzt, dabei entsteht das Modell auf Basis eines vereinfachten Modells (s.~h.~Abschnitt~\ref{sec:synchron-dq}~--~Linearisierte Gleichungen (Spannungsgleichungen im rotorfesten System)).
+Aus der Bestimmungsgleichung~(\ref{eqn:mi-lin-gleichung}) folgt die elektrische Winkelgeschwindigkeit $\omega_\x{el}$ (s.~h.~Gl.~(\ref{eqn:dw_dt})).
+
+
 
 \subsection{Regelblöcke}
 
