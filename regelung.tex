@@ -2,12 +2,14 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root =  main.tex
 
-\chapter{Modellierung einer PMSM mit einer feldorientierten Regelung}
+\chapter{Modellbasierte Implementierung der Vektorregelung}
 \label{cha:regelungpmsm}
 
-Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Modellierungssoftware  Simulink$^\text{\textregistered}$ geben, welches als Toolbox in der Software MATLAB$^\text{\textregistered}$ implementiert ist.
+Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Simulationstechniken und dem Anwenderprogramm Simulink dar.
+Simulink ist ein Programm, welches mit MATLAB gekoppelt ist, in Simulink kann der Anwender Simulationen durchführen.
+Aufgrund der Komplexität von Simulink soll an dieser Stelle nicht weiter auf die Toolboxen eingeganen werden.
 Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiteren Verständnis der Arbeit benötigten Grundkenntnisse.
-Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist, und zum andern auf der Anwenderfreundlichkeit bei der Durchführung von Simulationsprojekten. \autocite[Vorwort]{scherf2010}
+Der Vorteil bei der Nutzung von MATLAB basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist und zum anderen auf der Benutzerfreundlichkeit bei der Durchführung von Projektarbeiten \autocite{scherf2010}.
 Dem versierten Anwender der Software sei geraten, diesen Abschnitt zu überspringen.
 
 \section{Simulation von Systemen}\label{sec:simulation}
@@ -122,12 +124,12 @@ Wird nun die Differentialgleichung \ref{momentengleichgewichtgesamt2} nach der h
 An dieser Stelle ist die Modellbildung abgeschlossen. Jetzt können die Werte in MATLAB/Simulink  verarbeitet werden.
 Hier werden zuerst in der MATLAB-Umgebung Variablen mit den vorgegebenen Werten parametrisiert.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/regelung/matlab1.jpg}
-	\label{fig:matlab1}
-	\caption{Variablen in Matlab-Umgebung}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=\textwidth]{/regelung/matlab1.jpg}
+%	\label{fig:matlab1}
+%	\caption{Variablen in Matlab-Umgebung}
+%\end{figure}
 
 Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momentengleichgewichtgesamt2} aufgebaut werden.
 
@@ -138,13 +140,12 @@ Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momente
 	\caption{fertiges Modell in Simulink}
 \end{figure}
 
-Herzstück des Simulationsmodells bilden zwei Integratoren.
 Mit Hilfe dieser Blöcke lassen sich  $\dot{\varphi}$ und $\varphi$ erzeugen.
 Die Simulink Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
 Mit Hilfe dieser Blöcke und der Signalflusspfeile lässt sich die Gleichung in das Simulationsmodell übertragen.
 Ist das Modell aufgebaut, werden die Simulationsparameter ausgewählt. 
 Simulink arbeitet numerisch, daher muss ein Integrationsverfahren zur Lösung der DGLs ausgewählt werden. Voreingestellt ist das Dormand-Prince-Verfahren mit variabler Schrittweite.
-Diese Methode liefert in den meisten Anwendungen gute Ergebnisse. \autocite[S.~6]{scherf2010}
+Diese Methode liefert in den meisten Anwendungen gute Ergebnisse \autocite{scherf2010}.
 Zur Verifizierung der Simulationsergebnisse ist es für den Anwender unumgänglich, sich im Vorfeld Gedanken zum erwartenden Ergebnis zu machen.
 Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung in Abhängigkeit von der Zeit erzeugen.
 Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes \glqq{Scope}\grqq.
@@ -164,10 +165,11 @@ Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes 
 Dieses Kapitel dient zur Beschreibung der Bauteile und Komponenten, die für einen späteren Aufbau eines gesamten Regelungssystems der PMSM nötig sind.
 Zunächst wird das erstellte Gesamtsystem in Abbildung \ref{fig:signalflussplan} dargestellt:
 
-\newpage
-\begin{landscape}
-	\includepdf[pages={1},landscape=true]{signalflussplan.pdf}
-\end{landscape}
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{/simulink/foc-pmsm.pdf}
+	\label{fig:foc-pmsm}
+	\caption{Darstellung der Simulationsblöcke in Simulink.}
+\end{figure}
 
 Hier sind die Simulinkblöcke der Transformationen, das Modell der PMSM sowie Regelungskomponenten erkennbar.
 Im Folgenden werden diese erläutern und deren Funktionen dargestellt.
