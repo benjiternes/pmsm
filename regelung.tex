@@ -269,12 +269,15 @@ Zunächst wird auf das \enquote{Electrical system} eingegangen, welches in Abbil
 Die dabei modellierten Differentialgleichungen~(\ref{eqn:id_dt}) und (\ref{eqn:iq_dt}) werden entsprechend umgesetzt, dabei entsteht das Modell auf Basis eines vereinfachten Modells (s.~h.~Abschnitt~\ref{sec:synchron-dq}~--~Linearisierte Gleichungen (Spannungsgleichungen im rotorfesten System)).
 Aus der Bestimmungsgleichung~(\ref{eqn:mi-lin-gleichung}) folgt die elektrische Winkelgeschwindigkeit $\omega_\x{el}$ (s.~h.~Gl.~(\ref{eqn:dw_dt})).
 
-\subsection{Regelblöcke}
+\subsection{Regelungtechnische Blöcke}
 
-Wie im Signalflussplan \ref{fig:signalflussplan} erkennbar, ist zum einen ein Drehzahlregler und zum anderen eine Stromregelung im Modell enthalten. 
-Diese dienen dazu, um den Strom entsprechend der Solldrehzahl einzustellen.
-Hierzu wurden einfache PI-Regler verwendet.
-Die nachstehende Abbildung \ref{fig:drehzahl} zeigt den Aufbau Drehzahlregelung:
+Wie in der Abbildung \ref{fig:foc-pmsm} erkennbar ist, sind reglungstechnische Elemente enthalten.
+Zum einen ein Drehzahlgeber (s.~h.~Abbildung~\ref{fig:drehzahl}) und zum anderen die Stromregelung (s.~h.~Abbildung~\ref{fig:stromregelung}).
+Wie schon im Abschnitt~\ref{sec:foc} erörtert, regelt die Stromregelung den $i_\x{q}$-Strom~--~damit wird das benötigte Drehmoment realisiert.
+Der Drehzahlgeber führt dem System die eingestellte Drehzahl zur Verfügung, so dass die Kombination aus Drehzahlgeber und Stromregelung an einem gemeinsamen Strang ziehen.
+Die Stromregelung wird durch zwei einfache PI-Regeler realisiert.
+Auch der Drehzahlgeber wird lediglich durch einen PI-Regler realisiert.
+Komplexere Regler werden für die feldorientierte Regelung nicht benötigt \autocites{Perassi2006}{kellner2012}.
 
 \begin{figure}[h]
 	\centering
@@ -283,14 +286,26 @@ Die nachstehende Abbildung \ref{fig:drehzahl} zeigt den Aufbau Drehzahlregelung:
 	\caption{Aufbau der Drehzahlregelung.}
 \end{figure}
 
-Der Stromregler wird in Abbildung \ref{fig:stromregelung} gezeigt:
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/simulink/stromregelung.pdf}
 	\label{fig:stromregelung}
 	\caption{Aufbau der Stromregelung.}
 \end{figure}
+
+Der PI-Block aus der \enquote{Simulink $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous} Bibliothek ist standardmäßig als \enquote{Continuos-time} Block konfiguriert.
+Hinter dem Block stecken ähnlich wie in Abbildung \ref{fig:foc-dc-ac} veranschaulicht eine einfache mathematische Gleichung.
+Zudem sei gesagt, dass eine Parallele Regelstruktur angenommen wird.
+
+\begin{align}
+	P + I\cdot\frac{1}{s}
+\end{align}
+
+Dabei steht $P$ für die Verstärkung des Reglers und $I$ für die Verstärkung des Integralen Anteils.
+
+\begin{quote}
+	\enquote{[\ldots] Specify the proportional gain P. [\ldots] Specify the integral gain I. [\ldots] (Mathworks Help -- PID Controller, Discrete PID Controller. In: Simulink $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous)}
+\end{quote}
 
 %%% Local Variables: 
 %%% mode: latex
