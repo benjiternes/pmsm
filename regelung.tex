@@ -6,11 +6,10 @@
 \label{cha:regelungpmsm}
 
 Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Simulationstechniken und dem Anwenderprogramm Simulink dar.
-Simulink ist ein Programm, welches mit MATLAB gekoppelt ist, in Simulink kann der Anwender Simulationen durchführen.
-Aufgrund der Komplexität von Simulink soll an dieser Stelle nicht weiter auf die Toolboxen eingeganen werden.
+Simulink ist ein Programm, welches mit Matlab gekoppelt ist, in Simulink kann der Anwender Simulationen durchführen.
+Aufgrund der Komplexität von Simulink soll an dieser Stelle nicht weiter auf die \enquote{Toolboxen} eingeganen werden.
 Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiteren Verständnis der Arbeit benötigten Grundkenntnisse.
-Der Vorteil bei der Nutzung von MATLAB basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist und zum anderen auf der Benutzerfreundlichkeit bei der Durchführung von Projektarbeiten \autocite{scherf2010}.
-Dem versierten Anwender der Software sei geraten, diesen Abschnitt zu überspringen.
+Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist und zum anderen auf der Benutzerfreundlichkeit bei der Durchführung von Projektarbeiten \autocite{scherf2010}.
 
 \section{Simulation von Systemen}\label{sec:simulation}
 
@@ -32,7 +31,7 @@ Der Vorteil gegenüber der konventionellen Modellierung von umfangreichen System
 	\centering
 	\includegraphics{/simulink/subsysteme.pdf}
 	\label{fig:subsysteme}
-	\caption{Semantische Abbildung zur Unterteilung eines Systemes in Subsysteme.}
+	\caption{Semantische Darstellung zur Unterteilung eines Systemes in Subsysteme.}
 \end{figure}
 
 Das eingekreiste System kann so isoliert und gekapselt beschrieben werden.
@@ -43,26 +42,53 @@ Auch Subsysteme lassen sich in weitere Subsysteme zerlegen (s.~h.~Abbildung~\ref
 	\centering
 	\includegraphics{/simulink/subsubsystem.pdf}
 	\label{fig:subsubsysteme}
-	\caption{Semantische Abbildung zur Unterteilung eines Subsystems in weitere Subsysteme.}
+	\caption{Semantische Darstellung zur Unterteilung eines Subsystems in weitere Subsysteme.}
 \end{figure}
 
 Bei der Modellierung sollte auf die Übersichtlichkeit der Systeme geachtet werden.
 
 \section{Einführung in Simulink}\label{sec:simulink}
 
-MATLAB/Simulink ist vom Softwarehersteller \glqq{The Mathworks}\grqq~entwickelt worden.
-Zu den Einsatzgebieten der Software zählen hauptsächlich Modellierung und Simulation technischer und physikalischer Systeme. 
-MATLAB ist dabei die Kernsoftware, welche sich mit vielen Toolboxen ergänzen lässt. 
-Der Name MATLAB wurde dabei von "MATrix LABoratory" abgeleitet.
-Vor der Simulation eines technischen Prozesses steht die Modellbildung, welche in den vorangegangenen Kapiteln durchgeführt wurde.
-Dazu sind die nötigen physikalischen Gesetzmäßigkeiten zur Beschreibung der Maschine und Regelung genutzt worden.
-Als Ergebnis der Modellbildung werden nun die Differentialgleichungen, Verknüpfungen und Zusammenhänge innerhalb von Simulink zu einem geschlossen Simulationsmodell verbunden. 
-Der Aufbau von den Systemen findet in Simulink mit Hilfe von Blockbildern statt, welche mit Signalflusspfeilen zu einem Signalflussplan kombiniert werden. 
-Entscheidend für die Simulation von dynamischen Systemen ist die Lösung von mathematischen Zusammenhängen, insbesondere von Differentialgleichungen. 
+Simulink ist ein grafikorientiertes Softwaretool zur Simulation und Analyse von linearen und nichtlinearen mathematischen Modellen.
+Simulink ist als Unterprogramm von Matlab implementiert und greift auf dessen numerischen Lösungsalgorithmen zu.
+Bei dem Simulationswerkzeug Simulink handelt es sich um eine \emph{Toolbox} der Programmierumgebung Matlab.
+Sie dient mit ihrer speziell konzipierten Grafikoberfläche der Simulation dynamischer Systeme.
+Im Gegensatz zur zeilenorientierten Programmierung mit alphanumerischen Zeichen wird in Simulink das Systemmodell mittels des \emph{Simulink Library Browsers} einer nach Funktionen unterteilten Bibliothek entnommen und in das Eingabeoberfläche \enquote{gezogen}.
+Dort werden sie per Mausklick sinnvoll miteinander verbunden.
+In den meisten Simulationen handelt es sich bei dynamischen Systemen um zeitabhängige, lineare (oder nichtlineare) Vorgänge, die sich auf Basis von Differentialgleichungen beschreiben lassen.
+Die Modelle entstehen meistens auf Basis idealisierter Gleichungen.
+
+In der Systemtechnik wird zur Beschreibung häufig eine andere Form bevorzugt (Blockschaltbildern).
+Dabei wird versucht, das Verhalten des Systems durch eine grafische Darstellung zu erfassen.
+Einzelne Blöcke werden durch gezielte Verbindungen, den Signalflüssen, miteinander verbunden.
+Da Simulink auf dieser Art der Darstellung basiert, ist es offensichtlich, dass sich viele in Form vn Blockschaltbildern vorliegende Systeme unmittelbar in Simulink programmieren und simulieren lassen.
+Nach dem Aufbau des Systems im Eingabefenster, müssen die Blöcke parametriert werden.
+Anschließend kann die Simulation gestartet werden und das Ergebnis grafisch dargestellt werden.
+Die Simulation von Simulinkmodellen basiert auf iterativen Näherungsverfahren (Runge-Kutta, Adams, usw.).
+Das zeitliche Verhalten der simulierten Systeme wird daher in den wenigsten Fällen völlig identisch mit dem Differentialgleichungen erreicht.
+Bei korrekter Programmierung und guter Parameterwahl wird es diesem sehr Nahe kommen.
+
+Eine umfassende Hilfe über Simulink findet man nach Öffnen der Matlab-Entwicklungsumgebung im \emph{Popup-Menü} \emph{Help}.
+Dieses Menü stellt eine Windows-typische Hilfe für die gesamte Matlab-Produktfamilie zur Verfügung.
+Ist Simulink bereits geöffnet, so führt die Auswahl der Hilfe im \emph{Library Browser} oder im Eingabefenster direkt zur Simulink-Hilfe.
+Darüber hinaus werden in der Simulink-Hilfe viele Beispiele als lauffähige Programme zur Verfügung gestellt.
+Diese findet man in der Hilfe unter \emph{Demos}.
+
+Um mit Simulink arbeiten zu können, muss zunächst die Matlab-Entwicklungsumgebung in den Arbeitspeicher geladen werden.
+Der Start von Simulink kann über die Kommandozeile mit \enquote{simulink} erfolgen.
+
+Wie bereits erwähnt, werden (zeitkontinuierliche) dynamische Systeme durch Differentialgleichungen beschrieben, wie z.\ B.\ die normierte Bewegungsgleichung eines gedämpften Schwingers.
+
+\begin{align*}
+	\ddot{y}(t) + 2\cdot d\cdot \omega_\x{0}\cdot \dot{y}(t) + \omega_\x{0}^{2} y(t) = u(t)
+\end{align*}
+
+Wenn das System durch ein Blockschaltbild beschrieben wird, so betrachtet man nichts anderes, als die Lösung der Differentialgleichung.
+In diesem Fall ist Simulink ein numerischer Differentialgleichungslöser für dieses Projekt.
 
 \subsection{Simulationsbeispiel: Das mathematische Pendel}
 
-Zur Modellbildung und Simulation eines dynamischen Fadenpendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
+Zur Modellbildung und Simulation eines dynamischen Pendels sei zunächst die folgende Abbildung \ref{fig:pendel} gegeben:
 
 \begin{figure}[h]
 	\centering
@@ -85,7 +111,7 @@ Er gelten folgende Momente:
 		\bottomrule 
 	\end{tabular}
 \end{center}
-
+		
 Die Bewegung des Pendels wird mit folgenden Werten simuliert:
 
 \begin{center}
@@ -101,7 +127,7 @@ Die Bewegung des Pendels wird mit folgenden Werten simuliert:
 		\bottomrule
 	\end{tabular}
 \end{center}
-
+	
 Als nächster Schritt werden die physikalischen Systembeschreibungen in einer Gesamtformel zusammengefasst. 
 
 \begin{align}
@@ -121,9 +147,6 @@ Wird nun die Differentialgleichung \ref{momentengleichgewichtgesamt2} nach der h
 	\label{diffgleichung} 
 \end{align}
 
-An dieser Stelle ist die Modellbildung abgeschlossen. Jetzt können die Werte in MATLAB/Simulink  verarbeitet werden.
-Hier werden zuerst in der MATLAB-Umgebung Variablen mit den vorgegebenen Werten parametrisiert.
-
 %\begin{figure}[h]
 %	\centering
 %	\includegraphics[width=\textwidth]{/regelung/matlab1.jpg}
@@ -135,16 +158,17 @@ Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momente
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{/regelung/matlab2.jpg}
+	\includegraphics[width=0.8\textwidth]{/regelung/matlab2.jpg}
 	\label{fig:matlab2}
-	\caption{fertiges Modell in Simulink}
+	\caption{Modell des mathematischen Pendels in Matlab Simulink.}
 \end{figure}
-
+\pagebreak
 Mit Hilfe dieser Blöcke lassen sich  $\dot{\varphi}$ und $\varphi$ erzeugen.
 Die Simulink Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
 Mit Hilfe dieser Blöcke und der Signalflusspfeile lässt sich die Gleichung in das Simulationsmodell übertragen.
 Ist das Modell aufgebaut, werden die Simulationsparameter ausgewählt. 
 Simulink arbeitet numerisch, daher muss ein Integrationsverfahren zur Lösung der DGLs ausgewählt werden. Voreingestellt ist das Dormand-Prince-Verfahren mit variabler Schrittweite.
+
 Diese Methode liefert in den meisten Anwendungen gute Ergebnisse \autocite{scherf2010}.
 Zur Verifizierung der Simulationsergebnisse ist es für den Anwender unumgänglich, sich im Vorfeld Gedanken zum erwartenden Ergebnis zu machen.
 Im vorliegenden Beispiel sollte der Winkel $\varphi$ eine gedämpfte Schwingung in Abhängigkeit von der Zeit erzeugen.
@@ -162,8 +186,8 @@ Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes 
 
 \section{Simulationsblöcke}\label{sec:math-model-pmsm}
 
-Dieses Kapitel dient zur Beschreibung der Bauteile und Komponenten, die für einen späteren Aufbau eines gesamten Regelungssystems der PMSM nötig sind.
-Zunächst wird das erstellte Gesamtsystem in Abbildung \ref{fig:signalflussplan} dargestellt:
+Dieser Abschnitt zeigt alle Elemente der implementierten Vektorregelung in Matlab Simulink.
+In Abbildung~\ref{fig:foc-pmsm} ist die gesamte Vektorregelung dargestellt.
 
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{/simulink/foc-pmsm.pdf}
@@ -171,55 +195,26 @@ Zunächst wird das erstellte Gesamtsystem in Abbildung \ref{fig:signalflussplan}
 	\caption{Darstellung der Simulationsblöcke in Simulink.}
 \end{figure}
 
-Hier sind die Simulinkblöcke der Transformationen, das Modell der PMSM sowie Regelungskomponenten erkennbar.
-Im Folgenden werden diese erläutern und deren Funktionen dargestellt.
+Farbig gekennzeichnet sind reglungstechnische Elemente (rot), Transformationen (grün) und das mathematische Maschinenmodell einer anisotropen Synchronmaschine (cyan).
+Als \enquote{Step} modelliert ist der Lastsprung, die Drehmoment Anforderung an das System.
+Im Folgenden sollen alle Subsysteme entsprechend der Funktionsweise erörtert werden.
 
 \subsection{Transformationsblöcke}
 
 Der Aufbau der Koordinatentransformationen leitet aus Abschnitt \ref{sec:clark} ab. 
 Hierbei basiert der Block der $\alpha$-$\beta$-Transformation aus den Zusammenhängen von (\ref{clarkevektor}) und (\ref{clarkematrix}), während die Rücktransformation, die inverse $\alpha$-$\beta$-Transformation mit Hilfe von (\ref{inverseclarkevektornulleinfach}) und (\ref{inverseclarkematrixnulleinfach}) erstellt ist.
 Weiterhin orientieren sich die Umsetzungen in Simulink an den Blockschaltbildern aus \ref{fig:blockbildclarkeparkkomplett} und \ref{fig:blockbildinverseclarkeparkkomplett}.
-
-%Die folgende Abbildung \ref{fig:uvw_to_ab} zeigt den Blockaufbau der Clarke Transformation in Simulink:
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\textwidth]{/simulink/uvw_to_ab.pdf}
-%	\label{fig:uvw_to_ab}
-%	\caption{Aufbau Clarke Transformation}
-%\end{figure}
-
-%In Abbildung \ref{fig:uvw_to_ab} wird der Aufbau der inversen Clarke Transformation gezeigt:
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\textwidth]{/simulink/ab_to_uvw.pdf}
-%	\label{fig:ab_to_uvw}
-%	\caption{Aufbau Inverse Clarke Transformation}
-%\end{figure}
-
 Um die Koordinatentransformation zu vervollständigen ist die d-q-, oder Park Transformation, von entscheidender Bedeutung.
 Der Block für die d-q-Transformation setzt wird mit dem Zusammenhang \ref{parkvektor} und der Matrix \ref{parkmatrix} erstellt. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{/simulink/uvw_to_dq.pdf}
+	\label{fig:uvw_to_dq}
+	\caption{Aufbau Clarke-Park Transformation}
+\end{figure}
+
 Die inverse d-q-Transformation ist mit Hilfe der Matritzen \ref{parkvektorinvers} sowie \ref{parkmatrixinvers} aufgebaut.
-
-%Die nachstehende Grafik \ref{fig:ab_to_dq} stellt die Park Transformation in Simulink dar:
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\textwidth]{/simulink/ab_to_dq.pdf}
-%	\label{fig:ab_to_dq}
-%	\caption{Aufbau Park Transformation}
-%\end{figure}
-
-%In Abbildung \ref{fig:dq_to_ab} ist der Aufbau der inversen Park Transformation dargestellt:
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\textwidth]{/simulink/dq_to_ab.pdf}
-%	\label{fig:dq_to_ab}
-%	\caption{Aufbau Inverse Park Transformation}
-%\end{figure}
-
 An dieser Stelle ist es aus übersichtlichkeitsgründen sinnvoll, die Transformationsblöcke als Subsystem zusammenzufassen.
 Es ergibt sich für die Clarke-Park Transformation somit ein Block mit drei Eingängen für die drei Wechselgrößen und einem Eingange für $\varepsilon_\i{RS}$, sowie zwei Ausgängen für d- und q-Komponente.
 Ebendieses wird auch für die Rücktransformation gemacht. 
@@ -227,20 +222,13 @@ Hier ergibt sich ein Subsystem mit drei Eingängen.
 Zwei für d- und q-Größe sowie ebenfalls ein Eingang für $\varepsilon_\i{RS}$.
 Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/uvw_to_dq.pdf}
-	\label{fig:uvw_to_dq}
-	\caption{Aufbau Clarke-Park Transformation}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{/simulink/dq_to_uvw.pdf}
+	\includegraphics[width=0.8\textwidth]{/simulink/dq_to_uvw.pdf}
 	\label{fig:dq_to_uvw}
 	\caption{Aufbau inverse Clarke-Park Transformation}
 \end{figure}
+
 \newpage
 
 \subsection{Modellierung einer PMSM}
@@ -262,12 +250,12 @@ Das Modell wird in zwei Systeme unterteilt:
 	\caption{Aufbau des Subsystems: PMSM, mit der Unterteilung in: Electrical system und Mechanical system.}
 \end{figure}
 
-Bei dem \enquote{Mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s.~h.~Gl.~(\ref{eqn:mi-lin-gleichung}).
+Bei dem \enquote{Mechanical system} wird die Differentialgleichung der elektrischen Winkelgeschwindigkeit beschrieben s.~h.~Gleichung~(\ref{eqn:mi-lin-gleichung}).
 Das \enquote{Electrical system} beschreibt hingegen die Differentialgleichungen der Ströme und somit die elektrischen Parameter einer PMSM.
 Die Überführung der Maschinengleichungen erfolgt dabei dem gleichen Prinzip wie in Abschnitt \ref{cha:regelungpmsm}.
 Zunächst wird auf das \enquote{Electrical system} eingegangen, welches in Abbildung \ref{fig:electrical-system} dargestellt ist.
-Die dabei modellierten Differentialgleichungen~(\ref{eqn:id_dt}) und (\ref{eqn:iq_dt}) werden entsprechend umgesetzt, dabei entsteht das Modell auf Basis eines vereinfachten Modells (s.~h.~Abschnitt~\ref{sec:synchron-dq}~--~Linearisierte Gleichungen (Spannungsgleichungen im rotorfesten System)).
-Aus der Bestimmungsgleichung~(\ref{eqn:mi-lin-gleichung}) folgt die elektrische Winkelgeschwindigkeit $\omega_\x{el}$ (s.~h.~Gl.~(\ref{eqn:dw_dt})).
+Die dabei modellierten Gleichungen~(\ref{eqn:id_dt}) und (\ref{eqn:iq_dt}) werden entsprechend umgesetzt, dabei entsteht das Modell auf Basis eines vereinfachten Modells (s.~h.~Abschnitt~\ref{sec:synchron-dq}~--~Linearisierte Gleichungen (Spannungsgleichungen im rotorfesten System))~--~das Modell wird ohne Eisenverluste und Sättigungseffekte, wie Wirbelstromverluste, modelliert.
+Aus der Bestimmungsgleichung~(\ref{eqn:mi-lin-gleichung}) folgt die elektrische Winkelgeschwindigkeit $\omega_\x{el}$ (s.~h.~Gleichung~(\ref{eqn:dw_dt})).
 
 \subsection{Regelungtechnische Blöcke}
 
@@ -295,7 +283,7 @@ Komplexere Regler werden für die feldorientierte Regelung nicht benötigt \auto
 
 Der PI-Block aus der \enquote{Simulink $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous} Bibliothek ist standardmäßig als \enquote{Continuos-time} Block konfiguriert.
 Hinter dem Block stecken ähnlich wie in Abbildung \ref{fig:foc-dc-ac} veranschaulicht eine einfache mathematische Gleichung.
-Zudem sei gesagt, dass eine Parallele Regelstruktur angenommen wird.
+Zudem sei gesagt, dass eine Parallele Regelstruktur angenommen wird:
 
 \begin{align}
 	P + I\cdot\frac{1}{s}

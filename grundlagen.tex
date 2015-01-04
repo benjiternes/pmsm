@@ -237,7 +237,7 @@ Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
 \enquote{Die Begrenzungsflächen von Stator und Rotor können als glatt angenommen werden, was in Umfangsrichtung der Maschine konstanten Luftspalt und demzufolge auch einen kostanten magnetischen Luftspaltleitwert entspricht. (Gerling 2008, \emph{Elektrische Maschinen und Antriebe}. Bundeswehr Universität in München.)}
 \end{quote}
 
-Weitere spezifische Darstellungen zum Strombelag.
+\paragraph{Weitere spezifische Darstellungen zum Strombelag.}
 Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
 
 \begin{align}
@@ -250,7 +250,7 @@ betrachtet man jetzt die Polteilung $\tau_\i{p}$
 \tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:polteilung}
 \end{align}
 
-so wird aus Gl.~\ref{eqn:strombelag2} und Gl.~\ref{eqn:polteilung} bei voller Bewicklung über eine Polteilung
+so wird aus Gleichung~\ref{eqn:strombelag2} und Gleichung~\ref{eqn:polteilung} bei voller Bewicklung über eine Polteilung
 
 \begin{align}
 A = \frac{m w I}{p \tau_\i{p}}
@@ -279,7 +279,7 @@ V_\delta (x) = - \int_0^x A(x)\i{d}x
 
 Das Integral erhält die Bezeichnung \enquote{Felderregerkurve} (vgl.~\textcite[S.~199]{hofmann2013}).
 Die Felderregerkurve gibt an, welche magnetische Spannung zur Magnetfelderzeugung an der Stelle $x$ zur Verfügung steht.
-Diese ist wichtige für die Berechnung von Streuung und Verlusten in der Maschine.
+Diese ist wichtige für die Berechnung von Streuungs- und Verlusteffekten in der Maschine.
 
 \subsection{Durchflutung}\label{sec:durchflutung}
 
@@ -330,7 +330,7 @@ Nach \textcite{hofmann2013} sind Drehfelder
 Die Erzeugung von Drehfeldern kann auf zwei Arten geschehen.
 Zum einen aus der Drehung eines Gleichfeldes (s.~h.~Abschnitt~\ref{sec:gleichfelder}) oder durch die Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern.
 Bei der Synchronmaschine wird mittels Gleichstrom der Anker erregt, so entsteht zunächst ein Gleichfeld mit örtlicher Induktionsverteilung.
-Wird nun die das Gleichfeld erzeugende Wicklung gedreht, bekommt das Feld eine Drehgeschwindigkeit, \dh die Felddichte verhält sich orts- und zeitabhängig.
+Wird nun die das Gleichfeld erzeugende Wicklung gedreht, bekommt das Feld eine Drehgeschwindigkeit, d.\ h.\ die Felddichte verhält sich orts- und zeitabhängig.
 
 \begin{align}
 B(x,t) = \hat{B}\cdot\cos(\frac{x}{\tau_\i{p}}\pi\pm\omega t)
@@ -569,10 +569,10 @@ Bei einer trapezförmigen Speisung der Statorwicklung wird die Maschine als (BLD
 Der einfachste Fall für die Ermittlung des Signalflussplanes ist die Annahme, dass die Maschine an der Statorwicklung eine sinusförmige Spannung anliegt und die Maschine symmetrisch konzipiert wurde.
 Bei einer symmetrisch konzipierten Synchronmaschine werden die Reluktanzeinflüsse nicht wirksam.
 Aufgrund der besonderen konstruktiven Situation wird für den Rotor das mit dem Rotor umlaufende Koordinatensystem $el$ jetzt mit den allgemein verwendeten Achsenbezeichnungen $d$ und $q$ gewählt (s.~h.~Abbildung~\ref{fig:synchron-dq}).
-Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems $el(d, q)$ auf die mit der Polpaarzahl $Z_\i{p}$ umgerechnete mechanische Winkelgeschwindigkeit $\omega_\i{m}$ des Rotors festgelegt ist.
+Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems $el(d, q)$ auf die mit der Polpaarzahl $p$ umgerechnete mechanische Winkelgeschwindigkeit $\omega_\i{m}$ des Rotors festgelegt ist.
 
 \begin{align}
-\omega_\i{el} = Z_\i{p}\cdot\omega_\i{m}
+\omega_\i{el} = p\i{p}\cdot\omega_\i{m}
 \end{align}
 
 Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:dq-synchron-rotorfest} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
@@ -709,7 +709,7 @@ Allgemein kann das innere Drehmoment einer einpolpaarigen elektrischen Maschine 
 	M_\x{i} = \frac{3}{2}(\underline{\Psi}^{\x{d,q}} \times \underline{i}^{\x{d,q}}) 
 \end{align}
 
-Das innere Drehmoment $M_\x{i}$ für eine elektrische Maschine mit $Z_\x{p}$ Polpaaren kann schließlich nach Auswertung des Vektorproduktes ermittelt werden:
+Das innere Drehmoment $M_\x{i}$ für eine elektrische Maschine mit $p\x{p}$ Polpaaren kann schließlich nach Auswertung des Vektorproduktes ermittelt werden:
 
 	\begin{align}
 M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} ) \label{eqn:mi-gleichung}
@@ -718,10 +718,10 @@ M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} ) \label{eqn:mi-g
 Um das System vollständig zu beschreiben, fehlt noch die mechanische Bestimmungsgleichung
 
 \begin{align}
-	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{Z_\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
+	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{p\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
 \end{align}
 
-Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $Z_\x{p}$ für die Polpaarzahl der elektrischen Maschine.
+Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $p\x{p}$ für die Polpaarzahl der elektrischen Maschine.
 Alle hergeleiteten Gleichungen beziehen sich auf die Annahme des Grundwellenmodells.
 Im nächsten Schritt ist es wichtig die Flüsse durch Induktivitäten zu ersetzen.
 Dafür werden oft linearisierte Gleichungen verwendet \autocite{schroder2001}, bei dem Modell sind alle Parameter konstant.
@@ -758,7 +758,7 @@ Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechan
 \begin{align}
 \frac{\x{d}i_\x{d}}{\x{d}t} &= -\frac{R_\x{1}}{L_\x{d}}i_\x{d}+\omega_\x{el}\frac{L_\x{q}}{L_\x{d}}i_\x{q}+\frac{1}{L_\x{d}}u_\x{d} \label{eqn:id_dt} \\
 \frac{\x{d}i_\x{q}}{\x{d}t} &= -\omega_\x{el}\frac{L_\x{d}}{L_\x{q}}i_\x{d} - \frac{R_\x{1}}{L_\x{q}}i_\x{q} + \frac{1}{L_\x{q}}u_\x{q} - \frac{\omega_\x{el}}{L_\x{q}}\Psi_\x{pm} \label{eqn:iq_dt} \\
-\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J} \Psi_\x{pm} i_\x{q} - \frac{p}{J} M_\x{Last} \label{eqn:w_dt}
+\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J} \Psi_\x{pm} i_\x{q} - \frac{p}{J} M_\x{Last} \label{eqn:dw_dt}
 \end{align}
 
 \section{Feldorientierte Regelung}\label{sec:foc}

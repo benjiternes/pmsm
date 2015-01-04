@@ -8,6 +8,12 @@
 
 \renewcommand{\i}[1]{\mathrm{#1}}
 \newcommand{\x}[1]{\mathrm{#1}}
+\newcommand{\sh}{s.~h.~}
+
+\newcommand{\shortpage}{\enlargethispage{-1\baselineskip}}
+\newcommand{\veryshortpage}{\enlargethispage{-2\baselineskip}}
+\newcommand{\longpage}{\enlargethispage{1\baselineskip}}
+\newcommand{\verylongpage}{\enlargethispage{2\baselineskip}}
 
 \begin{document}
 \pagenumbering{Roman}
@@ -131,10 +137,10 @@ $b_\x{S}$	& Breite des Nutschlitzes & \si{m}\\
 % ----------------------------------------------------------------------------------------------------------
 \begin{appendix}
 \chapter{Simulationsblöcke}
-\section{Elektrische Komponenten}
+\section{Elektrische Komponenten~--~Subsysteme}
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/electrical-system.pdf}
+	\includegraphics[width=0.8\textwidth]{/simulink/electrical-system.pdf}
 	\label{fig:electrical-system}
 	\caption{Aufbau des elektrischen Subsystemsystems.}
 \end{figure}
@@ -146,22 +152,22 @@ $b_\x{S}$	& Breite des Nutschlitzes & \si{m}\\
 \caption{Aufbau des mechanischen Subsystems.}
 \end{figure}
 \newpage
-\section{Reglungstechnische Komponenten}
+\section{Transformations Subsysteme}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/uvw_to_ab.pdf}
+	\includegraphics[scale=0.7]{/simulink/uvw_to_ab.pdf}
 	\label{fig:uvw_to_ab}
 	\caption{Aufbau der Clarke-Transformation.}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{/simulink/ab_to_dq.pdf}
+	\includegraphics[scale=0.7]{/simulink/ab_to_dq.pdf}
 	\label{fig:uvw_to_ab}
 	\caption{Aufbau der Park-Transformation.}
 \end{figure}
 
-	
+
 	
 \end{appendix}
 
