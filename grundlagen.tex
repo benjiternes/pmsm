@@ -4,7 +4,7 @@
 
 \chapter{Theoretische und begriffliche Grundlagen}\label{cha:grundlagen}
 
-Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im folgenden einige Grundlagen erörtert.
+Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im Folgendem einige Grundlagen erörtert.
 
 \section{Maxwellsche Gleichungen}\label{sec:maxwell}
 
@@ -115,7 +115,7 @@ Aus Symmetrieüberlegungen ergibt sich, dass die einheitliche Phasenwinkeldiffer
 \Delta \varphi = \frac{\omega T}{m} = \frac{2\pi}{m}
 \end{align}
 
-Darin tritt die Periodendauert $T$ der Teilspannungen auf.
+Darin tritt die Periodendauer $T$ der Teilspannungen auf.
 Setzt man der Einfachheit
 
 \begin{align*}
@@ -271,7 +271,7 @@ Der alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung du
 A_\i{1}(x) = \hat{A}_\i{1} \cdot \cos(\frac{x}{\tau_\i{p}}\cdot \pi)
 \end{align}
 
-Die wichtigste Kenngröße zur Erzeugung der Kräfte in Maschinen sind die Feldgrößen, \dh bei Vernachlässigung des magnetischen Spannungsabfalls im Eisen kann laut dem Durchflutungsgesetz mit $\mu_\i{Fe} >> 1$ die magnetische Spannung über den Luftspalt an jeder Stelle der Umfangskoordinate $x$ über das Integral des Strombelages ermitteln (s.~h.~Abbildung~\ref{fig:Visio-strombelag-umlauf}).
+Die wichtigste Kenngröße zur Erzeugung der Kräfte in Maschinen sind die Feldgrößen, d.\ h.\ bei Vernachlässigung des magnetischen Spannungsabfalls im Eisen kann laut dem Durchflutungsgesetz mit $\mu_\i{Fe} >> 1$ die magnetische Spannung über den Luftspalt an jeder Stelle der Umfangskoordinate $x$ über das Integral des Strombelages ermitteln (s.~h.~Abbildung~\ref{fig:Visio-strombelag-hofmann}).
 
 \begin{align}
 V_\delta (x) = - \int_0^x A(x)\i{d}x
@@ -298,7 +298,8 @@ mit Gl.~\ref{eqn:polteilung} ergibt sich nach \textcite[S.~200]{hofmann2013}
 \subsection{Gleichfelder}\label{sec:gleichfelder}
 
 Wird der Strombelag einer Wicklung durch einen Gleichstrom gebildet, so entsteht ein örtlich, nicht zeitlich abhängiges Luftspaltfeld.
-Die örtliche Abhängigkeit hängt von den Wicklungsparametern ab, Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt Strombelag $A$ und Felderregerkurve $B$ einer Vollpol-Ankerspule.
+Die örtliche Abhängigkeit hängt von den Wicklungsparametern ab.
+Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt Strombelag $A$ und Felderregerkurve $B$ einer Vollpol-Ankerspule.
 Der Strombelag ist konzentriert, die Felderregerkurve wird trapezförmig an den Sinus angenähert.
 Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch die Grundwelle beschreiben
 
@@ -430,7 +431,7 @@ Als Motor wurden Drephasen-Synchronmaschinen schon bald für große Leistungen e
 Der Nachteil ist, dass die Drehzahl durch die Netzfrequenz festgelegt ist.
 Die Synchronmaschine arbeitet unabhängig von der Belastung stets mit der durch die Netzfrequenz und die ausgeführte Polpaarzahl festgelegten synchronen Drehzahl.
 
-Heute ist es möglich mit Hilfe eines Frequenzumrichters die Drehzahl der Synchronmaschine zu steuern.
+Heute ist es möglich, mit Hilfe eines Frequenzumrichters die Drehzahl der Synchronmaschine zu steuern.
 Aus diesem Grund werden größere Gleichstrommaschinen durch drehzahlvariable Synchronmaschinen abgelöst.
 Im Bereich kleinerer Leistungen wird anstelle der Gleichstromerregung eine Erregung durch Permanentmagnete eingesetzt.
 Dabei verliert man die Beeinflussung des Erregerzustandes über den Erregerstrom, dafür erhält man eine elektrische Maschine die keine elektrische Verbindung zum Läufer erfordert.
@@ -531,14 +532,14 @@ x_\i{d} = \frac{I_\i{1}}{U_\i{1}}\cdot X_\i{d}
 Als Richtwert gilt
 
 \begin{align*}
-x_\i{d} &= 1.2 \ldots 1.5\,\text{Vollpolläufer}
-x_\i{d} &= 0.6 \ldots 1.6\,\text{Schenkelpolläufer}
+x_\i{d} &= 1.2 \ldots 1.5\quad\text{Vollpolläufer} \\
+x_\i{d} &= 0.6 \ldots 1.6\quad\text{Schenkelpolläufer}
 \end{align*}
 
 Der Ständerkreisverlustwiderstand ist etwa mit 
 
 \begin{align}
-R_\i{1} \approx 0.07 X_\i{d}
+R_\i{1} \approx 0.07\cdot X_\i{d}
 \end{align}
 
 anzusetzen.
@@ -552,7 +553,7 @@ anzusetzen.
 
 \subsection{Beschreibung der Synchronmaschine im d,q-Koordinatensystem}\label{sec:synchron-dq}
 
-Im folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagneten ersetzt wird.
+Im Folgenden wird angenommen, dass die Speisung des Polrads durch Permanentmagnete ersetzt wird.
 In diesem Fall verbleiben nur die drei Statorwicklungen als stromdurchflossene Wicklungen.
 Wesentlich bei den nachstehenden Überlegungen ist es, ob die Synchronmaschine als symmetrische Maschine (Vollpolläufer) oder als unsymmetrische Maschine (Schenkelpolläufer) konzipiert ist.
 Die Wahl der Konzipierung hat Auswirkungen auf die Möglichkeit, Feldschwächebetrieb zu erreichen oder nur bedingt und dann mit Einschränkungen \autocite[S.~291]{schroder2000}.
@@ -575,7 +576,7 @@ Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems 
 \omega_\i{el} = p\i{p}\cdot\omega_\i{m}
 \end{align}
 
-Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:dq-synchron-rotorfest} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
+Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:synchron-grundlage} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
 Für die Herleitung der Zusammenhänge wird an dieser Stelle nicht weiter eingegangen, hierfür wird auf einschlägige Literatur verwiesen \autocites{mullerI2005}{fischer2009}{schroder2000}{kremser2004}.
 
 \begin{figure}[h!]
@@ -723,7 +724,7 @@ Um das System vollständig zu beschreiben, fehlt noch die mechanische Bestimmung
 
 Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $p\x{p}$ für die Polpaarzahl der elektrischen Maschine.
 Alle hergeleiteten Gleichungen beziehen sich auf die Annahme des Grundwellenmodells.
-Im nächsten Schritt ist es wichtig die Flüsse durch Induktivitäten zu ersetzen.
+Im nächsten Schritt ist es wichtig, die Flüsse durch Induktivitäten zu ersetzen.
 Dafür werden oft linearisierte Gleichungen verwendet \autocite{schroder2001}, bei dem Modell sind alle Parameter konstant.
 Dementsprechend einfach ist es, die Ableitungen der Flussverkettungen zu bestimmen.
 Beim linearen Maschinenmodell gibt es definitionsgemäß keine Sättigungserscheinungen \autocites{mullerII2008}{schroder2001}.
@@ -763,7 +764,7 @@ Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechan
 
 \section{Feldorientierte Regelung}\label{sec:foc}
 
-Die Feldorientierte Regelung auch unter \enquote{FOC} bekannt (engl. Field Oriented Control), in Europa als \enquote{vector control} zu finden, ist ein Regelverfahren für Drehstrommaschinen.
+Die feldorientierte Regelung auch unter \enquote{FOC} bekannt (engl. Field Oriented Control), in Europa als \enquote{vector control} zu finden, ist ein Regelverfahren für Drehstrommaschinen.
 In vielen Anwendungen werden Gleichstrommaschinen als Antriebe eingesetzt, da die Einstellmöglichkeiten der Drehzahl in weiten Bereichen auszeichnet.
 Drehstromantriebe werden hingegen oft mit einer festen Drehzahl betrieben.
 Da die Drehzahl abhängig von der Frequenz der Speisespannung ist, kann eine Drehzahländerung nur durch eine Frequenzänderung des speisenden Netzes geschehen.

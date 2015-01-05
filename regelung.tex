@@ -207,7 +207,7 @@ Weiterhin orientieren sich die Umsetzungen in Simulink an den Blockschaltbildern
 Um die Koordinatentransformation zu vervollständigen ist die d-q-, oder Park Transformation, von entscheidender Bedeutung.
 Der Block für die d-q-Transformation setzt wird mit dem Zusammenhang \ref{parkvektor} und der Matrix \ref{parkmatrix} erstellt. 
 
-\begin{figure}[h!]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{/simulink/uvw_to_dq.pdf}
 	\label{fig:uvw_to_dq}
@@ -222,14 +222,14 @@ Hier ergibt sich ein Subsystem mit drei Eingängen.
 Zwei für d- und q-Größe sowie ebenfalls ein Eingang für $\varepsilon_\i{RS}$.
 Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 
-\begin{figure}[h!]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{/simulink/dq_to_uvw.pdf}
 	\label{fig:dq_to_uvw}
 	\caption{Aufbau inverse Clarke-Park Transformation}
 \end{figure}
 
-\newpage
+%\verylongpage
 
 \subsection{Modellierung einer PMSM}
 
