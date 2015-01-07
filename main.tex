@@ -3,12 +3,13 @@
 % ----------------------------------------------------------------------------------------------------------
 \input{class.tex}
 \input{makros.tex} 
-
+	
 \usepackage{pdfpages}
 
 \renewcommand{\i}[1]{\mathrm{#1}}
 \newcommand{\x}[1]{\mathrm{#1}}
 
+\newcommand{\unit}[1]{$\mathrm{#1}$}
 \newcommand{\sh}{s.~h.~}
 \newcommand{\productname}[1]{\textsc{#1}}
 
@@ -83,36 +84,81 @@
 % ----------------------------------------------------------------------------------------------------------
 %\section*{Allgemeine Symbole}\label{s.sym.alg}
 \begin{flushleft}
-\begin{tabularx}{\textwidth}{lll}
+\begin{tabular}{lll}
 \toprule
 Symbol & Bedeutung	& Einheit\\
 \midrule
-$I$	& elektrische Stromstärke	&	\si{A} \\
-$\Theta$	&	elektr.Durchflutung 	&	\si{A}	\\
-$A$			&	elektr. Strombelag  	&  	\si{A/m}\\ 
-$J$			&	elektr. Stromdichte		&	\si{A/m^2} \\	
-$H$			&	magnetische Feldstärke		&	\si{A/m}\\
-$I_\i{e}$	&	Erregerstrom	&	\si{A} \\
-$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	\si{Vs/Am}\\
-$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
-$B$			&	magnetische Flussdichte		&	\si{Vs/m^2}\\
-$\Phi$		&	magnetischer Fluss			&	\si{Vs} \\
-$\Psi$		&	verketteter Fluss			&	\si{Vs} \\
-$U_\i{e}$ & Erregerspannung & \si{V}\\
-$R_\i{e}$	&	Erregerkreisverlustwiderstand &	\si{\Omega}\\
-$V$			&	magnetisches Vektorpotenzial&	\si{Vs/m}\\
-$V_\mathrm{m}$		&	magnetische Spannung		&	\si{A} \\
-$\omega_\mathrm{el}$	&	elektr.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
-$\omega_\mathrm{mech}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{1/s} \\
+$A$			&	elektrische Strombelag  	&  	\si{\ampere\per\meter} \\
+$\hat{A}_\x{1}$			&	Amplitude des Strombelages  	&  	\si{\ampere\per\meter} \\ 
+$B$			&	magnetische Flussdichte		&	\si{\volt\second\per\square\meter} \\
+$\hat{B}_\x{1}$	 &	Amplitude der magnetischen Flussdichte 	&  	\si{\volt\second\per\square\meter} \\ 
+$D$ & Verschiebungsstrom &  \si{\ampere} \\
+$E$ & elektrische Feldstärke & \si{\volt\per\meter} \\
+$H$			&	magnetische Feldstärke		&	\si{\ampere\per\meter}\\
+$H_\x{S}$	&   magnetische Feldstärke in Nutöffnung	&	\si{\ampere} \\
+$H_\x{t}$	&   Tangentiale Feldstärke	&	\si{\ampere} \\
+$I_\i{1}$	&	Ständerstrom	&	\si{\ampere} \\
+$I_\i{e}$	&	Erregerstrom	&	\si{\ampere} \\
+$I_\i{\mu}$	&	Magnetisierungsstrom	&	\si{\ampere} \\
+$J$			&	elektrische Stromdichte		&	\si{\ampere\per\square\meter} \\
+$J_\x{m}$			&	Trägheitsmoment	&	\si{\kilogram\square\meter} \\
+$L_\mathrm{e}$	& 	Erregerinduktivität & \si{\volt\second\per\ampere}\\
+$L_\mathrm{d}, L_\mathrm{q}$	& 	Statorinduktivität im d,q-System & \si{\volt\second\per\ampere}\\
+$M_\x{i}$			&	innere Drehmoment		&	\si{\newton\meter} \\
+$M_\x{Last}$			&	Lastmoment		&	\si{\newton\meter} \\
+$R_\mathrm{1}$		&	Statorwiderstand			&	\si{\ohm} \\
+$R_\i{e}$	&	Erregerkreisverlustwiderstand &	\si{\ohm}\\
+$T$ & Periodendauer & \si{\second} \\
+$\underline{T}'$ & nicht quadratische Transformationsmatrix & \\
+$\underline{T}$ & quadratische Transformationsmatrix & \\
+$U_\i{1}$ & Ständerspannung & \si{\volt}\\
+$U_\i{e}$ & Erregerspannung & \si{\volt}\\
+$U_\i{p}$ & Polradspannung & \si{\volt}\\
+$U_\i{h}$ & Hauptfeldspannung & \si{\volt}\\
+$V$ &	magnetisches Vektorpotenzial&	\si{\volt\second\per\meter}\\
+$V_\mathrm{\delta}$		&	magnetische Spannung		&	\si{\ampere} \\
+$X$	& 	Reaktanz & \si{\ohm}\\
+$X_\x{1}$	& 	Ständerreaktanz & \si{\ohm}\\
+$X_\x{d}$	& 	synchron Reaktanz & \si{\ohm}\\
+$X_\x{h}$	& 	Streureaktanz & \si{\ohm}\\
+
+$\underline{a}$ & Drehoperator &  \si{\radian} \\
+$b_\x{S}$	& Breite des Nutschlitzes & \si{\meter}\\
+$d_\x{i}$	& Innendurchmesser & \si{\meter}\\
+$f$ & Frequenz & \si{\per\second} \\
 $p$		&	Polpaarzahl					&	\\
-$u_\mathrm{d}, u_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{V} \\
-$i_\mathrm{d}, i_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{A} \\
-$\Psi_\mathrm{d}, \Psi_\mathrm{q}$	&	Flussverkettung im d,q-System	&	\si{A} \\
-$R_\mathrm{1}$		&	Statorwiderstand			&	\si{V/A} \\
-$L_\mathrm{d}, L_\mathrm{q}$	& 	Statorinduktivität im d,q-System & \si{Vs/A}\\
-$b_\x{S}$	& Breite des Nutschlitzes & \si{m}\\
+$u$ & zeitlich veränderliche Spannung & \si{\volt} \\
+$\hat{u}$ & Amplitude der Spannung & \si{\volt} \\ 
+$u_\mathrm{d}, u_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{\volt} \\
+$u_\mathrm{ind}$	&	induzierte Spannung &	\si{\volt} \\
+$i_\mathrm{d}, i_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{\ampere} \\
+$i_\mathrm{s}$	&	Ständerstrom	&	\si{\ampere} \\
+$\hat{i}_\mathrm{s}$	&	Amplitude des Ständerstromes	&	\si{\ampere} \\
+
+$\Theta$	&	magnetische Durchflutung 	&	\si{\ampere}	\\
+$\Theta_\x{Nut}$	&	magnetische Durchflutung in der Nut 	&	\si{\ampere}	\\
+$\Phi$		&	magnetischer Fluss			&	\si{\volt\second} \\
+$\Psi$		&	verketteter Fluss			&	\si{\volt\second} \\
+$\Psi_\mathrm{d}, \Psi_\mathrm{q}$	&	Flussverkettung im d,q-System	&	\si{\ampere} \\
+$\Psi_\mathrm{pm}$		&	verketteter Fluss des Permanentmagneten			&	\si{\volt\second} \\
+$x_\x{d}$	& 	realative synchron Reaktanz & \si{\ohm}\\
+
+$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	\si{\volt\second\per\ampere\per\meter}\\
+$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
+$\epsilon_\x{RS}$ & realative Lage zwischen Ständer- und Rotorkoordinatensystem & \si{\radian} \\
+$\epsilon_\x{0}$ & elektrische Feldkonstante & \si{\ampere\second\per\volt\per\meter} \\
+$\epsilon_\x{1}$ & relative Permitivität & \si{\ampere\second\per\volt\meter} \\
+
+$\rho$ & Raumladungsdichte & \si{\ampere\second\per\square\meter} \\
+$\kappa$ & Leitfähigkeit & \si{\per\ohm\per\meter} \\
+$\varphi$ & Phasenwinkel & \si{\radian} \\
+$\tau_\i{p}$ & Polteilung & \si{\meter} \\
+$\omega$ & Kreisfrequenz & \si{\per\second} \\
+$\omega_\mathrm{el}$	&	elektr.\ Winkelgeschwindigkeit des Rotors & \si{\per\second} \\
+$\omega_\mathrm{mech}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{\per\second} \\
+$\omega_\x{s}$ & Ständerkreisfrequenz & \si{\per\second} \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{flushleft}
 % ----------------------------------------------------------------------------------------------------------
 % Einleitung

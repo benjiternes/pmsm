@@ -23,10 +23,10 @@ und die dazu gehörigen Materialgesetze lauten
 \begin{align*}
 \vec{B} &= \mu\vec{H}\\
 \vec{D}	&= \epsilon\vec{E}\\
-\vec{J} &= \gamma\vec{E}
+\vec{J} &= \kappa\vec{E}
 \end{align*}
 
-Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \epsilon$ und $\gamma$ zu ortsunabhängigen Materialkonstanten.
+Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \epsilon$ und $\kappa$ zu ortsunabhängigen Materialkonstanten.
 
 \subsubsection{Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralfrom)}
 
@@ -241,7 +241,7 @@ Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
 Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
 
 \begin{align}
-A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot Z\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
+A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot p\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
 \end{align}
 
 betrachtet man jetzt die Polteilung $\tau_\i{p}$
@@ -251,9 +251,10 @@ betrachtet man jetzt die Polteilung $\tau_\i{p}$
 \end{align}
 
 so wird aus Gleichung~\ref{eqn:strombelag2} und Gleichung~\ref{eqn:polteilung} bei voller Bewicklung über eine Polteilung
+\longpage
 
 \begin{align}
-A = \frac{m w I}{p \tau_\i{p}}
+A = \frac{m w I}{p \cdot \tau_\i{p}}
 \end{align}
 
 \begin{quote}
@@ -484,7 +485,7 @@ Bei der Synchronmaschine entsteht die Magnetisierungsstrombelagswelle aus der St
 Der Magnetisierungsstrom setzt sich entsprechend zusammen
 
 \begin{align}
-\underline{I}_\mu = \underline{I}_\i{1} + I'_\i{e}
+\underline{I}_\mu = \underline{I}_\i{1} + \underline{I}'_\i{e}
 \end{align}
 
 Damit ergibt sich für die Ständerspannung $U_\i{1}$
@@ -573,7 +574,7 @@ Aufgrund der besonderen konstruktiven Situation wird für den Rotor das mit dem 
 Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems $el(d, q)$ auf die mit der Polpaarzahl $p$ umgerechnete mechanische Winkelgeschwindigkeit $\omega_\i{m}$ des Rotors festgelegt ist.
 
 \begin{align}
-\omega_\i{el} = p\i{p}\cdot\omega_\i{m}
+\omega_\i{el} = p \cdot\omega_\i{mech}
 \end{align}
 
 Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:synchron-grundlage} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
@@ -590,7 +591,7 @@ v, w)$, ständerfest $(\alpha, \beta)$ und rotorfest $(d, q)$.}
 Das Induktionsgesetz besagt, dass die in einer Spule induzierte Spannung gleich der entgegengesetzten Änderung der durch die Wicklung der Spule fließenden Flussverkettung ist \autocite{kellner2012}.
 
 \begin{align}
-u_\i{q} = - \frac{\i{d}}{\i{d}t}\Psi
+u_\i{ind} = - \frac{\i{d}}{\i{d}t}\Psi
 \end{align}
 
 \begin{figure}[h!]
@@ -719,10 +720,10 @@ M_\x{i} = \frac{3p}{2} ( \Psi_\x{d}i_\x{q} - \Psi_\x{q}i_\x{d} ) \label{eqn:mi-g
 Um das System vollständig zu beschreiben, fehlt noch die mechanische Bestimmungsgleichung
 
 \begin{align}
-	M_\x{i} - M_\x{Last} = J \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J}{p\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
+	M_\x{i} - M_\x{Last} = J_\x{m} \frac{\x{d}}{\x{d}t}\omega_\x{mech} = \frac{J_\x{m}}{p\x{p}} \frac{\x{d}}{\x{d}t}\omega_\x{el} \label{eqn:mechanische-gleichung}
 \end{align}
 
-Hierbei steht $M_\x{Last}$ für das Lastmoment, $J$ für die Trägheit des Systems und $p\x{p}$ für die Polpaarzahl der elektrischen Maschine.
+Hierbei steht $M_\x{Last}$ für das Lastmoment, $J_\x{m}$ für die Trägheit des Systems und $p$ für die Polpaarzahl der elektrischen Maschine.
 Alle hergeleiteten Gleichungen beziehen sich auf die Annahme des Grundwellenmodells.
 Im nächsten Schritt ist es wichtig, die Flüsse durch Induktivitäten zu ersetzen.
 Dafür werden oft linearisierte Gleichungen verwendet \autocite{schroder2001}, bei dem Modell sind alle Parameter konstant.
@@ -759,7 +760,7 @@ Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechan
 \begin{align}
 \frac{\x{d}i_\x{d}}{\x{d}t} &= -\frac{R_\x{1}}{L_\x{d}}i_\x{d}+\omega_\x{el}\frac{L_\x{q}}{L_\x{d}}i_\x{q}+\frac{1}{L_\x{d}}u_\x{d} \label{eqn:id_dt} \\
 \frac{\x{d}i_\x{q}}{\x{d}t} &= -\omega_\x{el}\frac{L_\x{d}}{L_\x{q}}i_\x{d} - \frac{R_\x{1}}{L_\x{q}}i_\x{q} + \frac{1}{L_\x{q}}u_\x{q} - \frac{\omega_\x{el}}{L_\x{q}}\Psi_\x{pm} \label{eqn:iq_dt} \\
-\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J} \Psi_\x{pm} i_\x{q} - \frac{p}{J} M_\x{Last} \label{eqn:dw_dt}
+\frac{\x{d}\omega_\x{el}}{\x{d}t} &= \frac{3p^2}{2J_\x{m}}(L_\x{d} - L_\x{q})i_\x{q} i_\x{d} + \frac{3p^2}{2J_\x{m}} \Psi_\x{pm} i_\x{q} - \frac{p}{J_\x{m}} M_\x{Last} \label{eqn:dw_dt}
 \end{align}
 
 \section{Feldorientierte Regelung}\label{sec:foc}
