@@ -9,9 +9,8 @@
 \renewcommand{\i}[1]{\mathrm{#1}}
 \newcommand{\x}[1]{\mathrm{#1}}
 
-\newcommand{\unit}[1]{$\mathrm{#1}$}
 \newcommand{\sh}{s.~h.~}
-\newcommand{\productname}[1]{\textsc{#1}}
+\newcommand{\product}[1]{\textsc{#1}}
 
 \newcommand{\longpage}{\enlargethispage{\baselineskip}}
 \newcommand{\verylongpage}{\enlargethispage{2\baselineskip}}
@@ -84,9 +83,9 @@
 % ----------------------------------------------------------------------------------------------------------
 %\section*{Allgemeine Symbole}\label{s.sym.alg}
 \begin{flushleft}
-\begin{tabular}{lll}
+\begin{tabularx}{\textwidth}{lll}
 \toprule
-Symbol & Bedeutung	& Einheit\\
+Symbol & Beschreibung	& SI-Einheit\\
 \midrule
 $A$			&	elektrische Strombelag  	&  	\si{\ampere\per\meter} \\
 $\hat{A}_\x{1}$			&	Amplitude des Strombelages  	&  	\si{\ampere\per\meter} \\ 
@@ -121,19 +120,28 @@ $X$	& 	Reaktanz & \si{\ohm}\\
 $X_\x{1}$	& 	Ständerreaktanz & \si{\ohm}\\
 $X_\x{d}$	& 	synchron Reaktanz & \si{\ohm}\\
 $X_\x{h}$	& 	Streureaktanz & \si{\ohm}\\
+\bottomrule
+\end{tabularx}
+\end{flushleft}
 
+\begin{flushleft}
+	\begin{tabularx}{\textwidth}{lll}
+		\toprule
+		Symbol & Beschreibung	& SI-Einheit\\
+		\midrule
 $\underline{a}$ & Drehoperator &  \si{\radian} \\
 $b_\x{S}$	& Breite des Nutschlitzes & \si{\meter}\\
 $d_\x{i}$	& Innendurchmesser & \si{\meter}\\
 $f$ & Frequenz & \si{\per\second} \\
+$i_\mathrm{d}, i_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{\ampere} \\
+$i_\mathrm{s}$	&	Ständerstrom	&	\si{\ampere} \\
+$\hat{i}_\mathrm{s}$	&	Amplitude des Ständerstromes	&	\si{\ampere} \\
 $p$		&	Polpaarzahl					&	\\
 $u$ & zeitlich veränderliche Spannung & \si{\volt} \\
 $\hat{u}$ & Amplitude der Spannung & \si{\volt} \\ 
 $u_\mathrm{d}, u_\mathrm{q}$	&	Statorspannungs-Komponenten im d,q-System &	\si{\volt} \\
 $u_\mathrm{ind}$	&	induzierte Spannung &	\si{\volt} \\
-$i_\mathrm{d}, i_\mathrm{q}$	&	Statorstrom-Kompenenten im d,q-System	&	\si{\ampere} \\
-$i_\mathrm{s}$	&	Ständerstrom	&	\si{\ampere} \\
-$\hat{i}_\mathrm{s}$	&	Amplitude des Ständerstromes	&	\si{\ampere} \\
+$x_\x{d}$	& 	realative synchron Reaktanz & \si{\ohm}\\
 
 $\Theta$	&	magnetische Durchflutung 	&	\si{\ampere}	\\
 $\Theta_\x{Nut}$	&	magnetische Durchflutung in der Nut 	&	\si{\ampere}	\\
@@ -141,24 +149,22 @@ $\Phi$		&	magnetischer Fluss			&	\si{\volt\second} \\
 $\Psi$		&	verketteter Fluss			&	\si{\volt\second} \\
 $\Psi_\mathrm{d}, \Psi_\mathrm{q}$	&	Flussverkettung im d,q-System	&	\si{\ampere} \\
 $\Psi_\mathrm{pm}$		&	verketteter Fluss des Permanentmagneten			&	\si{\volt\second} \\
-$x_\x{d}$	& 	realative synchron Reaktanz & \si{\ohm}\\
 
-$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	\si{\volt\second\per\ampere\per\meter}\\
-$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
 $\epsilon_\x{RS}$ & realative Lage zwischen Ständer- und Rotorkoordinatensystem & \si{\radian} \\
 $\epsilon_\x{0}$ & elektrische Feldkonstante & \si{\ampere\second\per\volt\per\meter} \\
 $\epsilon_\x{1}$ & relative Permitivität & \si{\ampere\second\per\volt\meter} \\
-
-$\rho$ & Raumladungsdichte & \si{\ampere\second\per\square\meter} \\
 $\kappa$ & Leitfähigkeit & \si{\per\ohm\per\meter} \\
-$\varphi$ & Phasenwinkel & \si{\radian} \\
+$\mu_\mathrm{0}$		&	magnetische Feldkonstante	&	\si{\volt\second\per\ampere\per\meter}\\
+$\mu_\mathrm{r}$		&	relative Permeabilität		&	\\
 $\tau_\i{p}$ & Polteilung & \si{\meter} \\
+$\rho$ & Raumladungsdichte & \si{\ampere\second\per\square\meter} \\
+$\varphi$ & Phasenwinkel & \si{\radian} \\
 $\omega$ & Kreisfrequenz & \si{\per\second} \\
 $\omega_\mathrm{el}$	&	elektr.\ Winkelgeschwindigkeit des Rotors & \si{\per\second} \\
 $\omega_\mathrm{mech}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{\per\second} \\
 $\omega_\x{s}$ & Ständerkreisfrequenz & \si{\per\second} \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{flushleft}
 % ----------------------------------------------------------------------------------------------------------
 % Einleitung
@@ -172,6 +178,7 @@ $\omega_\x{s}$ & Ständerkreisfrequenz & \si{\per\second} \\
 \input{grundlagen}
 \input{vektor}
 \input{regelung}
+\input{ergebnisse}
 \input{zusammenfassung}
 \listoffigures
 % ----------------------------------------------------------------------------------------------------------

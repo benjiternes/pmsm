@@ -5,11 +5,11 @@
 \chapter{Modellbasierte Implementierung der Vektorregelung}
 \label{cha:regelungpmsm}
 
-Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Simulationstechniken und dem Anwenderprogramm Simulink dar.
-Simulink ist ein Programm, welches mit Matlab gekoppelt ist, in Simulink kann der Anwender Simulationen durchführen.
-Aufgrund der Komplexität von Simulink soll an dieser Stelle nicht weiter auf die \enquote{Toolboxen} eingeganen werden.
+Die Einführung in das Kapitel stellt dem Leser zunächst eine grundlegende Einführung in die Simulationstechniken und dem Anwenderprogramm \product{Simulink} dar.
+\product{Simulink} ist ein Programm, welches mit \product{Matlab} gekoppelt ist, in \product{Simulink} kann der Anwender Simulationen durchführen.
+Aufgrund der Komplexität von \product{Simulink} soll an dieser Stelle nicht weiter auf die \enquote{Toolboxen} eingeganen werden.
 Somit erhalten auch Leser ohne Erfahrungen mit dem Softwarepaket, die zum weiteren Verständnis der Arbeit benötigten Grundkenntnisse.
-Der Vorteil bei der Nutzung von Matlab basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist und zum anderen auf der Benutzerfreundlichkeit bei der Durchführung von Projektarbeiten \autocite{scherf2010}.
+Der Vorteil bei der Nutzung von \product{Matlab} basiert zum einen darauf, dass die Software etablierter Quasistandard in der Industrie und an Hochschulen ist und zum anderen auf der Benutzerfreundlichkeit bei der Durchführung von Projektarbeiten \autocite{scherf2010}.
 
 \section{Simulation von Systemen}\label{sec:simulation}
 
@@ -24,7 +24,7 @@ Dabei können die eingesetzten Simulationsmittel unterschiedlich ausfallen.
 	\item Das System wird durch ein mathematisches Modell beschrieben.
 \end{enumerate}
 
-Bei umfangreichen Simulationen bietet es sich an, das System in \enquote{Subsysteme} zu unterteilen (s.~h.~Abbildung~\ref{fig:subsysteme}), so dass die Modellierung mit Simulink übersichtlicher wird.
+Bei umfangreichen Simulationen bietet es sich an, das System in \enquote{Subsysteme} zu unterteilen (s.~h.~Abbildung~\ref{fig:subsysteme}), so dass die Modellierung mit \product{Simulink} übersichtlicher wird.
 Der Vorteil gegenüber der konventionellen Modellierung von umfangreichen System, ist es, dass Fehler früher erkannt und einzelne Systeme auf physikalische Richtigkeit geprüft werden können.
 
 \begin{figure}[h!]
@@ -47,13 +47,13 @@ Auch Subsysteme lassen sich in weitere Subsysteme zerlegen (s.~h.~Abbildung~\ref
 
 Bei der Modellierung sollte auf die Übersichtlichkeit der Systeme geachtet werden.
 
-\section{Einführung in Simulink}\label{sec:simulink}
+\section{Einführung in \product{Simulink}}\label{sec:simulink}
 
-Simulink ist ein grafikorientiertes Softwaretool zur Simulation und Analyse von linearen und nichtlinearen mathematischen Modellen.
-Simulink ist als Unterprogramm von Matlab implementiert und greift auf dessen numerischen Lösungsalgorithmen zu.
-Bei dem Simulationswerkzeug Simulink handelt es sich um eine \emph{Toolbox} der Programmierumgebung Matlab.
+\product{Simulink} ist ein grafikorientiertes Softwaretool zur Simulation und Analyse von linearen und nichtlinearen mathematischen Modellen.
+\product{Simulink} ist als Unterprogramm von \product{Matlab} implementiert und greift auf dessen numerischen Lösungsalgorithmen zu.
+Bei dem Simulationswerkzeug \product{Simulink} handelt es sich um eine \emph{Toolbox} der Programmierumgebung \product{Matlab}.
 Sie dient mit ihrer speziell konzipierten Grafikoberfläche der Simulation dynamischer Systeme.
-Im Gegensatz zur zeilenorientierten Programmierung mit alphanumerischen Zeichen wird in Simulink das Systemmodell mittels des \emph{Simulink Library Browsers} einer nach Funktionen unterteilten Bibliothek entnommen und in das Eingabeoberfläche \enquote{gezogen}.
+Im Gegensatz zur zeilenorientierten Programmierung mit alphanumerischen Zeichen wird in \product{Simulink} das Systemmodell mittels des \emph{\product{Simulink} Library Browsers} einer nach Funktionen unterteilten Bibliothek entnommen und in das Eingabeoberfläche \enquote{gezogen}.
 Dort werden sie per Mausklick sinnvoll miteinander verbunden.
 In den meisten Simulationen handelt es sich bei dynamischen Systemen um zeitabhängige, lineare (oder nichtlineare) Vorgänge, die sich auf Basis von Differentialgleichungen beschreiben lassen.
 Die Modelle entstehen meistens auf Basis idealisierter Gleichungen.
@@ -61,21 +61,21 @@ Die Modelle entstehen meistens auf Basis idealisierter Gleichungen.
 In der Systemtechnik wird zur Beschreibung häufig eine andere Form bevorzugt (Blockschaltbildern).
 Dabei wird versucht, das Verhalten des Systems durch eine grafische Darstellung zu erfassen.
 Einzelne Blöcke werden durch gezielte Verbindungen, den Signalflüssen, miteinander verbunden.
-Da Simulink auf dieser Art der Darstellung basiert, ist es offensichtlich, dass sich viele in Form vn Blockschaltbildern vorliegende Systeme unmittelbar in Simulink programmieren und simulieren lassen.
+Da \product{Simulink} auf dieser Art der Darstellung basiert, ist es offensichtlich, dass sich viele in Form vn Blockschaltbildern vorliegende Systeme unmittelbar in Simulink programmieren und simulieren lassen.
 Nach dem Aufbau des Systems im Eingabefenster, müssen die Blöcke parametriert werden.
 Anschließend kann die Simulation gestartet werden und das Ergebnis grafisch dargestellt werden.
-Die Simulation von Simulinkmodellen basiert auf iterativen Näherungsverfahren (Runge-Kutta, Adams, usw.).
+Die Simulation von \product{Simulink}-Modellen basiert auf iterativen Näherungsverfahren (Runge-Kutta, Adams, usw.).
 Das zeitliche Verhalten der simulierten Systeme wird daher in den wenigsten Fällen völlig identisch mit dem Differentialgleichungen erreicht.
 Bei korrekter Programmierung und guter Parameterwahl wird es diesem sehr Nahe kommen.
 
-Eine umfassende Hilfe über Simulink findet man nach Öffnen der Matlab-Entwicklungsumgebung im \emph{Popup-Menü} \emph{Help}.
-Dieses Menü stellt eine Windows-typische Hilfe für die gesamte Matlab-Produktfamilie zur Verfügung.
-Ist Simulink bereits geöffnet, so führt die Auswahl der Hilfe im \emph{Library Browser} oder im Eingabefenster direkt zur Simulink-Hilfe.
-Darüber hinaus werden in der Simulink-Hilfe viele Beispiele als lauffähige Programme zur Verfügung gestellt.
+Eine umfassende Hilfe über \product{Simulink} findet man nach Öffnen der \product{Matlab}-Entwicklungsumgebung im \emph{Popup-Menü} \emph{Help}.
+Dieses Menü stellt eine Windows-typische Hilfe für die gesamte \product{Matlab}-Produktfamilie zur Verfügung.
+Ist \product{Simulink} bereits geöffnet, so führt die Auswahl der Hilfe im \emph{Library Browser} oder im Eingabefenster direkt zur \product{Simulink}-Hilfe.
+Darüber hinaus werden in der \product{Simulink}-Hilfe viele Beispiele als lauffähige Programme zur Verfügung gestellt.
 Diese findet man in der Hilfe unter \emph{Demos}.
 
-Um mit Simulink arbeiten zu können, muss zunächst die Matlab-Entwicklungsumgebung in den Arbeitspeicher geladen werden.
-Der Start von Simulink kann über die Kommandozeile mit \enquote{simulink} erfolgen.
+Um mit \product{Simulink} arbeiten zu können, muss zunächst die \product{Matlab}-Entwicklungsumgebung in den Arbeitspeicher geladen werden.
+Der Start von \product{Simulink} kann über die Kommandozeile mit \enquote{simulink} erfolgen.
 
 Wie bereits erwähnt, werden (zeitkontinuierliche) dynamische Systeme durch Differentialgleichungen beschrieben, wie z.\ B.\ die normierte Bewegungsgleichung eines gedämpften Schwingers.
 
@@ -84,7 +84,7 @@ Wie bereits erwähnt, werden (zeitkontinuierliche) dynamische Systeme durch Diff
 \end{align*}
 
 Wenn das System durch ein Blockschaltbild beschrieben wird, so betrachtet man nichts anderes, als die Lösung der Differentialgleichung.
-In diesem Fall ist Simulink ein numerischer Differentialgleichungslöser für dieses Projekt.
+In diesem Fall ist \product{Simulink} ein numerischer Differentialgleichungslöser für dieses Projekt.
 
 \subsection{Simulationsbeispiel: Das mathematische Pendel}
 
@@ -151,23 +151,23 @@ Wird nun die Differentialgleichung \ref{momentengleichgewichtgesamt2} nach der h
 %	\centering
 %	\includegraphics[width=\textwidth]{/regelung/matlab1.jpg}
 %	\label{fig:matlab1}
-%	\caption{Variablen in Matlab-Umgebung}
+%	\caption{Variablen in \product{Matlab}-Umgebung}
 %\end{figure}
 
-Anschließend kann in der Simulink-Umgebung das Modell entsprechend \ref{momentengleichgewichtgesamt2} aufgebaut werden.
+Anschließend kann in der \product{Simulink}-Umgebung das Modell entsprechend \ref{momentengleichgewichtgesamt2} aufgebaut werden.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{/regelung/matlab2.jpg}
 	\label{fig:matlab2}
-	\caption{Modell des mathematischen Pendels in Matlab Simulink.}
+	\caption{Modell des mathematischen Pendels in \product{Matlab} \product{Simulink}.}
 \end{figure}
 \pagebreak
 Mit Hilfe dieser Blöcke lassen sich  $\dot{\varphi}$ und $\varphi$ erzeugen.
-Die Simulink Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
+Die \product{Simulink} Bibliothek bietet eine Vielzahl von mathematischen Operatoren in Form von Blockbildern.
 Mit Hilfe dieser Blöcke und der Signalflusspfeile lässt sich die Gleichung in das Simulationsmodell übertragen.
 Ist das Modell aufgebaut, werden die Simulationsparameter ausgewählt. 
-Simulink arbeitet numerisch, daher muss ein Integrationsverfahren zur Lösung der DGLs ausgewählt werden. Voreingestellt ist das Dormand-Prince-Verfahren mit variabler Schrittweite.
+\product{Simulink} arbeitet numerisch, daher muss ein Integrationsverfahren zur Lösung der DGLs ausgewählt werden. Voreingestellt ist das Dormand-Prince-Verfahren mit variabler Schrittweite.
 
 Diese Methode liefert in den meisten Anwendungen gute Ergebnisse \autocite{scherf2010}.
 Zur Verifizierung der Simulationsergebnisse ist es für den Anwender unumgänglich, sich im Vorfeld Gedanken zum erwartenden Ergebnis zu machen.
@@ -186,13 +186,13 @@ Das Ergebnis der Simulation erhält der Anwender beim Anwählen des Blockbildes 
 
 \section{Simulationsblöcke}\label{sec:math-model-pmsm}
 
-Dieser Abschnitt zeigt alle Elemente der implementierten Vektorregelung in Matlab Simulink.
+Dieser Abschnitt zeigt alle Elemente der implementierten Vektorregelung in \product{Matlab} \product{Simulink}.
 In Abbildung~\ref{fig:foc-pmsm} ist die gesamte Vektorregelung dargestellt.
 
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{/simulink/foc-pmsm.pdf}
 	\label{fig:foc-pmsm}
-	\caption{Darstellung der Simulationsblöcke in Simulink.}
+	\caption{Darstellung der Simulationsblöcke in \product{Simulink}.}
 \end{figure}
 
 Farbig gekennzeichnet sind reglungstechnische Elemente (rot), Transformationen (grün) und das mathematische Maschinenmodell einer anisotropen Synchronmaschine (cyan).
@@ -203,7 +203,7 @@ Im Folgenden sollen alle Subsysteme entsprechend der Funktionsweise erörtert we
 
 Der Aufbau der Koordinatentransformationen leitet aus Abschnitt \ref{sec:clark} ab. 
 Hierbei basiert der Block der $\alpha$-$\beta$-Transformation aus den Zusammenhängen von (\ref{clarkevektor}) und (\ref{clarkematrix}), während die Rücktransformation, die inverse $\alpha$-$\beta$-Transformation mit Hilfe von (\ref{inverseclarkevektornulleinfach}) und (\ref{inverseclarkematrixnulleinfach}) erstellt ist.
-Weiterhin orientieren sich die Umsetzungen in Simulink an den Blockschaltbildern aus \ref{fig:blockbildclarkeparkkomplett} und \ref{fig:blockbildinverseclarkeparkkomplett}.
+Weiterhin orientieren sich die Umsetzungen in \product{Simulink} an den Blockschaltbildern aus \ref{fig:blockbildclarkeparkkomplett} und \ref{fig:blockbildinverseclarkeparkkomplett}.
 Um die Koordinatentransformation zu vervollständigen ist die d-q-, oder Park Transformation, von entscheidender Bedeutung.
 Der Block für die d-q-Transformation setzt wird mit dem Zusammenhang \ref{parkvektor} und der Matrix \ref{parkmatrix} erstellt. 
 
@@ -235,7 +235,7 @@ Es ergeben sich drei Ausgänge für das rückgeführte Dreiphasensystem.
 
 Als Grundlage für die Betrachtung der PMSM gilt der Abschnitt \ref{sec:synchron-dq}.
 Die grundlegenden Gleichung dazu sind (\ref{eqn:ud-lin-gleichung}), (\ref{eqn:uq-lin-gleichung}) und (\ref{eqn:mi-lin-gleichung}).
-Aus den Gleichungen ergibt sich im Simulink das Modell.
+Aus den Gleichungen ergibt sich im \product{Simulink} das Modell.
 Das Modell wird in zwei Systeme unterteilt:
 
 \begin{itemize}
@@ -281,7 +281,7 @@ Komplexere Regler werden für die feldorientierte Regelung nicht benötigt \auto
 	\caption{Aufbau der Stromregelung.}
 \end{figure}
 
-Der PI-Block aus der \enquote{Simulink $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous} Bibliothek ist standardmäßig als \enquote{Continuos-time} Block konfiguriert.
+Der PI-Block aus der \enquote{\product{Simulink} $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous} Bibliothek ist standardmäßig als \enquote{Continuos-time} Block konfiguriert.
 Hinter dem Block stecken ähnlich wie in Abbildung \ref{fig:foc-dc-ac} veranschaulicht eine einfache mathematische Gleichung.
 Zudem sei gesagt, dass eine Parallele Regelstruktur angenommen wird:
 
@@ -292,7 +292,7 @@ Zudem sei gesagt, dass eine Parallele Regelstruktur angenommen wird:
 Dabei steht $P$ für die Verstärkung des Reglers und $I$ für die Verstärkung des Integralen Anteils.
 
 \begin{quote}
-	\enquote{[\ldots] Specify the proportional gain P. [\ldots] Specify the integral gain I. [\ldots] (Mathworks Help -- PID Controller, Discrete PID Controller. In: Simulink $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous)}
+	\enquote{[\ldots] Specify the proportional gain P. [\ldots] Specify the integral gain I. [\ldots] (Mathworks Help -- PID Controller, Discrete PID Controller. In: \product{Simulink} $\rightarrow$ Modeling $\rightarrow$ Block Libraries $\rightarrow$ Continous)}
 \end{quote}
 
 %%% Local Variables: 
