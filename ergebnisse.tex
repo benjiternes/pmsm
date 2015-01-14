@@ -36,7 +36,6 @@ Die Koeffizienten $b_j$ definieren das jeweilige Verfahren und können als Quadr
 
 interpretiert werden.
 Die Größen $k_j$ bezeichnet man als Zwischenschritt, sie entsprechen Auswertungen der rechten Seite von $f$ an bestimmten Stellen.
-
 Die Steuerung der Schrittweite $h$ ist von besonderem Interesse.
 Man kann sich leicht vorstellen, dass die Funktion in Bereichen, in denen nur geringe Änderungen zwischen $y_{n+1}$ und $y_n$ vorliegen, mit weniger Rechenschritten auskommt, als in solchen, in den schnelle Änderungen vorliegen.\footnote{Vgl.~W.\ Kutta: \enquote{Beitrag zur näherungsweisen Integration totaler Differenzialgleichungen}, Z. Math. Phys., Bd. 46, 1901, S.~425--453}\footnote{Vgl.~C.\ Runge: \enquote{Über die numerische Auflösung von Differenzialgleichungen}, Math. Annalen, Bd. 46, 1895, S.~167--178, Online \url{http://gdz.sub.uni-goettingen.de/dms/load/img/?PPN=PPN235181684_0046&DMDID=DMDLOG_0022}}
 
@@ -50,7 +49,7 @@ Man kann sich leicht vorstellen, dass die Funktion in Bereichen, in denen nur ge
 		Beschreibung: & Eingestellter Wert: \\
 		\midrule
 		Solver options	& Fixed Step\\
-		Fixed-step size (fundamental sample time)	& 5e-6 \\
+		Fixed-step size (fundamental sample time)	& 1e-6 \\
 		Solver	& ode4 (Runge-Kutta) \\
 		Start time & 0.0 \\
 		Stop time & 10.0\\
@@ -59,9 +58,6 @@ Man kann sich leicht vorstellen, dass die Funktion in Bereichen, in denen nur ge
 		\bottomrule
 	\end{tabularx}
 \end{table}
-
-Des Weiteren wurden für die PMSM aus der \product{Matlab}-Bibliothek Parameter entnommen:
-
 \begin{table}[h!]
 	\centering
 	\caption{PMSM model configuration parameter.}
@@ -81,11 +77,28 @@ Des Weiteren wurden für die PMSM aus der \product{Matlab}-Bibliothek Parameter 
 		\bottomrule
 	\end{tabularx}
 \end{table}
-
+\verylongpage
+\newpage
 \section{Simulationsergebnisse ohne Netz}\label{sec:sim-ohne-netz}
 
-Die Simulation ohne Netz liefert gute Ergebnisse, im Folgenden sollen die Ergebnisse dargestellt werden.
+In diesem Abschnitte werden die Ergebnisse der Simulation ohne Netz dargestellt.
 
+\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{erg/drehzahl-einschwingvorgang.pdf}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{erg/drehzahl-einschwingvorgang-2.pdf}
+\end{minipage}
+
+Wie erwartet schwingt sich die Maschine bei einer Solldrehzahl von \SI{500}{\per\minute} ein.
+Nach \SI{3}{\sec} wird ein Lastsprung auf das System draufgegeben, um zu überprüfen, ob die Regelung funktioniert.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width=\textwidth]{erg/drehzahl-lastsprung-1.pdf}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width=\textwidth]{erg/drehzahl-lastsprung-2.pdf}
+\end{minipage}
 
 \section{Simulationsergebnisse am starren Netz}\label{sec:sim-starr-netz}
 
