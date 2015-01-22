@@ -4,13 +4,13 @@ DIV=classic,%
 %BCOR=10mm,%
 twoside=true,%
 headings=openany,%
-parskip=half+,%
+parskip=half-,%
 pagesize=auto,%
 numbers=noenddot,%
 headsepline=true,%
 toc=listof,%
 toc=bibliography%
-]{scrreprt}
+]{scrbook}
 
 % PDF-Kompression
 \pdfminorversion=5
@@ -52,7 +52,7 @@ toc=bibliography%
 \usepackage[ngerman,%
 pdfauthor={B. Ternes, J. Feldkamp},%
 pdftitle={Modellbasierte Implementierung einer Vektorregelung für Synchronmaschinen},%
-colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
+colorlinks=true,linkcolor=magenta,citecolor=magenta,filecolor=magenta,urlcolor=blue%
 ]{hyperref}
 
 % BibLaTeX
@@ -134,9 +134,9 @@ colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue%
 % linksbündige Fußboten
 \deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
 
-\usepackage[right=3cm,left=2cm]{geometry}
+\usepackage[right=3cm,left=2cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
 
-%\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
+\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
 % für autoref von Gleichungen in itemize-Umgebungen
 \makeatletter
 \newcommand{\saved@equation}{}
