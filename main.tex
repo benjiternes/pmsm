@@ -53,13 +53,17 @@
 	\normalsize
 	\newcolumntype{x}[1]{>{\raggedleft\arraybackslash\hspace{0pt}}p{#1}}
 	\begin{tabular}{x{6cm}p{7.5cm}}
-		\rule{0mm}{5ex}\textbf{Autoren:} & Benjamin Ternes\newline bbenji.ternes@gmail.com.de\newline Matrikelnummer: 014102076 \\
+		\rule{0mm}{5ex}\textbf{Autoren:} & Benjamin Ternes\newline benji.ternes@gmail.com\newline Matrikelnummer: 014102076 \\
 		\rule{0mm}{5ex}                & Jan Feldkamp\newline feldkamp.jan@gmx.de \newline Matrikelnummer: 012215207\\ 
 		\rule{0mm}{5ex}\textbf{Prüfer:} & Prof. Dr.-Ing. A. Bergmann \\ 
 		\rule{0mm}{5ex}\textbf{Abgabedatum:} & \today \\ 
 	\end{tabular} 
 \end{center}
-\clearpage
+\cleardoublepage
+
+\dictum{Das, wobei unsere Berechnungen versagen, nennen wir Zufall. (Albert Einstein, *14.\ März 1879~--~$\dagger$ 18.\ April 1955)}
+
+\cleardoublepage
 
 \pagestyle{scrheadings}
 \ohead[]{\pagemark}
@@ -71,20 +75,16 @@
 % ----------------------------------------------------------------------------------------------------------
 % Verzeichnisse
 % ----------------------------------------------------------------------------------------------------------
-\tableofcontents
-
+%\tableofcontents
 %\listoftables
 
-%\cleardoublepage
-
+\cleardoublepage
 \chapter*{Symbolverzeichnis}\label{s.sym}
 \addcontentsline{toc}{chapter}{Symbolverzeichnis}
 \markboth{Symbolverzeichnis}{Symbolverzeichnis}
 % ----------------------------------------------------------------------------------------------------------
 % Symbolliste
 % ----------------------------------------------------------------------------------------------------------
-%\section*{Allgemeine Symbole}\label{s.sym.alg}
-\begin{flushleft}
 \begin{tabularx}{\textwidth}{lll}
 \toprule
 Symbol & Beschreibung	& SI-Einheit\\
@@ -124,11 +124,9 @@ $X_\x{d}$	& 	synchron Reaktanz & \si{\ohm}\\
 $X_\x{h}$	& 	Streureaktanz & \si{\ohm}\\
 \bottomrule
 \end{tabularx}
-\end{flushleft}
 
-\begin{flushleft}
-	\begin{tabularx}{\textwidth}{lll}
-		\toprule
+\begin{tabularx}{\textwidth}{lll}
+\toprule
 		Symbol & Beschreibung	& SI-Einheit\\
 		\midrule
 $\underline{a}$ & Drehoperator &  \si{\radian} \\
@@ -167,7 +165,9 @@ $\omega_\mathrm{mech}$	&	mech.\ Winkelgeschwindigkeit des Rotors & \si{\per\seco
 $\omega_\x{s}$ & Ständerkreisfrequenz & \si{\per\second} \\
 \bottomrule
 \end{tabularx}
-\end{flushleft}
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
 % ----------------------------------------------------------------------------------------------------------
 % Einleitung
 % ----------------------------------------------------------------------------------------------------------

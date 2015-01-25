@@ -66,9 +66,9 @@ Nach dem Aufbau des Systems im Eingabefenster, müssen die Blöcke parametriert 
 Anschließend kann die Simulation gestartet werden und das Ergebnis grafisch dargestellt werden.
 Die Simulation von \product{Simulink}-Modellen basiert auf iterativen Näherungsverfahren (Runge-Kutta, Adams, usw.).
 Das zeitliche Verhalten der simulierten Systeme wird daher in den wenigsten Fällen völlig identisch mit den Differentialgleichungen erreicht.
-Bei korrekter Programmierung und guter Parameterwahl wird es diesem aber sehr nahekommen.
+Bei korrekter Programmierung und guter Parameterwahl wird es diesem sehr nahekommen.
 
-Eine umfassende Hilfe über \product{Simulink} findet man nach Öffnen der \product{Matlab}-Entwicklungsumgebung im \emph{Popup-Menü} \emph{Help}.
+Eine umfassende Hilfe über \product{Simulink} findet man nach Öffnen der \product{Matlab} Entwicklungsumgebung im \emph{Popup-Menü} \emph{Help}.
 Dieses Menü stellt eine Windows-typische Hilfe für die gesamte \product{Matlab}-Produktfamilie zur Verfügung.
 Ist \product{Simulink} bereits geöffnet, so führt die Auswahl der Hilfe im \emph{Library Browser} oder im Eingabefenster direkt zur \product{Simulink}-Hilfe.
 Darüber hinaus werden in der \product{Simulink}-Hilfe viele Beispiele als lauffähige Programme zur Verfügung gestellt.
@@ -101,7 +101,9 @@ Zur Modellbildung und Simulation eines dynamischen Pendels sei zunächst die fol
 
 Er gelten folgende Momente:
 
-\begin{center}
+	\begin{table}[h!]
+	\centering
+	\caption{Momentengleichungen des mathematischen Pendels.}
 	\begin{tabular}{ll}
 		\toprule
 		Bezeichnung:				&	Mathematisches Modell: \\
@@ -112,23 +114,25 @@ Er gelten folgende Momente:
 		Summe aller Kräfte			&	$\sum F = 0 \label{momentengleichgewicht} $ \\
 		\bottomrule 
 	\end{tabular}
-\end{center}
-		
+\end{table}
+
 Die Bewegung des Pendels wird mit folgenden Werten simuliert:
 
-\begin{center}
+\begin{table}[h!]
+	\centering
+	\caption{Parameter des mathematischen Pendels.}
 	\begin{tabular}{ll}
 		\toprule
 		Physikalische Bezeichnung:	& Wert: \\
 		\midrule
-		m		& \SI{2,3}{kg} \\
-		d		& \SI{0,2}{Nms} \\
-		l		& \SI{1,1}{m} \\
-		g		& \SI{9,81}{m/s^2}\\
+		m		& \SI{2,3}{\kilogram} \\
+		d		& \SI{0,2}{\newton\meter\second} \\
+		l		& \SI{1,1}{\meter} \\
+		g		& \SI{9,81}{\meter\per\square\second}\\
 		$\varphi$ & \SI{40}{^\circ}\\
 		\bottomrule
 	\end{tabular}
-\end{center}
+\end{table}
 	
 Als nächster Schritt werden die physikalischen Systembeschreibungen in einer Gesamtformel zusammengefasst. 
 
