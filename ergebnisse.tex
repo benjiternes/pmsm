@@ -7,11 +7,11 @@
 
 In diesem Kapitel sollen die Ergebnisse der durchgeführten Simulation aus den Kapitel~\ref{cha:regelungpmsm} diskutiert werden.
 %Dabei werden dem Leser Simulationsergebnisse und Probleme gezeigt, diese konnten aufgrund des Zeitaufwandes nicht mehr gelöst werden.
-Zu den ausgewählten Lösungsverfahren (s.~h.~Abschnitt~\ref{sec:parameter}) wurde das Runge-Kutta Verfahren mit fester Schrittweite gewählt.
+Zu den ausgewählten Lösungsverfahren (s.~h.~Abschnitt~\ref{sec:parameter}) wurde das Runge-Kutta-Verfahren mit fester Schrittweite gewählt.
 
 \section{Model and simulation parameter}\label{sec:parameter}
 
-Wie schon in der Einleitung dargestellt, wurde das Runge-Kutta\footnote{Nach Carl Runge und Martin Wilhelm Kutta benannt.} Verfahren gewählt.
+Wie schon in der Einleitung dargestellt, wurde das Runge-Kutta\footnote{Nach Carl Runge und Martin Wilhelm Kutta benannt.}-Verfahren gewählt.
 Dieses Verfahren ist ein sog. Einzelschrittverfahren zur näherungsweisen Lösung von Anfangswertproblemen in der numerischen Mathematik.
 Gegeben sei das Anfangswertproblem
 
@@ -70,7 +70,7 @@ Man kann sich leicht vorstellen, dass die Funktion in Bereichen, in denen nur ge
 		Frequenz $f$ & \SI{50}{\hertz}\\
 		Induktivität in $d,q$-Richtung ($L_\x{d}=L_\x{q}$) & \SI{0.0085}{\ohm\second}\\
 		Polpaarzahl $p$ & 4 \\
-		FLussverkettung $\Psi_\x{pm}$ & \SI{0.0715}{\volt\second}\\
+		Flussverkettung $\Psi_\x{pm}$ & \SI{0.0715}{\volt\second}\\
 		Ständerwiderstand $R_\x{1}$ & \SI{0.18}{\ohm}\\
 		Drehzahl Sollwert $n_\x{soll}$ & \SI{500}{\per\minute}\\
 		Drehmoment Sollwert $M_\x{Last}$ & \SI{60}{\newton\meter}\\
@@ -108,8 +108,8 @@ Wie in Abbildung \ref{fig:drehzahl-einschwingvorgang} erkennbar, regelt das Syst
 \label{fig:drehzahl-lastsprung}
 \end{figure}
  
-Nach Zugabe des Lastsprunges (nach \SI{3}{\sec} mit einem Drehmomentsollwert von \SI{60}{\newton\meter}) regelt das System die Drehzahl auf \SI{498.5}{\per\minute}.
-Der Fluss verursachende Strom $(i_\x{d})$ der Maschine ändert sich durch die Drehmomentvorgabe so, dass dieser länger braucht um auf null geregelt zu werden.
+Nach Zugabe des Lastsprunges (nach \SI{3}s mit einem Drehmomentsollwert von \SI{60}Nm) regelt das System die Drehzahl auf \SI{498.5}{\per\minute}.
+Der flussverursachende Strom $(i_\x{d})$ der Maschine ändert sich durch die Drehmomentvorgabe so, dass dieser länger braucht um auf null geregelt zu werden.
  
 %In Abbildung \ref{fig:drehzahl-lastsprung} ist erkennbar, dass sich die Maschine sich nach längerer Simulationszeit erst kurz vor den \SI{500}{\per\minute} einpendelt, dies liegt zum einen an den eingestellten Regelparametern der Simulation und zum anderen weil sich der Fluss der Maschine nur sehr langsam ändern kann.
 
@@ -125,7 +125,7 @@ Der Fluss verursachende Strom $(i_\x{d})$ der Maschine ändert sich durch die Dr
 \end{figure}
 
 In kürzester Zeit schwingt sich das System ein (s.~h.~Abbildung~\ref{fig:drehmoment}).
-Den Lastsprung regelt das System in kürzester Zeit aus, so dass sich das Drehmoment von \SI{60}{\newton\meter} einstellt.
+Den Lastsprung regelt das System in kürzester Zeit aus, sodass sich das Drehmoment von \SI{60}Nm einstellt.
 
 \begin{figure}[h!]
 	\begin{minipage}[t]{0.5\textwidth}
@@ -138,9 +138,9 @@ Den Lastsprung regelt das System in kürzester Zeit aus, so dass sich das Drehmo
 		\label{fig:idiq-strom}
 	\end{figure}
 
-Wie schon beim Drehmoment (s.~h.~Abbildung~\ref{fig:drehmoment}) erkennbar, regelt das System den $i_\x{q}$-Strom so, dass das Drehmoment auf \SI{60}{\newton\meter} geregelt wird (s.~h.~Abbildung~\ref{fig:idiq-strom}).
+Wie schon beim Drehmoment (s.~h.~Abbildung~\ref{fig:drehmoment}) erkennbar, regelt das System den $i_\x{q}$-Strom so, dass das Drehmoment auf \SI{60}Nm geregelt wird (s.~h.~Abbildung~\ref{fig:idiq-strom}).
 In Abbildung \ref{fig:idiq-strom} rechts, ist der $i_\x{d}$- und $i_\x{q}$-Strom aufgetragen.
-Der $i_\x{d}$-Strom wird vom System auf null geregelt.
+Der $i_\x{d}$-Strom wird vom System auf Null geregelt.
 
 \newpage
 
@@ -153,14 +153,14 @@ Der $i_\x{d}$-Strom wird vom System auf null geregelt.
 	\begin{minipage}[t]{0.5\textwidth} 
 		\includegraphics[width=\textwidth]{erg/netz/uduq.pdf}
 	\end{minipage}
-	\caption{Simulationsergebnisse des starren Netzes. Links: Drehzahl in Abhängig der Zeit (Eingschwingvorgang). Rechts: Clarke/Park-Transformation der Spannungen $(u_\x{d}, u_\x{q})$.}
+	\caption{Simulationsergebnisse des starren Netzes. Links: Drehzahl in Abhängig der Zeit (Eingschwingvorgang). Rechts: Clarke-Park-Transformation der Spannungen $(u_\x{d}, u_\x{q})$.}
 	\label{fig:n-netz}
 \end{figure}
 
 Wie links in Abbildung \ref{fig:n-netz} erkennbar ist, regelt das System die Drehzahl auf \SI{600}{\per\minute}.
-Rechts in Abbildung \ref{fig:n-netz} ist der Ausgang der Clarke/Park-Transformation graphisch dargestellt.
-Die Transformation soll gleichgrößen statt Wechselgrößen ausgeben, an dieser Stelle ist das Problem bei der Simulation am starren Netz.
-Der zurückgeführte Winkel $\epsilon_\x{RS}$, der PMSM, bewirkt, dass sich die Transformations Ausgangsgrößen wie Wechselgrößen verhalten.
+Rechts in Abbildung \ref{fig:n-netz} ist der Ausgang der Clarke-Park-Transformation graphisch dargestellt.
+Die Transformation soll Gleichgrößen statt Wechselgrößen ausgeben, an dieser Stelle ist das Problem bei der Simulation am starren Netz.
+Der zurückgeführte Winkel $\epsilon_\x{RS}$, der PMSM, bewirkt, dass sich die Transformationsausgangsgrößen wie Wechselgrößen verhalten.
 
 
 \begin{figure}[h!]
@@ -198,12 +198,12 @@ In Abbildung \ref{fig:n-pwm} ist erkennbar, dass die Drehzahl sich auf \SI{500}{
 	\begin{minipage}[t]{0.5\textwidth} 
 		\includegraphics[width=\textwidth]{erg/pwm/torque-pwm-2.pdf}
 	\end{minipage}
-	\caption{Drehmoment in Abhängigkeit der Zeit dargestellt. Links: Einschwingvorgang. Rechts: Lastsprung.}
+	\caption{Drehmoment ist in Abhängigkeit der Zeit dargestellt. Links: Einschwingvorgang. Rechts: Lastsprung.}
 	\label{fig:mi-pwm}
 \end{figure}
 
 Im Gegensatz zur Simulation ohne Netz, entsteht durch die PWM ein sog. \enquote{Torque-ripple} (s.~h.~Abbildung~\ref{fig:mi-pwm}).
-Das Drehmoment schwingt sich auf den Sollwert ein, auch nach dem Lastsprung regelt das System diesen so aus, dass sich das Drehmoment relativ schnell auf einem Sollwert von \SI{50}{\newton\meter} regelt.
+Das Drehmoment schwingt sich auf den Sollwert ein, auch nach dem Lastsprung regelt das System diesen so aus, dass sich das Drehmoment relativ schnell auf einem Sollwert von \SI{50}Nm regelt.
 
 \begin{figure}[h!]
 	\begin{minipage}[t]{0.5\textwidth}

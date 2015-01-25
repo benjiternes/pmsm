@@ -14,15 +14,15 @@ Dabei haben Drehfeldmaschinen, aufgrund fehlender mechanischer Kommutation den V
 
 Entscheidend für den Aufbau einer geregelten PMSM ist die Vektor- bzw. feldorientierte Regelung. 
 Die Maschine wird näherungsweise mit sinusförmigen Strömen gespeist. 
-Ebenso besitzen alle weiteren auftretenden elektrischen Größen wie Spannungen, Flüsse oder Felder aufgrund ihres Zeitverhaltens annähernd Sinusform \parencite[S.~1]{nuss2010}.	
-Die Idee der Vektorregelung ist es nun, nicht die zeitlichen Momentanwerte der Ströme zu verändern, sondern die erfassten Wechselgrößen in ein Zwei-komponentiges rotierendes Koordinatensystem zu übertragen.
+Ebenso besitzen alle weiteren auftretenden elektrischen Größen wie Spannungen, Flüsse oder Felder aufgrund ihres Zeitverhaltens annähernd Sinusform \parencite{nuss2010}.	
+Die Idee der Vektorregelung ist es , nicht die zeitlichen Momentanwerte der Ströme zu verändern, sondern die erfassten Wechselgrößen in ein zweikomponentiges rotierendes Koordinatensystem zu übertragen.
 Dabei beschreibt eine Komponente das Drehmoment, während die andere Komponente die magnetische Flussdichte darstellt.
 Diese Größen werden regelungstechnisch verwertet und zurück transformiert.
 
 \section{Raumzeigerdarstellung}
 \label{sec:raumzeiger}
 
-Die stationären Zusammenhänge der elektrischen Größen in der Maschine, welche ursächlich aus dem Zusammenhang von $\Psi$ und B herrühren, können zunächst mithilfe komplexer Zeitzeiger beschrieben werden. Dabei lassen sich die Statorströme, $i_\i{u}$, $i_\i{v}$, und $i_\i{w}$ einer Drehfeldmaschine mit idendischer Amplitunde $\hat i_\i{s}$ und Statorkreisfrequenz $\omega_\i{s}$  und der in Abschnitt \ref{subsec:mehrphasensysteme} angeführten Phasenverschiebung $\Delta \varphi = 120^{\circ}$ als
+Die stationären Zusammenhänge der elektrischen Größen in der Maschine, welche ursächlich aus dem Zusammenhang von $\Psi$ und B herrühren, können zunächst mithilfe komplexer Zeitzeiger beschrieben werden. Dabei lassen sich die Statorströme, $i_\i{u}$, $i_\i{v}$, und $i_\i{w}$ einer Drehfeldmaschine mit idendischer Amplitunde $\hat i_\i{s}$ und Statorkreisfrequenz $\omega_\i{s}$  und der in Abschnitt \ref{subsec:mehrphasensysteme} angeführten Phasenverschiebung $\Delta \varphi = 120^{\circ}$ als:
 
 
 \begin{align}
@@ -60,7 +60,7 @@ Bei der Entwicklung bieten sich die Statorphasenströme $i_\i{s,u}$, $i_\i{s,v}$
 Diese stehen zu jedem Zeitpunkt zur Verfügung. 
 Es sei angemerkt, dass dabei die Nullbedingung erfüllt ist. 
 Die Summe der Statorphasenströme muss immer Null sein, was beim Einsatz von Drehfeldmaschinen idr. gegeben ist.
-Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die Dritte zu schließen, da gilt:
+Dadurch ist es auch immer möglich mit Kenntnis zweier Größen auf die Dritte zu schließen, da gilt:
 
 \begin{align}
 	i_\i{s,u} + i_\i{s,v} + i_\i{s,w} = 0 
@@ -69,14 +69,14 @@ Dadrurch ist es auch immer möglich mit Kenntnis zweier Größen auf die Dritte 
 
 
 Nun ist der zweikomponentige Zeitzeiger immer um mindestens zwei Momentanwerte erweiterbar. 
-Ein hierfür geeigneter Ansatz zur Erzeugung eines Raumzeigers wird in \parencite[S.~2]{nuss2010} gewählt:
+Ein hierfür geeigneter Ansatz zur Erzeugung eines Raumzeigers wird in \parencite{nuss2010} gewählt:
 
 \begin{align}
 	\underline{i}_\i{s}(t) = \frac{2}{3} \cdot \Bigl\{\underline{i}_\i{s,u}(t) + \underline{i}_\i{s,v}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{i}_\i{s,w}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{statorstromzeiger}
 \end{align}
 
 Um jetzt aufzeigen zu können, dass der Ansatz aus Gleichung (\ref{statorstromzeiger}) im stationären Zustand mit dem entsprechenden Statorstromzeitzeiger übereinstimmt und schlussendlich den Raumzeiger zu erzeugen, werden zunächst in Gleichung (\ref{statorstromzeiger}) die Statorstrommomentanwerte aus Gleichung (\ref{statorströme}) eingesetzt.
-Dadurch erhält man
+Dadurch erhält man:
 
 \begin{align}
 	\begin{split}
@@ -85,7 +85,7 @@ Dadurch erhält man
 \end{split}
 \end{align}
 
-Wird nun die Cosinus-Funktion durch die entsprechende exponentielle Darstellung ersetzt, folgt hieraus
+Wird nun die Cosinus-Funktion durch die entsprechende exponentielle Darstellung ersetzt, folgt hieraus:
 
 \begin{align}
 	\begin{split}
@@ -94,7 +94,7 @@ Wird nun die Cosinus-Funktion durch die entsprechende exponentielle Darstellung 
 	\end{split}
 \end{align}
 
-Nach ausmultiplizieren der Terme folgt mit $1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}}=0$ das Ergebnis und somit der Raumzeiger
+Nach ausmultiplizieren der Terme folgt mit $1+e^{j\tfrac{4\pi}{3}}+e^{j\tfrac{8\pi}{3}}=0$ das Ergebnis und somit der Raumzeiger:
 
 \begin{align}
 \begin{split}
@@ -118,7 +118,7 @@ Die folgende Abbildung \ref{fig:raumzeigermaschine} zeigt zur Veranschaulichung 
 
 
 Mit der Einführung des Raumzeigers ist die theoretische Grundlage dafür geschaffen, die PMSM feldorientiert zu regeln.
-Da sich, wie Eingangs beschrieben, alle Größen in der Drehfeldmaschine näherungsweise sinusförmig verhalten, ist die Stromraumzeigerdarstellung aus Gleichung (\ref{statorstromzeiger}) für alle andren dreiphasigen Größen als allgemeine Raumzeigerdarstellung definierbar.
+Da sich, wie eingangs beschrieben, alle Größen in der Drehfeldmaschine näherungsweise sinusförmig verhalten, ist die Stromraumzeigerdarstellung aus Gleichung (\ref{statorstromzeiger}) für alle anderen dreiphasigen Größen als allgemeine Raumzeigerdarstellung definierbar.
 
 \begin{align}
 	\underline{a}(t) = \frac{2}{3} \cdot \Bigl\{\underline{a}_\i{u}(t) + \underline{a}_\i{v}(t)\cdot e^{j\tfrac{2\pi}{3}} + \underline{a}_\i{w}(t)\cdot e^{j\tfrac{4\pi}{3}} \Bigr\} \label{raumzeigerdefinition}
@@ -129,7 +129,7 @@ Im Folgenden werden die in der Praxis benötigten Transformationsvorschriften er
 
 \section{Beschreibung in $\alpha$-$\beta$-Koordinatensystem}\label{sec:clark}
 
-Als Grundlage für das Wechseln zwischen Phasen- und Raumzeigergrößen dient zunächst die Definition aus Gleichung (\ref{raumzeigerdefinition}). Die Definitionsgleichung lässt sich in Real- und Imaginärteil aufspalten. Es kommt so zu folgender Aufteilung
+Als Grundlage für das Wechseln zwischen Phasen- und Raumzeigergrößen dient zunächst die Definition aus Gleichung (\ref{raumzeigerdefinition}). Die Definitionsgleichung lässt sich in Real- und Imaginärteil aufspalten. Es kommt so zu folgender Aufteilung:
 
 \begin{align}
 	Re~{\underline{a}(t)} = \frac{2}{3} \cdot \Bigl\{ a_{u}(t) + a_{v}(t) \cdot\cos{\frac{2 \pi}{3}} + a_{w}(t) \cdot\cos{\frac{4 \pi}{3}} \Bigr\}
@@ -141,10 +141,10 @@ Als Grundlage für das Wechseln zwischen Phasen- und Raumzeigergrößen dient zu
 	\label{imaginärteil}
 \end{align}
 
-In Zusammenhang mit der Clarke Transformationsvorschrift ist es üblich, den Realteil in $\alpha$-Koordinaten und den Imaginärteil als $\beta$-Koordinaten auszudrücken. 
-Daher ist die Clarke Transformation im deutschsprachigen Bereich auch $\alpha$-$\beta$-Transformation bekannt.
-Um im Weiteren die in der Praxis notwendige Transformationsmatrix zu erhalten, werden die Trigonometrischen Ausdrücke numerisch dargestellt. 
-Aus den Gleichungen (\ref{realteil}) und (\ref{imaginärteil}) folgt somit
+In Zusammenhang mit der Clarke-Transformationsvorschrift ist es üblich, den Realteil in $\alpha$-Koordinaten und den Imaginärteil als $\beta$-Koordinaten auszudrücken. 
+Daher ist die Clarke-Transformation im deutschsprachigen Bereich auch $\alpha$-$\beta$-Transformation bekannt.
+Um im Weiteren die in der Praxis notwendige Transformationsmatrix zu erhalten, werden die trigonometrischen Ausdrücke numerisch dargestellt. 
+Aus den Gleichungen (\ref{realteil}) und (\ref{imaginärteil}) folgt somit:
 
 \begin{align}
 	a_{\alpha}(t) = \frac{2}{3} \cdot \Bigl\{ a_{u}(t) - \frac{1}{2} \cdot a_{v}(t) - \frac{1}{2} \cdot a_{w}  \Bigr\}
@@ -164,12 +164,13 @@ Der entstandene Raumzeiger in  $\alpha$-$\beta$-Koordinaten ist in allgemeiner F
 \end{align}
 
 darstellbar. Um die $\alpha$- und $\beta$-Komponente des entstandenen Raumzeigers besser nachvollziehen zu können, zeigt die Abbildung \ref{fig:alphabetakoordinaten} eine beispielhafte Lage des Zeigers in $\alpha$-$\beta$-Koordinaten.
+\newpage
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/alphabetakoordinaten.pdf}
 	\label{fig:alphabetakoordinaten}
-	\caption{Beispielhafte Lage des Raumzeigers im $\alpha$-$\beta$-Koordinatensystem.}
+	\caption{Lage des Raumzeigers im $\alpha$-$\beta$-Koordinatensystem.}
 \end{figure}
 
 Nachdem sich der Raumzeiger im neuern Koordinatensystem darstellen lässt, ist es nun entscheidend, eine mathematische Transformationsvorschrift aufzustellen, die sich an Gleichungen (\ref{alpha}) und (\ref{beta}) orientiert. 
@@ -208,7 +209,7 @@ Die inverse Matrix bildet sich aus Gleichung (\ref{clarkematrix}).
 Da es sich hier aber um eine nichtquadratische Matrix handelt, ist diese zunächst nicht invertierbar.
 Folglich muss die Matrix um eine Eingangsgröße erweitert werden.
 Dabei bietet sich die Nullbedingung des Systems an.
-Bindet man die Kontengleichung aus Gleichung (\ref{knotengleichung}) in Gleichung (\ref{clarkematrix}) ein, folgt für die vektorielle Transformationsbeziehung
+Bindet man die Knotengleichung aus Gleichung (\ref{knotengleichung}) in Gleichung (\ref{clarkematrix}) ein, folgt für die vektorielle Transformationsbeziehung:
 
 \begin{align}
 	\begin{bmatrix}
@@ -296,13 +297,13 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
  \end{align}
  
  aus. 
- Da die Nullkomponente der Phasengröße aufgrund der symmetrischen Belastung null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${\underline{T}^{-1}}$ entspricht. Zusammgefassend ist die Transformation in der fogenden Abbildung \ref{fig:clarktransformationdiagramm} erkennbar.
+ Da die Nullkomponente der Phasengröße aufgrund der symmetrischen Belastung null ist, kann auch $a_{0}$ null gesetzt werden, was dem Wegfall der letzten Spalte von ${\underline{T}^{-1}}$ entspricht. Zusammgefassend ist die Transformation in der folgenden Abbildung \ref{fig:clarktransformationdiagramm} erkennbar.
  
  \begin{figure}[h]
  	\centering
  	\includegraphics[width=\textwidth]{/vektor/clarktransformationdiagramm.pdf}
  	\label{fig:clarktransformationdiagramm}
- 	\caption{Clarke Transformation}
+ 	\caption{Clarke-Transformation}
  \end{figure}
  
 
@@ -310,17 +311,17 @@ Für die Praxisanwendung reicht die vereinfachte inverse Clarke-Transformation m
 
 Für die Regelung von Drehfeldmaschinen hat es sich als praktikabel herausgestellt, die Beschreibung des im Vorfeld beschriebenen ortsfesten Koordinatensystems in ein, mit der Winkelgeschwindigkeit des Rotors, rotierendes Koordinatensystem zu überführen. 
 Daher wird die Darstellung auch rotorfest genannt. 
-Die Vorteile dieser Koordinatenbeschreibung liegen zum einen in einer einfacheren Darstellbarkeit elektrophysikalischer Zusammenhänge und zum anderen dass die Raumzeigergrößen näherungsweise Gleichgrößen sind.
-Dadurch lassen sich klassische Regelvefahren auf die Maschine anwenden.
+Die Vorteile dieser Koordinatenbeschreibung liegen zum einen in einer einfacheren Darstellbarkeit elektrophysikalischer Zusammenhänge und zum anderen daran, dass die Raumzeigergrößen näherungsweise Gleichgrößen sind.
+Dadurch lassen sich klassische Regelverfahren auf die Maschine anwenden.
 Das Regelverhalten ähnelt dem der Gleichstrommaschine, welche sich durch eine gute Regelbarkeit auszeichnet. 
-Für die folgende Park Transformation dient die zuvor durchgeführte Clarke Transformation als Grundlage. 
-Zur Verdeutlichung der Transvormationsvorschriften dient die nachfolgende Abbildung \ref{fig:dqkoordinaten} am Beispiel eines Statorstromraumzeigers
+Für die folgende Park-Transformation dient die zuvor durchgeführte Clarke-Transformation als Grundlage. 
+Zur Verdeutlichung der Transformationsvorschriften dient die nachfolgende Abbildung \ref{fig:dqkoordinaten} am Beispiel eines Statorstromraumzeigers.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/dqkoordinaten.pdf}
 	\label{fig:dqkoordinaten}
-	\caption{Zusammenhang zwischen $\alpha$-$\beta$-Koordinaten und d-q-Koordinaten}
+	\caption{Zusammenhang von $\alpha$-$\beta$-Koordinaten und d-q-Koordinaten}
 \end{figure}
 
 
@@ -353,7 +354,7 @@ Die Transformationsmatrix lautet dann
 	\label{parkmatrix}
 \end{align}
 
-Da die Matrix um eine quadratische ist, kann diese ohne weiteres invertiert werden.
+Da die Matrix eine quadratische ist, kann diese ohne weiteres invertiert werden.
 Die Rücktransformation von d-q-Koordinaten in $\alpha$-$\beta$-Koordinaten ist für die Regelung ebenfalls von entscheidender Bedeutung, um aus dem rotierenden Raumzeiger im letzten Schritt wieder die drei Phasengrößen zu erhalten. 
 Es gilt für die Rücktransformation also die Beziehung
 
@@ -383,19 +384,21 @@ mit der Transformationsmatrix
 
 Dieser Transformationsschritt ist der Abbildung \ref{fig:parktransformationdiagramm} zu entnehmen.
 
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{/vektor/parktransformationdiagramm.pdf}
 	\label{fig:parktransformationdiagramm}
 	\caption{Park Transformation}
 \end{figure}
-
+i
+\newpage
 
 \section{Signalflussplan der Koordinatentransformationen}\label{sec:signalflussplan}
 
 In diesem Abschnitt wird mit Hilfe der Transformationsvorschriften aus den vorherigen Abschnitten \ref{sec:clark} und \ref{sec:park} ein Signalflussplan entwickelt.
 Dieser Plan soll im praktischen Teil in das Simulationsmodell integriert werden können.
-Zur einfacheren Darstellung der Clarke- und Parktransformation werden zunächst die benötigten Signalflussbilder entwickelt.
+Zur einfacheren Darstellung der Clarke- und Park-Transformation werden zunächst die benötigten Signalflussbilder entwickelt.
 
 \begin{figure}[h]
 	\centering
@@ -409,6 +412,7 @@ Bei der Parktransformation wird der Winkel $\varepsilon_\i{RS}$, um den das $\al
 Die entsprechenden Rücktransformationen sind in Abbildung \ref{fig:blockbildclarkeparkkomplett} c) und Abbildung \ref{fig:blockbildclarkeparkkomplett} d) der Grafik veranschaulicht.
 
 Innerhalb des Reglermodells werden die Hin- und Rücktransformationen direkt aufeinander folgen. Daher sind in der nachstehenden Abbildung \ref{fig:blockbildinverseclarkeparkkomplett} die Clarke-Park-Transformation, sowie die Park-Clarke-Transformation als zusammenhängendes Blockbild mit den Stromkomponenten aufgezeigt.
+\newpage
 
 \begin{figure}[h]
 	\centering

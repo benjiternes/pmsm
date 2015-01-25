@@ -9,7 +9,7 @@ Um auf die Regelung einer anisotropen Synchronmaschine einzugehen, werden im Fol
 \section{Maxwellsche Gleichungen}\label{sec:maxwell}
 
 Die Grundlage für alle Betrachtungen sind die Maxwellschen Gleichungen.
-In Differentialform lauten diese (unter Vernachlässigung des Verschiebungsstromes $\vec{D}$
+In Differentialform lauten diese (unter Vernachlässigung des Verschiebungsstromes $\vec{D}$)
 
 \begin{tabular}{ll}
 1. Maxwellsche Gleichung	&	$\nabla \times \vec{H} = \vec{J}+\frac{\i{d}\vec{D}}{\i{d}t} \approx \vec{J}$ \\
@@ -26,9 +26,9 @@ und die dazu gehörigen Materialgesetze lauten
 \vec{J} &= \kappa\vec{E}
 \end{align*}
 
-Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \epsilon$ und $\kappa$ zu ortsunabhängigen Materialkonstanten.
+Bei homogenen isotropen Materialien reduzieren sich die Skalarfelder $\mu, \epsilon$ und $\kappa$ zu ortsunabhängigen Materialkonstanten.
 
-\subsubsection{Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralfrom)}
+\subsubsection{Das Durchflutungsgesetz (1. Maxwellsche Gleichung in Integralform)}
 
 \begin{minipage}{0.5\textwidth}
 	\begin{align}
@@ -41,7 +41,7 @@ Bei homogenen, isotropen Materialien reduzieren sich die Skalarfelder $\mu, \eps
 
 Das Linienintegral der magnetischen Feldstärke $\vec{H}$ längs eines in sich geschlossenen räumlichen Integrationsweges $\vec{l}$ ist gleich dem gesamten elektrischen Strom, der durch die so begrenzte Fläche $A$ hindurchtritt.
 
-\subsubsection{Das Induktionsgesetz (2. Maxwellsche Gleichung in Integralfrom)}
+\subsubsection{Das Induktionsgesetz (2. Maxwellsche Gleichung in Integralform)}
 
 \begin{minipage}{0.5\textwidth}
 \begin{align}
@@ -63,13 +63,13 @@ Hierbei ist
 
 der magnetische Fluss.
 
-\subsubsection{(3. Maxwellsche Gleichung in Integralfrom)}
+\subsubsection{(3. Maxwellsche Gleichung in Integralform)}
 
 \begin{align}
 \int_A \vec{B}\i{d}\vec{A} = 0
 \end{align}
 
-\subsubsection{(4. Maxwellsche Gleichung in Integralfrom)}
+\subsubsection{(4. Maxwellsche Gleichung in Integralform)}
 
 \begin{align}
 \int_A \vec{D}\i{d}\vec{A} = \int_V\rho\i{d}V
@@ -88,7 +88,7 @@ Haben diese $m$ Wechselspannungsquellen dieselbe Kreisfrequenz $\omega$, so stel
 \caption{Spannungsquelle eines Mehrphasensystems.}
 \end{figure}
 
-Da keine Vorgaben bezüglich der Amplituden $\hat{u}$ und der Phasenlage $\varphi$ in der Definition der allgemeinen Mehrphasen-Spannungsquelle enthalten sind, kann sie \zB durch das folgende Gleichungssystemen beschrieben werden
+Da keine Vorgaben bezüglich der Amplituden $\hat{u}$ und der Phasenlage $\varphi$ in der Definition der allgemeinen Mehrphasen-Spannungsquelle enthalten sind, kann sie \zB durch das folgende Gleichungssystemen beschrieben werden:
 
 \begin{align}
 u_\i{1(t)} &= \hat{u}_\i{1} \cdot \cos(\omega t - \varphi_\i{1}) \\
@@ -103,13 +103,13 @@ Aus der allgemeinen Mehrphasen-Spannungsquelle entsteht eine symmetrische Mehrph
 \hat{u}_\i{1} = \hat{u}_\i{2} = \ldots \hat{u}_\i{m}
 \end{align*}
 
-und gleiche Phasenwinkeldifferenz zwischen aufeinanderfolgenden Teilspannungen gefordert werden
+und gleiche Phasenwinkeldifferenz zwischen aufeinanderfolgenden Teilspannungen gefordert werden:
 
 \begin{align*}
 \varphi_\i{1} - \varphi_\i{2} = \varphi_\i{2} - \varphi_\i{3} = \ldots = \varphi_\i{m-1} - \varphi_\i{m} = \Delta \varphi
 \end{align*}
 
-Aus Symmetrieüberlegungen ergibt sich, dass die einheitliche Phasenwinkeldifferenz eine Funktion der Phasenzahl $m$ sein muss.
+Aus Symmetrieüberlegungen ergibt sich, dass die einheitliche Phasenwinkeldifferenz eine Funktion der Phasenzahl $m$ sein muss:
 
 \begin{align}
 \Delta \varphi = \frac{\omega T}{m} = \frac{2\pi}{m}
@@ -119,10 +119,10 @@ Darin tritt die Periodendauer $T$ der Teilspannungen auf.
 Setzt man der Einfachheit
 
 \begin{align*}
-\varphi_\i{1} = 0
+\varphi_\i{1} = 0,
 \end{align*}
 
-so wird die symmetrische Mehrphasen-Spannungsquelle durch das folgende Gleichungssystem beschrieben.
+so wird die symmetrische Mehrphasen-Spannungsquelle durch das folgende Gleichungssystem beschrieben:
 
 \begin{align}
 u_\i{1}(t) &= \hat{u} \cdot \cos(\omega t) \label{eqn:drehstrom} \\ 
@@ -137,20 +137,20 @@ Es kommt nur bei kleinen Leistungen zum Einsatz.
 Eine Ausnahme stellt die Bahnversorgung dar, die bis zu großen Leistungen generell einphasig betrieben wird.
 Gekennzeichnet ist diese durch die eingeprägte Frequenz von $f = 16\frac{2}{3}\mbox{Hz}$.
 
-Die Phasenzahl $m=2$ tritt bei elektrischen Kleinmaschinen auf, allerdings nur in Form eines unsymmetrischen Systems mit einer Phasenwinkeldifferenz
+Die Phasenzahl $m=2$ tritt bei elektrischen Kleinmaschinen auf, allerdings nur in Form eines unsymmetrischen Systems mit einer Phasenwinkeldifferenz von:
 
 \begin{align*}
 \Delta \varphi = 90^{\circ} \,\text{bzw.\ } 270^{\circ}
 \end{align*}
 
-Die Phasenzahl $m=3$ kennzeichnet das Drehstromsystem, dass die Basis der elektrischen Energietechnik bildet.
+Die Phasenzahl $m=3$ kennzeichnet ein Drehstromsystem, welches die Basis der elektrischen Energietechnik bildet.
 Höhere Phasenzahlen treten \zB in der Stromrichtertechnik auf mit $m=6, 12, 24$.
-Drehstromerzeuger mit Phasenzahl $m=3$ werden generell als symmetrisches System ausgelegt.
+Drehstromerzeuger mit der Phasenzahl $m=3$ werden generell als symmetrisches System ausgelegt.
 Als Klemmenbezeichnung ist die Buchstabengruppe $R, S, T$ bzw.\ $U, V, W$ üblich, wobei die gemeinsame Leitung der drei Teilspannungen mit $O, N$ oder $Mp$ für Mittelpunkt bezeichnet wird.
 
 Durch die DIN-Normung wurde festgelegt, dass die Klemmenbezeichnung beim Drehstromsystem mit $L1, L2$ und $L3$ zu erfolgen hat.
 Die Phasenwinkeldifferenz ist $\Delta \varphi = 120^{\circ}$.
-Stellt man die Phasenspannungen $u_\i{1}(t), u_\i{2}(t), u_\i{3}(t)$ nach Abbildung~\ref{eqn:drehstrom} dar, so ergibt sich 
+Stellt man die Phasenspannungen $u_\i{1}(t), u_\i{2}(t), u_\i{3}(t)$ nach Abbildung~\ref{fig:dreiphasen} dar, so ergibt sich:
 
 \begin{figure}[!h]
 \centering
@@ -161,25 +161,25 @@ Stellt man die Phasenspannungen $u_\i{1}(t), u_\i{2}(t), u_\i{3}(t)$ nach Abbild
 
 \section{Theorie der Drehfeldmaschinen}\label{sec:grund-drehfeld}
 
-Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen, der Grund hierfür ist die Robustheit der aktiven Bauteile und die gute Energieeffizienz.
+Drehfeldmaschinen sind die am häufigsten eingesetzten Antriebsmaschinen. Der Grund hierfür ist die Robustheit der aktiven Bauteile und die gute Energieeffizienz.
 Zudem besitzen Drehfeldmaschinen ein großes Leistungsspektrum und einen großen Drehzahl- und Drehmomentstellbereich.
 Die wesentlichen Vertreter der Maschinenfamilie sind die Synchron- und die Asynchronmaschinen.
 Beide basieren auf der Wirkung eines Drehfeldes, das sich durch den Luftspalt der Maschine bewegt.
 Die Synchron- und Asynchronmaschine besitzen im Ständer denselben Aufbau und erfordern zur Darstellung ihres Verhaltens eine Reihe gleicher physikalischer Begriffe.
 Es ist zweckmäßig die Grundlagen der Synchronmaschine in einem eigenen Kapitel zu behandeln.
-Dies gilt \insb für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
+Dies gilt insbesondere für den Aufbau der Drehstromwicklungen sowie die Grundlagen zur Beschreibung von umlaufenden Durchflutungen und deren Felder.
 
-Der prinzipielle Aufbau einer Drehstromwicklung lässt sich anhand aus den Anforderungen zur Erzeugung einer dreiphasigen Wechselspannung erläutern.
+Der prinzipielle Aufbau einer Drehstromwicklung lässt sich aus den Anforderungen zur Erzeugung einer dreiphasigen Wechselspannung erläutern.
 Eine solche Drehspannung erhält man mit einer Anordnung nach Abbildung~\ref{fig:drehstromwicklung}.
 Ein aus Dynamoblechen geschichtetes Ständerblechpacket enthält in Nuten am Bohrungsumfang gleichmäßig verteilte Leiter, die zu drei räumlich verteilten Wicklungssträngen zusammengeschaltet werden \autocite[S.~141]{fischer2009}.
 Der Läufer erzeugt ein Gleichfeld, das eine sinusförmige Feldverteilung längst des Luftspaltes aufbaut.
-Hat der Läufer eine konstante Drehzahl, so induziert das Feld in den einzelnen Spulen zeitlich sinusförmige Spannungen, die sich innerhalb eines Wicklungsstranges zu einem Wert addieren.
+Hat der Läufer eine konstante Drehzahl, so induziert das Feld in den einzelnen Spulen zeitlich versetzte sinusförmige Spannungen, die sich innerhalb eines Wicklungsstranges zu einem Wert addieren.
 
 \section{Magnetfelder}
 
 \subsection{Strombelag}
 
-Das Luftspaltfeld hat die zentrale Bedeutung und muss deshalb auch berechnet werden können.
+Das Luftspaltfeld hat die zentrale Bedeutung für Drehfeldmaschinen und muss deshalb berechnet werden können.
 Die Ursache für die Entstehung dieses Luftspaltfeldes sind die vom Strom durchflossenen Leiter in den Nuten des Stators.
 Unter der idealisierten Annahme eines homogenen Feldverlaufs im Bereich der Nutöffnung (s.~h.~Abbildung~\ref{fig:nutquerfeld}) das Feld im Luftspalt vom Feld in der Nut getrennt.
 
@@ -206,13 +206,14 @@ H_\i{S} = \frac{\Theta_\i{Nut}}{b_\i{S}}
 
 Diese Randbedingung zur Berechnung des Luftspaltfeldes kann auch anders erzeugt werden.
 Unter Annahme, dass die Nutdurchflutung $\Theta$ unendlich dünn auf einer glatten Eisenoberfläche gleichmäßig im Bereich der Nutöffnung $b_\i{S}$ verteilt ist.
-Diese Modellvorstellung wird mit Hilfe des Strombelages beschrieben.
+Diese Modellvorstellung wird mit Hilfe des Strombelages beschrieben:
 
 \begin{align}
 A = \frac{\Theta_\i{Nut}}{b_\i{S}}
 \end{align}
 
-s.~h.~Abbildung~\ref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen Beschreibung.
+Die folgende Abbildung~\ref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen Beschreibung:
+\newpage
 
 \begin{figure}[!h]
 \centering
@@ -221,7 +222,7 @@ s.~h.~Abbildung~\ref{fig:strombelag-neu} zeigt die Modellvorstellung der obigen 
 \caption{Vereinfachte Modellvorstellung zur Berechnung des Luftspaltfeldes mit Hilfe des Strombelags.}
 \end{figure}
 
-Bei Auswertung des Durchflutungsgesetz bei einem Umlauf um diesen Strombelag, ergibt sich für die tangentiale Feldstärke $H_\i{t}$ an der Eisenoberfläche im Bereich des Strombelages
+Bei Auswertung des Durchflutungsgesetz bei einem Umlauf um diesen Strombelag, ergibt sich für die tangentiale Feldstärke $H_\i{t}$ an der Eisenoberfläche im Bereich des Strombelages:
 
 \begin{align}
 \oint \vec{H}d\vec{l} = \Theta_\i{Nut} \\
@@ -238,27 +239,28 @@ Zudem kann eine deutlich vereinfachte Geometrie zugrunde gelegt werden.
 \end{quote}
 
 \paragraph{Weitere spezifische Darstellungen zum Strombelag.}
-Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als \autocite[S.~199]{hofmann2013}
+Die räumliche Verteilung des Stromes wird durch den Strombelag wiedergegeben, der als Leiterzahl $\times$ Stromstärke pro Länge des stromdurchflossenen Umfanges bei rotatorischen Maschinen als 
 
 \begin{align}
 A = \frac{I \cdot w}{x_\i{S}\cdot p} = \frac{2m \cdot p\cdot I}{\pi \cdot d_\i{i}} \label{eqn:strombelag2}
 \end{align}
 
-betrachtet man jetzt die Polteilung $\tau_\i{p}$
+festgelegt wird. \autocite[S.~199]{hofmann2013}
+Betrachtet man jetzt die Polteilung $\tau_\i{p}$ mit 
 
 \begin{align}
-\tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:polteilung}
+\tau_\i{p} = \frac{\pi \cdot d_\i{i}}{2p} \label{eqn:polteilung},
 \end{align}
 
 so wird aus Gleichung~\ref{eqn:strombelag2} und Gleichung~\ref{eqn:polteilung} bei voller Bewicklung über eine Polteilung
 \longpage
 
 \begin{align}
-A = \frac{m w I}{p \cdot \tau_\i{p}}
+A = \frac{m w I}{p \cdot \tau_\i{p}}.
 \end{align}
 
 \begin{quote}
-\enquote{Aus dem Strombelag $A$ wir bei rotatorischen Maschinen abhängig von der Umfangskoordinate mit $A(x)$, wenn:
+\enquote{Aus dem Strombelag $A$ wird bei rotatorischen Maschinen abhängig von der Umfangskoordinate mit $A(x)$, wenn:
 \begin{itemize}
 \item sich durch Wechsel von Hin- und Rückleiter einer Wicklung die Stromrichtung ändert,
 \item durch Konzentration der Wicklung der Strom in den Lücken zu Null wird.
@@ -266,7 +268,7 @@ A = \frac{m w I}{p \cdot \tau_\i{p}}
 \autocite[S.~199]{hofmann2013}}
 \end{quote}
 
-Der alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung durch seine Grundwelle beschrieben werden
+Der alternierende Strombelag $A$ kann mit Hilfe der Fourier-Reihenentwicklung durch seine Grundwelle beschrieben werden:
 
 \begin{align}
 A_\i{1}(x) = \hat{A}_\i{1} \cdot \cos(\frac{x}{\tau_\i{p}}\cdot \pi)
@@ -280,11 +282,11 @@ V_\delta (x) = - \int_0^x A(x)\i{d}x
 
 Das Integral erhält die Bezeichnung \enquote{Felderregerkurve} (vgl.~\textcite[S.~199]{hofmann2013}).
 Die Felderregerkurve gibt an, welche magnetische Spannung zur Magnetfelderzeugung an der Stelle $x$ zur Verfügung steht.
-Diese ist wichtige für die Berechnung von Streuungs- und Verlusteffekten in der Maschine.
+Diese ist wichtig für die Berechnung von Streuungs- und Verlusteffekten in der Maschine.
 
 \subsection{Durchflutung}\label{sec:durchflutung}
 
-Die Durchflutung lässt sich als Integral des Strombelages entlang der Polteilung darstellen
+Die Durchflutung lässt sich als Integral des Strombelages entlang der Polteilung darstellen:
 
 \begin{align}
 \Theta = -\int_0^{\tau_\i{p}} A(x)\i{d}x
@@ -295,30 +297,33 @@ mit Gl.~\ref{eqn:polteilung} ergibt sich nach \textcite[S.~200]{hofmann2013}
 \begin{align}
 \Theta = - \int_0^{2(\pi /p)} A(\gamma)\i{d}\gamma \quad \text{mit}\,\, \frac{x}{\tau_\i{p}}=\frac{\gamma}{\pi}
 \end{align}
+\newpage
 
 \subsection{Gleichfelder}\label{sec:gleichfelder}
 
 Wird der Strombelag einer Wicklung durch einen Gleichstrom gebildet, so entsteht ein örtlich, nicht zeitlich abhängiges Luftspaltfeld.
 Die örtliche Abhängigkeit hängt von den Wicklungsparametern ab.
-Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt Strombelag $A$ und Felderregerkurve $B$ einer Vollpol-Ankerspule.
+Abbildung~\ref{fig:Visio-strombelag-hofmann} zeigt den Strombelag $A$ und die Felderregerkurve $B$ einer Vollpol-Ankerspule.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{Visio-strombelag-hofmann.pdf}
+	\label{fig:Visio-strombelag-hofmann}
+	\caption{Strombelag, Felderreger- und Feldkurve der Vollpolmaschine.}
+\end{figure}
+
 Der Strombelag ist konzentriert, die Felderregerkurve wird trapezförmig an den Sinus angenähert.
-Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch die Grundwelle beschreiben
+Der Induktionsverlauf lässt sich allgemein nach Fourier-Reihenentwicklung durch die Grundwelle beschreiben:
 
 \begin{align}
 B_\i{1}(x) = \hat{B}_\i{1}\cdot\cos(\frac{x}{\tau_\i{p}}\cdot \pi)
 \end{align}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{Visio-strombelag-hofmann.pdf}
-\label{fig:Visio-strombelag-hofmann}
-\caption{Strombelag, Felderreger- und Feldkurve der Vollpolmaschine.}
-\end{figure}
 
 Nutzbare Gleichfelder treten auf als:
 \begin{itemize}
 	\item Erreger- und Ankerfeld in Gleichstrommaschinen
-	\item Erregerfeld in Vollpol-Synchronmaschine
+	\item Erregerfeld in Vollpol-Synchronmaschinen
 \end{itemize}
 
 \subsection{Drehfelder}\label{sec:drehfelder}
@@ -326,19 +331,19 @@ Nutzbare Gleichfelder treten auf als:
 Nach \textcite{hofmann2013} sind Drehfelder
 
 \begin{quote}
-\enquote{[\ldots] sind Magnetfelder, deren Welle durch den Luftspalt läuft.}
+\enquote{[\ldots]  Magnetfelder, deren Welle durch den Luftspalt läuft.}
 \end{quote}
 
 Die Erzeugung von Drehfeldern kann auf zwei Arten geschehen.
-Zum einen aus der Drehung eines Gleichfeldes (s.~h.~Abschnitt~\ref{sec:gleichfelder}) oder durch die Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern.
-Bei der Synchronmaschine wird mittels Gleichstrom der Anker erregt, so entsteht zunächst ein Gleichfeld mit örtlicher Induktionsverteilung.
-Wird nun die das Gleichfeld erzeugende Wicklung gedreht, bekommt das Feld eine Drehgeschwindigkeit, d.\ h.\ die Felddichte verhält sich orts- und zeitabhängig.
+Zum Einen aus der Drehung eines Gleichfeldes (s.~h.~Abschnitt~\ref{sec:gleichfelder}) oder durch die Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern.
+Bei der Synchronmaschine wird mittels Gleichstrom der Anker erregt, es entsteht zunächst ein Gleichfeld mit örtlicher Induktionsverteilung.
+Wird nun die das Gleichfeld erzeugende Wicklung gedreht, bekommt das Feld eine Drehgeschwindigkeit, d.\ h.\ die Felddichte verhält sich orts- und zeitabhängig:
 
 \begin{align}
 B(x,t) = \hat{B}\cdot\cos(\frac{x}{\tau_\i{p}}\pi\pm\omega t)
 \end{align}
 
-Der Fall, dass sich aus der Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern ein Drehfeld bildet soll hier nicht weiter erläutert werden.
+Der Fall, dass sich aus der Überlagerung von räumlich verteilten und zeitlich versetzten Wechselfeldern ein Drehfeld bildet, soll hier nicht weiter erläutert werden.
 
 %\section{Induktivitäten}\label{sec:induktiv}
 
@@ -410,7 +415,7 @@ Der Fall, dass sich aus der Überlagerung von räumlich verteilten und zeitlich 
 
 \section{Einführung Synchronmaschine}\label{sec:synchron}
 
-Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut, den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
+Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut. Den ersten dreiphasigen Synchrongenerator entwickelten 1887 unabhängig voneinander F.~A.~Haselwander\footnote{Friedrich August Haselwander war ein deutscher Ingenieur, ein Erfinder der Drehstrom-Synchronmaschine und des kompressorlosen Ölmotors.} und C.~S.~Bradley\footnote{Charles Schenk Bradley war ein US-amerikanischer Elektrotechniker, Erfinder und Pionier von frühen Elektromotoren. Er zählt neben F.~A.~Haselwander zu den Begründern des heute im Bereich der elektrischen Energietechnik eingesetzten Dreiphasenwechselstromes.} Bei den Entwicklungen bildeten sich die Bauformen der Schenkelpol- und Vollpolmaschine aus. Die Weiterentwicklung der Synchronmaschine hing stark mit dem Ausbau der Energieversorgung und dem Bedarf von leistungsstärkeren Generatoren zusammen. Unabhängig von der Entwicklung wurden schon sehr früh Synchronmaschinen als Antriebsmaschinen für eine konstante Drehzahlregelung oder einen Phasenbetrieb in der Industrie eingesetzt \autocites[S.~287]{fischer2009}[S.~485f.]{mullerI2005}.
 
 \begin{figure}[h!]
 \centering
@@ -426,16 +431,16 @@ Die ersten Synchronmaschinen wurden als Einphasengenerator entwickelt und gebaut
 \end{figure}
 
 Die gleichstromgespeiste Erregerwicklung ermöglicht es, das Magnetfeld unabhängig vom Netz zu beeinflussen.
-Als Spannungsquelle für die Speisung der Erregerwicklung wurden sog.\ Gleichstromerregermaschinen eingesetzt, in der heutigen Zeit werden Wechselspannung mit Hilfe von Leistungselektronischen Schaltungen gespeist.
+Als Spannungsquelle für die Speisung der Erregerwicklung wurden sog.\ Gleichstromerregermaschinen eingesetzt, in der heutigen Zeit werden Wechselspannung mit Hilfe von leistungselektronischen Schaltungen gespeist.
 Um die Schleifringübertragung der Erregerleistung zu umgehen, werden schleifring- bzw.\ bürstenlose Erregersysteme realisiert \autocite{fischer2009}.
-Als Motor wurden Drephasen-Synchronmaschinen schon bald für große Leistungen eingesetzt, \zB zum Antrieb von Pumpen und Verdichten \autocite[S.~486]{mullerI2005}.
+Als Motor wurden Dreiphasen-Synchronmaschinen schon bald für große Leistungen eingesetzt, \zB zum Antrieb von Pumpen und Verdichtern \autocite[S.~486]{mullerI2005}.
 Der Nachteil ist, dass die Drehzahl durch die Netzfrequenz festgelegt ist.
 Die Synchronmaschine arbeitet unabhängig von der Belastung stets mit der durch die Netzfrequenz und die ausgeführte Polpaarzahl festgelegten synchronen Drehzahl.
 
 Heute ist es möglich, mit Hilfe eines Frequenzumrichters die Drehzahl der Synchronmaschine zu steuern.
 Aus diesem Grund werden größere Gleichstrommaschinen durch drehzahlvariable Synchronmaschinen abgelöst.
 Im Bereich kleinerer Leistungen wird anstelle der Gleichstromerregung eine Erregung durch Permanentmagnete eingesetzt.
-Dabei verliert man die Beeinflussung des Erregerzustandes über den Erregerstrom, dafür erhält man eine elektrische Maschine die keine elektrische Verbindung zum Läufer erfordert.
+Dabei verliert man die Beeinflussung des Erregerzustandes über den Erregerstrom, dafür erhält man eine elektrische Maschine, die keine elektrische Verbindung zum Läufer erfordert.
 
 \subsection{Spannungsgleichungen und Ersatzschaltbild}\label{sec:spannungsgleichung-esb}
 
@@ -459,7 +464,7 @@ vorliegt s.~h.~Abbildung~\ref{fig:dq-synchron-1}.
 \caption{Veranschaulicht das mit $n$ rotierende $d, q-$System, in dem der Maschinenzustand durch ruhende Zeiger ausgedrückt wird.}
 \end{figure}
 
-Der Ständerkreis kann in den Läuferkreis keine Spannung induzieren, weil Ständerfeld und Läuferfeld gleiche Drehzahl haben und somit im Läufer keine ständerbedingten Flussänderungen entstehen.
+Der Ständerkreis kann in den Läuferkreis keine Spannung induzieren, weil Ständerfeld und Läuferfeld die gleiche Drehzahl haben und somit im Läufer keine ständerbedingten Flussänderungen entstehen.
 Mit dieser Erkenntnis und den oben genannten Voraussetzungen wird der Läuferkreis durch die Gleichung
 
 \begin{align}
@@ -524,7 +529,7 @@ Haupt- und Streureaktanz des Ständerkreises werden häufig zur synchronen Reakt
 X_\i{d} = X_\i{1} + X_\i{h}
 \end{align}
 
-Die daraus folgende relative synchron Reaktanz ist eine wichtige Kenngröße der Synchronmaschine.
+Die daraus folgende relative synchrone Reaktanz ist eine wichtige Kenngröße der Synchronmaschine.
 
 \begin{align}
 x_\i{d} = \frac{I_\i{1}}{U_\i{1}}\cdot X_\i{d}
@@ -563,7 +568,7 @@ Die Wahl der Konzipierung hat Auswirkungen auf die Möglichkeit, Feldschwächebe
 \centering
 \includegraphics{synchron-dq.pdf}
 \label{fig:synchron-dq}
-\caption{Darstellung der Synchronmaschine im dq-Koordinatensystem.}
+\caption{Synchronmaschine im dq-Koordinatensystem.}
 \end{figure}
 
 Wird die Synchronmaschine in der Statorwicklung mit einer sinusförmigen Spannung versorgt, so ist diese als (PMSM) permanentmagneterregte Synchronmaschine definiert.
@@ -577,7 +582,7 @@ Damit wird die Kreisfrequenz $\omega_\i{el}$ des umlaufenden Koordinatensystems 
 \omega_\i{el} = p \cdot\omega_\i{mech}
 \end{align}
 
-Auf die grundlegenden elektrischen Effekte reduziert kann eine PMSM nach Abbildung~\ref{fig:synchron-grundlage} dargestellt werden; drei konzentrierte Induktivitäten im Ständerblechpacket zusammen mit dem Permanentmagneten im Rotor.
+Auf die grundlegenden elektrischen Effekte reduziert kann, eine PMSM nach Abbildung~\ref{fig:synchron-grundlage} dargestellt werden. Drei konzentrierte Induktivitäten im Ständerblechpacket, zusammen mit dem Permanentmagneten im Rotor.
 Für die Herleitung der Zusammenhänge wird an dieser Stelle nicht weiter eingegangen, hierfür wird auf einschlägige Literatur verwiesen \autocites{mullerI2005}{fischer2009}{schroder2000}{kremser2004}.
 
 \begin{figure}[h!]
@@ -601,7 +606,7 @@ u_\i{ind} = - \frac{\i{d}}{\i{d}t}\Psi
 \caption{Allgemeines Netzwerk des Ständers einer Drehstrommaschine.}
 \end{figure}
 
-Entsprechend Abbildung~\ref{fig:netzwerk-stander-drehstrom} ergeben die die Grundgleichungen einer PMSM ganz allgemein zu
+Entsprechend Abbildung~\ref{fig:netzwerk-stander-drehstrom} ergeben die die Grundgleichungen einer PMSM ganz allgemein zu:
 
 \begin{align}
 u_\i{u} = R_\i{1}i_\i{u} + \frac{\i{d}}{\i{d}t}\Psi_\i{u} \nonumber \\ 
@@ -611,7 +616,7 @@ u_\i{w} = R_\i{1}i_\i{w} + \frac{\i{d}}{\i{d}t}\Psi_\i{w} \nonumber
 
 Es wird im Folgenden davon ausgegangen, dass das dreiphasige System symmetrisch und damit nullsystemfrei ist.
 Damit lassen sich komplexe Zahlen zur Darstellung der Ströme und Spannungen verwenden.
-Der Komplexe Spannungszeiger in ständerfesten Koordinaten lautet
+Der komplexe Spannungszeiger in ständerfesten Koordinaten lautet
 
 \begin{align}
 \underline{u}^{\alpha, \beta} = \frac{2}{3}(u_\i{u} + \underline{a} u_\i{v} + \underline{a}^2 u_\i{w} ) \quad \text{mit}\,\, \underline{a} = e^{\i{j}2\pi/3} = -\frac{1}{2}+\i{j}\frac{\sqrt{3}}{2} \label{eqn:2}
@@ -662,7 +667,7 @@ Der Vorteil ist, dass die läuferfesten Koordinaten Gleichgrößen sind, währen
 Die Eigenschaft der läuferfesten Koordinaten wird für die feldorientierte Regelung verwendet \autocites{schroder2001}{nuss2010}{fuest2004}.
 Es ist mit den läuferfesten Koordinaten möglich, dass Motormodell entsprechend Gleichung~(\ref{eqn:10}) darzustellen.
 Die läuferfesten Koordinaten werden durch Drehung des $\alpha,\beta$-Koordinatensystems um den elektrischen Läuferwinkel $\epsilon_\i{RS}$ gewonnen.
-Für einen beispielhaften Zeiger $\underline{\xi}$ gilt nach \textcite{kellner2012}
+Für einen beispielhaften Zeiger $\underline{\xi}$ gilt nach \textcite{kellner2012}:
 
 \begin{align}
 	\underline{\xi}^{\alpha,\beta} &= \xi \cdot e^{\x{j}\epsilon_\xi} = \underline{\xi}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} \label{eqn:raumzeiger-a-b}\\
@@ -675,7 +680,7 @@ Mit Hilfe der Gleichung~(\ref{eqn:raumzeiger-a-b}), lässt sich allgemein der Sp
 	\underline{u}^{\alpha,\beta} = \underline{u}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} = R_\x{1}\underline{i}^{\x{d,q}}\cdot e^{\x{j}\epsilon_\x{el}} + \frac{\x{d}}{\x{d}t}(\underline{\Psi}^{\x{d,q}}e^{\x{j}\epsilon_\x{el}})
 \end{align}
 
-Durch Anwendung der Produktregel kann der Fluss umgeschrieben werden.
+Durch Anwendung der Produktregel kann der Fluss umgeschrieben werden zu:
 
 \begin{align}
 	\frac{\x{d}}{\x{d}t}\underline{\Psi}^{\alpha,\beta} &= \frac{\x{d}}{\x{d}t}(\underline{\Psi}^{\x{d,q}}e^{\x{j}\epsilon_\x{el}}) \nonumber \\
@@ -698,7 +703,7 @@ Gleichung~(\ref{eqn:udq-zeiger-vereinfacht}) kann gemäß
 	u_\x{d} + \x{j}u_\x{q} = R_\x{1}(i_\x{d}+\x{j}i_\x{q}) + \frac{\x{d}}{\x{d}t}(\Psi_\x{d}+\x{j}\Psi_\x{q}) + \x{j}\omega_\x{el}(\Psi_\x{d}+\x{j}\Psi_\x{q})
 \end{align}
 
-Eine Trennung von Real- und Imaginärteil ergibt die bekannten, üblicherweise verwendeten Gleichungen \autocite{schroder2001}
+in  Real- und Imaginärteil getrennt werden. Damit ergeben sich die bekannten und üblicherweise verwendeten Gleichungen \autocite{schroder2001}:
 
 	\begin{align}
 		u_\x{d} &= R_\x{1}i_\x{d} + \frac{\x{d}}{\x{d}t}\Psi_\x{d}-\omega_\x{el}\Psi_\x{q} \label{eqn:ud-gleichung}\\
@@ -766,7 +771,7 @@ Löst man obenstehende Gleichung mit der mechanischen Gleichung (\ref{eqn:mechan
 \section{Feldorientierte Regelung}\label{sec:foc}
 
 Die feldorientierte Regelung auch unter \enquote{FOC} bekannt (engl. Field Oriented Control), in Europa als \enquote{vector control} zu finden, ist ein Regelverfahren für Drehstrommaschinen.
-In vielen Anwendungen werden Gleichstrommaschinen als Antriebe eingesetzt, da die Einstellmöglichkeiten der Drehzahl in weiten Bereichen auszeichnet.
+In vielen Anwendungen werden Gleichstrommaschinen als Antriebe eingesetzt, da diese sich durch gute Einstellmöglichkeiten der Drehzahl auszeichnet.
 Drehstromantriebe werden hingegen oft mit einer festen Drehzahl betrieben.
 Da die Drehzahl abhängig von der Frequenz der Speisespannung ist, kann eine Drehzahländerung nur durch eine Frequenzänderung des speisenden Netzes geschehen.
 Historisch gesehen war dies früher eine große Herausforderung, die mittlerweile durch die Weiterentwicklung der Leistungselektronik einfach zu realisieren ist.
@@ -777,9 +782,8 @@ Die feldorientierte Regelung stellt dabei ein geeignetes Verfahren dar, die Sync
 
 \subsection{Prinzip der FOC}
 
-Das Prinzip der Feldorientierten Regelung beruht auf der Feldorientierung.
-Dabei wird ein Koordinatensystem (d,q-Koordinatensystem) auf dem Rotor gelegt, so rotiert das Koordinatensystem mit dem Rotor und dem magnetischen Feld.
-Somit lassen sich die gleichen Gleichungen wie bei der Gleichstrommaschine verwenden (s.~h.~Abb.~\ref{fig:foc-dc-ac}).
+Bei der feldorientierten Regelung wird ein Koordinatensystem (d,q-Koordinatensystem) auf den Rotor gelegt. So rotiert das Koordinatensystem mit dem Rotor und dem magnetischen Feld.
+Somit lassen sich die gleichen Gleichungen wie bei der Gleichstrommaschine verwenden (s.~h.~Abbildung ~\ref{fig:foc-dc-ac}).
 
 \begin{figure}[h!]
 	\centering
@@ -792,10 +796,10 @@ Gleichung~(\ref{eqn:mi-gleichung}) beschreibt das Drehmoment der elektrischen Ma
 Das Drehmoment der Maschine ist daher genau dann optimal, wenn Statorfluss und Statorstrom orthogonal zueinander stehen.
 Ist die Lage des Statorflusses bekannt, kann der Stromzeiger orthogonal dazu eingestellt werden.
 Das Drehmoment der Maschine ist dann nur noch von der Amplitude des Statorstromes abhängig.
-Aus reglungstechnisches Sicht kann die feldorientiert geregelte Synchronmaschine mit der Gleichstrommaschine verglichen werden \autocite{Thur2006}.
+Aus regelungstechnischer Sicht kann die feldorientiert geregelte Synchronmaschine mit der Gleichstrommaschine verglichen werden \autocite{Thur2006}.
 Wird der Fluss in der Statorwicklung durch Sensoren ermittelt, spricht man von direkter Feldorientierung.
 Diese Methode ist sehr präzise, in der Praxis ist sie jedoch nur mit Sondermaschinen realisierbar \autocite{Thur2006}.
-Im Allgemeinen wird der Ständerfluss durch ein Modell wie bspw.\ die Integration der Ständerspannung ermittelt.
+Im Allgemeinen wird der Ständerfluss durch ein Modell wie bspw.\ der Integration der Ständerspannung ermittelt.
 Die unterschiedlichen Konzepte zur Feldorientierung unterscheiden sich genau in diesem Modell.
 Alle diese Methoden werden als indirekte Feldorientierung bezeichnet \autocite{Thur2006}.
 
